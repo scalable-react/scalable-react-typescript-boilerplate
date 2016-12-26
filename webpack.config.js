@@ -11,8 +11,9 @@ module.exports = {
     './src/index.tsx'
   ],
   output: {
+    path: path.resolve(__dirname, 'dist'),
     filename: 'app.js',
-    path: path.resolve('dist')
+    publicPath: '/dist',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -23,8 +24,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.tsx?$/, loaders: ['babel', 'ts-loader'] },
-      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'] },
+      { test: /\.tsx?$/, loaders: ['babel', 'ts-loader'], include: path.join(__dirname, 'src') },
+      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'], include: path.join(__dirname, 'src') },
     ]
   },
   plugins: [

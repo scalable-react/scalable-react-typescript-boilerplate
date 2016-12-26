@@ -1,11 +1,12 @@
 import * as React from 'react';
+import { Header, Container } from './styles';
 
 class Home extends React.Component<any, any> {
   render() {
     return (
-      <div>
-        <h1>Welcome Home</h1>
-      </div>
+      <Container>
+        <Header>Welcome back</Header>
+      </Container>
     );
   }
 }

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Header } from './styles';
 
 interface AppProps {
   children: any
