@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as Router from 'react-router';
-import { Route, IndexRoute, browserHistory, Router as ReactRouter } from 'react-router';
+import { Provider } from 'react-redux';
+import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
+import store, { history } from './store';
 import { App, Home } from 'containers';
 
 const routes = (
@@ -10,9 +12,11 @@ const routes = (
 );
 
 const RouterApp = () => (
-  <ReactRouter history={browserHistory}>
-    {routes}
-  </ReactRouter>
+  <Provider store={store}>
+    <ReactRouter history={history}>
+      {routes}
+    </ReactRouter>
+  </Provider>
 );
 
 export default RouterApp;

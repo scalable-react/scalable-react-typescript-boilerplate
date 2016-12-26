@@ -1,33 +1,33 @@
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
+const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
   devtool: 'eval',
-  // This will be our app's entry point (webpack will look for it in the 'src' directory due to the modulesDirectory setting below). Feel free to change as desired.
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    'index.tsx'
+    './src/index.tsx'
   ],
-  // Output the bundled JS to dist/app.js
   output: {
     filename: 'app.js',
     path: path.resolve('dist')
   },
   resolve: {
-    // Look for modules in .ts(x) files first, then .js(x)
-    extensions: ['', '.ts', '.tsx', '.js', '.jsx'],
-    // Add 'src' to our modulesDirectories, as all our app code will live in there, so Webpack should look in there for modules
-    modulesDirectories: ['src', 'node_modules'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    alias: {
+      components: path.resolve(ROOT_PATH, 'src/components'),
+      containers: path.resolve(ROOT_PATH, 'src/containers'),
+    },
   },
   module: {
     loaders: [
-      // .ts(x) files should first pass through the Typescript loader, and then through babel
-      { test: /\.tsx?$/, loaders: ['babel', 'ts-loader'] }
+      { test: /\.tsx?$/, loaders: ['babel', 'ts-loader'] },
+      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'] },
     ]
   },
-  plugin: [
+  plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ]
 };

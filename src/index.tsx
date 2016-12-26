@@ -1,9 +1,7 @@
-// Import React and React DOM
 import * as React from 'react';
 import { render } from 'react-dom';
-// Import the Hot Module Reloading App Container – more on why we use 'require' below
-const { AppContainer } = require('react-hot-loader');
 import RouterApp from './routes';
+const { AppContainer } = require('react-hot-loader');
 
 declare var module: { hot: any };
 
