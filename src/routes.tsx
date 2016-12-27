@@ -3,11 +3,12 @@ import * as Router from 'react-router';
 import { Provider } from 'react-redux';
 import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
 import store, { history } from './store';
-import { App, Home } from 'containers';
+import { App, Home, Docs } from 'containers';
 
 const routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Home}/>
+    <Route path="/docs" component={Docs} />
   </Route>
 );
 

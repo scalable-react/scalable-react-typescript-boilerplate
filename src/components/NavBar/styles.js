@@ -27,7 +27,7 @@ export const LeftMenu = styled.div`
 `;
 
 export const LeftMenuText = styled.a`
-  color: #00d5fe;
+  color: #007acc;
   font-weight: 700;
 `;
 

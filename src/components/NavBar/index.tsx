@@ -1,13 +1,15 @@
 import * as React from 'react';
 const Nav = require('./styles').Nav;
-const InnerNav = require('./styles').InnerNav;
-const LogoImage = require('./styles').LogoImage;
-const LeftMenu = require('./styles').LeftMenu;
-const LeftMenuText = require('./styles').LeftMenuText;
-const RightMenu = require('./styles').RightMenu;
-const Menu = require('./styles').Menu;
-const MenuItem = require('./styles').MenuItem;
-const Anchor = require('./styles').Anchor;
+const {
+  InnerNav,
+  LogoImage,
+  LeftMenu,
+  LeftMenuText,
+  RightMenu,
+  Menu,
+  MenuItem,
+  Anchor,
+} = require('./styles');
 
 interface IProps extends React.Props<NavBar> {
   logoText: string,
