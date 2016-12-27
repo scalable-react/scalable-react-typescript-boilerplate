@@ -1,4 +1,5 @@
 import * as types from './constants';
+import { Action } from './actions';
 
 interface AppState {
   isMobile: boolean
@@ -8,12 +9,12 @@ export const initialState: AppState = {
   isMobile: false,
 };
 
-const app = (state: AppState = initialState, action): AppState => {
+const app = (state: AppState = initialState, action: Action<any>): AppState => {
   switch(action.type) {
-    case types.TOGGLE_MOBILE:
+    case types.SET_MOBILE:
       return {
         ...state,
-        isMobile: !state.isMobile,
+        isMobile: action.payload.isMobile,
       };
     default:
       return state;

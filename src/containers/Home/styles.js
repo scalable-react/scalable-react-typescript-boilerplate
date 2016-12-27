@@ -1,14 +1,10 @@
-import styled from 'styled-components';
+const styled = require('styled-components').default;
 
-export const Container = styled('div')`
+export const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vw;
-  width: 100vh;
-`;
-
-export const Header = styled.h1`
-  text-align: center;
-  color: blue;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
 `;
