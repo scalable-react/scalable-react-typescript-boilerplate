@@ -62,6 +62,19 @@ Check the components directory for examples.
 └── .gitignore
 ```
 
+## Included Components
+Included in this project are a few primitive components that you can use to bootstrap your next project. 
+- Anchor
+- Article
+- Button
+- Footer
+- Header
+- Hero
+- Image
+- NavBar
+- Paragraph
+- SvgIcon
+
 ## Scripts
 - npm run start
   - Start the dev server
