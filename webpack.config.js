@@ -26,6 +26,7 @@ module.exports = {
     loaders: [
       { test: /\.tsx?$/, loaders: ['babel', 'ts-loader'], include: path.join(__dirname, 'src') },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'], include: path.join(__dirname, 'src') },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
     ]
   },
   plugins: [

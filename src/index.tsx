@@ -2,6 +2,7 @@ import * as React from 'react';
 import { render } from 'react-dom';
 import RouterApp from './routes';
 const { AppContainer } = require('react-hot-loader');
+import './styles/index.css';
 
 declare var module: { hot: any };
 

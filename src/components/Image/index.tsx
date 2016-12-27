@@ -7,7 +7,7 @@ enum ImageSize {
   medium = 400,
   large = 500,
   xlarge = 600,
-}
+};
 
 interface IProps extends React.Props<Image> {
   size?: ImageSize,
