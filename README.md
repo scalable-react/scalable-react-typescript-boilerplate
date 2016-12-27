@@ -25,6 +25,11 @@ We encourage encapsulation of features by asking that you organize each feature 
 
 Give it a try! We promise you will enjoy it.
 
+## Styled Components
+This project embraces [styled-components](https://github.com/styled-components/styled-components) as it's a fantastic way to style your React components.  
+
+Check the components directory for examples.
+
 ## File Structure
 ```
 ├── README.md
