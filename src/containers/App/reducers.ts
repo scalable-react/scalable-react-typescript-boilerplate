@@ -9,7 +9,7 @@ interface AppState {
       url: string,
     }
   ],
-  logo: string,
+  logoText: string,
 };
 
 export const initialState: AppState = {
@@ -24,7 +24,7 @@ export const initialState: AppState = {
       url: '/docs'
     },
   ],
-  logo: 'React + TypeScript',
+  logoText: 'React + TypeScript',
 };
 
 const app = (state: AppState = initialState, action: Action<any>): AppState => {

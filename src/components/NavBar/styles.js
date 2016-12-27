@@ -18,12 +18,12 @@ export const InnerNav = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
 export const LeftMenu = styled.div`
   margin-right: 1rem;
-  padding-top: 7px;
+  margin-left: 1rem;
 `;
 
 export const LeftMenuText = styled.a`
@@ -33,6 +33,7 @@ export const LeftMenuText = styled.a`
 
 export const RightMenu = styled.div`
   max-width: 400px;
+  margin-right: 1rem;
 `;
 
 export const Menu = styled.ul`
