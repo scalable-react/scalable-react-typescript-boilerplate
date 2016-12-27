@@ -27,7 +27,8 @@ module.exports = {
       { test: /\.tsx?$/, loaders: ['babel', 'ts-loader'], include: path.join(__dirname, 'src') },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'], include: path.join(__dirname, 'src') },
       { test: /\.css$/, loader: 'style-loader!css-loader' },
-      { test: /\.json$/, loader: 'json' }
+      { test: /\.json$/, loader: 'json' },
+      { test: /\.md$/, loader: "html!markdown" },
     ]
   },
   plugins: [

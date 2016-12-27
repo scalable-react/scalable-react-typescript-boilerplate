@@ -4,6 +4,10 @@ import NavBar from './NavBar';
 import Hero from './Hero';
 import Button from './Button';
 import Article from './Article';
+import Footer from './Footer';
+import Paragraph from './Paragraph';
+import SvgIcon from './SvgIcon';
+import Anchor from './Anchor';
 
 export {
   Header,
@@ -12,4 +16,8 @@ export {
   Hero,
   Button,
   Article,
+  Footer,
+  Paragraph,
+  SvgIcon,
+  Anchor,
 };

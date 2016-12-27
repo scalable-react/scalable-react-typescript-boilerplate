@@ -11,7 +11,7 @@ class Home extends React.Component<any, any> {
           <Hero>
             <Image src="https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png" />
             <Header color="#007acc">
-              Scalable React TypeScript
+              Scalable React TS Boilerplate
             </Header>
             <Button color="#c05b4d">
               Get Started

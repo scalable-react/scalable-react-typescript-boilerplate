@@ -9,4 +9,5 @@ export const ArticleComponent = styled.article`
   border: 1px solid #dbe2e8;
   max-width: 960px;
   box-sizing: border-box;
+  flex-grow: 1;
 `;
