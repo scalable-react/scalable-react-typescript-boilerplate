@@ -2,7 +2,6 @@ import * as React from 'react';
 const Nav = require('./styles').Nav;
 const {
   InnerNav,
-  LogoImage,
   LeftMenu,
   LeftMenuText,
   RightMenu,
@@ -12,12 +11,12 @@ const {
 } = require('./styles');
 
 interface IProps extends React.Props<NavBar> {
-  logoText: string,
-  links: Array<{ url: string, text: string }>
+  logoText: string;
+  links: Array<{ url: string, text: string }>;
 };
 
 class NavBar extends React.Component<IProps, any> {
-  render() {
+  public render() {
     return (
       <Nav>
         <InnerNav>
@@ -36,7 +35,7 @@ class NavBar extends React.Component<IProps, any> {
                   >
                     {item.text}
                   </Anchor>
-                </MenuItem>
+                </MenuItem>,
               )}
             </Menu>
           </RightMenu>

@@ -23,13 +23,19 @@ module.exports = {
     },
   },
   module: {
-    loaders: [
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.tsx?$/,
+        loader: 'tslint',
+        exclude: /(node_modules)/
+      },
       { test: /\.tsx?$/, loaders: ['babel', 'ts-loader'], include: path.join(__dirname, 'src') },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'], include: path.join(__dirname, 'src') },
       { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.json$/, loader: 'json' },
       { test: /\.md$/, loader: "html!markdown" },
-    ]
+    ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

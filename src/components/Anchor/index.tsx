@@ -1,14 +1,13 @@
 import * as React from 'react';
-const Markdown = require('react-markdown');
 const AnchorComponent = require('./styles').AnchorComponent;
 
 interface IProps extends React.Props<Anchor> {
-  href?: string,
-  label?: string,
+  href?: string;
+  label?: string;
 };
 
 class Anchor extends React.Component<IProps, any> {
-  render() {
+  public render() {
     const {
       label,
       children,

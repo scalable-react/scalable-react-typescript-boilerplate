@@ -4,7 +4,7 @@ const Section = require('./styles').Section;
 const markdownContent = require('./README.md');
 
 class Home extends React.Component<any, any> {
-  render() {
+  public render() {
     return (
       <Section>
         <Article content={markdownContent} />

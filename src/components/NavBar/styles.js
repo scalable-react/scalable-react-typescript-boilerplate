@@ -7,12 +7,6 @@ export const Nav = styled.nav`
   padding: .5rem;
 `;
 
-export const LogoImage = styled.img`
-  width: 100%;
-  height: auto;
-  max-width: 100px;
-`;
-
 export const InnerNav = styled.div`
   width: 100%;
   display: flex;

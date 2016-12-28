@@ -4,11 +4,11 @@ require('github-markdown-css/github-markdown.css');
 const ArticleComponent = require('./styles').ArticleComponent;
 
 interface IProps extends React.Props<Button> {
-  content: string;
+  content: string,
 };
 
 class Button extends React.Component<IProps, any> {
-  public render() {
+  render() {
     return (
       <ArticleComponent className="markdown-body">
         <Markdown source={this.props.content} />

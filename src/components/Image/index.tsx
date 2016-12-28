@@ -10,15 +10,15 @@ enum ImageSize {
 };
 
 interface IProps extends React.Props<Image> {
-  size?: ImageSize,
-  src: string,
+  size?: ImageSize;
+  src: string;
 };
 
 class Image extends React.Component<IProps, any> {
-  static defaultProps = {
+  public static defaultProps = {
     size: ImageSize.xsmall,
-  }
-  render() {
+  };
+  public render() {
     return (
       <Img
         size={this.props.size}

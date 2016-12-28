@@ -7,7 +7,7 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "sourceMap": true,
-    "outDir": "ts-build",
+    "outDir": "build",
     "jsx": "preserve",
     "allowJs": true
   },

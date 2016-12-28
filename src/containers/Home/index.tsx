@@ -4,7 +4,7 @@ import { Docs } from 'containers';
 const Container = require('./styles').Container;
 
 class Home extends React.Component<any, any> {
-  render() {
+  public render() {
     return (
       <Container>
         <section>

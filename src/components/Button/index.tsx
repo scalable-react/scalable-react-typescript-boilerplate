@@ -10,19 +10,19 @@ enum ButtonSize {
 }
 
 interface IProps extends React.Props<Button> {
-  color?: string,
-  backgroundColor?: string,
-  onClick?: (any) => any,
-  size?: ButtonSize,
+  color?: string;
+  backgroundColor?: string;
+  onClick?: (x: any) => any;
+  size?: ButtonSize;
 };
 
 class Button extends React.Component<IProps, any> {
-  static defaultProps: IProps = {
+  public static defaultProps: IProps = {
     color: '#fefefe',
     backgroundColor: '#c05b4d',
     size: ButtonSize.medium,
-  }
-  render() {
+  };
+  public render() {
     return (
       <ButtonComponent
         onClick={this.props.onClick}

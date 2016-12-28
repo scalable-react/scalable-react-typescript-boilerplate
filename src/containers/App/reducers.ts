@@ -1,7 +1,7 @@
 import * as types from './constants';
-import { Action } from './actions';
+import { IAction } from './actions';
 
-interface AppState {
+interface IAppState {
   isMobile: boolean,
   navLinks: [
     {
@@ -12,7 +12,7 @@ interface AppState {
   logoText: string,
 };
 
-export const initialState: AppState = {
+export const initialState: IAppState = {
   isMobile: false,
   navLinks: [
     {
@@ -27,7 +27,7 @@ export const initialState: AppState = {
   logoText: 'React + TypeScript',
 };
 
-const app = (state: AppState = initialState, action: Action<any>): AppState => {
+const app = (state: IAppState = initialState, action: IAction<any>): AppState => {
   switch(action.type) {
     case types.SET_MOBILE:
       return {
