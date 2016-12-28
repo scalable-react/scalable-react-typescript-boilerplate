@@ -27,7 +27,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(ROOT_PATH, './build/public'),
     publicPath: '/',
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
@@ -37,10 +37,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    alias: {
-      components: path.resolve(ROOT_PATH, 'src/components'),
-      containers: path.resolve(ROOT_PATH, 'src/containers'),
-    },
   },
   module: {
     loaders: [
@@ -76,6 +72,22 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: false
+    }),
+    new HtmlwebpackPlugin({
+      template: 'config/templates/_index.prod.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
+      inject: true,
     }),
     new webpack.LoaderOptionsPlugin({
       debug: false,

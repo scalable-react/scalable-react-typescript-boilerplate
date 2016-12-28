@@ -6,6 +6,10 @@
   version "2.0.41"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-2.0.41.tgz#88faa58e931d1c676daca71369cbc3767737d8d3"
 
+"@types/node@^6.0.54":
+  version "6.0.54"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.54.tgz#65859962ba988052cbdd5c48881395acfdd46931"
+
 "@types/react-dom@^0.14.19":
   version "0.14.19"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-0.14.19.tgz#698a14335e32fb1bc61db65f5647c9668a7fc2eb"
@@ -4613,9 +4617,9 @@ tslint-react@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/tslint-react/-/tslint-react-2.2.0.tgz#c2a080fafd4d61f0f78dd1d6c91206718157e038"
 
-tslint@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/tslint/-/tslint-4.2.0.tgz#b9f5c5b871b784ab2f4809e704ade42d62f523ad"
+tslint@next:
+  version "4.2.0-dev.0"
+  resolved "https://registry.yarnpkg.com/tslint/-/tslint-4.2.0-dev.0.tgz#fd70d27fe640ab8c15dbfe0362c49357b6c572b7"
   dependencies:
     babel-code-frame "^6.20.0"
     colors "^1.1.2"

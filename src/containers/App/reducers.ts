@@ -1,15 +1,19 @@
-import * as types from './constants';
-import { IAction } from './actions';
+import { SET_MOBILE } from './constants';
+
+interface IAction<P> {
+  type: string;
+  payload: P;
+}
 
 interface IAppState {
-  isMobile: boolean,
+  isMobile: boolean;
   navLinks: [
     {
-      text: string,
-      url: string,
+      text: string;
+      url: string;
     }
   ],
-  logoText: string,
+  logoText: string;
 };
 
 export const initialState: IAppState = {
@@ -27,9 +31,9 @@ export const initialState: IAppState = {
   logoText: 'React + TypeScript',
 };
 
-const app = (state: IAppState = initialState, action: IAction<any>): AppState => {
+const appReducer = (state: IAppState = initialState, action: IAction<any>): IAppState => {
   switch(action.type) {
-    case types.SET_MOBILE:
+    case SET_MOBILE:
       return {
         ...state,
         isMobile: action.payload.isMobile,
@@ -39,4 +43,4 @@ const app = (state: IAppState = initialState, action: IAction<any>): AppState =>
   }
 };
 
-export default app;
+export default appReducer;

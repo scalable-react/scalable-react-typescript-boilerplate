@@ -1,2 +1,0 @@
-export type SET_MOBILE = 'APP/SET_MOBILE';
-export const SET_MOBILE: SET_MOBILE = 'APP/SET_MOBILE';

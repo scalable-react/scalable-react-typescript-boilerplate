@@ -3,23 +3,20 @@ const path = require('path');
 const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
-  devtool: 'eval',
+  target: 'node',
   entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    './src/index.tsx'
+    './src/server.tsx'
   ],
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'app.js',
-    publicPath: '/dist',
+    path: path.resolve(__dirname, 'public'),
+    filename: '../build/server.js',
+    publicPath: '/public/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
-      components: path.resolve(ROOT_PATH, 'src/components'),
-      containers: path.resolve(ROOT_PATH, 'src/containers'),
+      components: path.resolve(ROOT_PATH, 'build/src/components'),
+      containers: path.resolve(ROOT_PATH, 'build/src/containers'),
     },
   },
   module: {
@@ -31,7 +28,4 @@ module.exports = {
       { test: /\.md$/, loader: "html!markdown" },
     ],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ]
 };

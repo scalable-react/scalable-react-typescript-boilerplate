@@ -1,6 +1,6 @@
 import * as types from './constants';
 
-export interface IAction<P> {
+interface IAction<P> {
   type: string;
   payload: P;
 }

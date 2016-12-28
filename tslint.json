@@ -33,9 +33,6 @@
     "jsx-wrap-multiline": [
       false
     ],
-    "allow-parens": [
-      false
-    ],
     "jsx-no-multiline-js": [
       false
     ]

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "module": "es6",
     "target": "es6",
     "moduleResolution": "node",
@@ -7,10 +8,13 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "sourceMap": true,
-    "outDir": "build",
+    "outDir": "build/src",
     "jsx": "preserve",
     "allowJs": true
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
     "node_modules"
   ]

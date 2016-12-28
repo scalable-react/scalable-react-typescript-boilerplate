@@ -11,7 +11,7 @@ const path = require('path');
 const morgan = require('morgan');
 const styleSheet = require('styled-components/lib/models/StyleSheet');
 const { ReduxAsyncConnect, loadOnServer } = require('redux-connect');
-const manifest = require('../public/manifest.json');
+const manifest = require('./public/manifest.json');
 
 declare var process: { env: any };
 declare var __dirname: any;
@@ -24,7 +24,7 @@ const IP = process.env.IP || '0.0.0.0';
 const PORT = process.env.PORT || 1337;
 
 app.use(morgan('combined'));
-app.use(express.static(path.join(__dirname + '../public')));
+app.use(express.static(path.join(__dirname + './public')));
 
 app.use((req, res) => {
   match({ routes, location: req.url },
