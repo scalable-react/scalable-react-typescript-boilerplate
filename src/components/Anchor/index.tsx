@@ -4,6 +4,7 @@ const AnchorComponent = require('./styles').AnchorComponent;
 interface IProps extends React.Props<Anchor> {
   href?: string;
   label?: string;
+  color?: string;
 };
 
 class Anchor extends React.Component<IProps, any> {
@@ -12,9 +13,10 @@ class Anchor extends React.Component<IProps, any> {
       label,
       children,
       href,
+      color,
     } = this.props;
     return (
-      <AnchorComponent href={href}>
+      <AnchorComponent color={color} href={href}>
         {label || children}
       </AnchorComponent>
     );

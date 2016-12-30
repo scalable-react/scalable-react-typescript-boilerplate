@@ -11,7 +11,7 @@ const path = require('path');
 const morgan = require('morgan');
 const styleSheet = require('styled-components/lib/models/StyleSheet');
 const { ReduxAsyncConnect, loadOnServer } = require('redux-connect');
-const manifest = require('./public/manifest.json');
+const manifest = require('build/public/manifest.json');
 
 declare var process: { env: any };
 declare var __dirname: any;

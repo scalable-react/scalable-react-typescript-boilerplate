@@ -6,7 +6,7 @@
         "react-hot-loader/babel"
       ]
     },
-    "production": {
+    "server": {
       "plugins": [
         [
           "babel-plugin-webpack-alias", {

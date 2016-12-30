@@ -37,6 +37,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    alias: {
+      components: path.resolve(ROOT_PATH, 'src/components'),
+      containers: path.resolve(ROOT_PATH, 'src/containers'),
+    },
   },
   module: {
     loaders: [

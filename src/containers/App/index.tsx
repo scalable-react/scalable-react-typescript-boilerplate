@@ -3,6 +3,7 @@ import * as AppActionCreators from './actions';
 import { NavBar, Footer, Header, Paragraph, SvgIcon, Anchor } from 'components';
 const connect = require('react-redux').connect;
 const bindActionCreators = require('redux').bindActionCreators;
+import { Author } from './styles';
 
 interface IAppProps extends React.Props<any> {
   children: any;
@@ -63,6 +64,10 @@ class App extends React.Component<IAppProps, any> {
           <Paragraph>
             Scalable React TS Boilerplate
           </Paragraph>
+          <Author>
+            <span>By </span>
+            <Anchor color="#007acc" href="http://www.ryancollins.io/">Ryan C. Collins</Anchor>
+          </Author>
           <Anchor href="https://github.com/RyanCCollins/scalable-react-ts-boilerplate">
             <SvgIcon style={{ height: 35, width: 35, fill: 'white' }} viewBox="0 0 1792 1792">
               <path // tslint:disable-next-line

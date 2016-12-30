@@ -21,11 +21,11 @@ export const initialState: IAppState = {
   navLinks: [
     {
       text: 'Home',
-      url: '/'
+      url: '/',
     },
     {
       text: 'Documentation',
-      url: '/docs'
+      url: '/docs',
     },
   ],
   logoText: 'React + TypeScript',
@@ -34,10 +34,9 @@ export const initialState: IAppState = {
 const appReducer = (state: IAppState = initialState, action: IAction<any>): IAppState => {
   switch(action.type) {
     case SET_MOBILE:
-      return {
-        ...state,
+      return Object.assign({}, state, {
         isMobile: action.payload.isMobile,
-      };
+      });
     default:
       return state;
   }
