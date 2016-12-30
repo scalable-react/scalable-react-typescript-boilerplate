@@ -24,7 +24,7 @@ const IP = process.env.IP || '0.0.0.0';
 const PORT = process.env.PORT || 1337;
 
 app.use(morgan('combined'));
-app.use(express.static(path.join(__dirname + './public')));
+app.use(express.static(path.join(__dirname + '../public')));
 
 app.use((req, res) => {
   match({ routes, location: req.url },

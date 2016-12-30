@@ -10,6 +10,7 @@
     "start": "node devServer.js",
     "predeploy": "rimraf build/public/*.*",
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js",
+    "postdeploy": "./node_modules/.bin/tsc",
     "setup:yarn": "yarn",
     "serve:bundle": "cross-env NODE_ENV=server PORT=1337 node server.js",
     "postinstall": "npm run deploy"
