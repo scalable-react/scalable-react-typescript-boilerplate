@@ -13,11 +13,14 @@ class Home extends React.Component<any, any> {
             <Header color="#007acc">
               Scalable React TS Boilerplate
             </Header>
-            <Button color="#c05b4d">
-              <Anchor color="#fff" href="https://github.com/RyanCCollins/scalable-react-ts-boilerplate">
+            <Anchor
+              color="#fff"
+              href="https://github.com/RyanCCollins/scalable-react-ts-boilerplate"
+            >
+              <Button color="#c05b4d">
                 Get Started
-              </Anchor>
-            </Button>
+              </Button>
+            </Anchor>
           </Hero>
         </section>
         <Docs />
