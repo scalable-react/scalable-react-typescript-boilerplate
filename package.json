@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "RyanCCollins",
   "license": "MIT",
+  "engines": {
+    "node": "6.2.0",
+    "npm": "3.8.9"
+  },
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
     "start": "node devServer.js",
