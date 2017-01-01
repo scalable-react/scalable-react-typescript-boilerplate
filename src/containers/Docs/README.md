@@ -63,7 +63,7 @@ Check the components directory for examples.
 ```
 
 ## Included Components
-Included in this project are a few primitive components that you can use to bootstrap your next project.
+Included in this project are a few primitive components that you can use to bootstrap your next project. 
 - Anchor
 - Article
 - Button

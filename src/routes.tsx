@@ -13,7 +13,9 @@ export const routes = (
 
 const RouterApp = () => (
   <Provider store={store}>
-    <ReactRouter history={history}>
+    <ReactRouter
+      history={history}
+    >
       {routes}
     </ReactRouter>
   </Provider>
