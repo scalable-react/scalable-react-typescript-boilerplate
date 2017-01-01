@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Header, Image, Hero, Button } from 'components';
+import { Header, Image, Hero, Button, Anchor } from 'components';
 import { Docs } from 'containers';
 const Container = require('./styles').Container;
 
@@ -14,7 +14,9 @@ class Home extends React.Component<any, any> {
               Scalable React TS Boilerplate
             </Header>
             <Button color="#c05b4d">
-              Get Started
+              <Anchor color="#fff" href="https://github.com/RyanCCollins/scalable-react-ts-boilerplate">
+                Get Started
+              </Anchor>
             </Button>
           </Hero>
         </section>
