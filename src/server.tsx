@@ -19,7 +19,7 @@ const compression = require('compression');
 app.use(compression());
 
 // Need to set this to your api url
-const IP = process.env.IP || 'localhost';
+const IP = process.env.IP || '0.0.0.0';
 const PORT = process.env.PORT || 1337;
 
 app.use(morgan('combined'));
