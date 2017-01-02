@@ -1,7 +1,7 @@
 import * as React from 'react';
 const P = require('./styles').P;
 
-interface IProps extends React.Props<Header> {
+interface IProps extends React.Props<Paragraph> {
   color?: string;
   textAlign?: string;
   fontSize?: number;
