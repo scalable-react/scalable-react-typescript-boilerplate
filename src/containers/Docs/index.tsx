@@ -3,14 +3,16 @@ import { Article } from 'components';
 const Section = require('./styles').Section;
 const markdownContent = require('./README.md');
 
-class Home extends React.Component<any, any> {
+class Docs extends React.Component<any, any> {
   public render() {
     return (
       <Section>
-        <Article content={markdownContent} />
+        {typeof markdownContent === 'string' &&
+          <Article content={markdownContent} />
+        }
       </Section>
     );
   }
 }
 
-export default Home;
+export default Docs;

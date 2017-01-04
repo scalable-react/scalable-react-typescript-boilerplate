@@ -1,13 +1,24 @@
 import * as React from 'react';
 import { Article } from 'components';
-import { Header, Image, Button, Markdown } from 'components';
+import { Header, Image, Button, Markdown, Anchor } from 'components';
 import { ImageSize } from 'components/Image';
-const { Container, FeatureImage, Card, FeaturesSection, Feature, FeatureSectionInner } = require('./styles');
+const {
+  Headline,
+  Container,
+  FeatureImage,
+  Card,
+  FeaturesSection,
+  Feature,
+  FeatureSectionInner,
+} = require('./styles');
 
 class Features extends React.Component<any, any> {
   public render() {
     return (
       <Container>
+        <Headline>
+          Features
+        </Headline>
         <FeaturesSection id="features-section-one" background="#f3f3f3">
           <FeatureSectionInner>
             <Feature>
@@ -23,9 +34,14 @@ class Features extends React.Component<any, any> {
                 <Markdown
                   content={`__Visual Primitives for the component age.__ \n Use the best bits of ES6 to style your apps without stress.`}
                 />
-                <Button color="#c05b4d">
-                  View Website
-                </Button>
+                <Anchor
+                  color="#fff"
+                  href="https://styled-components.com/"
+                >
+                  <Button color="#c05b4d">
+                    View Website
+                  </Button>
+                </Anchor>
               </Card>
             </Feature>
           </FeatureSectionInner>
@@ -43,11 +59,8 @@ class Features extends React.Component<any, any> {
             <Card>
               <Header textAlign="left" color="black">Feature First</Header>
               <Markdown
-                content={`__Visual Primitives for the component age.__ \n Use the best bits of ES6 to style your apps without stress.`}
+                content={`__Component based file organization.__ \n Code reuse has _never_ been easier.  Organizing your UI components by feature, rather than file-type, will help you to reuse code.  Try it now and thank us later!`}
               />
-              <Button color="#c05b4d">
-                View Website
-              </Button>
             </Card>
           </Feature>
             <Feature>

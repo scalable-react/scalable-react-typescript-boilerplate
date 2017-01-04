@@ -16,16 +16,16 @@ const Html = (props: {
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <title>Scalable React TypeScript Boilerplate</title>
       <link href="https://fonts.googleapis.com/css?family=Hind|Montserrat|Roboto+Mono" rel="stylesheet" />
-      <link href={`${props.cssHash}`} rel="stylesheet" />
+      <link href={`public${props.cssHash}`} rel="stylesheet" />
       <style dangerouslySetInnerHTML={{ __html: props.styles }} />
     </head>
     <body>
       <div id="app" dangerouslySetInnerHTML={{ __html: props.content }} />
-      <script src={`${props.scriptHash}`} charSet="UTF-8" />
-      <script src={`${props.vendorHash}`} type="text/javascript" />
+      <script src={`public${props.scriptHash}`} charSet="UTF-8" />
+      <script src={`public${props.vendorHash}`} type="text/javascript" />
       <script
         dangerouslySetInnerHTML={{
-          __html: `window.__PRELOADED_STATE__=${serialize(props.state, { isJSON: true })};`,
+          __html: `window.__INITIAL_STATE__=${serialize(props.state, { isJSON: true })};`,
         }}
         charSet="UTF-8"
       />
