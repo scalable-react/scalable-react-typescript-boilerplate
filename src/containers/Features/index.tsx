@@ -16,10 +16,10 @@ class Features extends React.Component<any, any> {
   public render() {
     return (
       <Container>
-        <Headline>
-          Features
-        </Headline>
         <FeaturesSection id="features-section-one" background="#f3f3f3">
+          <Headline>
+            Features
+          </Headline>
           <FeatureSectionInner>
             <Feature>
               <Image
