@@ -64,16 +64,16 @@ Check the components directory for examples.
 
 ## Included Components
 Included in this project are a few primitive components that you can use to bootstrap your next project. 
-- Anchor
-- Article
-- Button
-- Footer
-- Header
-- Hero
-- Image
-- NavBar
-- Paragraph
-- SvgIcon
+- [Anchor](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/tree/master/src/components/Anchor/index.tsx)
+- [Article](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Article/index.tsx)
+- [Button](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Button/index.tsx)
+- [Footer](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Footer/index.tsx)
+- [Header](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Header/index.tsx)
+- [Hero](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Hero/index.tsx)
+- [Image](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Image/index.tsx)
+- [NavBar](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/NavBar/index.tsx)
+- [Paragraph](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Paragraph/index.tsx)
+- [SvgIcon](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/SvgIcon/index.tsx)
 
 ## Server Rendering
 This project embraces server-side rendering.  Included in the setup is an [Express server](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/server.tsx) that will server render.  Note that the server-rendering will not work with the TypeScript source code, so you must compile the project into the Build directory first.  Also, you must copy any other assets (images, markdown, etc.) into the build folder.
