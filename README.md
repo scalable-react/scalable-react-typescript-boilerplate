@@ -1,8 +1,4 @@
 # Scalable React TS Boilerplate
-<!-- HTML snippet -->
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/RyanCCollins/scalable-react-ts-boilerplate">
-  <img src="https://www.netlify.com/img/deploy/button.svg" title="Deploy to Netlify">
-</a>
 
 ## Background
 
@@ -86,6 +82,11 @@ This project embraces server-side rendering.  Included in the setup is an [Expre
 A big feature of the [Scalable React Boilerplate](https://github.com/RyanCCollins/scalable-react-boilerplate) project is the code generation tools. They will be incorporated into this project at a later time.  If you are interested in contributing, please let us know!
 
 ## Deployment
+<!-- HTML snippet -->
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/RyanCCollins/scalable-react-ts-boilerplate">
+  <img src="https://www.netlify.com/img/deploy/button.svg" title="Deploy to Netlify">
+</a>
+
 The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/) built for this boilerplate is deployed to Heroku.  Included is a Procfile that will run the server.  The deployment is automated completely.  After the install script, the deploy script will run on the server in order to compile the bundle and prepare the build folder for server-rendering.
 
 ## Scripts
