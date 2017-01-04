@@ -9,6 +9,7 @@ import Paragraph from './Paragraph';
 import SvgIcon from './SvgIcon';
 import Anchor from './Anchor';
 import Markdown from './Markdown'
+import Headline from './Headline';
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   SvgIcon,
   Anchor,
   Markdown,
+  Headline,
 };

@@ -15,7 +15,7 @@ class Header extends React.Component<IProps, any> {
   };
   public render() {
     return (
-      <H1 textAlign={textAlign} color={this.props.color}>
+      <H1 textAlign={this.props.textAlign} color={this.props.color}>
         {this.props.children}
       </H1>
     );

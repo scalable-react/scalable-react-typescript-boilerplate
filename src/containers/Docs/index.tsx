@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Article } from 'components';
-const { Headline, Section } = require('./styles');
+import { Article, Headline } from 'components';
+const { Section } = require('./styles');
 const markdownContent = require('./README.md');
 
 class Docs extends React.Component<any, any> {

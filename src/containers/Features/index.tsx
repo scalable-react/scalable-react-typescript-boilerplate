@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { Article } from 'components';
-import { Header, Image, Button, Markdown, Anchor } from 'components';
+import { Header, Headline, Image, Button, Markdown, Anchor } from 'components';
 import { ImageSize } from 'components/Image';
 const {
-  Headline,
   Container,
   FeatureImage,
   Card,

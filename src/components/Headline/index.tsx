@@ -15,7 +15,7 @@ class Headline extends React.Component<IProps, any> {
   };
   public render() {
     return (
-      <HeadlineStyled textAlign={textAlign} color={this.props.color}>
+      <HeadlineStyled textAlign={this.props.textAlign} color={this.props.color}>
         {this.props.children}
       </HeadlineStyled>
     );

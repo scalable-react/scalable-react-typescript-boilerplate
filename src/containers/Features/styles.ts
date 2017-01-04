@@ -40,9 +40,3 @@ export const FeatureImage = styled.div`
   justify-content: center;
   padding: 60px;
 `;
-
-export const Headline = styled.h1`
-  text-align: center;
-  font-size: 48px;
-  margin: 60px;
-`;
