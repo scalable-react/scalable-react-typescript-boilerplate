@@ -28,9 +28,8 @@ class NavBar extends React.Component<IProps, any> {
           <RightMenu>
             <Menu>
               {this.props.links.map((item, i) =>
-                <MenuItem>
+                <MenuItem key={i}>
                   <Anchor
-                    key={i}
                     href={item.url}
                   >
                     {item.text}

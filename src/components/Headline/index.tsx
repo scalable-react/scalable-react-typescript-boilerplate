@@ -1,5 +1,5 @@
 import * as React from 'react';
-const HeadlineStyled = require('./styles').H1;
+const { HeadlineStyled } = require('./styles');
 
 type TextAligment = 'center' | 'left' | 'right' | 'justify';
 
