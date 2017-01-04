@@ -1,0 +1,3 @@
+[build]
+  command = "npm run deploy"
+  publish = "build/public"
