@@ -1,7 +1,7 @@
 import * as React from 'react';
 const Img = require('./styles').Img;
 
-enum ImageSize {
+export enum ImageSize {
   xsmall = 200,
   small = 300,
   medium = 400,
@@ -12,6 +12,7 @@ enum ImageSize {
 interface IProps extends React.Props<Image> {
   size?: ImageSize;
   src: string;
+  alt: string;
 };
 
 class Image extends React.Component<IProps, any> {
@@ -21,6 +22,7 @@ class Image extends React.Component<IProps, any> {
   public render() {
     return (
       <Img
+        alt={this.props.alt}
         size={this.props.size}
         src={this.props.src}
       />

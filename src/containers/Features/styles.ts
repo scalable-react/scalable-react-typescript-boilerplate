@@ -5,13 +5,6 @@ export const Container = styled.div`
   width: 100vw;
 `;
 
-export const HeroImage = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  justify-content: center;
-`;
-
 export const FeaturesSection = styled.section`
   width: 100%;
   background: ${props => props.background}
@@ -33,13 +26,11 @@ export const Feature = styled.div`
   justify-content: center;
 `;
 
-export const Card = styled.div`
-
-`;
+export const Card = styled.div``;
 
 export const FeatureImage = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 60px;
 `;

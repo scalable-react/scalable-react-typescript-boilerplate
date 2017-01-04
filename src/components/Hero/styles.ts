@@ -2,8 +2,8 @@ const styled = require('styled-components').default;
 
 export const HeroDiv = styled.div`
   background: ${(props) => props.color};
-  height: 300px;
-  padding-top: 50px;
+  min-height: 350px;
+  padding: 50px 0;
   text-align: center;
   width: 100%;
 `;
