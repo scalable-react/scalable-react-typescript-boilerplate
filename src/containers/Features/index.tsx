@@ -23,7 +23,7 @@ class Features extends React.Component<any, any> {
               <Image
                 size={ImageSize.small}
                 alt="Styled-components logo"
-                src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/styled-components-logo.png?raw=true"
+                src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc.png?raw=true"
               />
             </Feature>
             <Feature>
@@ -47,7 +47,7 @@ class Features extends React.Component<any, any> {
             <Image
               size={ImageSize.medium}
               alt="Styled-components example"
-              src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/styled-components-example.png?raw=true"
+              src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc-example.png?raw=true"
             />
           </FeatureImage>
         </FeaturesSection>
