@@ -9,6 +9,7 @@ const {
   Feature,
   FeatureSectionInner,
 } = require('./styles');
+const features = require('./features').default;
 
 class Features extends React.Component<any, any> {
   public render() {
@@ -30,7 +31,7 @@ class Features extends React.Component<any, any> {
               <Card>
                 <Header textAlign="left" color="black">Styled Components</Header>
                 <Markdown
-                  content={`__Visual Primitives for the component age.__ \n Use the best bits of ES6 to style your apps without stress.`}
+                  content={features.styledComponents}
                 />
                 <Anchor
                   color="#fff"
@@ -57,7 +58,7 @@ class Features extends React.Component<any, any> {
               <Card>
                 <Header textAlign="left" color="black">Feature First</Header>
                 <Markdown
-                  content={`__Component based file organization.__ \n Code reuse has _never_ been easier.  Organizing your UI components by feature, rather than file-type, will help you to reuse code.  Try it now and thank us later!`}
+                  content={features.featureFirst}
                 />
               </Card>
             </Feature>

@@ -30,13 +30,18 @@ export const Feature = styled.div`
   display: flex;
   justify-content: center;
   margin: 20px;
+  min-width: 300px;
   @media screen and (max-width: 768px) {
+    max-width: 100vw !important;
     flex-basis: 100%;
   }
 `;
 
 export const Card = styled.div`
   max-width: 540px;
+  h1 {
+    margin-top: 0 !important;
+  }
 `;
 
 export const FeatureImage = styled.div`
