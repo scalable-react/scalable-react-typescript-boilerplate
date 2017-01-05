@@ -3,7 +3,7 @@ import { SET_MOBILE } from './constants';
 interface IAction<P> {
   type: string;
   payload: P;
-}
+};
 
 interface IAppState {
   isMobile: boolean;
