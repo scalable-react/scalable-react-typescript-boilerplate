@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Docs, Features } from 'containers';
+import { Features } from 'containers';
 import { ImageSize } from 'components/Image';
 import { ButtonSize } from 'components/Button';
 import { Header, Image, Hero, Button, Anchor } from 'components';
-const { Container, HeroImage, HeadingContainer } = require('./styles');
+const { Container, Section, HeroImage, HeadingContainer, GetStartedButtons } = require('./styles');
 
 class Home extends React.Component<any, any> {
   public render() {
@@ -39,7 +39,38 @@ class Home extends React.Component<any, any> {
           </Hero>
         </section>
         <Features />
-        <Docs />
+        <Section id="get-started" backgroundColor="#e6e8ec">
+          <GetStartedButtons>
+            <Anchor
+              color="#fff"
+              href="/docs"
+            >
+              <Button
+                style={{ margin: 10 }}
+                size={ButtonSize.xlarge}
+                isHero
+                backgroundColor="#c05b4d"
+                borderColor="#732419"
+              >
+                Read the docs
+              </Button>
+            </Anchor>
+            <Anchor
+              color="#fff"
+              href="https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png"
+            >
+              <Button
+                style={{ margin: 10 }}
+                size={ButtonSize.xlarge}
+                isHero
+                backgroundColor="#c05b4d"
+                borderColor="#732419"
+              >
+                View the code
+              </Button>
+            </Anchor>
+          </GetStartedButtons>
+        </Section>
       </Container>
     );
   }
