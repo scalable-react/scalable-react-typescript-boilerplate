@@ -73,7 +73,7 @@ class Features extends React.Component<any, any> {
             <Image
               size={ImageSize.medium}
               alt="feature-first example"
-              src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first-sample.png?raw=true"
+              src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first-example.png?raw=true"
             />
           </FeatureImage>
         </FeaturesSection>
