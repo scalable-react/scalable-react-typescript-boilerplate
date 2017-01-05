@@ -1,3 +1,4 @@
+// tslint:disable
 export default {
   styledComponents: `__Visual Primitives for the component age.__
 
@@ -10,4 +11,4 @@ export default {
 
   We've included component / container generators for you to easily get started using the feature-first architecture.  Try it __now__ and thank us later!`,
   typeScript: `placeholder`,
-}
+};

@@ -12,7 +12,7 @@ interface IAppState {
       text: string;
       url: string;
     }
-  ],
+  ];
   logoText: string;
 };
 
@@ -32,7 +32,7 @@ export const initialState: IAppState = {
 };
 
 const appReducer = (state: IAppState = initialState, action: IAction<any>): IAppState => {
-  switch(action.type) {
+  switch (action.type) {
     case SET_MOBILE:
       return Object.assign({}, state, {
         isMobile: action.payload.isMobile,

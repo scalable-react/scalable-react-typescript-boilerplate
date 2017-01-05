@@ -63,14 +63,16 @@ Check the components directory for examples.
 ```
 
 ## Included Components
-Included in this project are a few primitive components that you can use to bootstrap your next project. 
+Included in this project are a few primitive components that you can use to bootstrap your next project.
 - [Anchor](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/tree/master/src/components/Anchor/index.tsx)
 - [Article](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Article/index.tsx)
 - [Button](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Button/index.tsx)
 - [Footer](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Footer/index.tsx)
 - [Header](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Header/index.tsx)
+- [Headline](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Headline/index.tsx)
 - [Hero](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Hero/index.tsx)
 - [Image](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Image/index.tsx)
+- [Markdown](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Markdown/index.tsx)
 - [NavBar](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/NavBar/index.tsx)
 - [Paragraph](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Paragraph/index.tsx)
 - [SvgIcon](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/SvgIcon/index.tsx)
