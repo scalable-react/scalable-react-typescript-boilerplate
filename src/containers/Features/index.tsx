@@ -23,6 +23,34 @@ class Features extends React.Component<any, any> {
             <Feature>
               <Image
                 size={ImageSize.small}
+                alt="Type-Script Logo"
+                src="https://raw.githubusercontent.com/RyanCCollins/cdn/master/stsb-images/ts-resized-2.png"
+              />
+            </Feature>
+            <Feature>
+              <Card>
+                <Header textAlign="left" color="black">TypeScript</Header>
+                <Markdown
+                  content={features.typeScript}
+                />
+                <Anchor
+                  color="#fff"
+                  href="http://www.typescriptlang.org/docs/tutorial.html"
+                >
+                  <Button color="#c05b4d">
+                    Get Started
+                  </Button>
+                </Anchor>
+              </Card>
+
+            </Feature>
+          </FeatureSectionInner>
+        </FeaturesSection>
+        <FeaturesSection id="features-section-two" background="#e6e8ec">
+          <FeatureSectionInner>
+            <Feature>
+              <Image
+                size={ImageSize.small}
                 alt="Styled-components logo"
                 src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc.png?raw=true"
               />
@@ -52,7 +80,7 @@ class Features extends React.Component<any, any> {
             />
           </FeatureImage>
         </FeaturesSection>
-        <FeaturesSection id="features-section-two" background="#e6e8ec">
+        <FeaturesSection id="features-section-three" background="#f3f3f3">
           <FeatureSectionInner reverse>
             <Feature>
               <Card>

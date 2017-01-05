@@ -10,5 +10,5 @@ export default {
   Code reuse has _never_ been easier.  Organizing your UI components by feature, rather than file-type, will help you to reuse code and facilitates building of UI component libraries.
 
   We've included component / container generators for you to easily get started using the feature-first architecture.  Try it __now__ and thank us later!`,
-  typeScript: `placeholder`,
+  typeScript: `TypeScript is a _typed superset_ of JavaScript that compiles to plain JavaScript!`,
 };
