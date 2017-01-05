@@ -10,4 +10,9 @@ export const HeroImage = styled.div`
   align-items: center;
   margin-bottom: 20px;
   justify-content: center;
+  height: 100px;
+`;
+
+export const HeadingContainer = styled.div`
+  padding: 20px;
 `;

@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Docs, Features } from 'containers';
 import { ImageSize } from 'components/Image';
-const { Container, HeroImage } = require('./styles');
+import { ButtonSize } from 'components/Button';
 import { Header, Image, Hero, Button, Anchor } from 'components';
+const { Container, HeroImage, HeadingContainer } = require('./styles');
 
 class Home extends React.Component<any, any> {
   public render() {
@@ -17,14 +18,21 @@ class Home extends React.Component<any, any> {
                 src="https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png"
               />
             </HeroImage>
-            <Header color="#007acc">
-              Scalable React TS Boilerplate
-            </Header>
+            <HeadingContainer>
+              <Header color="#007acc">
+                Scalable React TS Boilerplate
+              </Header>
+            </HeadingContainer>
             <Anchor
               color="#fff"
               href="https://github.com/RyanCCollins/scalable-react-ts-boilerplate"
             >
-              <Button color="#c05b4d">
+              <Button
+                size={ButtonSize.xlarge}
+                isHero
+                backgroundColor="#c05b4d"
+                borderColor="#732419"
+              >
                 Get Started
               </Button>
             </Anchor>
