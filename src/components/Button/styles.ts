@@ -14,7 +14,6 @@ export const ButtonComponent = styled.button`
   cursor: pointer;
 `;
 
-
 export const HeroButton = styled.button`
   background-color: ${(props) => props.backgroundColor};
   color: ${(props) => props.color};

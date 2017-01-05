@@ -63,14 +63,16 @@ Check the components directory for examples.
 ```
 
 ## Included Components
-Included in this project are a few primitive components that you can use to bootstrap your next project. 
+Included in this project are a few primitive components that you can use to bootstrap your next project.
 - [Anchor](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/tree/master/src/components/Anchor/index.tsx)
 - [Article](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Article/index.tsx)
 - [Button](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Button/index.tsx)
 - [Footer](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Footer/index.tsx)
 - [Header](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Header/index.tsx)
+- [Headline](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Headline/index.tsx)
 - [Hero](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Hero/index.tsx)
 - [Image](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Image/index.tsx)
+- [Markdown](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Markdown/index.tsx)
 - [NavBar](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/NavBar/index.tsx)
 - [Paragraph](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Paragraph/index.tsx)
 - [SvgIcon](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/SvgIcon/index.tsx)
@@ -82,6 +84,11 @@ This project embraces server-side rendering.  Included in the setup is an [Expre
 A big feature of the [Scalable React Boilerplate](https://github.com/RyanCCollins/scalable-react-boilerplate) project is the code generation tools. They will be incorporated into this project at a later time.  If you are interested in contributing, please let us know!
 
 ## Deployment
+<!-- HTML snippet -->
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/RyanCCollins/scalable-react-ts-boilerplate">
+  <img src="https://www.netlify.com/img/deploy/button.svg" title="Deploy to Netlify">
+</a>
+
 The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/) built for this boilerplate is deployed to Heroku.  Included is a Procfile that will run the server.  The deployment is automated completely.  After the install script, the deploy script will run on the server in order to compile the bundle and prepare the build folder for server-rendering.
 
 ## Scripts
