@@ -42,7 +42,6 @@ class Features extends React.Component<any, any> {
                   </Button>
                 </Anchor>
               </Card>
-
             </Feature>
           </FeatureSectionInner>
         </FeaturesSection>
@@ -97,7 +96,6 @@ class Features extends React.Component<any, any> {
                 />
               </Card>
             </Feature>
-
           </FeatureSectionInner>
           <FeatureImage>
             <Image
