@@ -52,20 +52,20 @@ class Features extends React.Component<any, any> {
           </FeatureImage>
         </FeaturesSection>
         <FeaturesSection id="features-section-two" background="#e6e8ec">
-          <FeatureSectionInner>
-          <Feature>
-            <Card>
-              <Header textAlign="left" color="black">Feature First</Header>
-              <Markdown
-                content={`__Component based file organization.__ \n Code reuse has _never_ been easier.  Organizing your UI components by feature, rather than file-type, will help you to reuse code.  Try it now and thank us later!`}
-              />
-            </Card>
-          </Feature>
+          <FeatureSectionInner reverse>
+            <Feature>
+              <Card>
+                <Header textAlign="left" color="black">Feature First</Header>
+                <Markdown
+                  content={`__Component based file organization.__ \n Code reuse has _never_ been easier.  Organizing your UI components by feature, rather than file-type, will help you to reuse code.  Try it now and thank us later!`}
+                />
+              </Card>
+            </Feature>
             <Feature>
               <Image
                 size={ImageSize.small}
                 alt="feature-first logo"
-                src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first-image.png?raw=true"
+                src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first.png?raw=true"
               />
             </Feature>
           </FeatureSectionInner>

@@ -19,8 +19,9 @@ export const FeatureSectionInner = styled.div`
   max-width: 1000px;
   padding: 60px 120px;
   @media screen and (max-width: 768px) {
-    flex-direction: column;
-    padding: 20px;
+    flex-wrap: ${props => props.reverse ? 'wrap-reverse' : 'wrap'};
+    padding: 60px 20px;
+    padding-top:
   }
 `;
 
@@ -29,6 +30,9 @@ export const Feature = styled.div`
   display: flex;
   justify-content: center;
   margin: 20px;
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+  }
 `;
 
 export const Card = styled.div`
