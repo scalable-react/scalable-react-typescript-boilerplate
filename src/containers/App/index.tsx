@@ -3,7 +3,7 @@ import * as AppActionCreators from './actions';
 import { NavBar, Footer, Header, Paragraph, SvgIcon, Anchor } from 'components';
 const connect = require('react-redux').connect;
 const bindActionCreators = require('redux').bindActionCreators;
-import { Author } from './styles';
+import { Author, Main } from './styles';
 
 interface IAppProps extends React.Props<any> {
   children: any;
@@ -51,7 +51,7 @@ class App extends React.Component<IAppProps, any> {
   }
   public render() {
     return (
-      <main>
+      <Main>
         <NavBar
           links={this.props.navLinks}
           logoText={this.props.logoText}
@@ -76,7 +76,7 @@ class App extends React.Component<IAppProps, any> {
             </SvgIcon>
           </Anchor>
         </Footer>
-      </main>
+      </Main>
     );
   }
 }

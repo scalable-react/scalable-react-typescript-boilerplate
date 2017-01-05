@@ -2,6 +2,7 @@ import * as React from 'react';
 const Img = require('./styles').Img;
 
 export enum ImageSize {
+  xxsmall = 100,
   xsmall = 200,
   small = 300,
   medium = 400,

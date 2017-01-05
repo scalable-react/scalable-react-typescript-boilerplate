@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Docs, Features } from 'containers';
+import { ImageSize } from 'components/Image';
 const { Container, HeroImage } = require('./styles');
 import { Header, Image, Hero, Button, Anchor } from 'components';
 
@@ -11,6 +12,7 @@ class Home extends React.Component<any, any> {
           <Hero>
             <HeroImage>
               <Image
+                size={ImageSize.xxsmall}
                 alt="Typescript logo"
                 src="https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png"
               />

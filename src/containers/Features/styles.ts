@@ -20,6 +20,7 @@ export const FeatureSectionInner = styled.div`
   padding: 60px 120px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    padding: 20px;
   }
 `;
 

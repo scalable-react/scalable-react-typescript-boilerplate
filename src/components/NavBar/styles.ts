@@ -5,6 +5,7 @@ export const Nav = styled.nav`
   background: #0a0a0a;
   color: #fefefe;
   padding: .5rem;
+  box-sizing: border-box;
 `;
 
 export const InnerNav = styled.div`
