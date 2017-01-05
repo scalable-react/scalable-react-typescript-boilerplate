@@ -47,7 +47,7 @@ class Features extends React.Component<any, any> {
           </FeatureSectionInner>
         </FeaturesSection>
         <FeaturesSection id="features-section-two" background="#e6e8ec">
-          <FeatureSectionInner>
+          <FeatureSectionInner reverse>
             <Feature>
               <Card>
                 <Header textAlign="left" color="black">Styled Components</Header>
@@ -81,7 +81,7 @@ class Features extends React.Component<any, any> {
           </FeatureImage>
         </FeaturesSection>
         <FeaturesSection id="features-section-three" background="#f3f3f3">
-          <FeatureSectionInner reverse>
+          <FeatureSectionInner>
             <Feature>
               <Image
                 size={ImageSize.small}
