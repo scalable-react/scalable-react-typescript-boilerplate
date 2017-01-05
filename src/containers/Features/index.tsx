@@ -49,13 +49,6 @@ class Features extends React.Component<any, any> {
         <FeaturesSection id="features-section-two" background="#e6e8ec">
           <FeatureSectionInner>
             <Feature>
-              <Image
-                size={ImageSize.small}
-                alt="Styled-components logo"
-                src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc.png?raw=true"
-              />
-            </Feature>
-            <Feature>
               <Card>
                 <Header textAlign="left" color="black">Styled Components</Header>
                 <Markdown
@@ -71,6 +64,13 @@ class Features extends React.Component<any, any> {
                 </Anchor>
               </Card>
             </Feature>
+            <Feature>
+              <Image
+                size={ImageSize.small}
+                alt="Styled-components logo"
+                src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc.png?raw=true"
+              />
+            </Feature>
           </FeatureSectionInner>
           <FeatureImage>
             <Image
@@ -83,6 +83,13 @@ class Features extends React.Component<any, any> {
         <FeaturesSection id="features-section-three" background="#f3f3f3">
           <FeatureSectionInner reverse>
             <Feature>
+              <Image
+                size={ImageSize.small}
+                alt="feature-first logo"
+                src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first.png?raw=true"
+              />
+            </Feature>
+            <Feature>
               <Card>
                 <Header textAlign="left" color="black">Feature First</Header>
                 <Markdown
@@ -90,13 +97,7 @@ class Features extends React.Component<any, any> {
                 />
               </Card>
             </Feature>
-            <Feature>
-              <Image
-                size={ImageSize.small}
-                alt="feature-first logo"
-                src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first.png?raw=true"
-              />
-            </Feature>
+
           </FeatureSectionInner>
           <FeatureImage>
             <Image
