@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const FeaturesSection = styled.section`
   width: 100%;
-  background: ${props => props.background}
+  background: ${(props) => props.background}
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@ export const FeatureSectionInner = styled.div`
   max-width: 1000px;
   padding: 60px 120px;
   @media screen and (max-width: 768px) {
-    flex-wrap: ${props => props.reverse ? 'wrap-reverse' : 'wrap'};
+    flex-wrap: ${(props) => props.reverse ? 'wrap-reverse' : 'wrap'};
     padding: 60px 20px;
     padding-top:
   }

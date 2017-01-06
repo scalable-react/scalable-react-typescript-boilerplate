@@ -20,12 +20,12 @@ export const initialState: IAppState = {
   isMobile: false,
   navLinks: [
     {
-      text: 'Home',
-      url: '/',
+      text: 'Docs',
+      url: '/docs',
     },
     {
-      text: 'Documentation',
-      url: '/docs',
+      text: 'About',
+      url: '/about',
     },
   ],
   logoText: 'React + TypeScript',
