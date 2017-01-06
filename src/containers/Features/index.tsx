@@ -38,7 +38,7 @@ class Features extends React.Component<any, any> {
                   href="http://www.typescriptlang.org/docs/tutorial.html"
                 >
                   <Button color="#c05b4d">
-                    Get Started
+                    View Website
                   </Button>
                 </Anchor>
               </Card>
