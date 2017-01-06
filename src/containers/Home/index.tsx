@@ -39,7 +39,7 @@ class Home extends React.Component<any, any> {
           </Hero>
         </section>
         <Features />
-        <Section id="get-started" backgroundColor="#e6e8ec">
+        <Section id="get-started" backgroundColor="#f3f3f3">
           <GetStartedButtons>
             <Anchor
               color="#fff"
@@ -57,7 +57,7 @@ class Home extends React.Component<any, any> {
             </Anchor>
             <Anchor
               color="#fff"
-              href="https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png"
+              href="https://github.com/RyanCCollins/scalable-react-ts-boilerplate"
             >
               <Button
                 style={{ margin: 10 }}
