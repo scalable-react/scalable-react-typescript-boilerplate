@@ -3,9 +3,9 @@ import { Provider } from 'react-redux';
 import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
 import { App, Home, Docs, About } from 'containers';
 import store, { history } from './store';
-const { initialize, set, pageview } = require('react-ga');
+const ReactGA = require('react-ga');
 
-initialize('UA-89939143-1');
+ReactGA.initialize('UA-89939143-1');
 
 export const routes = (
   <Route path="/" component={App}>
@@ -19,9 +19,11 @@ const RouterApp = () => (
   <Provider store={store}>
     <ReactRouter
       onUpdate={() => { // tslint:disable jsx-no-lambda
-        window.scrollTo(0, 0);
-        set({ page: window.location.pathname });
-        pageview(window.location.pathname);
+        if (window) {
+          window.scrollTo(0, 0);
+          ReactGA.set({ page: window.location.pathname });
+          ReactGA.pageview(window.location.pathname);
+        }
       }}
       history={history}
     >
