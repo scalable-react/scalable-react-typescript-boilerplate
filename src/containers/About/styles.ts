@@ -15,6 +15,10 @@ export const AboutSection = styled.section`
 `;
 
 export const AboutSectionInner = styled.div`
-  padding: 60px 120px;
+  padding: 30px 60px;
   flex-grow: 1;
+`;
+
+export const StyledHr = styled.hr`
+  border-top: 4px solid;
 `;
