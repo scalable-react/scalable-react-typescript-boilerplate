@@ -7,6 +7,14 @@ const ReactGA = require('react-ga');
 
 ReactGA.initialize('UA-89939143-1');
 
+const logPage = () => {
+  if (window) {
+    window.scrollTo(0, 0);
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  }
+};
+
 export const routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Home}/>
@@ -18,13 +26,7 @@ export const routes = (
 const RouterApp = () => (
   <Provider store={store}>
     <ReactRouter
-      onUpdate={() => { // tslint:disable jsx-no-lambda
-        if (window) {
-          window.scrollTo(0, 0);
-          ReactGA.set({ page: window.location.pathname });
-          ReactGA.pageview(window.location.pathname);
-        }
-      }}
+      onUpdate={logPage}
       history={history}
     >
       {routes}
