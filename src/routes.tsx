@@ -5,7 +5,9 @@ import { App, Home, Docs, About } from 'containers';
 import store, { history } from './store';
 const ReactGA = require('react-ga');
 
-ReactGA.initialize('UA-89939143-1');
+if (window) {
+  ReactGA.initialize('UA-89939143-1');
+}
 
 const logPage = () => {
   if (window) {
