@@ -3,6 +3,7 @@ import Home from './Home';
 import Docs from './Docs';
 import Features from './Features';
 import About from './About';
+import TodoApp from './TodoApp';
 
 export {
   App,
@@ -10,4 +11,5 @@ export {
   Docs,
   Features,
   About,
+  TodoApp,
 };
