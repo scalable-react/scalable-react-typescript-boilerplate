@@ -5,12 +5,12 @@ import { App, Home, Docs, About } from 'containers';
 import store, { history } from './store';
 const ReactGA = require('react-ga');
 
-if (window) {
+if (typeof window !== 'undefined') {
   ReactGA.initialize('UA-89939143-1');
 }
 
 const logPage = () => {
-  if (window) {
+  if (typeof window !== 'undefined') {
     window.scrollTo(0, 0);
     ReactGA.set({ page: window.location.pathname });
     ReactGA.pageview(window.location.pathname);
