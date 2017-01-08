@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Article, Headline } from 'components';
+import { Article, Headline, LoadingIndicator } from 'components';
 import * as DocsActionCreators from './actions';
 import { selectError, selectIsLoading, selectMarkdownContent } from './selectors';
 const connect = require('react-redux').connect;
@@ -42,7 +42,7 @@ class Docs extends React.Component<any, any> {
           Documentation
         </Headline>
         {error && <p>{error}</p>}
-        {isLoading && <p>Loading...</p>}
+        <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&
           <Article content={markdownContent} />
         }

@@ -8,8 +8,9 @@ import Footer from './Footer';
 import Paragraph from './Paragraph';
 import SvgIcon from './SvgIcon';
 import Anchor from './Anchor';
-import Markdown from './Markdown'
+import Markdown from './Markdown';
 import Headline from './Headline';
+import LoadingIndicator from './LoadingIndicator';
 
 export {
   Header,
@@ -24,4 +25,5 @@ export {
   Anchor,
   Markdown,
   Headline,
+  LoadingIndicator,
 };

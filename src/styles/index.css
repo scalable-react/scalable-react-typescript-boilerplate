@@ -23,3 +23,71 @@ a {
   line-height: inherit;
   cursor: pointer;
 }
+
+.dizzy-gillespie {
+  filter: saturate(3);
+  width: 0.1px;
+  height: 0.1px;
+  border: 30px solid transparent;
+  border-radius: 5px;
+  animation: loader 3s ease-in infinite, spin 1s linear infinite;
+}
+
+.dizzy-gillespie::before {
+  filter: saturate(0.3);
+  display: block;
+  position: absolute;
+  z-index: -1;
+  margin-left: -30px;
+  margin-top: -30px;
+  content: '';
+  height: 0.1;
+  width: 0.1;
+  border: 30px solid transparent;
+  border-radius: 5px;
+  animation: loader 2s ease-in infinite reverse, spin 0.8s linear infinite reverse;
+}
+
+.dizzy-gillespie::after {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  margin-left: -10px;
+  margin-top: -10px;
+  content: '';
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+@keyframes loader {
+  0% {
+    border-bottom-color: transparent;
+    border-top-color: #865CD6;
+  }
+  25% {
+    border-left-color: transparent;
+    border-right-color: #DC2878;
+  }
+  50% {
+    border-top-color: transparent;
+    border-bottom-color: #00CCEB;
+  }
+  75% {
+    border-right-color: transparent;
+    border-left-color: #DC2878;
+  }
+  100% {
+    border-bottom-color: transparent;
+    border-top-color: #865CD6;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
