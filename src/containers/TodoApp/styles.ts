@@ -6,6 +6,12 @@ export const Container = styled.div`
   width: 100%;
 `;
 
+export const AboutSection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const InnerContainer = styled.div`
   line-height: 1.4em;
   color: #4d4d4d;
@@ -15,6 +21,7 @@ export const InnerContainer = styled.div`
   font-smoothing: antialiased;
   font-weight: 300;
   padding-top: 130px;
+  min-height: 100vh;
 `;
 
 export const Section = styled.section`
@@ -98,4 +105,13 @@ export const DeleteButton = styled.button`
   &:hover {
     color: #af5b5e;
   }
+`;
+
+export const H1 = styled.h1`
+  text-align: center;
+  font-size: 48px;
+  margin: 0;
+  padding-top: 60px;
+  text-align: center;
+  color: #000000;
 `;
