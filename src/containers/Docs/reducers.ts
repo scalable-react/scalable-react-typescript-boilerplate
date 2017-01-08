@@ -17,7 +17,7 @@ export const initialState: IDocsState = {
   isLoading: false,
 };
 
-const docsReducer = (state: IAppState = initialState, action: IAction<any>): IDocsState => {
+const docsReducer = (state: IDocsState = initialState, action: IAction<any>): IDocsState => {
   switch (action.type) {
     case types.LOAD_INTIATION:
       return Object.assign({}, state, {
