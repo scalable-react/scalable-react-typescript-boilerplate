@@ -6,12 +6,6 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const AboutSection = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const InnerContainer = styled.div`
   line-height: 1.4em;
   color: #4d4d4d;

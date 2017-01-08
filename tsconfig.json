@@ -14,9 +14,6 @@
   "include": [
     "src/**/*"
   ],
-  "paths": {
-    "redux-thunk": ["./config/types/typings.d.ts"]
-  },
   "exclude": [
     "node_modules"
   ]
