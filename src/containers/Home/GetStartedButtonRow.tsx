@@ -21,7 +21,7 @@ const GetStartedButtonRow = () =>
     </Anchor>
     <Anchor
       color="#fff"
-      href="https://github.com/RyanCCollins/scalable-react-ts-boilerplate"
+      href="/todo-app"
     >
       <Button
         style={{ margin: 10 }}
@@ -30,7 +30,7 @@ const GetStartedButtonRow = () =>
         backgroundColor="#c05b4d"
         borderColor="#732419"
       >
-        View the code
+        View Example App
       </Button>
     </Anchor>
   </GetStartedButtons>;
