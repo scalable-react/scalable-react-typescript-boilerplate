@@ -5,15 +5,15 @@ const selectDocs = () => (state: IInitialState) => state.docs;
 
 export const selectError = createSelector(
   selectDocs(),
-  (docs) => docs.error
+  (docs) => docs.error,
 );
 
 export const selectIsLoading = createSelector(
   selectDocs(),
-  (docs) => docs.isLoading
+  (docs) => docs.isLoading,
 );
 
 export const selectMarkdownContent = createSelector(
   selectDocs(),
-  (docs) => docs.markdownContent
+  (docs) => docs.markdownContent,
 );
