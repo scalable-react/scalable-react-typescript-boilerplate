@@ -22,3 +22,9 @@ export const AboutSectionInner = styled.div`
 export const StyledHr = styled.hr`
   border-top: 4px solid;
 `;
+
+export const AvatarContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 30px 60px;
+`;

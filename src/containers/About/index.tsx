@@ -1,6 +1,16 @@
 import * as React from 'react';
-import { Headline, Markdown, Image, Paragraph } from 'components';
-const { Container, AboutSection, AboutSectionInner, StyledHr } = require('./styles');
+import {
+  Headline,
+  Markdown,
+  Image,
+  Paragraph,
+  Avatar } from 'components';
+const {
+  Container,
+  AboutSection,
+  AboutSectionInner,
+  StyledHr,
+  AvatarContainer } = require('./styles');
 const about = require('./about').default;
 
 class About extends React.Component<any, any> {
@@ -26,6 +36,10 @@ class About extends React.Component<any, any> {
             Team Members
             <StyledHr/>
           </Headline>
+          <AboutSectionInner>
+            <Avatar avatarUrl='https://avatars0.githubusercontent.com/u/13810084?v=3&s=460' />
+            <Avatar avatarUrl='https://avatars1.githubusercontent.com/u/19292575?v=3&s=460' />
+          </AboutSectionInner>
         </AboutSection>
       </Container>
     );
