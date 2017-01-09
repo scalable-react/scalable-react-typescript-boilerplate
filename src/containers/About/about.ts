@@ -1,6 +1,6 @@
 export default {
   aboutContent: `
-# Scalable React Boilerplate
+<h1> Scalable React Boilerplate </h1>
 
 The boilerplate aims to follow best practices for building highly scalable and reusable apps and component libraries with React and cutting edge JavaScript.
 
