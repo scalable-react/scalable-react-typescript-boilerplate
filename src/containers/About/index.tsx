@@ -7,7 +7,7 @@ class About extends React.Component<any, any> {
   public render() {
     return (
       <Container>
-        <AboutSection>
+        <AboutSection id="about-section" background="#f3f3f3">
           <Headline textAlign="left">
             About
             <StyledHr />
