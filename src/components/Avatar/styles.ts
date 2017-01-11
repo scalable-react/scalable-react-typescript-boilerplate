@@ -20,4 +20,5 @@ export const AvatarDiv = styled.div`
 
 export const AvatarName = styled.p`
   margin: 3px;
+  font-size: 18px;
 `;
