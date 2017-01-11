@@ -3,7 +3,7 @@ const styled = require('styled-components').default;
 export const AvatarContainer = styled.div`
   padding: 3px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
@@ -19,6 +19,5 @@ export const AvatarDiv = styled.div`
 `;
 
 export const AvatarName = styled.p`
-  font-size: 12px;
   margin: 3px;
 `;

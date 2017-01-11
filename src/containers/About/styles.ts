@@ -4,7 +4,6 @@ export const Container = styled.div`
   min-height: calc(100vh - 54px);
   width: 100vw;
   display: flex;
-  flex-direction: column;
 `;
 
 export const AboutSection = styled.section`

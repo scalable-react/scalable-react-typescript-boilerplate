@@ -37,8 +37,8 @@ class About extends React.Component<any, any> {
             <StyledHr/>
           </Headline>
           <AboutSectionInner>
-            <Avatar avatarUrl='https://avatars0.githubusercontent.com/u/13810084?v=3&s=460' />
-            <Avatar avatarUrl='https://avatars1.githubusercontent.com/u/19292575?v=3&s=460' />
+            <Avatar name="Ryan C. Collins" avatarUrl='https://avatars0.githubusercontent.com/u/13810084?v=3&s=460' />
+            <Avatar name="Abhishek Ghosh" avatarUrl='https://avatars1.githubusercontent.com/u/19292575?v=3&s=460' />
           </AboutSectionInner>
         </AboutSection>
       </Container>

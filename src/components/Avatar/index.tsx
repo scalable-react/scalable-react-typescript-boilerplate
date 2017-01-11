@@ -1,5 +1,5 @@
 import * as React from 'react';
-const { AvatarContainer, AvatarDiv, AvatarName } = require('./styles').AvatarDiv;
+const { AvatarContainer, AvatarDiv, AvatarName } = require('./styles');
 
 interface IProps extends React.Props<Avatar> {
   avatarUrl: string;
@@ -17,10 +17,12 @@ class Avatar extends React.Component<IProps, any> {
       name
     } = this.props;
     return (
-
-
+      <AvatarContainer>
+        <AvatarName>
+          {name}
+        </AvatarName>
         <AvatarDiv avatarUrl={avatarUrl} />
-
+      </AvatarContainer>
     );
   }
 }
