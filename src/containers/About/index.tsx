@@ -17,6 +17,7 @@ const {
   Github
 } = require('./styles');
 const about = require('./about').default;
+import contributors from './contributors';
 
 class About extends React.Component<any, any> {
   public render() {
@@ -42,35 +43,22 @@ class About extends React.Component<any, any> {
             <StyledHr/>
           </Headline>
           <AboutSectionInner>
-            <AvatarContainer>
-              <Avatar
-                name="Ryan C. Collins"
-                avatarUrl='https://avatars0.githubusercontent.com/u/13810084?v=3&s=460'
-              />
-              <Div>
-                <Markdown content={`${about.aboutRyan}`} />
-              </Div>
-              <Div>
-                <Anchor href="http://github.com/RyanCCollins">
-                  <Github />
-                </Anchor>
-              </Div>
-            </AvatarContainer>
-            
-            <AvatarContainer>
-              <Avatar
-                name="Abhishek Ghosh"
-                avatarUrl='https://raw.githubusercontent.com/ghoshabhi/cdn/master/profile_ag.jpg'
-              />
-              <Div>
-                <Markdown content={`${about.aboutAbhi}`} />
-              </Div>
-              <Div>
-                <Anchor href="https://github.com/ghoshabhi">
-                  <Github />
-                </Anchor>
-              </Div>
-            </AvatarContainer>
+            {contributors.map(contributor =>
+              <AvatarContainer>
+                <Avatar
+                  name={contributor.name}
+                  avatarUrl={contributor.avatar}
+                />
+                <Div>
+                  <Markdown content={contributor.bio} />
+                </Div>
+                <Div>
+                  <Anchor href={contributor.github}>
+                    <Github />
+                  </Anchor>
+                </Div>
+              </AvatarContainer>
+            )}
           </AboutSectionInner>
         </AboutSection>
       </Container>
