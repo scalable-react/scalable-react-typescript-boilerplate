@@ -18,10 +18,10 @@ class Avatar extends React.Component<IProps, any> {
     } = this.props;
     return (
       <AvatarContainer>
+        <AvatarDiv avatarUrl={avatarUrl} />
         <AvatarName>
           {name}
         </AvatarName>
-        <AvatarDiv avatarUrl={avatarUrl} />
       </AvatarContainer>
     );
   }

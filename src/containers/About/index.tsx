@@ -5,7 +5,9 @@ import {
   Image,
   Paragraph,
   Avatar,
-  Anchor } from 'components';
+  Anchor,
+  Article,
+} from 'components';
 const {
   Container,
   AboutSection,
@@ -14,7 +16,9 @@ const {
   AvatarContainer,
   Div,
   Divider,
-  Github
+  Github,
+  Card,
+  CardFooter,
 } = require('./styles');
 const about = require('./about').default;
 import contributors from './contributors';
@@ -23,41 +27,40 @@ class About extends React.Component<any, any> {
   public render() {
     return (
       <Container>
-        <AboutSection id="about-section" background="#f3f3f3">
+        <AboutSection id="about-section-1">
           <Headline textAlign="left">
             About
             <StyledHr />
           </Headline>
           <AboutSectionInner>
-            <Paragraph
-              fontSize={36}
-              color={'black'}
-            >
-              <Markdown content={`${about.aboutContent}`} />
-            </Paragraph>
+            <Article
+              content={`${about.aboutContent}`}
+            />
           </AboutSectionInner>
         </AboutSection>
-        <AboutSection>
+        <AboutSection id="about-section-two" padBottom>
           <Headline>
             Team Members
             <StyledHr/>
           </Headline>
           <AboutSectionInner>
             {contributors.map(contributor =>
-              <AvatarContainer>
-                <Avatar
-                  name={contributor.name}
-                  avatarUrl={contributor.avatar}
-                />
-                <Div>
-                  <Markdown content={contributor.bio} />
-                </Div>
-                <Div>
-                  <Anchor href={contributor.github}>
-                    <Github />
-                  </Anchor>
-                </Div>
-              </AvatarContainer>
+              <Card>
+                <AvatarContainer>
+                  <Avatar
+                    name={contributor.name}
+                    avatarUrl={contributor.avatar}
+                  />
+                  <Div>
+                    <Markdown content={contributor.bio} />
+                  </Div>
+                  <CardFooter>
+                    <Anchor href={contributor.github}>
+                      <Github />
+                    </Anchor>
+                  </CardFooter>
+                </AvatarContainer>
+              </Card>
             )}
           </AboutSectionInner>
         </AboutSection>

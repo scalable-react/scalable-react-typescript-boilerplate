@@ -1,6 +1,6 @@
 export default {
   aboutContent: `
-# Scalable React Boilerplate
+# Scalable React TypeScript Boilerplate
 
 The boilerplate aims to follow best practices for building highly scalable and reusable apps and component libraries with React and cutting edge JavaScript.
 
@@ -9,7 +9,7 @@ You can read more about the organizational strategy used in this app in [this Me
 We incorporate an ESLint configuration and follow strictly the [AirBnb JS & JSX style guides](https://github.com/airbnb/javascript).
 `,
 
-aboutRyan: `Passionate Software Engineer, specializing in cutting-edge front end / user interface technologies. Incorporating the latest technologies to build highly reactive UI components, progressive web applications, scalable back end APIs and more, focusing on design patterns, style and testability.`,
+aboutRyan: `Hi, I'm Ryan. I’m a software engineer working on building the web one component at a time.  I am a UI / UX Engineer on the Grommet UX team, building the world's most advanced UX framework. I'm also an avid functional programmer and a student of Deep Learning / AI.`,
 
 aboutAbhi: `I am a Full Stack Engineer focussing on newest front-end and scalable back-end technologies. My keen area of interests are React, Redux, GraphQL, Google App Engine, Flask, Python and NodeJS to name a few.`,
 };
