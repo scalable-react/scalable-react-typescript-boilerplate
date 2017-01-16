@@ -45,7 +45,7 @@ class About extends React.Component<any, any> {
           </Headline>
           <AboutSectionInner>
             {contributors.map((contributor, index) =>
-              <Card key = {index}>
+              <Card key={index}>
                 <AvatarContainer>
                   <Avatar
                     name={contributor.name}
