@@ -11,8 +11,10 @@ import Anchor from './Anchor';
 import Markdown from './Markdown';
 import Headline from './Headline';
 import LoadingIndicator from './LoadingIndicator';
+import Avatar from './Avatar';
 
 export {
+  Avatar,
   Header,
   Image,
   NavBar,
