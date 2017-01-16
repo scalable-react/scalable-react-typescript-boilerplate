@@ -1,6 +1,6 @@
 import * as React from 'react';
-const Nav = require('./styles').Nav;
 const {
+  Nav,
   InnerNav,
   LeftMenu,
   LeftMenuText,
