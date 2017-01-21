@@ -1,5 +1,7 @@
 # Scalable React TS Boilerplate
 
+Checkout [our website](https://scalable-react-ts-boilerplate.herokuapp.com/) for documentation and examples.
+
 ## Background Info
 
 This project was initially inspired by the [Scalable React Boilerplate](https://github.com/RyanCCollins/scalable-react-boilerplate). It inherits the [Feature-First](https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.8nerdsqhd) organizational pattern.

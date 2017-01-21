@@ -55,7 +55,6 @@ class TodoApp extends React.Component<any, ITodoAppState> {
     });
   }
   private handleDeletion(i) {
-    console.log(`clicked handleDeletion with ${i}`);
     const todos = [
       ...this.state.todos.slice(0, i),
       ...this.state.todos.slice(i + 1),
