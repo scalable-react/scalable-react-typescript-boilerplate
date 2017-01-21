@@ -31,6 +31,10 @@ class TodoApp extends React.Component<any, ITodoAppState> {
   private handleAddTodo(e) {
     if (e.key === 'Enter') {
       e.preventDefault();
+      const { input } = this.state;
+      if (!input) {
+        return;
+      }
       const newTodos = [
         ...this.state.todos,
         {

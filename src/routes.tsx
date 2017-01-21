@@ -32,9 +32,8 @@ const RouterApp = () => (
     <ReactRouter
       onUpdate={logPage}
       history={history}
-    >
-      {routes}
-    </ReactRouter>
+      routes={routes}
+    />
   </Provider>
 );
 

@@ -16,7 +16,7 @@ From the root of the project directory, run `yarn` if you have yarn installed gl
 `npm install`.
 
 3. Start the Development Server
-Run `npm run start` then browse http://localhost:3000 to see your running app.
+Run `npm run start` then browse http://localhost:1337 to see your running app.
 
 ## What is Feature First?
 In most projects and frameworks, files are organized in a File type first fashion. For example, your tests exist in a test folder, your styles in a styles folder. This boilerplate takes a different approach.

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import RouterApp from './routes';
+import RouterApp, { routes } from './routes';
 const { AppContainer } = require('react-hot-loader');
 import './styles/index.css';
 
@@ -16,8 +16,8 @@ render(
 );
 
 if (module.hot) {
-  module.hot.accept('./containers/App', () => {
-    const NextApp = require('./containers/App').default;
+  module.hot.accept('./routes', () => {
+    const NextApp = require('./routes').default;
     render(
       <AppContainer>
          <NextApp />
