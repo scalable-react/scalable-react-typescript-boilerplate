@@ -1,0 +1,11 @@
+{{#if wantFlowTypes}}
+/* @flow */
+{{/if}}
+import { createSelector } from 'reselect';
+
+export const select{{ properCase name }} = () => (state) => state.{{ properCase name }};
+
+export const selectMyProp = createSelector(
+  select{{ properCase name }}(),
+  ({{ camelCase name }}) => {{ camelCase name }}.myProp
+);

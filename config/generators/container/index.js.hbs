@@ -1,0 +1,68 @@
+{{#if wantFlowTypes}}
+/* @flow */
+import React, { Component } from 'react';
+{{else}}
+import React, { Component, PropTypes } from 'react';
+{{/if}}
+import Box from 'grommet/components/Box';
+{{#if imports}}
+{{{ createImports imports }}}
+{{/if}}
+{{#if wantActionsAndReducer}}
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as {{ properCase name }}ActionCreators from './actions';
+{{/if}}
+{{#if wantSelectors}}
+import { selectMyProp } from './selectors';
+{{/if}}
+{{#if wantFlowTypes}}
+import type { {{ properCase name }}Props } from './flowTypes';
+{{/if}}
+
+class {{ properCase name }} extends Component { // eslint-disable-line react/prefer-stateless-function
+  {{#if wantFlowTypes}}
+  props: {{ properCase name }}Props;
+  {{/if}}
+  render() {
+    return (
+      <Box>
+
+      </Box>
+    );
+  }
+}
+
+{{#unless wantFlowTypes}}
+{{ properCase name }}.propTypes = {
+  // isLoading: PropTypes.bool.isRequired
+};
+{{/unless}}
+
+{{#if wantActionsAndReducer}}
+{{#if wantSelectors}}
+const mapStateToProps = (state) => ({
+  // myProp: selectMyProp(state)
+});
+{{else}}
+const mapStateToProps = (state) => ({
+  // myProp: state.myProp
+});
+{{/if}}
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(
+    {{ properCase name }}ActionCreators,
+    dispatch
+  )
+});
+{{/if}}
+
+{{#if wantActionsAndReducer}}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)({{ properCase name }});
+{{else}}
+export default {{ properCase name }};
+{{/if}}

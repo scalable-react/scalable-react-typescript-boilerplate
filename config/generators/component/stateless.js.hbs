@@ -1,0 +1,46 @@
+{{#if wantFlowTypes}}
+/* @flow */
+{{/if}}
+{{#if wantPropTypes}}
+import React, { PropTypes } from 'react';
+{{else}}
+import React from 'react';
+{{/if}}
+import Box from 'grommet/components/Box';
+{{#if imports}}
+{{{ createImports imports }}}
+{{/if}}
+
+{{#if wantFlowTypes}}
+export default function {{ properCase name }}(props: {}) {
+  return (
+    <Box>
+
+    </Box>
+  );
+}
+{{else if wantPropTypes}}
+{{#unless wantFlowTypes}}
+export default function {{ properCase name }}(props) {
+  return (
+    <Box>
+
+    </Box>
+  );
+}
+{{/unless}}
+{{else}}
+export default function {{ properCase name }}() {
+  return (
+    <Box>
+
+    </Box>
+  );
+}
+{{/if}}
+
+{{#if wantPropTypes}}
+{{ properCase name }}.propTypes = {
+
+};
+{{/if}}
