@@ -1,0 +1,18 @@
+import * as T from './constants';
+import { I{{ properCase name }}Action } from './reducer';
+
+export const loadDataInitiation = (): I{{ properCase name }}Action => ({
+  type: T.LOAD_DATA_INITIATION,
+});
+
+export const loadDataSuccess = (data: any): I{{ properCase name }}Action => ({
+  type: T.LOAD_DATA_SUCCESS,
+  data,
+});
+
+export const loadDataFailure = (
+  error: { message: string },
+): I{{ properCase name }}Action => ({
+  type: T.LOAD_DATA_FAILURE,
+  error,
+});

@@ -1,0 +1,93 @@
+import * as React from 'react';
+{{#if wantActionsAndReducer}}
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { I{{ properCase name }}State } from './reducer';
+import {
+  loadDataInitiation,
+  loadDataSuccess,
+  loadDataFailure,
+} from './actions';
+{{/if}}
+{{#if wantSelectors}}
+import {
+  selectIsLoading,
+  selectError,
+  selectData,
+} from './selectors';
+{{/if}}
+import { Heading, Section } from './styles';
+
+{{#unless wantActionsAndReducer}}
+interface I{{ properCase name }}PropTypes extends React.Props<any> {
+
+};
+
+{{/unless}}
+{{#if wantActionsAndReducer}}
+interface I{{ properCase name }}Props extends React.Props<any> {
+  isLoading: boolean;
+  error?: { message: string };
+  data?: any;
+};
+
+interface I{{ properCase name }}DispatchProps {
+  actions: {
+    loadDataInitiation: Function;
+    loadDataSuccess: Function;
+    loadDataFailure: Function;
+  };
+};
+
+type I{{ properCase name }}PropTypes = I{{ properCase name }}Props & I{{ properCase name }}DispatchProps;
+
+{{#if wantSelectors}}
+const mapStateToProps = (state: I{{ properCase name }}State): I{{ properCase name }}Props => ({
+  isLoading: selectIsLoading(state),
+  error: selectError(state),
+  data: selectData(state),
+});
+{{else}}
+const mapStateToProps = (state) => ({
+  isLoading: state.{{ camelCase name }}.isLoading,
+  error: state.{{ camelCase name }}.error,
+  data: state.{{ camelCase name }}.data,
+});
+{{/if}}
+
+const mapDispatchToProps = (dispatch): I{{ properCase name }}DispatchProps => ({
+  actions: bindActionCreators(
+    {
+      loadDataInitiation,
+      loadDataSuccess,
+      loadDataFailure,
+    },
+    dispatch,
+  )
+});
+
+{{/if}}
+{{#if wantActionsAndReducer}}
+class {{ properCase name }} extends React.Component<I{{ properCase name }}PropTypes, I{{ properCase name }}State> {
+{{else}}
+class {{ properCase name }} extends React.Component<I{{ properCase name }}PropTypes, any> {
+{{/if}}
+  public render() {
+    return (
+      <Section>
+        <Heading>
+          Best container ever!
+        </Heading>
+      </Section>
+    );
+  }
+}
+
+{{#if wantActionsAndReducer}}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)({{ properCase name }});
+{{else}}
+export default {{ properCase name }};
+{{/if}}

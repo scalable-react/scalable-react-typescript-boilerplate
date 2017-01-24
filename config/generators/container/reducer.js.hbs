@@ -1,0 +1,47 @@
+import * as T from './constants';
+
+export interface I{{ properCase name }}Action {
+  type: T.LOAD_DATA_INITIATION_TYPE |
+    T.LOAD_DATA_SUCCESS_TYPE |
+      T.LOAD_DATA_FAILURE_TYPE;
+  error?: { message: string };
+  data?: any;
+};
+
+export interface I{{ properCase name }}State {
+  isLoading: boolean;
+  error?: { message: string };
+  data?: any;
+};
+
+export const initialState: I{{ properCase name }}State = {
+  isLoading: false,
+  error: null,
+  data: null,
+};
+
+const {{ camelCase name }}Reducer = (
+  state: I{{ properCase name }}State = initialState,
+  action: I{{ properCase name }}Action,
+): I{{ properCase name }}State => {
+  switch (action.type) {
+    case T.LOAD_DATA_INITIATION:
+      return Object.assign({}, state, {
+        isLoading: true,
+      });
+    case T.LOAD_DATA_SUCCESS:
+      return Object.assign({}, state, {
+        isLoading: false,
+        data: action.data,
+      });
+    case T.LOAD_DATA_FAILURE:
+      return Object.assign({}, state, {
+        isLoading: false,
+        error: action.error,
+      });
+    default:
+      return state;
+  }
+};
+
+export default {{ camelCase name }}Reducer;
