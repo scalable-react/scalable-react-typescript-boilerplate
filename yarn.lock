@@ -4175,15 +4175,15 @@ react-ga@^2.1.2:
   dependencies:
     object-assign "^4.0.1"
 
-react-hot-loader@3.0.0-beta.2:
-  version "3.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-3.0.0-beta.2.tgz#4ebd8c709c9b83e75890231957ca4f122a075e74"
+react-hot-loader@3.0.0-beta.6:
+  version "3.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-3.0.0-beta.6.tgz#463fac0bfc8b63a8385258af20c91636abce75f4"
   dependencies:
     babel-template "^6.7.0"
     global "^4.3.0"
     react-deep-force-update "^2.0.1"
     react-proxy "^3.0.0-alpha.0"
-    redbox-react "^1.2.3"
+    redbox-react "^1.2.5"
     source-map "^0.4.4"
 
 react-markdown@^2.4.2:
@@ -4304,7 +4304,7 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-redbox-react@^1.2.3:
+redbox-react@^1.2.5:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/redbox-react/-/redbox-react-1.3.3.tgz#63ec9c2cb9c620c46e2b9f8543b4898f1b787e41"
   dependencies:
