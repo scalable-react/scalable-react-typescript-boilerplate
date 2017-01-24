@@ -5,7 +5,7 @@ interface IAction<P> {
   payload: P;
 };
 
-interface IAppState {
+export interface IAppState {
   isMobile: boolean;
   navLinks: [
     {

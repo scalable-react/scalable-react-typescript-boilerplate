@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
-import { App, Home, Docs, About } from 'containers';
 import store, { history } from './store';
+import { App, Home, Docs, About, TodoApp } from './containers';
+
 const ReactGA = require('react-ga');
 
 if (typeof window !== 'undefined') {
@@ -22,6 +23,7 @@ export const routes = (
     <IndexRoute component={Home}/>
     <Route path="/docs" component={Docs} />
     <Route path="/about" component={About} />
+    <Route path="/todo-app" component={TodoApp} />
   </Route>
 );
 
@@ -30,9 +32,8 @@ const RouterApp = () => (
     <ReactRouter
       onUpdate={logPage}
       history={history}
-    >
-      {routes}
-    </ReactRouter>
+      routes={routes}
+    />
   </Provider>
 );
 

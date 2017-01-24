@@ -1,3 +1,4 @@
+/* GENERATOR-IMPORT */
 import Header from './Header';
 import Image from './Image';
 import NavBar from './NavBar';
@@ -8,10 +9,14 @@ import Footer from './Footer';
 import Paragraph from './Paragraph';
 import SvgIcon from './SvgIcon';
 import Anchor from './Anchor';
-import Markdown from './Markdown'
+import Markdown from './Markdown';
 import Headline from './Headline';
+import LoadingIndicator from './LoadingIndicator';
+import Avatar from './Avatar';
 
 export {
+  /* GENERATOR-EXPORT */
+  Avatar,
   Header,
   Image,
   NavBar,
@@ -24,4 +29,5 @@ export {
   Anchor,
   Markdown,
   Headline,
+  LoadingIndicator,
 };

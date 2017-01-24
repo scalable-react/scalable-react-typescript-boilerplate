@@ -3,17 +3,16 @@ const path = require('path');
 const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'cheap-module-source-map',
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
+    'webpack-hot-middleware/client',
     './src/index.tsx'
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.js',
-    publicPath: '/dist',
+    publicPath: '/static/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],

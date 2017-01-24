@@ -1,34 +1,18 @@
-{{#if wantFlowTypes}}
-/* @flow */
-{{/if}}
 import * as T from './constants';
-{{#if wantFlowTypes}}
-import type { {{ properCase name }}Action } from './flowTypes';
+import { I{{ properCase name }}Action } from './reducer';
 
-export const loadDataInitiation = (): {{ properCase name }}Action => ({
-  type: T.LOAD_DATA_INITIATION
+export const loadDataInitiation = (): I{{ properCase name }}Action => ({
+  type: T.LOAD_DATA_INITIATION,
 });
 
-export const loadDataSuccess = (): {{ properCase name }}Action => ({
-  type: T.LOAD_DATA_SUCCESS
+export const loadDataSuccess = (data: any): I{{ properCase name }}Action => ({
+  type: T.LOAD_DATA_SUCCESS,
+  data,
 });
 
-export const loadDataFailure = (error: { message: string }): {{ properCase name }}Action => ({
+export const loadDataFailure = (
+  error: { message: string },
+): I{{ properCase name }}Action => ({
   type: T.LOAD_DATA_FAILURE,
-  error
+  error,
 });
-{{else}}
-
-export const loadDataInitiation = () => ({
-  type: T.LOAD_DATA_INITIATION
-});
-
-export const loadDataSuccess = () => ({
-  type: T.LOAD_DATA_SUCCESS
-});
-
-export const loadDataFailure = (error) => ({
-  type: T.LOAD_DATA_FAILURE,
-  error
-});
-{{/if}}

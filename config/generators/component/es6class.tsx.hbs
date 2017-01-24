@@ -1,0 +1,21 @@
+import * as React from 'react';
+import { Box } from './styles';
+
+interface I{{ properCase name }}Props extends React.Props<{{ properCase name }}> {
+  content: string;
+};
+
+class {{ properCase name }} extends React.Component<I{{ properCase name }}Props, any> {
+  public render() {
+    const {
+      content,
+    } = this.props;
+    return (
+      <Box>
+        {content}
+      </Box>
+    );
+  }
+}
+
+export default {{ properCase name }};

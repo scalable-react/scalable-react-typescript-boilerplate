@@ -1,11 +1,18 @@
-{{#if wantFlowTypes}}
-/* @flow */
-{{/if}}
 import { createSelector } from 'reselect';
 
-export const select{{ properCase name }} = () => (state) => state.{{ properCase name }};
+export const select{{ properCase name }} = () => (state) => state.{{ camelCase name }};
 
-export const selectMyProp = createSelector(
+export const selectIsLoading = createSelector(
   select{{ properCase name }}(),
-  ({{ camelCase name }}) => {{ camelCase name }}.myProp
+  ({{ camelCase name }}) => {{ camelCase name }}.isLoading,
+);
+
+export const selectError = createSelector(
+  select{{ properCase name }}(),
+  ({{ camelCase name }}) => {{ camelCase name }}.error,
+);
+
+export const selectData = createSelector(
+  select{{ properCase name }}(),
+  ({{ camelCase name }}) => {{ camelCase name }}.data,
 );

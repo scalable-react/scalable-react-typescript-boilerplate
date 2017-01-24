@@ -22,8 +22,7 @@ module.exports = {
       'react-router',
       'react-router-redux',
       'react-markdown',
-      'redux-thunk',
-      'redux'
+      'redux',
     ]
   },
   output: {
