@@ -1,5 +1,4 @@
 /* GENERATOR-IMPORT */
-import FooBar from './FooBar';
 import App from './App';
 import Home from './Home';
 import Docs from './Docs';
@@ -9,7 +8,6 @@ import TodoApp from './TodoApp';
 
 export {
   /* GENERATOR-EXPORT */
-  FooBar,
   App,
   Home,
   Docs,
