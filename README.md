@@ -1,4 +1,5 @@
 ![TypeScript](https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png)
+
 # Scalable React TS Boilerplate
 
 Checkout [our website](https://scalable-react-ts-boilerplate.herokuapp.com/) for documentation and examples.
