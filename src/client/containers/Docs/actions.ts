@@ -8,6 +8,10 @@ interface IAction<P> {
   payload?: P;
 }
 
+interface foo {
+  bar: number
+}
+
 export const loadInitiation = (): IAction<any> => ({
   type: types.LOAD_INTIATION,
 });

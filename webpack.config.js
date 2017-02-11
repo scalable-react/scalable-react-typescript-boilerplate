@@ -7,7 +7,7 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
-    './src/index.tsx'
+    './src/client/index.tsx'
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -17,8 +17,8 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
-      components: path.resolve(ROOT_PATH, 'src/components'),
-      containers: path.resolve(ROOT_PATH, 'src/containers'),
+      components: path.resolve(ROOT_PATH, 'src/client/components'),
+      containers: path.resolve(ROOT_PATH, 'src/client/containers'),
     },
   },
   module: {
@@ -27,7 +27,7 @@ module.exports = {
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'], include: path.join(__dirname, 'src') },
       { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.json$/, loader: 'json' },
-      { test: /\.md$/, loader: "html!markdown" },
+      { test: /\.md$/, loader: 'html!markdown' },
     ],
   },
   plugins: [
