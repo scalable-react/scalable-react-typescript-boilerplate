@@ -1,3 +1,4 @@
+/* GENERATOR-IMPORT */
 import Header from './Header';
 import Image from './Image';
 import NavBar from './NavBar';
@@ -14,6 +15,7 @@ import LoadingIndicator from './LoadingIndicator';
 import Avatar from './Avatar';
 
 export {
+  /* GENERATOR-EXPORT */
   Avatar,
   Header,
   Image,
