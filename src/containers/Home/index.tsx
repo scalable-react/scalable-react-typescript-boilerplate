@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Features } from 'containers';
 import { ImageSize } from 'components/Image';
 import { Header, Image, Hero } from 'components';
-const { Container, Section, HeroImage, HeadingContainer } = require('./styles');
+const { Container, Section, HeroLogo, HeroLogoRow, HeadingContainer } = require('./styles');
 const GetStartedButtonRow = require('./GetStartedButtonRow').default;
 
 class Home extends React.Component<any, any> {
@@ -11,13 +11,11 @@ class Home extends React.Component<any, any> {
       <Container>
         <section id="hero-section">
           <Hero>
-            <HeroImage>
-              <Image
-                size={ImageSize.xxsmall}
-                alt="Typescript logo"
-                src="https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png"
-              />
-            </HeroImage>
+            <HeroLogoRow>
+              <HeroLogo>
+                TS
+              </HeroLogo>
+            </HeroLogoRow>
             <HeadingContainer>
               <Header color="#007acc">
                 Scalable React TS Boilerplate

@@ -13,12 +13,21 @@ export const Section = styled.section`
   }
 `;
 
-export const HeroImage = styled.div`
-  display: flex;
-  align-items: center;
+export const HeroLogo = styled.div`
   margin-bottom: 20px;
   justify-content: center;
   height: 100px;
+  width: 100px;
+  background: #007acc;
+  color: white;
+  font-size: 68px;
+`;
+
+export const HeroLogoRow = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const HeadingContainer = styled.div`
