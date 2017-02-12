@@ -30,7 +30,7 @@ graphQlEntry(expressApp).then((app) => {
   if (debug) {
     app.use(morgan('combined'));
   }
-  app.use('/public', express.static(path.join(__dirname, '../public')));
+  app.use('/public', express.static(path.join(__dirname, '../../public')));
 
   app.use((req, res) => {
     match({ routes, location: req.url },
