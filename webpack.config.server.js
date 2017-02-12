@@ -28,4 +28,12 @@ module.exports = {
       { test: /\.md$/, loader: 'html!markdown' },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
+    }),
+    new webpack.DefinePlugin({
+      'process.env.API_URL': JSON.stringify(process.env.API_URL || 'http://localhost:1338/api')
+    }),
+  ]
 };
