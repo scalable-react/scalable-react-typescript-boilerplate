@@ -26,7 +26,8 @@ graphQlEntry(expressApp).then((app) => {
   // Need to set this to your api url
   const IP = process.env.IP || '0.0.0.0';
   const PORT = process.env.PORT || 1338;
-  const apiUrl = `http://${PORT}:${IP}/api`;
+  const API_URL = process.env.API_URL;
+  const apiUrl = API_URL || `http://${PORT}:${IP}/api`;
   const debug = process.env.DEBUG === 'true' || false;
   if (debug) {
     app.use(morgan('combined'));
