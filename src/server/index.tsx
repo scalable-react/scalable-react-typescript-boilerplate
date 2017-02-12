@@ -18,15 +18,15 @@ require('./db');
 
 const styleSheet = require('styled-components/lib/models/StyleSheet');
 const manifest = require('../../public/manifest.json');
-const apiUrl = process.env.API_URL || 'http://localhost:1338/api';
 
 const expressApp = express();
 graphQlEntry(expressApp).then((app) => {
   app.use(compression());
 
   // Need to set this to your api url
-  const IP = process.env.IP || 'localhost';
+  const IP = process.env.IP || '0.0.0.0';
   const PORT = process.env.PORT || 1338;
+  const apiUrl = `http://${PORT}:${IP}/api`;
   const debug = process.env.DEBUG === 'true' || false;
   if (debug) {
     app.use(morgan('combined'));
