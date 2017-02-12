@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Provider } from 'react-redux';
+import { ApolloProvider } from 'react-apollo';
 import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
+import client from './apolloClient';
 import store, { history } from './store';
-import { App, Home, Docs, About, TodoApp } from './containers';
+import { App, Home, Docs, About, TodoApp, Blog } from './containers';
 
 const ReactGA = require('react-ga');
 
@@ -20,21 +21,22 @@ const logPage = () => {
 
 export const routes = (
   <Route path="/" component={App}>
-    <IndexRoute component={Home}/>
+    <IndexRoute component={Home} />
     <Route path="/docs" component={Docs} />
     <Route path="/about" component={About} />
+    <Route path="/blog" component={Blog} />
     <Route path="/todo-app" component={TodoApp} />
   </Route>
 );
 
 const RouterApp = () => (
-  <Provider store={store}>
+  <ApolloProvider store={store} client={client}>
     <ReactRouter
       onUpdate={logPage}
       history={history}
       routes={routes}
     />
-  </Provider>
+  </ApolloProvider>
 );
 
 export default RouterApp;

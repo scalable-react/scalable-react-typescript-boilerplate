@@ -21,7 +21,7 @@ module.exports = {
       type: 'input',
       name: 'path',
       message: 'What directory would you like your container in? (relative)',
-      default: './src/containers',
+      default: './src/client/containers',
       validate: (value) => {
         return true;
       }
@@ -41,8 +41,8 @@ module.exports = {
   ],
   actions: (data) => {
     const containerPath = path.resolve(process.cwd(), `${data.path}/{{properCase name}}/`);
-    const rootPath = path.resolve(process.cwd(), `./src/containers/index.ts`);
-    const reducersPath = path.resolve(process.cwd(), './src/reducers.ts');
+    const rootPath = path.resolve(process.cwd(), `./src/client/containers/index.ts`);
+    const reducersPath = path.resolve(process.cwd(), './src/client/reducers.ts');
     const actions = [{
       type: 'add',
       path: `${containerPath}/index.tsx`,

@@ -1,5 +1,6 @@
-import { combineReducers } from 'redux';
+import { combineReducers, Reducer } from 'redux';
 import { routerReducer } from 'react-router-redux';
+import client from './apolloClient';
 /* GENERATOR-IMPORT */
 import app, { initialState as appState, IAppState } from 'containers/App/reducers';
 import docs, { initialState as docsState, IDocsState } from 'containers/Docs/reducers';
@@ -21,4 +22,5 @@ export const rootReducer = combineReducers({
   app,
   docs,
   routing: routerReducer,
+  apollo: client.reducer() as Reducer<any>,
 });

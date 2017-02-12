@@ -1,4 +1,5 @@
 /* GENERATOR-IMPORT */
+import Post from './Post';
 import Header from './Header';
 import Image from './Image';
 import NavBar from './NavBar';
@@ -16,6 +17,7 @@ import Avatar from './Avatar';
 
 export {
   /* GENERATOR-EXPORT */
+  Post,
   Avatar,
   Header,
   Image,

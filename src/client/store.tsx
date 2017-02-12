@@ -2,6 +2,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 import { rootReducer, initialState as clientState } from './reducers';
+import client from './apolloClient';
 
 const isClient = typeof document !== 'undefined';
 
@@ -19,7 +20,8 @@ function createThunkMiddleware() {
 }
 
 const thunk = createThunkMiddleware();
-const middleWare = applyMiddleware(thunk);
+const middlewares = [thunk, client.middleware()];
+const middleWare = applyMiddleware(...middlewares);
 
 const store = createStore(
   rootReducer,

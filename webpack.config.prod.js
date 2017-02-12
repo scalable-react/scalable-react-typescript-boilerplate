@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     main: [
-      './src/index.tsx'
+      './src/client/index.tsx'
     ],
     vendor: [
       'react',
@@ -37,8 +37,8 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
-      components: path.resolve(ROOT_PATH, 'src/components'),
-      containers: path.resolve(ROOT_PATH, 'src/containers'),
+      components: path.resolve(ROOT_PATH, 'src/client/components'),
+      containers: path.resolve(ROOT_PATH, 'src/client/containers'),
     },
   },
   module: {
@@ -53,7 +53,7 @@ module.exports = {
         }),
       },
       { test: /\.json$/, loader: 'json' },
-      { test: /\.md$/, loader: "html!markdown" },
+      { test: /\.md$/, loader: 'html!markdown' },
     ]
   },
   plugins: [

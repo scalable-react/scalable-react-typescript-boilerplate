@@ -1,4 +1,5 @@
 /* GENERATOR-IMPORT */
+import Blog from './Blog';
 import App from './App';
 import Home from './Home';
 import Docs from './Docs';
@@ -8,6 +9,7 @@ import TodoApp from './TodoApp';
 
 export {
   /* GENERATOR-EXPORT */
+  Blog,
   App,
   Home,
   Docs,

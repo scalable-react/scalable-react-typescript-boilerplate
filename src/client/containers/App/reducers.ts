@@ -27,6 +27,10 @@ export const initialState: IAppState = {
       text: 'About',
       url: '/about',
     },
+    {
+      text: 'Blog',
+      url: '/blog',
+    },
   ],
   logoText: 'React + TypeScript',
 };

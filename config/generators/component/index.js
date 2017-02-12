@@ -20,7 +20,7 @@ module.exports = {
       type: 'input',
       name: 'path',
       message: 'What directory would you like your component in? (relative)',
-      default: './src/components',
+      default: './src/client/components',
       validate: (value) => {
         return true;
       }
@@ -35,7 +35,7 @@ module.exports = {
   ],
   actions: (data) => {
     const componentPath = path.resolve(process.cwd(), `${data.path}/{{properCase name}}/`);
-    const rootPath = path.resolve(process.cwd(), `./src/components/index.ts`);
+    const rootPath = path.resolve(process.cwd(), `./src/client/components/index.ts`);
     const actions = [{
       type: 'add',
       path: `${componentPath}/index.tsx`,
