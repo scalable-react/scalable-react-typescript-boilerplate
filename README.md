@@ -34,15 +34,11 @@ This project embraces [styled-components](https://github.com/styled-components/s
 
 Check the components directory for examples.
 
-## File Structure
+## Full Stack
+This boilerplate contains setup to quickly get started with a Full Stack application.  Within the `src/` directory, you will find a server and a client folder.
+
+### Client File Structure
 ```
-├── README.md
-├── LICENSE
-├── index.html
-├── package.json
-├── yarn.lock
-├── webpack.config.js
-├── src/
 |   ├── components
 |   |   ├── Anchor
 |   |   |   ├── index.tsx
@@ -60,11 +56,31 @@ Check the components directory for examples.
 |   ├── routes.tsx
 |   ├── index.tsx
 |   └── styles
-├── .babelrc
-├── tsconfig.json
-├── server.js
-└── .gitignore
 ```
+
+### Server file structure
+```
+|   ├── db
+|   |   ├── models
+|   |   |   └── // etc.
+|   |   ├── utils
+|   |   |   └── // etc.
+|   |   └── index.ts
+|   ├── graph
+|   |   ├── mutations
+|   |   |   └── // etc.
+|   |   ├── queries
+|   |   |   └── // etc.
+|   |   ├── types
+|   |   |   └── // etc.
+|   |   ├── schema.json
+|   |   └── index.ts
+|   ├── index.tsx
+|   └── graphqlEntry.ts
+```
+
+## Apollo GraphQL
+Recently, we've added support for Apollo and GraphQL both server and client side.  The starter code in this repo demonstrates how to setup your GraphQL server.  The `/blog` route will show you a very simple example of loading data via Apollo Graphql.
 
 ## Included Components
 Included in this project are a few primitive components that you can use to bootstrap your next project.
