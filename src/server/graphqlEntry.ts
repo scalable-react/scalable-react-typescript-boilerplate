@@ -4,6 +4,7 @@ import fs from 'fs';
 import * as express from 'express';
 import { graphql } from 'graphql';
 import { introspectionQuery } from 'graphql/utilities';
+import bodyParser from 'body-parser';
 import { graphiqlExpress, graphqlExpress } from 'graphql-server-express';
 import schema from './graph';
 
@@ -27,6 +28,8 @@ function createSchema() {
 
 export default function graphqlEntry(app): Promise<express.Application> {
   return new Promise<express.Application>(async(res, rej) => {
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
     app.use('/api', graphqlExpress({
       schema,
     }));

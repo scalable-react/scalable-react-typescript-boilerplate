@@ -53,7 +53,7 @@ module.exports = {
         }),
       },
       { test: /\.json$/, loader: 'json' },
-      { test: /\.md$/, loader: "html!markdown" },
+      { test: /\.md$/, loader: 'html!markdown' },
     ]
   },
   plugins: [

@@ -1,17 +1,21 @@
 import * as React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
-import { Provider } from 'react-redux';
 import morgan from 'morgan';
 import express from 'express';
 import compression from 'compression';
+import path from 'path';
+import { ApolloProvider } from 'react-apollo';
 import store from '../client/store';
+import client from '../client/apolloClient';
 import { routes } from '../client/routes';
 import Html from '../client/containers/Html';
-import path from 'path';
 import graphQlEntry from './graphqlEntry';
 
+const env = require('node-env-file');
+env(path.join(process.cwd(), '.env'));
 require('./db');
+
 const styleSheet = require('styled-components/lib/models/StyleSheet');
 const manifest = require('../../public/manifest.json');
 
@@ -22,8 +26,10 @@ graphQlEntry(expressApp).then((app) => {
   // Need to set this to your api url
   const IP = process.env.IP || 'localhost';
   const PORT = process.env.PORT || 1338;
-
-  app.use(morgan('combined'));
+  const debug = process.env.DEBUG === 'true' || false;
+  if (debug) {
+    app.use(morgan('combined'));
+  }
   app.use('/public', express.static(path.join(__dirname, '../public')));
 
   app.use((req, res) => {
@@ -39,9 +45,9 @@ graphQlEntry(expressApp).then((app) => {
           const state = store.getState();
 
           const content = renderToString(
-            <Provider store={store}>
+            <ApolloProvider store={store} client={client}>
               <RouterContext {...renderProps} />
-            </Provider>,
+            </ApolloProvider>,
           );
           const html = (
             <Html

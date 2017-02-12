@@ -18,7 +18,7 @@
     "compile": "./node_modules/.bin/tsc",
     "setup:yarn": "yarn",
     "preserve": "npm run compile",
-    "serve": "cross-env NODE_ENV=server PORT=1337 node server.js",
+    "serve": "cross-env NODE_ENV=server node server.js",
     "postinstall": "npm run deploy",
     "generator": "plop --plopfile ./config/generators/cli.js"
   },
