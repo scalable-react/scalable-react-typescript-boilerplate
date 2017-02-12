@@ -14,3 +14,8 @@ export const Article = styled.article`
     padding: 20px;
   }
 `;
+
+export const Content = styled.div`
+  margin-top: 60px;
+  padding: 20px;
+`;

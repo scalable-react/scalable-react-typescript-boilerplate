@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Markdown, Image, Headline } from 'components';
 import { ImageSize } from 'components/Image';
-import { Article } from './styles';
+import { Article, Content } from './styles';
 
 export default function Post(props: {
   content: string;
@@ -11,11 +11,13 @@ export default function Post(props: {
   const { content, title, image } = props;
   return (
     <Article>
+      <Image alt={title} size={ImageSize.large} src={image} />
       <Headline>
         {title}
       </Headline>
-      <Image alt={title} size={ImageSize.xlarge} src={image} />
-      <Markdown content={content} />
+      <Content>
+        <Markdown content={content} />
+      </Content>
     </Article>
   );
 };
