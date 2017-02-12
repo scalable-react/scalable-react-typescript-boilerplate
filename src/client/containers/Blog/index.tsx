@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { Article, Headline, LoadingIndicator } from 'components';
+import { Headline, LoadingIndicator, Post } from 'components';
 import POST_QUERY from './posts.graphql';
-import { BlogLayout } from './styles';
+import { BlogLayout, StyledHr } from './styles';
 
 interface IPost {
   tags: Array<{ name: string }>;
@@ -27,10 +27,11 @@ class Blog extends React.Component<IBlogPropTypes, any> {
         <Headline>
           Posts
         </Headline>
+        <StyledHr />
         {error && <p>{error}</p>}
         <LoadingIndicator isLoading={loading} />
-        {posts && posts.map((post, i) =>
-          <Article key={i} content={post.content} />,
+        {posts && posts.map((item, i) =>
+          <Post key={i} {...item} />,
         )}
       </BlogLayout>
     );
@@ -38,9 +39,9 @@ class Blog extends React.Component<IBlogPropTypes, any> {
 }
 
 const withData = graphql(POST_QUERY, {
-  props: ({ data: { loading, posts, error } }) => ({
+  props: ({ data: { loading, post, error } }) => ({
     loading,
-    posts,
+    posts: post,
     error,
   }),
 });

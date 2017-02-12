@@ -10,7 +10,7 @@ export const AboutSection = styled.section`
   align-items: center;
   flex-direction: column;
   background-color: #f5f5f5;
-  padding-bottom: ${props => props.padBottom ? 100 : 0}px;
+  padding-bottom: ${(props) => props.padBottom ? 100 : 0}px;
 `;
 
 export const AboutSectionInner = styled.div`

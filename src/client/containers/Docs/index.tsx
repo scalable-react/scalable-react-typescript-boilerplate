@@ -4,7 +4,7 @@ import * as DocsActionCreators from './actions';
 import { selectError, selectIsLoading, selectMarkdownContent } from './selectors';
 const connect = require('react-redux').connect;
 const bindActionCreators = require('redux').bindActionCreators;
-const { Section } = require('./styles');
+const { Section, StyledHr } = require('./styles');
 
 interface IAppProps extends React.Props<any> {
   error?: string;
@@ -41,6 +41,7 @@ class Docs extends React.Component<any, any> {
         <Headline>
           Documentation
         </Headline>
+        <StyledHr />
         {error && <p>{error}</p>}
         <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&

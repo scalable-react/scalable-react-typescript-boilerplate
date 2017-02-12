@@ -1,10 +1,4 @@
-import path from 'path';
-import env from 'node-env-file';
-import ApolloClient, {
-  createNetworkInterface,
-} from 'apollo-client';
-
-env(path.join(process.cwd(), '.env'));
+import { ApolloClient, createNetworkInterface } from 'apollo-client';
 
 declare var window: {
   __APOLLO_STATE__: string,

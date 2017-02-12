@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ApolloClient, createNetworkInterface } from 'apollo-client';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import morgan from 'morgan';
@@ -7,7 +8,6 @@ import compression from 'compression';
 import path from 'path';
 import { ApolloProvider } from 'react-apollo';
 import store from '../client/store';
-import client from '../client/apolloClient';
 import { routes } from '../client/routes';
 import Html from '../client/containers/Html';
 import graphQlEntry from './graphqlEntry';
@@ -18,6 +18,7 @@ require('./db');
 
 const styleSheet = require('styled-components/lib/models/StyleSheet');
 const manifest = require('../../public/manifest.json');
+const apiUrl = process.env.API_URL || 'http://localhost:1338/api';
 
 const expressApp = express();
 graphQlEntry(expressApp).then((app) => {
@@ -43,6 +44,19 @@ graphQlEntry(expressApp).then((app) => {
         } else if (renderProps) {
           const styles = styleSheet.rules().map((rule) => rule.cssText).join('\n');
           const state = store.getState();
+
+          const networkInterface = createNetworkInterface({
+            uri: apiUrl,
+            opts: {
+              headers: req.headers,
+              credentials: 'same-origin',
+            },
+          });
+
+          const client = new ApolloClient({
+            networkInterface,
+            ssrMode: true,
+          });
 
           const content = renderToString(
             <ApolloProvider store={store} client={client}>
