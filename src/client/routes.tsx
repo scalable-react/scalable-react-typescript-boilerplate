@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Provider } from 'react-redux';
+import { ApolloProvider } from 'react-apollo';
 import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
+import client from './apolloClient';
 import store, { history } from './store';
 import { App, Home, Docs, About, TodoApp } from './containers';
 
@@ -20,7 +21,7 @@ const logPage = () => {
 
 export const routes = (
   <Route path="/" component={App}>
-    <IndexRoute component={Home}/>
+    <IndexRoute component={Home} />
     <Route path="/docs" component={Docs} />
     <Route path="/about" component={About} />
     <Route path="/todo-app" component={TodoApp} />
@@ -28,13 +29,13 @@ export const routes = (
 );
 
 const RouterApp = () => (
-  <Provider store={store}>
+  <ApolloProvider store={store} client={client}>
     <ReactRouter
       onUpdate={logPage}
       history={history}
       routes={routes}
     />
-  </Provider>
+  </ApolloProvider>
 );
 
 export default RouterApp;

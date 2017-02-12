@@ -14,8 +14,10 @@
     "start": "node devServer.js",
     "predeploy": "rimraf build/public/*.*",
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js",
-    "postdeploy": "./node_modules/.bin/tsc",
+    "postdeploy": "npm run compile",
+    "compile": "./node_modules/.bin/tsc",
     "setup:yarn": "yarn",
+    "preserve": "npm run compile",
     "serve": "cross-env NODE_ENV=server PORT=1337 node server.js",
     "postinstall": "npm run deploy",
     "generator": "plop --plopfile ./config/generators/cli.js"
@@ -25,6 +27,7 @@
     "@types/compression": "latest",
     "@types/express": "latest",
     "@types/graphql": "latest",
+    "@types/isomorphic-fetch": "0.0.30",
     "@types/mongoose": "^4.7.5",
     "@types/morgan": "latest",
     "@types/node": "^6.0.54",
@@ -34,7 +37,7 @@
     "@types/react-router": "^2.0.41",
     "@types/react-router-redux": "^4.0.35",
     "@types/reselect": "^2.0.27",
-    "@types/whatwg-fetch": "^0.0.33",
+    "apollo-client": "0.8.5",
     "autoprefixer": "^6.6.0",
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
@@ -54,9 +57,11 @@
     "github-markdown-css": "^2.4.1",
     "graphql": "^0.9.1",
     "graphql-server-express": "^0.6.0",
+    "graphql-tag": "^1.2.4",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.24.1",
     "imports-loader": "^0.7.0",
+    "isomorphic-fetch": "^2.2.1",
     "json-loader": "^0.5.4",
     "markdown-loader": "^0.1.7",
     "mongoose": "^4.8.2",
@@ -66,6 +71,7 @@
     "postcss-loader": "^1.2.1",
     "precss": "^1.4.0",
     "react": "^15.4.1",
+    "react-apollo": "^0.10.1",
     "react-dom": "^15.4.1",
     "react-ga": "^2.1.2",
     "react-hot-loader": "3.0.0-beta.6",
@@ -89,7 +95,6 @@
     "webpack": "2.1.0-beta.25",
     "webpack-dev-middleware": "^1.9.0",
     "webpack-hot-middleware": "^2.15.0",
-    "webpack-manifest-plugin": "^1.1.0",
-    "whatwg-fetch": "^2.0.1"
+    "webpack-manifest-plugin": "^1.1.0"
   }
 }

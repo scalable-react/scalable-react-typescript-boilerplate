@@ -32,7 +32,7 @@ export default function graphqlEntry(app): Promise<express.Application> {
     }));
 
     app.use('/graphql-ui', graphiqlExpress({
-      endpointURL: '/graphql-ui',
+      endpointURL: '/api',
     }));
     await createSchema().catch((err) => rej(err));
     res(app);
