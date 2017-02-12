@@ -25,9 +25,9 @@ class Blog extends React.Component<IBlogPropTypes, any> {
     return (
       <BlogLayout>
         <Headline>
-          Posts
+          Blog
+          <StyledHr />
         </Headline>
-        <StyledHr />
         {error && <p>{error}</p>}
         <LoadingIndicator isLoading={loading} />
         {posts && posts.map((item, i) =>

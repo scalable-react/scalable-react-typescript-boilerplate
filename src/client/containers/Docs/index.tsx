@@ -40,8 +40,8 @@ class Docs extends React.Component<any, any> {
       <Section>
         <Headline>
           Documentation
+          <StyledHr />
         </Headline>
-        <StyledHr />
         {error && <p>{error}</p>}
         <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&
