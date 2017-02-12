@@ -36,13 +36,9 @@ const env = require('node-env-file');
 
 env(path.join(process.cwd(), '.env'));
 
-const dbUri = `mongodb://localhost:27017/${process.env.DB}`;
-const options = {
-  user: process.env.DB_USER,
-  pass: process.env.DB_PW,
-};
+const dbUri = process.env.MONGODB_URI;
 
-mongoose.connect(dbUri, options);
+mongoose.connect(dbUri);
 mongoose.connection.on('connected', () => {
   console.info(`Mongoose connection open to ${dbUri}`);
   createSeedData();
