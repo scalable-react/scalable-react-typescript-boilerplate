@@ -52,7 +52,7 @@ export const Icon = styled(SvgIcon)`
   }
 `;
 
-export const Anchor = styled.p`
+export const Anchor = styled.a`
   color: #007acc;
   font-size: 1.1875rem;
   line-height: 24px;

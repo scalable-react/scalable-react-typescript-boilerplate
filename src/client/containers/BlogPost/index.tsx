@@ -57,6 +57,7 @@ class Blog extends React.Component<IBlogPropTypes, any> {
       post: postId,
     }).then(() => {
       this.props.refetch();
+      alert('Sorry, but this is just a demonstration.  Please don\'t hate us');
       this.setState({
         input: '',
       });
