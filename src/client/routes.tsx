@@ -25,6 +25,7 @@ export const routes = (
     <Route path="/docs" component={Docs} />
     <Route path="/about" component={About} />
     <Route path="/blog" component={Blog} />
+    <Route path="/blog/:postId" component={Blog} />
     <Route path="/todo-app" component={TodoApp} />
   </Route>
 );

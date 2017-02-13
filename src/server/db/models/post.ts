@@ -1,17 +1,6 @@
 import mongoose from 'mongoose';
 
-const TagSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-});
-
 const PostSchema = new mongoose.Schema({
-  id: {
-    type: String,
-    required: true,
-  },
   title: {
     type: String,
   },
@@ -21,7 +10,7 @@ const PostSchema = new mongoose.Schema({
   content: {
     type: String,
   },
-  tags: [TagSchema],
+  comments: [{ type: String, ref: 'Comment' }],
 });
 
 export default mongoose.model('Post', PostSchema);

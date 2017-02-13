@@ -2,12 +2,14 @@ import gql from 'graphql-tag';
 
 export default gql`
   query Posts {
-    post {
+    posts {
+      id: _id
       title
       image
       content
-      tags {
-        name
+      comments {
+        body
+        author
       }
     }
   }

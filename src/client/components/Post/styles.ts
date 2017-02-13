@@ -10,12 +10,16 @@ export const Article = styled.article`
   max-width: 960px;
   box-sizing: border-box;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   @media screen and (max-width: 768px) {
     padding: 20px;
   }
 `;
 
 export const Content = styled.div`
-  margin-top: 60px;
+  margin: 60px 0px;
   padding: 20px;
 `;

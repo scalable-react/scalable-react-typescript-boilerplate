@@ -1,16 +1,5 @@
-import {
-  GraphQLList,
-} from 'graphql';
-
-import postType from '../../types/post';
-import PostModel from '../../../db/models/post';
+import posts from './posts';
 
 export default {
-  type: new GraphQLList(postType),
-  args: {},
-  resolve() {
-    return PostModel
-      .find()
-      .exec();
-  },
+  posts,
 };

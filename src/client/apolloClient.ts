@@ -4,7 +4,7 @@ declare var window: {
   __APOLLO_STATE__: string,
 };
 
-const uri = process.env.API_URL || 'http://localhost:1338/api';
+const uri = process.env.API_URL || 'http://0.0.0.0:1338/api';
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({

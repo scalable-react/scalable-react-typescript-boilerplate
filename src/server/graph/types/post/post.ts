@@ -2,23 +2,17 @@ import {
   GraphQLObjectType,
   GraphQLList,
   GraphQLString,
+  GraphQLID,
 } from 'graphql';
-
-const TagType = new GraphQLObjectType({
-  name: 'Tag',
-  fields: () => ({
-    slug: { type: GraphQLString },
-    name: { type: GraphQLString },
-  }),
-});
+import commentType from '../comment/comment';
 
 export default new GraphQLObjectType({
   name: 'Post',
   fields: () => ({
-    id: { type: GraphQLString },
+    _id: { type: GraphQLID },
     title: { type: GraphQLString },
     content: { type: GraphQLString },
-    tags: { type: new GraphQLList(TagType) },
+    comments: { type: new GraphQLList(commentType) },
     image: { type: GraphQLString },
   }),
 });

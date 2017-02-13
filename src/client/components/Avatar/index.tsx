@@ -14,7 +14,7 @@ class Avatar extends React.Component<IProps, any> {
   public render() {
     const {
       avatarUrl,
-      name
+      name,
     } = this.props;
     return (
       <AvatarContainer>

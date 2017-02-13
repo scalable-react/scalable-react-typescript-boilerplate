@@ -30,6 +30,9 @@
     "jsx-alignment": [
       false
     ],
+    "jsx-no-lambda": [
+      false
+    ],
     "jsx-wrap-multiline": [
       false
     ],
