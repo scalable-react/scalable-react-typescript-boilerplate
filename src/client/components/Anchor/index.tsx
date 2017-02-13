@@ -8,6 +8,9 @@ interface IProps extends React.Props<Anchor> {
 };
 
 class Anchor extends React.Component<IProps, any> {
+  public static defaultProps = {
+    color: '#007acc',
+  };
   public render() {
     const {
       label,

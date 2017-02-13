@@ -1,12 +1,16 @@
 import gql from 'graphql-tag';
 
 export default gql`
-  query Posts {
-    posts {
+  query Post($id: ID!) {
+    post(id: $id) {
       id: _id
       title
       image
       content
+      comments {
+        body
+        author
+      }
     }
   }
 `;

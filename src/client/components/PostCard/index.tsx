@@ -1,6 +1,15 @@
 import * as React from 'react';
-import { SvgIcon, Anchor } from 'components';
-import { Card, CardThumbnail, CardHeading, CardDescription } from './styles';
+import shortenText from './shortenText';
+import {
+  Icon,
+  Card,
+  CardFooter,
+  CardThumbnail,
+  CardHeading,
+  CardDescription,
+  Anchor,
+  CardContents,
+} from './styles';
 
 export default function PostCard(props: {
   content: string;
@@ -12,18 +21,22 @@ export default function PostCard(props: {
   return (
     <Card>
       <CardThumbnail image={image} />
-      <CardHeading>
-        {title}
-      </CardHeading>
-      <CardDescription>
-        {content}
-      </CardDescription>
-      <Anchor href={`/blog/${id}`}>
-        <SvgIcon>
-          <path fill="none" stroke="#000000" stroke-width="2" d="M2,12 L22,12 M13,3 L22,12 L13,21" />
-        </SvgIcon>
-        Read More
-      </Anchor>
+      <CardContents>
+        <CardHeading>
+          {title}
+        </CardHeading>
+        <CardDescription>
+          {shortenText(content, 150)}
+        </CardDescription>
+        <CardFooter>
+          <Anchor href={`/blog/posts/${id}`}>
+            <Icon>
+              <path fill="none" d="M2,12 L22,12 M13,3 L22,12 L13,21" />
+            </Icon>
+            Read More
+          </Anchor>
+        </CardFooter>
+      </CardContents>
     </Card>
   );
 };

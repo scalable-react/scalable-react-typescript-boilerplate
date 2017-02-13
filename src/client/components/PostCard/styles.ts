@@ -1,3 +1,5 @@
+import SvgIcon from '../SvgIcon';
+import AnchorComponent from '../Anchor';
 const styled = require('styled-components').default;
 
 export const Card = styled.div`
@@ -6,6 +8,7 @@ export const Card = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 0px;
+  background-color: white;
 `;
 
 export const CardThumbnail = styled.div`
@@ -15,9 +18,13 @@ export const CardThumbnail = styled.div`
   justify-content: center;
 `;
 
+export const CardContents = styled.div`
+  padding: 24px;
+`;
+
 export const CardHeading = styled.h2`
   font-size: 2.25rem;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 12px;
   line-height: 1.23;
 `;
@@ -30,3 +37,27 @@ export const CardDescription = styled.p`
   margin-bottom: 24px;
 `;
 
+export const Icon = styled(SvgIcon)`
+  vertical-align: middle;
+  margin-right: 12px;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  fill: #007acc;
+  stroke: #007acc;
+  flex: 0 0 auto;
+  stroke-width: 2;
+  &:hover {
+    transform: translate(4px, 0px);
+  }
+`;
+
+export const Anchor = styled(AnchorComponent)`
+  color: #007acc;
+  font-size: 1.1875rem;
+  line-height: 24px;
+  font-weight: 600;
+`;
+
+export const CardFooter = styled.footer``;

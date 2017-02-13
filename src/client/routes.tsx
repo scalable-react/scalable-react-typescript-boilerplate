@@ -3,7 +3,7 @@ import { ApolloProvider } from 'react-apollo';
 import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
 import client from './apolloClient';
 import store, { history } from './store';
-import { App, Home, Docs, About, TodoApp, Blog } from './containers';
+import { App, Home, Docs, About, TodoApp, Blog, BlogPost } from './containers';
 
 const ReactGA = require('react-ga');
 
@@ -25,8 +25,9 @@ export const routes = (
     <Route path="/docs" component={Docs} />
     <Route path="/about" component={About} />
     <Route path="/blog" component={Blog} />
-    <Route path="/blog/:postId" component={Blog} />
+    <Route path="/blog/posts/:postId" component={BlogPost} />
     <Route path="/todo-app" component={TodoApp} />
+    <Route path="*" component={Home} />
   </Route>
 );
 

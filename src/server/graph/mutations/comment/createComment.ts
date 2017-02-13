@@ -10,7 +10,6 @@ export default {
   type: GraphQLBoolean,
   args: {
     data: {
-      name: 'data',
       type: new GraphQLNonNull(types.commentInputType),
     },
   },

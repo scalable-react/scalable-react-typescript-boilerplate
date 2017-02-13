@@ -10,7 +10,6 @@ export default {
   type: new GraphQLList(types.commentType),
   args: {
     postId: {
-      name: 'postId',
       type: new GraphQLNonNull(GraphQLID),
     },
   },

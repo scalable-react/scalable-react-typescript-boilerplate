@@ -11,7 +11,6 @@ export default {
   resolve() {
     return PostModel
       .find()
-      .populate('comments')
       .exec();
   },
 };
