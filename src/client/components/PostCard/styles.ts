@@ -1,5 +1,4 @@
 import SvgIcon from '../SvgIcon';
-import AnchorComponent from '../Anchor';
 const styled = require('styled-components').default;
 
 export const Card = styled.div`
@@ -53,7 +52,7 @@ export const Icon = styled(SvgIcon)`
   }
 `;
 
-export const Anchor = styled(AnchorComponent)`
+export const Anchor = styled.p`
   color: #007acc;
   font-size: 1.1875rem;
   line-height: 24px;

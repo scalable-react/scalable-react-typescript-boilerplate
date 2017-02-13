@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { Headline, LoadingIndicator, Post } from 'components';
+import { LoadingIndicator, Post } from 'components';
 import POST_QUERY from './post.graphql';
 import COMMENT_MUTATION from './comments.graphql';
-import { BlogLayout, StyledHr } from './styles';
+import { BlogLayout } from './styles';
 
 interface IPostComments {
   body: string;
@@ -24,6 +24,7 @@ interface IBlogProps extends React.Props<any> {
   error?: { message: string };
   post?: IPost;
   submitComment?: Function;
+  refetch: Function;
   params: {
     postId: String;
   };
@@ -46,34 +47,31 @@ class Blog extends React.Component<IBlogPropTypes, any> {
       input: target.value,
     });
   }
-  private handleAddingComment(_, i) {
+  private handleAddingComment() {
     const { input } = this.state;
     const author = 'Unknown';
     const { postId } = this.props.params;
     this.props.submitComment({
-      input,
+      body: input,
       author,
       post: postId,
     }).then(() => {
+      this.props.refetch();
       this.setState({
         input: '',
       });
     });
   }
-  private handleEnterKeyUp(e, i) {
+  private handleEnterKeyUp(e) {
     if (e.keyCode === 13) {
       e.preventDefault();
-      this.handleAddingComment(e, i);
+      this.handleAddingComment();
     }
   }
   public render() {
     const { loading, post, error } = this.props;
     return (
       <BlogLayout>
-        <Headline>
-          Blog
-          <StyledHr />
-        </Headline>
         {error && <p>{error.message}</p>}
         <LoadingIndicator isLoading={loading} />
         {post &&
@@ -99,42 +97,17 @@ const withData = graphql(POST_QUERY, {
       id: params.postId,
     },
   }),
-  props: ({ data: { loading, post, error } }) => ({
+  props: ({ data: { loading, post, error, refetch } }) => ({
     loading,
     post,
     error,
+    refetch,
   }),
 });
 
 const withMutation = graphql(COMMENT_MUTATION, {
   props: ({ mutate }) => ({
-    submitComment: ({ input, author, post }) =>
-      mutate({
-        variables: { input, author, post },
-        optimisticResponse: {
-          __typename: 'Mutation',
-          createComment: {
-            __typename: 'Comment',
-            id: null,
-            author,
-            post,
-            input,
-            createdAt: +new Date(),
-          },
-        },
-        updateQueries: {
-          Posts: (prev, { mutationResult }) => {
-            const newComment = mutationResult.data.createComment;
-            return {
-              ...prev,
-              comments: [
-                ...prev.comments,
-                newComment,
-              ],
-            };
-          },
-        },
-      }),
+    submitComment: mutate,
   }),
 });
 

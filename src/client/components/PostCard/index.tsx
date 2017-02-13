@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router';
 import shortenText from './shortenText';
 import {
   Icon,
@@ -29,12 +30,12 @@ export default function PostCard(props: {
           {shortenText(content, 150)}
         </CardDescription>
         <CardFooter>
-          <Anchor href={`/blog/posts/${id}`}>
+          <Link to={`/blog/posts/${id}`}>
             <Icon>
               <path fill="none" d="M2,12 L22,12 M13,3 L22,12 L13,21" />
             </Icon>
-            Read More
-          </Anchor>
+            <Anchor>Read More</Anchor>
+          </Link>
         </CardFooter>
       </CardContents>
     </Card>
