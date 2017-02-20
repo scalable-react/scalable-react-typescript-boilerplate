@@ -42,7 +42,9 @@
     "serve": "cross-env NODE_ENV=server node server.js",
     "postinstall": "npm run deploy",
     "generator": "plop --plopfile ./config/generators/cli.js",
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "npm run test -- --watch",
+    "test:update": "npm run test -- --update"
   },
   "dependencies": {
     "@types/body-parser": "latest",

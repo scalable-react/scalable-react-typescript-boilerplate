@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import * as React from 'react';
 import Box from '../';
-import props from './__mocks__/boxMocks';
+import props from './__mocks__/boxMocks.mock';
 
 describe('<Box />', () => {
   it('should render with default props', () => {

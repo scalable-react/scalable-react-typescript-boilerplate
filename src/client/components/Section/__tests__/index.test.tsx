@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import * as React from 'react';
 import Section from '../';
-import props from './__mocks__/sectionMocks';
+import props from './__mocks__/sectionMocks.mock';
 
 describe('<Section />', () => {
   it('should render with default props', () => {

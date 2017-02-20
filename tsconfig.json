@@ -16,7 +16,7 @@
   ],
   "exclude": [
     "node_modules",
-    "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "/__mocks__/.*"
+    "**/*.test.*",
+    "**/*.mock.*"
   ]
 }
