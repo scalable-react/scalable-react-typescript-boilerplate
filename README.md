@@ -82,13 +82,18 @@ This boilerplate contains setup to quickly get started with a Full Stack applica
 ## Apollo GraphQL
 Recently, we've added support for Apollo and GraphQL both server and client side.  The starter code in this repo demonstrates how to setup your GraphQL server.  The `/blog` route will show you a very simple example of loading data via Apollo Graphql.
 
-## Included Components
-Included in this project are a few primitive components that you can use to bootstrap your next project.
+## UI Components
+#### Build your next UIKit with this library!
+Included in this project are a few primitive components that you can use to bootstrap your next project, or as a reference for building a UIKit.
+- [Box](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/tree/master/src/components/Box/index.tsx)
+  - Flex Box component!  Whoot!
+- [Section](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/tree/master/src/components/Section/index.tsx)
+  - A section component.  Extends the Box component giving flex-box properties.
 - [Anchor](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/tree/master/src/components/Anchor/index.tsx)
 - [Article](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Article/index.tsx)
 - [Button](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Button/index.tsx)
 - [Footer](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Footer/index.tsx)
-- [Header](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Header/index.tsx)
+- [Heading](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Heading/index.tsx)
 - [Headline](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Headline/index.tsx)
 - [Hero](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Hero/index.tsx)
 - [Image](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Image/index.tsx)
@@ -96,6 +101,7 @@ Included in this project are a few primitive components that you can use to boot
 - [NavBar](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/NavBar/index.tsx)
 - [Paragraph](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Paragraph/index.tsx)
 - [SvgIcon](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/SvgIcon/index.tsx)
+- And more!
 
 ## Generators
 We've included some generators so that you can easily scaffold out components & containers from the command line.
@@ -129,6 +135,8 @@ The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/
   - Create a production bundle for deployment
 - `npm run run serve:bundle`
   - Serve the production bundle on port 1337
+- `npm run test`
+  - Run the test suite
 
 ## Resources
 - [JavaScript Code Quality with Free Tools](https://dev-blog.apollodata.com/javascript-code-quality-with-free-tools-9a6d80e29f2d#.1unvvh8vw)
