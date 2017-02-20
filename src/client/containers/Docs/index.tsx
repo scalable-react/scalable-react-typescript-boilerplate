@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Article, Headline, LoadingIndicator } from 'components';
+import { Article, Headline, LoadingIndicator, Box, Section } from 'components';
 import * as DocsActionCreators from './actions';
 import { selectError, selectIsLoading, selectMarkdownContent } from './selectors';
 const connect = require('react-redux').connect;
 const bindActionCreators = require('redux').bindActionCreators;
-const { Section, StyledHr } = require('./styles');
+const { StyledHr } = require('./styles');
 
 interface IAppProps extends React.Props<any> {
   error?: string;
@@ -37,12 +37,27 @@ class Docs extends React.Component<any, any> {
       error,
     } = this.props;
     return (
-      <Section>
+      <Section
+        alignItems="center"
+        flexDirection="column"
+        pad="medium"
+        full={{ vertical: true }}
+        backgroundColor="#f5f5f5"
+      >
         <Headline>
           Documentation
           <StyledHr />
         </Headline>
-        {error && <p>{error}</p>}
+        {error &&
+          <Box
+            backgroundColor="#ff324d"
+            size={{ horizontal: 'medium' }}
+            pad="small"
+            alignItems="center"
+          >
+            <p style={{ color: 'white' }}>{error.message}</p>
+          </Box>
+        }
         <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&
           <Article content={markdownContent} />

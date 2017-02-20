@@ -27,7 +27,7 @@ class Blog extends React.Component<IBlogPropTypes, any> {
         alignItems="center"
         flexDirection="column"
         pad="medium"
-        size={{ vertical: 'full' }}
+        full={{ vertical: true }}
         backgroundColor="#f5f5f5"
       >
         <Headline>

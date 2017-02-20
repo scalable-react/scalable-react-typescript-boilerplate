@@ -1,5 +1,6 @@
 const styled = require('styled-components').default;
 import { Size, ISizeObject, BoxSize, IBoxSize } from './types';
+import { Full } from './types';
 
 const SIZE_MAP = {
   none: 0,
@@ -90,6 +91,19 @@ export function boxSizeToStyle(size: BoxSize | IBoxSize): ISizeStyle {
   }
 }
 
+export function calculateFullStyle(full: Full, postFix: 'vw' | 'vh'): string {
+  if (typeof full === 'object') {
+    if (postFix === 'vw') {
+      return full.horizontal ? `100${postFix}` : 'auto';
+    } else {
+      return full.vertical ? `100${postFix}` : 'auto';
+    }
+  } else if (typeof full === 'boolean') {
+    return full ? `100${postFix}` : 'auto';
+  }
+  return 'auto';
+}
+
 export default styled.div`
   display: flex;
   background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
@@ -102,4 +116,6 @@ export default styled.div`
   width: ${({ size }) => boxSizeToStyle(size).width};
   height: ${({ size }) => boxSizeToStyle(size).height};
   flex-basis: auto;
+  min-height: ${({ full }) => calculateFullStyle(full, 'vh')}
+  min-width: ${({ full }) => calculateFullStyle(full, 'vw')}
 `;

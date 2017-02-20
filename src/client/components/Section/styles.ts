@@ -1,5 +1,5 @@
 const styled = require('styled-components').default;
-import { calculateFlexWrap, sizeToString, boxSizeToStyle } from '../Box/styles';
+import { calculateFlexWrap, sizeToString, boxSizeToStyle, calculateFullStyle } from '../Box/styles';
 
 export default styled.section`
   display: flex;
@@ -13,4 +13,6 @@ export default styled.section`
   width: ${({ size }) => boxSizeToStyle(size).width};
   height: ${({ size }) => boxSizeToStyle(size).height};
   flex-basis: auto;
+  min-height: ${({ full }) => calculateFullStyle(full, 'vh')}
+  min-width: ${({ full }) => calculateFullStyle(full, 'vw')}
 `;
