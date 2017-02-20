@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { Headline, LoadingIndicator, PostCard } from 'components';
+import { Headline, LoadingIndicator, PostCard, Section, Box } from 'components';
 import POST_QUERY from './posts.graphql';
-import { BlogLayout, StyledHr } from './styles';
+import { StyledHr } from './styles';
 
 interface IPost {
   id: string;
@@ -23,20 +23,45 @@ class Blog extends React.Component<IBlogPropTypes, any> {
   public render() {
     const { loading, posts, error } = this.props;
     return (
-      <BlogLayout>
+      <Box
+        alignItems="center"
+        flexDirection="column"
+        pad="medium"
+        size={{ vertical: 'full' }}
+        backgroundColor="#f5f5f5"
+      >
         <Headline>
           Blog
           <StyledHr />
         </Headline>
-        {error && <p>{error.message}</p>}
+        {error &&
+          <Box
+            backgroundColor="#ff324d"
+            size={{ horizontal: 'medium' }}
+            pad="small"
+            alignItems="center"
+          >
+            <p style={{ color: 'white' }}>{error.message}</p>
+          </Box>
+        }
         <LoadingIndicator isLoading={loading} />
-        {posts && posts.map((item, i) =>
-          <PostCard
-            key={i}
-            {...item}
-          />,
-        )}
-      </BlogLayout>
+        <Section
+          wrap
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="row"
+          size={{ horizontal: 'full' }}
+          pad={{ horizontal: 'medium' }}
+        >
+          {posts && posts.map((item, i) =>
+            <Box key={i} pad="medium">
+              <PostCard
+                {...item}
+              />
+            </Box>,
+          )}
+        </Section>
+      </Box>
     );
   }
 }
