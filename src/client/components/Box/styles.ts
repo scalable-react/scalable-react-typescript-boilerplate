@@ -1,5 +1,5 @@
 const styled = require('styled-components').default;
-import { Size, ISizeObject, BoxSize, IBoxSize } from '../Box/types';
+import { Size, ISizeObject, BoxSize, IBoxSize } from './types';
 
 const SIZE_MAP = {
   none: 0,

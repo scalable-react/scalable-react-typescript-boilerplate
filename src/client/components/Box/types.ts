@@ -14,6 +14,7 @@ interface IBoxProps {
   children?: JSX.Element;
   margin?: Size | ISizeObject;
   backgroundColor?: string;
+  backgroundImage?: string;
 };
 
 export default IBoxProps;
