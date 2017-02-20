@@ -4,6 +4,12 @@ export type BoxSize =  'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxl
 export interface IBoxSize { horizontal?: BoxSize; vertical?: BoxSize; };
 export interface IFullObject { horizontal: boolean; vertical: boolean; };
 export type Full = boolean | IFullObject;
+export type WrapOption = 'wrap' | 'wrap-reverse' | 'nowrap';
+
+export interface ISizeStyle {
+  height: string;
+  width: string;
+};
 
 interface IBoxProps {
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';

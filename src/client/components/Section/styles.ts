@@ -1,5 +1,10 @@
 const styled = require('styled-components').default;
-import { calculateFlexWrap, sizeToString, boxSizeToStyle, calculateFullStyle } from '../Box/styles';
+import {
+  calculateFlexWrap,
+  sizeToString,
+  boxSizeToStyle,
+  calculateFullStyle,
+} from '../Box/styleUtils';
 
 export default styled.section`
   display: flex;
