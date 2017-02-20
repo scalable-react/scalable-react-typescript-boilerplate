@@ -90,7 +90,7 @@ export function boxSizeToStyle(size: BoxSize | IBoxSize): ISizeStyle {
   }
 }
 
-export const BoxStyles = `
+export default styled.div`
   display: flex;
   background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
   justify-content: ${({ justifyContent }) => justifyContent || 'flex-start'};
@@ -102,8 +102,4 @@ export const BoxStyles = `
   width: ${({ size }) => boxSizeToStyle(size).width};
   height: ${({ size }) => boxSizeToStyle(size).height};
   flex-basis: auto;
-`;
-
-export default styled.div`
-  ${BoxStyles}
 `;
