@@ -3,12 +3,12 @@ const H1 = require('./styles').H1;
 
 type TextAligment = 'center' | 'left' | 'right' | 'justify';
 
-interface IProps extends React.Props<Header> {
+interface IProps extends React.Props<Heading> {
   color?: string;
   textAlign?: string;
 };
 
-class Header extends React.Component<IProps, any> {
+class Heading extends React.Component<IProps, any> {
   public static defaultProps: IProps = {
     color: '#007acc',
     textAlign: 'center',
@@ -22,4 +22,4 @@ class Header extends React.Component<IProps, any> {
   }
 }
 
-export default Header;
+export default Heading;

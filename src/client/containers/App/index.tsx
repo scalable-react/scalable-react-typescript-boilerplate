@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as AppActionCreators from './actions';
-import { NavBar, Footer, Header, Paragraph, SvgIcon, Anchor } from 'components';
+import { NavBar, Footer, Heading, Paragraph, SvgIcon, Anchor } from 'components';
 const connect = require('react-redux').connect;
 const bindActionCreators = require('redux').bindActionCreators;
 import { Author, Main } from './styles';
@@ -58,9 +58,9 @@ class App extends React.Component<IAppProps, any> {
         />
         {React.cloneElement(this.props.children, this.props)}
         <Footer>
-          <Header>
+          <Heading>
             React + TypeScript
-          </Header>
+          </Heading>
           <Paragraph>
             Scalable React TS Boilerplate
           </Paragraph>

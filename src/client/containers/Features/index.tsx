@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Header, Headline, Image, Button, Markdown, Anchor } from 'components';
+import { Heading, Headline, Image, Button, Markdown, Anchor } from 'components';
 import { ImageSize } from 'components/Image';
 const {
   Container,
@@ -29,7 +29,7 @@ class Features extends React.Component<any, any> {
             </Feature>
             <Feature>
               <Card>
-                <Header textAlign="left" color="black">TypeScript</Header>
+                <Heading textAlign="left" color="black">TypeScript</Heading>
                 <Markdown
                   content={features.typeScript}
                 />
@@ -49,7 +49,7 @@ class Features extends React.Component<any, any> {
           <FeatureSectionInner reverse>
             <Feature>
               <Card>
-                <Header textAlign="left" color="black">Styled Components</Header>
+                <Heading textAlign="left" color="black">Styled Components</Heading>
                 <Markdown
                   content={features.styledComponents}
                 />
@@ -90,7 +90,7 @@ class Features extends React.Component<any, any> {
             </Feature>
             <Feature>
               <Card>
-                <Header textAlign="left" color="black">Feature First</Header>
+                <Heading textAlign="left" color="black">Feature First</Heading>
                 <Markdown
                   content={features.featureFirst}
                 />

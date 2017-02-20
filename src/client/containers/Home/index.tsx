@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Features } from 'containers';
-import { ImageSize } from 'components/Image';
-import { Header, Image, Hero } from 'components';
+import { Heading, Hero } from 'components';
 const { Container, Section, HeroLogo, HeroLogoRow, HeadingContainer } = require('./styles');
 const GetStartedButtonRow = require('./GetStartedButtonRow').default;
 
@@ -17,9 +16,9 @@ class Home extends React.Component<any, any> {
               </HeroLogo>
             </HeroLogoRow>
             <HeadingContainer>
-              <Header color="#007acc">
+              <Heading color="#007acc">
                 Scalable React TS Boilerplate
-              </Header>
+              </Heading>
             </HeadingContainer>
             <GetStartedButtonRow />
           </Hero>

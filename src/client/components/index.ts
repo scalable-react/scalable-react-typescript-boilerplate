@@ -5,7 +5,7 @@ import PostCard from './PostCard';
 import AddComment from './AddComment';
 import Comment from './Comment';
 import Post from './Post';
-import Header from './Header';
+import Heading from './Heading';
 import Image from './Image';
 import NavBar from './NavBar';
 import Hero from './Hero';
@@ -29,7 +29,7 @@ export {
   Comment,
   Post,
   Avatar,
-  Header,
+  Heading,
   Image,
   NavBar,
   Hero,

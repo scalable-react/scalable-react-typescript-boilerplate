@@ -2,8 +2,6 @@ import * as React from 'react';
 import {
   Headline,
   Markdown,
-  Image,
-  Paragraph,
   Avatar,
   Anchor,
   Article,
@@ -15,7 +13,6 @@ const {
   StyledHr,
   AvatarContainer,
   Div,
-  Divider,
   Github,
   Card,
   CardFooter,
