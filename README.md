@@ -39,44 +39,88 @@ This boilerplate contains setup to quickly get started with a Full Stack applica
 
 ### Client File Structure
 ```
-|   ├── components
-|   |   ├── Anchor
-|   |   |   ├── index.tsx
-|   |   |   └── styles.js
-|   |   └── index.ts
-|   ├── containers
-|   |   ├── App
-|   |   |   ├── constants.ts
-|   |   |   ├── index.tsx
-|   |   |   ├── actions.ts
-|   |   |   └── reducers.ts
-|   |   └── index.ts
-|   ├── reducers.ts
-|   ├── store.tsx
-|   ├── routes.tsx
-|   ├── index.tsx
-|   └── styles
+src/client
+├── apolloClient.ts
+├── components
+│   ├── Box
+│   │   ├── __tests__
+│   │   │   ├── __mocks__
+│   │   │   │   └── boxMocks.mock.ts
+│   │   │   ├── __snapshots__
+│   │   │   │   └── index.test.tsx.snap
+│   │   │   └── index.test.tsx
+│   │   ├── index.tsx
+│   │   ├── maps.ts
+│   │   ├── styleUtils.ts
+│   │   ├── styles.ts
+│   │   └── types.ts
+│   ├── Section
+│   │   ├── __tests__
+│   │   │   ├── __mocks__
+│   │   │   │   └── sectionMocks.mock.ts
+│   │   │   ├── __snapshots__
+│   │   │   │   └── index.test.tsx.snap
+│   │   │   └── index.test.tsx
+│   │   ├── index.tsx
+│   │   └── styles.ts
+│   └── index.ts
+├── containers
+│   ├── Blog
+│   │   ├── index.tsx
+│   │   ├── posts.graphql.ts
+│   │   └── styles.ts
+│   ├── BlogPost
+│   │   ├── comments.graphql.ts
+│   │   ├── index.tsx
+│   │   ├── post.graphql.ts
+│   │   └── styles.ts
+│   └── index.ts
+├── index.tsx
+├── reducers.ts
+├── routes.tsx
+├── store.tsx
+└── styles
+    └── index.css
 ```
 
 ### Server file structure
 ```
-|   ├── db
-|   |   ├── models
-|   |   |   └── // etc.
-|   |   ├── utils
-|   |   |   └── // etc.
-|   |   └── index.ts
-|   ├── graph
-|   |   ├── mutations
-|   |   |   └── // etc.
-|   |   ├── queries
-|   |   |   └── // etc.
-|   |   ├── types
-|   |   |   └── // etc.
-|   |   ├── schema.json
-|   |   └── index.ts
-|   ├── index.tsx
-|   └── graphqlEntry.ts
+src/server
+├── db
+│   ├── index.ts
+│   ├── models
+│   │   ├── comment.ts
+│   │   └── post.ts
+│   └── utils
+│       └── uuid.ts
+├── graph
+│   ├── index.ts
+│   ├── mutations
+│   │   ├── comment
+│   │   │   ├── createComment.ts
+│   │   │   └── index.ts
+│   │   └── index.ts
+│   ├── queries
+│   │   ├── comment
+│   │   │   ├── comment.ts
+│   │   │   ├── comments.ts
+│   │   │   └── index.ts
+│   │   ├── index.ts
+│   │   └── post
+│   │       ├── index.ts
+│   │       ├── post.ts
+│   │       └── posts.ts
+│   ├── schema.json
+│   └── types
+│       ├── comment
+│       │   ├── comment.ts
+│       │   └── commentInput.ts
+│       ├── index.ts
+│       └── post
+│           ├── post.ts
+│           └── postInput.ts
+├── graphqlEntry.ts
+└── index.tsx
 ```
 
 ## Apollo GraphQL
