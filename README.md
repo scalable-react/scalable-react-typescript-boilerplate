@@ -37,6 +37,8 @@ Check the components directory for examples.
 ## Full Stack
 This boilerplate contains setup to quickly get started with a Full Stack application.  Within the `src/` directory, you will find a server and a client folder.
 
+## File Tree Structure
+
 ### Client File Structure
 ```
 src/client
