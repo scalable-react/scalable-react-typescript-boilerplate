@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Component from './styles';
-import IBoxProps from './types';
+import IBoxProps from '../Box/types';
 
-export default function Box(props: IBoxProps) {
+export default function Section(props: IBoxProps) {
   const { children, ...rest } = props;
   return (
     <Component {...rest}>
-      {children || null}
+      {children}
     </Component>
   );
 };

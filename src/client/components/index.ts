@@ -1,4 +1,5 @@
 /* GENERATOR-IMPORT */
+import Section from './Section';
 import Box from './Box';
 import PostCard from './PostCard';
 import AddComment from './AddComment';
@@ -21,6 +22,7 @@ import Avatar from './Avatar';
 
 export {
   /* GENERATOR-EXPORT */
+  Section,
   Box,
   PostCard,
   AddComment,

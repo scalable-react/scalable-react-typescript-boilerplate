@@ -1,16 +1,19 @@
-export type Size = 'small' | 'medium' | 'large';
+export type Size = 'none' | 'small' | 'medium' | 'large';
 export interface ISizeObject { horizontal?: Size; vertical?: Size; };
+export type BoxSize =  'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'full';
+export interface IBoxSize { horizontal?: BoxSize; vertical?: BoxSize; };
 
 interface IBoxProps {
-  alignItems: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
-  direction: 'row' | 'column';
-  justifyContent: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
+  alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
+  direction?: 'row' | 'column';
+  justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
   wrap?: boolean;
   reverse?: boolean;
-  size?: Size;
+  size?: BoxSize | IBoxSize;
   pad?: Size | ISizeObject;
-  children: JSX.Element;
+  children?: JSX.Element;
   margin?: Size | ISizeObject;
+  backgroundColor?: string;
 };
 
 export default IBoxProps;

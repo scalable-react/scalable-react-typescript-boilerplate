@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { Headline, LoadingIndicator, PostCard } from 'components';
+import { Headline, LoadingIndicator, PostCard, Section, Box } from 'components';
 import POST_QUERY from './posts.graphql';
 import { BlogLayout, StyledHr } from './styles';
 
@@ -30,12 +30,22 @@ class Blog extends React.Component<IBlogPropTypes, any> {
         </Headline>
         {error && <p>{error.message}</p>}
         <LoadingIndicator isLoading={loading} />
-        {posts && posts.map((item, i) =>
-          <PostCard
-            key={i}
-            {...item}
-          />,
-        )}
+        <Section
+          wrap
+          justifyContent="center"
+          alignItems="center"
+          direction="row"
+          size={{ horizontal: 'full' }}
+          pad={{ horizontal: 'medium' }}
+        >
+          {posts && posts.map((item, i) =>
+            <Box key={i} pad="medium">
+              <PostCard
+                {...item}
+              />
+            </Box>,
+          )}
+        </Section>
       </BlogLayout>
     );
   }
