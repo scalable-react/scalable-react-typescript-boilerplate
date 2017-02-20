@@ -1,6 +1,6 @@
-// From https://grommet.github.io/docs/spinning
+// Adapted from https://grommet.github.io/docs/spinning
 import * as React from 'react';
-import SvgIcon from './styles';
+import SvgIcon, { Circle } from './styles';
 import { Box } from 'components';
 
 interface IProps extends React.Props<LoadingIndicator> {
@@ -19,11 +19,11 @@ class LoadingIndicator extends React.Component<IProps, any> {
           justifyContent="center"
         >
           <SvgIcon viewBox="0 0 48 48">
-            <circle
+            <Circle
               cx="24"
               cy="24"
               r="21"
-              stroke="#979797"
+              stroke="#007acc"
               strokeWidth="6"
               fill="none"
             />
