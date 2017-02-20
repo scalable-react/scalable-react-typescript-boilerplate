@@ -1,0 +1,13 @@
+exports[`<Section /> should render with default props 1`] = `
+<styled.section>
+  <div />
+</styled.section>
+`;
+
+exports[`<Section /> should render with different props 1`] = `
+<styled.section
+  pad="medium"
+  size="large">
+  <div />
+</styled.section>
+`;

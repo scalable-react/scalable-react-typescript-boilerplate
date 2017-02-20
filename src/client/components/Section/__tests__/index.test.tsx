@@ -1,23 +1,23 @@
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import * as React from 'react';
-import Box from '../';
-import props from './__mocks__/boxMocks';
+import Section from '../';
+import props from './__mocks__/sectionMocks';
 
-describe('<Box />', () => {
+describe('<Section />', () => {
   it('should render with default props', () => {
     const wrapper = shallow(
-      <Box>
+      <Section>
         <div />
-      </Box>,
+      </Section>,
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
   it('should render with different props', () => {
     const wrapper = shallow(
-      <Box {...props}>
+      <Section {...props}>
         <div />
-      </Box>,
+      </Section>,
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
