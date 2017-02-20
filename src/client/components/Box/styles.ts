@@ -92,10 +92,10 @@ export function boxSizeToStyle(size: BoxSize | IBoxSize): ISizeStyle {
 
 export default styled.div`
   display: flex;
-  background-color: ${(props) => props.backgroundColor || 'transparent'};
-  justify-content: ${(props) => props.justifyContent || 'flex-start'};
-  align-items: ${(props) => props.alignItems || 'flex-start'};
-  flex-direction: ${(props) => props.direction || 'column'};
+  background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
+  justify-content: ${({ justifyContent }) => justifyContent || 'flex-start'};
+  align-items: ${({ alignItems }) => alignItems || 'flex-start'};
+  flex-direction: ${({ flexDirection }) => flexDirection || 'column'};
   flex-wrap: ${({ wrap, reverse }) => calculateFlexWrap(wrap, reverse)};
   padding: ${({ pad }) => sizeToString(pad)};
   margin: ${({ margin }) => sizeToString(margin)};

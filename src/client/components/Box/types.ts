@@ -5,7 +5,7 @@ export interface IBoxSize { horizontal?: BoxSize; vertical?: BoxSize; };
 
 interface IBoxProps {
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
-  direction?: 'row' | 'column';
+  flexDirection?: 'row' | 'column';
   justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
   wrap?: boolean;
   reverse?: boolean;
