@@ -1,0 +1,13 @@
+exports[`<Box /> should render with default props 1`] = `
+<styled.div>
+  <div />
+</styled.div>
+`;
+
+exports[`<Box /> should render with different props 1`] = `
+<styled.div
+  pad="medium"
+  size="large">
+  <div />
+</styled.div>
+`;
