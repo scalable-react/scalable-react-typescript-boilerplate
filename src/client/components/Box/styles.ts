@@ -36,7 +36,7 @@ export function sizeToString(size: Size | ISizeObject): string {
   } else if (typeof size === 'object') {
     const horizontal = size.horizontal || 'none';
     const vertical = size.vertical || 'none';
-    returnVal = `${SIZE_MAP[horizontal]}px ${SIZE_MAP[vertical]}px`;
+    returnVal = `${SIZE_MAP[vertical]}px ${SIZE_MAP[horizontal]}px`;
   } else {
     returnVal = `0px`;
   }

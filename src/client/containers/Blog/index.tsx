@@ -26,7 +26,7 @@ class Blog extends React.Component<IBlogPropTypes, any> {
       <Box
         alignItems="center"
         flexDirection="column"
-        pad="medium"
+        pad={{ vertical: 'medium', horizontal: 'small' }}
         full={{ vertical: true }}
         backgroundColor="#f5f5f5"
       >
@@ -51,7 +51,6 @@ class Blog extends React.Component<IBlogPropTypes, any> {
           alignItems="center"
           flexDirection="row"
           size={{ horizontal: 'full' }}
-          pad={{ horizontal: 'medium' }}
         >
           {posts && posts.map((item, i) =>
             <Box key={i} pad="medium">

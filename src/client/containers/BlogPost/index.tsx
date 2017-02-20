@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { LoadingIndicator, Post } from 'components';
+import { LoadingIndicator, Post, Section } from 'components';
 import POST_QUERY from './post.graphql';
 import COMMENT_MUTATION from './comments.graphql';
-import { BlogLayout } from './styles';
 
 interface IPostComments {
   body: string;
@@ -72,7 +71,13 @@ class Blog extends React.Component<IBlogPropTypes, any> {
   public render() {
     const { loading, post, error } = this.props;
     return (
-      <BlogLayout>
+      <Section
+        alignItems="center"
+        flexDirection="column"
+        pad={{ vertical: 'large', horizontal: 'small' }}
+        full={{ vertical: true }}
+        backgroundColor="#f5f5f5"
+      >
         {error && <p>{error.message}</p>}
         <LoadingIndicator isLoading={loading} />
         {post &&
@@ -86,7 +91,7 @@ class Blog extends React.Component<IBlogPropTypes, any> {
             {...post}
           />
         }
-      </BlogLayout>
+      </Section>
     );
   }
 }
