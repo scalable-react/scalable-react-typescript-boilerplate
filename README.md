@@ -114,6 +114,17 @@ This project embraces server-side rendering.  Included in the setup is an [Expre
 ## Code Generation
 A big feature of the [Scalable React Boilerplate](https://github.com/RyanCCollins/scalable-react-boilerplate) project is the code generation tools. They will be incorporated into this project at a later time.  If you are interested in contributing, please let us know!
 
+## Testing
+Included is a test framework for all of your React testing needs.  We are using Jest to run the test suite and generate snapshots, plus Enzyme for component introspection.
+
+Tests should be collocated within the component / container they represent. Test files should be named `index.test.tsx` and mocks must be named `myMock.mock.ts`.
+
+Please reference the `[Box](https://github.com/RyanCCollins/scalable-react-typescript-boilerplate/tree/master/src/client/components/Box)` and `(Section)[https://github.com/RyanCCollins/scalable-react-typescript-boilerplate/tree/master/src/client/components/Section]` components for example tests.  More will be added at a later time. 
+
+Note that the test are not compiled by TypeScript, that way there is no code duplication and you can use static types in your tests.
+
+P.S. If you are looking to contribute, this would be a great first contribution!
+
 ## Deployment
 <!-- HTML snippet -->
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/RyanCCollins/scalable-react-ts-boilerplate">
@@ -137,6 +148,10 @@ The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/
   - Serve the production bundle on port 1337
 - `npm run test`
   - Run the test suite
+- `npm run test:watch`
+  - Run the test suite in watch mode
+- `npm run test:update`
+  - Update the failing snapshot tests
 
 ## Resources
 - [JavaScript Code Quality with Free Tools](https://dev-blog.apollodata.com/javascript-code-quality-with-free-tools-9a6d80e29f2d#.1unvvh8vw)

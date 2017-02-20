@@ -6,6 +6,7 @@ exports[`<Section /> should render with default props 1`] = `
 
 exports[`<Section /> should render with different props 1`] = `
 <styled.section
+  backgroundColor="#f5f5f5"
   pad="medium"
   size="large">
   <div />

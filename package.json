@@ -44,7 +44,7 @@
     "generator": "plop --plopfile ./config/generators/cli.js",
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "npm run test -- --watch",
-    "test:update": "npm run test -- --update"
+    "test:update": "npm run test -- --u"
   },
   "dependencies": {
     "@types/body-parser": "latest",
