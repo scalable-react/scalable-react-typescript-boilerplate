@@ -6,11 +6,12 @@ import morgan from 'morgan';
 import express from 'express';
 import compression from 'compression';
 import path from 'path';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import store from '../client/store';
 import { routes } from '../client/routes';
 import Html from '../client/containers/Html';
 import graphQlEntry from './graphqlEntry';
+import 'isomorphic-fetch';
 
 const env = require('node-env-file');
 env(path.join(process.cwd(), '.env'));
@@ -27,7 +28,7 @@ graphQlEntry(expressApp).then((app) => {
   const IP = process.env.IP || '0.0.0.0';
   const PORT = process.env.PORT || 1338;
   const API_URL = process.env.API_URL;
-  const apiUrl = API_URL || `http://${PORT}:${IP}/api`;
+  const apiUrl = API_URL || `http://${IP}:${PORT}/api`;
   const debug = process.env.DEBUG === 'true' || false;
   if (debug) {
     app.use(morgan('combined'));
@@ -43,8 +44,9 @@ graphQlEntry(expressApp).then((app) => {
           console.error('ROUTER ERROR:', error); // eslint-disable-line no-console
           res.status(500);
         } else if (renderProps) {
-          const styles = styleSheet.rules().map((rule) => rule.cssText).join('\n');
-          const state = store.getState();
+          const styles = !process.env.browser
+            ? styleSheet.rules().map((rule) => rule.cssText).join('\n')
+            : null;
 
           const networkInterface = createNetworkInterface({
             uri: apiUrl,
@@ -59,22 +61,26 @@ graphQlEntry(expressApp).then((app) => {
             ssrMode: true,
           });
 
-          const content = renderToString(
+          const component = (
             <ApolloProvider store={store} client={client}>
               <RouterContext {...renderProps} />
-            </ApolloProvider>,
+            </ApolloProvider>
           );
-          const html = (
-            <Html
-              content={content}
-              scriptHash={manifest['/main.js']}
-              vendorHash={manifest['/vendor.js']}
-              cssHash={manifest['/main.css']}
-              styles={styles}
-              state={state}
-            />
-          );
-          res.status(200).send(`<!doctype html>\n${renderToStaticMarkup(html)}`);
+          getDataFromTree(component).then(() => {
+            const content = renderToString(component);
+            const state = { apollo: client.getInitialState() };
+            const html = (
+              <Html
+                content={content}
+                scriptHash={manifest['/main.js']}
+                vendorHash={manifest['/vendor.js']}
+                cssHash={manifest['/main.css']}
+                styles={styles}
+                state={state}
+              />
+            );
+            res.status(200).send(`<!doctype html>\n${renderToStaticMarkup(html)}`);
+          }).catch((err) => console.error(`Server rendering error: ${err}`));
         } else {
           res.status(404).send('Not found');
         }
