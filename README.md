@@ -215,6 +215,7 @@ See here for the [license](https://github.com/RyanCCollins/scalable-react-typesc
 ## Roadmap
 ### v1.0.2
 
+- [ ] Integrate storybook
 - [ ] Add a no any rule and update source to use it
 - [ ] Add more reusable modules, ala box / section
 - [ ] Standardize the tslint configuration
