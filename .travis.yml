@@ -1,6 +1,7 @@
 language: node_js
 node_js:
     - "6"
+cache: yarn
 before_script:
     - npm install jest-cli
-script: npm run test
+script: test
