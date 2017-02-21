@@ -1,0 +1,13 @@
+exports[`<Footer /> should render with default props 1`] = `
+<styled.footer
+  color="#0a0a0a">
+  <div />
+</styled.footer>
+`;
+
+exports[`<Footer /> should render with different props 1`] = `
+<styled.footer
+  color="#0b0b0b">
+  <div />
+</styled.footer>
+`;
