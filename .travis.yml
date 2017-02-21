@@ -2,5 +2,5 @@ language: node_js
 node_js:
     - "6"
 before_script:
-    - npm install jest
+    - npm install jest-cli
 script: npm run test
