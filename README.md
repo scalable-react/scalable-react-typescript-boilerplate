@@ -204,3 +204,23 @@ The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/
 - [Working with React & TypeScript](http://blog.wolksoftware.com/working-with-react-and-typescript)
 - [Setting up a New React / TypeScript Project](http://blog.tomduncalf.com/posts/setting-up-typescript-and-react/)
 - [Feature First Architecture](https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.8nerdsqhd)
+
+
+## Contributing
+See here for our [contribution guide](https://github.com/RyanCCollins/scalable-react-typescript-boilerplate/blob/master/CONTRIBUTING.md).  We are on slack, please go [here for an invite](https://scalable-react-slack.herokuapp.com/)!  We'd love to hear from you!
+
+## License
+See here for the [license](https://github.com/RyanCCollins/scalable-react-typescript-boilerplate/blob/master/LICENSE).
+
+## Roadmap
+### v1.0.2
+
+- [ ] Add a no any rule and update source to use it
+- [ ] Add more reusable modules, ala box / section
+- [ ] Standardize the tslint configuration
+- [ ] Introduce an async redux workflow
+  - Redux logic
+  - Redux Side-effect
+  - Sagas
+  - Etc.
+- [ ] Remove requires and use es6 imports for all libs
