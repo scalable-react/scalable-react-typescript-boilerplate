@@ -4,4 +4,4 @@ node_js:
 cache: yarn
 before_script:
     - npm install jest-cli
-script: test
+script: npm run test
