@@ -80,6 +80,8 @@ env(path.join(process.cwd(), '.env'));
 
 const dbUri = process.env.MONGODB_URI;
 
+mongoose.Promise = global.Promise;
+
 mongoose.connect(dbUri);
 mongoose.connection.on('connected', () => {
   console.info(`Mongoose connection open to ${dbUri}`);
