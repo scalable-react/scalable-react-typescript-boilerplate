@@ -28,7 +28,7 @@
       false
     ],
     "jsx-alignment": [
-      false
+      true
     ],
     "jsx-no-lambda": [
       false
