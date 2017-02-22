@@ -205,7 +205,6 @@ The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/
 - [Setting up a New React / TypeScript Project](http://blog.tomduncalf.com/posts/setting-up-typescript-and-react/)
 - [Feature First Architecture](https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.8nerdsqhd)
 
-
 ## Contributing
 See here for our [contribution guide](https://github.com/RyanCCollins/scalable-react-typescript-boilerplate/blob/master/CONTRIBUTING.md).  We are on slack, please go [here for an invite](https://scalable-react-slack.herokuapp.com/)!  We'd love to hear from you!
 
@@ -224,3 +223,6 @@ See here for the [license](https://github.com/RyanCCollins/scalable-react-typesc
   - Sagas
   - Etc.
 - [ ] Remove requires and use es6 imports for all libs
+
+## Troubleshooting
+Make sure to use the right version of node.  You can reference the version in the `.nvmrc` file.  For help installing and using NVM, please refer to this [gist](https://gist.github.com/RyanCCollins/1a5686ff9dd51b72eb2d4dc70aa6c1f4).
