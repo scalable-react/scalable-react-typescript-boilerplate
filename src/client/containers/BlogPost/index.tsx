@@ -3,35 +3,9 @@ import { graphql } from 'react-apollo';
 import { LoadingIndicator, Post, Section } from 'components';
 import POST_QUERY from './post.graphql';
 import COMMENT_MUTATION from './comments.graphql';
+import { BlogProps } from './types';
 
-interface IPostComments {
-  body: string;
-  author: string;
-}
-
-interface IPost {
-  id: string;
-  tags: Array<{ name: string }>;
-  title: string;
-  image: string;
-  content: string;
-  comments: IPostComments[];
-}
-
-interface IBlogProps extends React.Props<any> {
-  loading: boolean;
-  error?: { message: string };
-  post?: IPost;
-  submitComment?: Function;
-  refetch: Function;
-  params: {
-    postId: String;
-  };
-};
-
-type IBlogPropTypes = IBlogProps;
-
-class Blog extends React.Component<IBlogPropTypes, any> {
+class Blog extends React.Component<BlogProps, any> {
   constructor() {
     super();
     this.handleAddingComment = this.handleAddingComment.bind(this);

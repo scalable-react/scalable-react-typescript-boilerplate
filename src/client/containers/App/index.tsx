@@ -4,16 +4,7 @@ const { connect } = require('react-redux');
 const { bindActionCreators } = require('redux');
 import { NavBar, Footer, Heading, Paragraph, SvgIcon, Anchor, Box } from 'components';
 import { Author, Main } from './styles';
-
-interface AppProps extends React.Props<any> {
-  children: any;
-  actions: {
-    appSetMobile: (isMobile: boolean) => void,
-  };
-  isMobile: boolean;
-  navLinks: Array<{ url: string, text: string }>;
-  logoText: string;
-};
+import { AppProps } from './types';
 
 const mapStateToProps = (state) => ({
   isMobile: state.app.isMobile,
