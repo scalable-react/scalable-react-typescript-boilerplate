@@ -1,10 +1,10 @@
 const bio = require('./about').default;
 
 interface Contributor {
-  name: string,
-  avatar: string,
-  github: string,
-  bio: string,
+  name: string;
+  avatar: string;
+  github: string;
+  bio: string;
 };
 
 const contributors: Contributor[] = [
@@ -19,7 +19,7 @@ const contributors: Contributor[] = [
     avatar: 'https://raw.githubusercontent.com/ghoshabhi/cdn/master/profile_ag.jpg',
     github: 'https://github.com/ghoshabhi',
     bio: `${bio.aboutAbhi}`,
-  }
+  },
 ];
 
 export default contributors;

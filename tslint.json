@@ -22,13 +22,22 @@
     "member-ordering": [
       false
     ],
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods",
+      "ignore-interfaces"
+    ],
     "object-literal-sort-keys": false,
     "no-shadowed-variable": false,
     "no-console": [
       false
     ],
-    "jsx-alignment": [
+    "interface-name": [
       false
+    ],
+    "jsx-alignment": [
+      true
     ],
     "jsx-no-lambda": [
       false

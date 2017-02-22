@@ -1,3 +1,4 @@
+// tslint:disable
 export default {
   aboutContent: `
 # Scalable React TypeScript Boilerplate

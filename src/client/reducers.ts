@@ -2,12 +2,12 @@ import { combineReducers, Reducer } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import client from './apolloClient';
 /* GENERATOR-IMPORT */
-import app, { initialState as appState, IAppState } from 'containers/App/reducers';
+import app, { initialState as appState, AppState } from 'containers/App/reducers';
 import docs, { initialState as docsState, IDocsState } from 'containers/Docs/reducers';
 
 export interface IInitialState {
   /* GENERATOR-EXPORT-STATE-TYPE */
-  app: IAppState;
+  app: AppState;
   docs: IDocsState;
 }
 
@@ -19,6 +19,7 @@ export const initialState: IInitialState = {
 
 export const rootReducer = combineReducers({
   /* GENERATOR-EXPORT-REDUCER */
+  test,
   app,
   docs,
   routing: routerReducer,

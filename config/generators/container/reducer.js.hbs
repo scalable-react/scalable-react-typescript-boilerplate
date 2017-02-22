@@ -1,6 +1,6 @@
 import * as T from './constants';
 
-export interface I{{ properCase name }}Action {
+export interface {{ properCase name }}Action {
   type: T.LOAD_DATA_INITIATION_TYPE |
     T.LOAD_DATA_SUCCESS_TYPE |
       T.LOAD_DATA_FAILURE_TYPE;
@@ -8,22 +8,22 @@ export interface I{{ properCase name }}Action {
   data?: any;
 };
 
-export interface I{{ properCase name }}State {
+export interface {{ properCase name }}State {
   isLoading: boolean;
   error?: { message: string };
   data?: any;
 };
 
-export const initialState: I{{ properCase name }}State = {
+export const initialState: {{ properCase name }}State = {
   isLoading: false,
   error: null,
   data: null,
 };
 
 const {{ camelCase name }}Reducer = (
-  state: I{{ properCase name }}State = initialState,
-  action: I{{ properCase name }}Action,
-): I{{ properCase name }}State => {
+  state: {{ properCase name }}State = initialState,
+  action: {{ properCase name }}Action,
+): {{ properCase name }}State => {
   switch (action.type) {
     case T.LOAD_DATA_INITIATION:
       return Object.assign({}, state, {

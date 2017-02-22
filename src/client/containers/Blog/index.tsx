@@ -3,23 +3,9 @@ import { graphql } from 'react-apollo';
 import { Headline, LoadingIndicator, PostCard, Section, Box } from 'components';
 import POST_QUERY from './posts.graphql';
 import { StyledHr } from './styles';
+import { BlogProps } from './types';
 
-interface IPost {
-  id: string;
-  title: string;
-  image: string;
-  content: string;
-}
-
-interface IBlogProps extends React.Props<any> {
-  loading: boolean;
-  error?: { message: string };
-  posts?: IPost[];
-};
-
-type IBlogPropTypes = IBlogProps;
-
-class Blog extends React.Component<IBlogPropTypes, any> {
+class Blog extends React.Component<BlogProps, any> {
   public render() {
     const { loading, posts, error } = this.props;
     return (

@@ -13,12 +13,12 @@ const {
   H1,
 } = require('./styles');
 
-interface ITodoAppState {
+interface TodoAppState {
   todos?: Array<{ text: string }>;
   input?: string;
 }
 
-class TodoApp extends React.Component<any, ITodoAppState> {
+class TodoApp extends React.Component<any, TodoAppState> {
   constructor() {
     super();
     this.handleAddTodo = this.handleAddTodo.bind(this);

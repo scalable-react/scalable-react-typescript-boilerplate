@@ -2,7 +2,7 @@ import * as React from 'react';
 {{#if wantActionsAndReducer}}
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { I{{ properCase name }}State } from './reducer';
+import { {{ properCase name }}State } from './reducer';
 import {
   loadDataInitiation,
   loadDataSuccess,
@@ -19,19 +19,19 @@ import {
 import { Heading, Section } from './styles';
 
 {{#unless wantActionsAndReducer}}
-interface I{{ properCase name }}PropTypes extends React.Props<any> {
+interface {{ properCase name }}PropTypes extends React.Props<any> {
 
 };
 
 {{/unless}}
 {{#if wantActionsAndReducer}}
-interface I{{ properCase name }}Props extends React.Props<any> {
+interface {{ properCase name }}Props extends React.Props<any> {
   isLoading: boolean;
   error?: { message: string };
   data?: any;
 };
 
-interface I{{ properCase name }}DispatchProps {
+interface {{ properCase name }}DispatchProps {
   actions: {
     loadDataInitiation: Function;
     loadDataSuccess: Function;
@@ -39,10 +39,10 @@ interface I{{ properCase name }}DispatchProps {
   };
 };
 
-type I{{ properCase name }}PropTypes = I{{ properCase name }}Props & I{{ properCase name }}DispatchProps;
+type {{ properCase name }}PropTypes = {{ properCase name }}Props & {{ properCase name }}DispatchProps;
 
 {{#if wantSelectors}}
-const mapStateToProps = (state: I{{ properCase name }}State): I{{ properCase name }}Props => ({
+const mapStateToProps = (state: {{ properCase name }}State): {{ properCase name }}Props => ({
   isLoading: selectIsLoading(state),
   error: selectError(state),
   data: selectData(state),
@@ -55,7 +55,7 @@ const mapStateToProps = (state) => ({
 });
 {{/if}}
 
-const mapDispatchToProps = (dispatch): I{{ properCase name }}DispatchProps => ({
+const mapDispatchToProps = (dispatch): {{ properCase name }}DispatchProps => ({
   actions: bindActionCreators(
     {
       loadDataInitiation,
@@ -63,14 +63,14 @@ const mapDispatchToProps = (dispatch): I{{ properCase name }}DispatchProps => ({
       loadDataFailure,
     },
     dispatch,
-  )
+  ),
 });
 
 {{/if}}
 {{#if wantActionsAndReducer}}
-class {{ properCase name }} extends React.Component<I{{ properCase name }}PropTypes, I{{ properCase name }}State> {
+class {{ properCase name }} extends React.Component<{{ properCase name }}PropTypes, {{ properCase name }}State> {
 {{else}}
-class {{ properCase name }} extends React.Component<I{{ properCase name }}PropTypes, any> {
+class {{ properCase name }} extends React.Component<{{ properCase name }}PropTypes, any> {
 {{/if}}
   public render() {
     return (
@@ -86,7 +86,7 @@ class {{ properCase name }} extends React.Component<I{{ properCase name }}PropTy
 {{#if wantActionsAndReducer}}
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )({{ properCase name }});
 {{else}}
 export default {{ properCase name }};
