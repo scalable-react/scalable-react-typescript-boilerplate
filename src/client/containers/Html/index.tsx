@@ -25,7 +25,7 @@ const Html = (props: {
       <script src={`public${props.vendorHash}`} type="text/javascript" />
       <script
         dangerouslySetInnerHTML={{
-          __html: `window.__INITIAL_STATE__=${serialize(props.state, { isJSON: true })};`,
+          __html: `window.__APOLLO_STATE__=${serialize(props.state, { isJSON: true })};`,
         }}
         charSet="UTF-8"
       />
