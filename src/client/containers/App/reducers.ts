@@ -1,22 +1,20 @@
 import { SET_MOBILE } from './constants';
 
-interface IAction<P> {
+export interface Action<P> {
   type: string;
   payload: P;
 };
 
-export interface IAppState {
+export interface AppState {
   isMobile: boolean;
-  navLinks: [
-    {
-      text: string;
-      url: string;
-    }
-  ];
+  navLinks: [{
+    text: string;
+    url: string;
+  }];
   logoText: string;
 };
 
-export const initialState: IAppState = {
+export const initialState: AppState = {
   isMobile: false,
   navLinks: [
     {
@@ -35,7 +33,7 @@ export const initialState: IAppState = {
   logoText: 'React + TypeScript',
 };
 
-const appReducer = (state: IAppState = initialState, action: IAction<any>): IAppState => {
+const appReducer = (state: AppState = initialState, action: Action<any>): AppState => {
   switch (action.type) {
     case SET_MOBILE:
       return Object.assign({}, state, {

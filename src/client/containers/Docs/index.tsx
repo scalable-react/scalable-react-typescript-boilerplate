@@ -6,11 +6,12 @@ const connect = require('react-redux').connect;
 const bindActionCreators = require('redux').bindActionCreators;
 const { StyledHr } = require('./styles');
 
-interface IAppProps extends React.Props<any> {
+interface DocsProps extends React.Props<any> {
   error?: string;
   docs?: string;
   isLoading: boolean;
   actions: any;
+  markdownContent: string;
 };
 
 const mapStateToProps = (state) => ({
@@ -26,7 +27,7 @@ const mapDispatchToProps = (dispatch) => ({
   ),
 });
 
-class Docs extends React.Component<any, any> {
+class Docs extends React.Component<DocsProps, any> {
   public componentDidMount() {
     this.props.actions.loadMarkdown();
   }

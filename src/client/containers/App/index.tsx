@@ -5,7 +5,7 @@ const { bindActionCreators } = require('redux');
 import { NavBar, Footer, Heading, Paragraph, SvgIcon, Anchor, Box } from 'components';
 import { Author, Main } from './styles';
 
-interface IAppProps extends React.Props<any> {
+interface AppProps extends React.Props<any> {
   children: any;
   actions: {
     appSetMobile: (isMobile: boolean) => void,
@@ -28,7 +28,7 @@ const mapDispatchToProps = (dispatch) => ({
   ),
 });
 
-class App extends React.Component<IAppProps, any> {
+class App extends React.Component<AppProps, any> {
   constructor() {
     super();
     this.handleMobile = this.handleMobile.bind(this);

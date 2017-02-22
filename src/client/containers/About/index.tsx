@@ -57,7 +57,7 @@ class About extends React.Component<any, any> {
                     </Anchor>
                   </CardFooter>
                 </AvatarContainer>
-              </Card>
+              </Card>,
             )}
           </AboutSectionInner>
         </AboutSection>
