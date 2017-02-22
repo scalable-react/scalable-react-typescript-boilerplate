@@ -3,23 +3,23 @@ const url = 'https://raw.githubusercontent.com/RyanCCollins/scalable-react-ts-bo
 
 declare var fetch: any;
 
-interface IAction<P> {
+interface Action<P> {
   type: string;
   payload?: P;
 }
 
-export const loadInitiation = (): IAction<any> => ({
+export const loadInitiation = (): Action<any> => ({
   type: types.LOAD_INTIATION,
 });
 
-export const loadSuccess = (data: any): IAction<any> => ({
+export const loadSuccess = (data: any): Action<any> => ({
   type: types.LOAD_SUCCESS,
   payload: {
     data,
   },
 });
 
-export const loadFailure = (error: string): IAction<any> => ({
+export const loadFailure = (error: { message: string }): Action<any> => ({
   type: types.LOAD_FAILURE,
   payload: {
     error,
@@ -35,7 +35,7 @@ export const loadMarkdown = () => (dispatch: Function) => {
         dispatch(loadSuccess(text));
       })
       .catch((err) => {
-        dispatch(loadFailure(err.message));
+        dispatch(loadFailure(err));
       });
   }, 1000);
 };

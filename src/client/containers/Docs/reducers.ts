@@ -1,23 +1,25 @@
 import * as types from './constants';
 
-interface IAction<P> {
+interface Action<P> {
   type: string;
   payload?: P;
 };
 
-export interface IDocsState {
+export interface DocsState {
   markdownContent?: string;
-  error?: string;
+  error?: {
+    message: string;
+  };
   isLoading: boolean;
 };
 
-export const initialState: IDocsState = {
+export const initialState: DocsState = {
   markdownContent: null,
   error: null,
   isLoading: false,
 };
 
-const docsReducer = (state: IDocsState = initialState, action: IAction<any>): IDocsState => {
+const docsReducer = (state: DocsState = initialState, action: Action<any>): DocsState => {
   switch (action.type) {
     case types.LOAD_INTIATION:
       return Object.assign({}, state, {
