@@ -6,8 +6,8 @@
   "author": "RyanCCollins",
   "license": "MIT",
   "engines": {
-    "node": "6.2.0",
-    "npm": "3.8.9"
+    "node": "6.9.5",
+    "npm": "3.10.8"
   },
   "jest": {
     "moduleFileExtensions": [
