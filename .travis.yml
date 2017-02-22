@@ -4,3 +4,5 @@ node_js:
 script: npm run test
 notifications:
   slack: scalable-react:HPFuyoipfw9RROPGrZrczz1m
+  email:
+    on_failure: always
