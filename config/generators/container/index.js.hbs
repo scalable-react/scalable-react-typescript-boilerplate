@@ -63,7 +63,7 @@ const mapDispatchToProps = (dispatch): {{ properCase name }}DispatchProps => ({
       loadDataFailure,
     },
     dispatch,
-  )
+  ),
 });
 
 {{/if}}
@@ -86,7 +86,7 @@ class {{ properCase name }} extends React.Component<{{ properCase name }}PropTyp
 {{#if wantActionsAndReducer}}
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )({{ properCase name }});
 {{else}}
 export default {{ properCase name }};
