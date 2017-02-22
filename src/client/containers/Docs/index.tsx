@@ -7,7 +7,9 @@ const bindActionCreators = require('redux').bindActionCreators;
 const { StyledHr } = require('./styles');
 
 interface DocsProps extends React.Props<any> {
-  error?: string;
+  error?: {
+    message: string;
+  };
   docs?: string;
   isLoading: boolean;
   actions: any;
