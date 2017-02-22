@@ -3,12 +3,12 @@ import { routerReducer } from 'react-router-redux';
 import client from './apolloClient';
 /* GENERATOR-IMPORT */
 import app, { initialState as appState, AppState } from 'containers/App/reducers';
-import docs, { initialState as docsState, IDocsState } from 'containers/Docs/reducers';
+import docs, { initialState as docsState, DocsState } from 'containers/Docs/reducers';
 
 export interface IInitialState {
   /* GENERATOR-EXPORT-STATE-TYPE */
   app: AppState;
-  docs: IDocsState;
+  docs: DocsState;
 }
 
 export const initialState: IInitialState = {
