@@ -5,13 +5,13 @@ import client from './apolloClient';
 import app, { initialState as appState, AppState } from 'containers/App/reducers';
 import docs, { initialState as docsState, DocsState } from 'containers/Docs/reducers';
 
-export interface IInitialState {
+export interface InitialState {
   /* GENERATOR-EXPORT-STATE-TYPE */
   app: AppState;
   docs: DocsState;
 }
 
-export const initialState: IInitialState = {
+export const initialState: InitialState = {
   /* GENERATOR-EXPORT-STATE */
   app: appState,
   docs: docsState,
@@ -19,7 +19,6 @@ export const initialState: IInitialState = {
 
 export const rootReducer = combineReducers({
   /* GENERATOR-EXPORT-REDUCER */
-  test,
   app,
   docs,
   routing: routerReducer,

@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
-import { IInitialState } from '../../reducers';
+import { InitialState } from '../../reducers';
 
-const selectDocs = () => (state: IInitialState) => state.docs;
+const selectDocs = () => (state: InitialState) => state.docs;
 
 export const selectError = createSelector(
   selectDocs(),
