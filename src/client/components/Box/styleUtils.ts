@@ -1,4 +1,4 @@
-import { Size, ISizeObject, BoxSize, IBoxSize, Full, WrapOption, ISizeStyle } from './types';
+import { Size, SizeObject, BoxSize, BoxSizeObject, Full, WrapOption, SizeStyle } from './types';
 import { SIZE_MAP, BOX_SIZE_MAP } from './maps';
 
 export function calculateFlexWrap(wrap?: boolean, reverse?: boolean): WrapOption {
@@ -11,7 +11,7 @@ export function calculateFlexWrap(wrap?: boolean, reverse?: boolean): WrapOption
   }
 }
 
-export function sizeToString(size: Size | ISizeObject): string {
+export function sizeToString(size: Size | SizeObject): string {
   let returnVal;
   if (typeof size === 'string') {
     returnVal = `${SIZE_MAP[size]}px`;
@@ -25,7 +25,7 @@ export function sizeToString(size: Size | ISizeObject): string {
   return returnVal;
 }
 
-function stringBoxStyle(size: BoxSize): ISizeStyle {
+function stringBoxStyle(size: BoxSize): SizeStyle {
   if (size === 'full') {
     return {
       width: '100vw',
@@ -39,7 +39,7 @@ function stringBoxStyle(size: BoxSize): ISizeStyle {
   }
 }
 
-function objectBoxStyle(size: IBoxSize): ISizeStyle {
+function objectBoxStyle(size: BoxSizeObject): SizeStyle {
   let width = 'auto';
   let height = 'auto';
   if (size.vertical) {
@@ -58,7 +58,7 @@ function objectBoxStyle(size: IBoxSize): ISizeStyle {
   };
 }
 
-export function boxSizeToStyle(size: BoxSize | IBoxSize): ISizeStyle {
+export function boxSizeToStyle(size: BoxSize | BoxSizeObject): SizeStyle {
   if (typeof size === 'string') {
     return stringBoxStyle(size);
   } else if (typeof size === 'object') {
