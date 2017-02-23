@@ -1,3 +1,4 @@
+import { marginCss } from '../Paragraph/styles';
 import { calculateSize } from './styleUtils';
 const styled = require('styled-components').default;
 const { css } = require('styled-components');
@@ -28,6 +29,7 @@ export const H1 = styled.h1`
   color: ${(props) => props.color};
   ${(props) => truncateCss(props.truncate)};
   ${(props) => textTransformCss(props.upcase)};
+  ${(props) => marginCss(props.margin)};
 `;
 
 export const H2 = styled.h2`
@@ -36,6 +38,7 @@ export const H2 = styled.h2`
   color: ${(props) => props.color};
   ${(props) => truncateCss(props.truncate)};
   ${(props) => textTransformCss(props.upcase)};
+  ${(props) => marginCss(props.margin)};
 `;
 
 export const H3 = styled.h3`
@@ -44,6 +47,7 @@ export const H3 = styled.h3`
   color: ${(props) => props.color};
   ${(props) => truncateCss(props.truncate)};
   ${(props) => textTransformCss(props.upcase)};
+  ${(props) => marginCss(props.margin)};
 `;
 
 export const H4 = styled.h4`
@@ -52,6 +56,7 @@ export const H4 = styled.h4`
   color: ${(props) => props.color};
   ${(props) => truncateCss(props.truncate)};
   ${(props) => textTransformCss(props.upcase)};
+  ${(props) => marginCss(props.margin)};
 `;
 
 export const H5 = styled.h5`
@@ -60,4 +65,5 @@ export const H5 = styled.h5`
   color: ${(props) => props.color};
   ${(props) => truncateCss(props.truncate)};
   ${(props) => textTransformCss(props.upcase)};
+  ${(props) => marginCss(props.margin)};
 `;

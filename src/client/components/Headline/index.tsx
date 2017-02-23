@@ -8,6 +8,7 @@ class Headline extends React.Component<HeadlineProps, any> {
     textAlign: 'center',
     size: 'medium',
     fontWeight: 400,
+    margin: 'medium',
   };
   public render() {
     const { children, ...rest } = this.props;

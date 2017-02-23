@@ -1,7 +1,5 @@
-import { Rem, Px, Tag } from './types';
-
-const rootRem: number = 16;
-const remFromPX = (px: Px): Rem => (px / rootRem);
+import { Tag } from './types';
+import remStringFromPX from 'utils/remStringFromPX';
 
 const sizeMap = {
   h1: 36,
@@ -11,4 +9,4 @@ const sizeMap = {
   h5: 16,
 };
 
-export const calculateSize = (tag: Tag): string => `${remFromPX(sizeMap[tag])}rem`;
+export const calculateSize = (tag: Tag): string => remStringFromPX(sizeMap[tag]);

@@ -26,6 +26,8 @@ interface BoxProps {
   backgroundColor?: string;
   backgroundImage?: string;
   full?: boolean | { horizontal?: boolean, vertical?: boolean };
+  className?: string;
+  style?: any;
 };
 
 export default BoxProps;

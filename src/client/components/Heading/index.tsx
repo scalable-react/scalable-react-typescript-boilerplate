@@ -9,6 +9,7 @@ class Heading extends React.Component<HeadingProps, any> {
     tag: 'h1',
     truncate: false,
     upcase: false,
+    margin: 'medium',
   };
   public render() {
     const { children, tag, ...rest } = this.props;

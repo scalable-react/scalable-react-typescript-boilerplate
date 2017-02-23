@@ -1,6 +1,6 @@
-import { Rem, Px, HeadlineSize, SizeMap } from './types';
+import { HeadlineSize, SizeMap } from './types';
+import remStringFromPX from 'utils/remStringFromPX';
 
-const baseRem = 16;
 const sizeMap: SizeMap = {
   small: 30,
   medium: 48,
@@ -8,11 +8,6 @@ const sizeMap: SizeMap = {
   xlarge: 72,
 };
 
-function pxToRem(px: Px): Rem {
-  return px / baseRem;
-};
-
 export default function calculateSize(size: HeadlineSize): string {
-  const remValue = pxToRem(sizeMap[size]);
-  return `${remValue}rem`;
+  return remStringFromPX(sizeMap[size]);
 };

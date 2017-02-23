@@ -1,14 +1,19 @@
 import * as React from 'react';
 import { Features } from 'containers';
-import { Heading, Hero } from 'components';
-const { Container, Section, HeroLogo, HeroLogoRow, HeadingContainer } = require('./styles');
+import { Heading, Section, Hero, Paragraph } from 'components';
+const { Container, HeroLogo, HeroLogoRow, HeadingContainer } = require('./styles');
 const GetStartedButtonRow = require('./GetStartedButtonRow').default;
 
 class Home extends React.Component<any, any> {
   public render() {
     return (
       <Container>
-        <section id="hero-section">
+        <Section
+          alignItems="center"
+          flexDirection="column"
+          full={{ horizontal: true }}
+          backgroundColor="#f5f5f5"
+        >
           <Hero>
             <HeroLogoRow>
               <HeroLogo>
@@ -16,15 +21,18 @@ class Home extends React.Component<any, any> {
               </HeroLogo>
             </HeroLogoRow>
             <HeadingContainer>
-              <Heading tag="h2" color="#007acc">
-                Scalable React TS Boilerplate
+              <Heading margin="small" tag="h1" color="#007acc">
+                Scalable React TypeScript Boilerplate
               </Heading>
+              <Paragraph style={{ fontStyle: 'italic' }} margin="small" size="large">
+                Scaling JavaScript apps has never been easier
+              </Paragraph>
             </HeadingContainer>
             <GetStartedButtonRow />
           </Hero>
-        </section>
+        </Section>
         <Features />
-        <Section id="get-started" backgroundColor="#f3f3f3">
+        <Section backgroundColor="#f3f3f3">
           <GetStartedButtonRow />
         </Section>
       </Container>

@@ -17,6 +17,7 @@ module.exports = {
     alias: {
       components: path.resolve(ROOT_PATH, 'build/src/client/components'),
       containers: path.resolve(ROOT_PATH, 'build/src/client/containers'),
+      utils: path.resolve(ROOT_PATH, 'build/src/client/utils'),
     },
   },
   module: {
