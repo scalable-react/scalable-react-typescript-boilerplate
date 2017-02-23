@@ -1,5 +1,18 @@
-import { Size, SizeObject, BoxSize, BoxSizeObject, Full, WrapOption, SizeStyle } from './types';
+import {
+  Size,
+  SizeObject,
+  BoxSize,
+  BoxSizeObject,
+  Full,
+  WrapOption,
+  SizeStyle,
+  Rem,
+  Px,
+} from './types';
 import { SIZE_MAP, BOX_SIZE_MAP } from './maps';
+
+const rootRem: number = 16;
+const remFromPX = (px: Px): Rem => (px / rootRem);
 
 export function calculateFlexWrap(wrap?: boolean, reverse?: boolean): WrapOption {
   if (wrap && reverse) {
@@ -14,13 +27,13 @@ export function calculateFlexWrap(wrap?: boolean, reverse?: boolean): WrapOption
 export function sizeToString(size: Size | SizeObject): string {
   let returnVal;
   if (typeof size === 'string') {
-    returnVal = `${SIZE_MAP[size]}px`;
+    returnVal = `${remFromPX(SIZE_MAP[size])}rem`;
   } else if (typeof size === 'object') {
     const horizontal = size.horizontal || 'none';
     const vertical = size.vertical || 'none';
-    returnVal = `${SIZE_MAP[vertical]}px ${SIZE_MAP[horizontal]}px`;
+    returnVal = `${remFromPX(SIZE_MAP[vertical])}rem ${remFromPX(SIZE_MAP[horizontal])}rem`;
   } else {
-    returnVal = `0px`;
+    returnVal = `0rem`;
   }
   return returnVal;
 }
@@ -33,8 +46,8 @@ function stringBoxStyle(size: BoxSize): SizeStyle {
     };
   } else {
     return {
-      width: size ? `${BOX_SIZE_MAP[size]}px` : '',
-      height: size ? `${BOX_SIZE_MAP[size]}px` : '',
+      width: size ? `${remFromPX(BOX_SIZE_MAP[size])}rem` : '',
+      height: size ? `${remFromPX(BOX_SIZE_MAP[size])}rem` : '',
     };
   }
 }
@@ -45,12 +58,12 @@ function objectBoxStyle(size: BoxSizeObject): SizeStyle {
   if (size.vertical) {
     height = size.vertical === 'full'
       ? '100vh'
-      : `${BOX_SIZE_MAP[size.vertical]}px`;
+      : `${remFromPX(BOX_SIZE_MAP[size.vertical])}rem`;
   }
   if (size.horizontal) {
     width = size.horizontal === 'full'
       ? '100vw'
-      : `${BOX_SIZE_MAP[size.horizontal]}px`;
+      : `${remFromPX(BOX_SIZE_MAP[size.horizontal])}rem`;
   }
   return {
     width,

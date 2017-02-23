@@ -5,6 +5,8 @@ export interface BoxSizeObject { horizontal?: BoxSize; vertical?: BoxSize; };
 export interface FullObject { horizontal: boolean; vertical: boolean; };
 export type Full = boolean | FullObject;
 export type WrapOption = 'wrap' | 'wrap-reverse' | 'nowrap';
+export type Rem = number;
+export type Px = number;
 
 export interface SizeStyle {
   height: string;
