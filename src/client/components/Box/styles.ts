@@ -18,6 +18,6 @@ export default styled.div`
   width: ${({ size }) => boxSizeToStyle(size).width};
   height: ${({ size }) => boxSizeToStyle(size).height};
   flex-basis: auto;
-  min-height: ${({ full }) => calculateFullStyle(full, 'vh')}
-  min-width: ${({ full }) => calculateFullStyle(full, 'vw')}
+  min-height: ${({ full }) => calculateFullStyle(full, 'vh')};
+  min-width: ${({ full }) => calculateFullStyle(full, 'vw')};
 `;

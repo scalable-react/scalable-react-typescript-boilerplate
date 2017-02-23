@@ -1,27 +1,20 @@
 import * as React from 'react';
-const P = require('./styles').P;
+import Component from './styles';
+import { ParagraphProps } from './types';
 
-interface IProps extends React.Props<Paragraph> {
-  color?: string;
-  textAlign?: string;
-  fontSize?: number;
-};
-
-class Paragraph extends React.Component<IProps, any> {
-  public static defaultProps: IProps = {
+class Paragraph extends React.Component<ParagraphProps, any> {
+  public static defaultProps: ParagraphProps = {
     color: '#fff',
     textAlign: 'center',
-    fontSize: 18,
+    size: 'medium',
+    margin: 'medium',
   };
   public render() {
+    const { children, ...rest } = this.props;
     return (
-      <P
-        fontSize={this.props.fontSize}
-        color={this.props.color}
-        textAlign={this.props.textAlign}
-      >
-        {this.props.children}
-      </P>
+      <Component {...rest}>
+        {children}
+      </Component>
     );
   }
 }

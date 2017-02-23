@@ -47,7 +47,7 @@ class Docs extends React.Component<DocsProps, any> {
         full={{ vertical: true }}
         backgroundColor="#f5f5f5"
       >
-        <Headline>
+        <Headline fontWeight={700}>
           Documentation
           <StyledHr />
         </Headline>

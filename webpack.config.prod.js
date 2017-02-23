@@ -39,6 +39,7 @@ module.exports = {
     alias: {
       components: path.resolve(ROOT_PATH, 'src/client/components'),
       containers: path.resolve(ROOT_PATH, 'src/client/containers'),
+      utils: path.resolve(ROOT_PATH, 'src/client/utils'),
     },
   },
   module: {
