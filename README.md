@@ -131,22 +131,22 @@ Recently, we've added support for Apollo and GraphQL both server and client side
 ## UI Components
 #### Build your next UIKit with this library!
 Included in this project are a few primitive components that you can use to bootstrap your next project, or as a reference for building a UIKit.
-- [Box](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/tree/master/src/components/Box/index.tsx)
+- [Box](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Box/index.tsx)
   - Flex Box component!  Whoot!
-- [Section](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/tree/master/src/components/Section/index.tsx)
+- [Section](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Section/index.tsx)
   - A section component.  Extends the Box component giving flex-box properties.
-- [Anchor](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/tree/master/src/components/Anchor/index.tsx)
-- [Article](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Article/index.tsx)
-- [Button](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Button/index.tsx)
-- [Footer](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Footer/index.tsx)
-- [Heading](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Heading/index.tsx)
-- [Headline](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Headline/index.tsx)
-- [Hero](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Hero/index.tsx)
-- [Image](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Image/index.tsx)
-- [Markdown](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Markdown/index.tsx)
-- [NavBar](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/NavBar/index.tsx)
-- [Paragraph](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/Paragraph/index.tsx)
-- [SvgIcon](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/components/SvgIcon/index.tsx)
+- [Anchor](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Anchor/index.tsx)
+- [Article](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Article/index.tsx)
+- [Button](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Button/index.tsx)
+- [Footer](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Footer/index.tsx)
+- [Heading](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Heading/index.tsx)
+- [Headline](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Headline/index.tsx)
+- [Hero](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Hero/index.tsx)
+- [Image](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Image/index.tsx)
+- [Markdown](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Markdown/index.tsx)
+- [NavBar](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/NavBar/index.tsx)
+- [Paragraph](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/Paragraph/index.tsx)
+- [SvgIcon](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/SvgIcon/index.tsx)
 - And more!
 
 ## Generators
