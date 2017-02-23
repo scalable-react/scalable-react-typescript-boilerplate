@@ -40,6 +40,7 @@
     "compile": "./node_modules/.bin/tsc",
     "setup:yarn": "yarn",
     "preserve": "npm run compile",
+    "lint": "tslint \"src/**/**/*.ts\"",
     "serve": "cross-env NODE_ENV=server node server.js",
     "postinstall": "npm run deploy",
     "generator": "plop --plopfile ./config/generators/cli.js",

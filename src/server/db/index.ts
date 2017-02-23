@@ -1,4 +1,4 @@
-import mongoose, { Types } from 'mongoose';
+import mongoose from 'mongoose';
 import path from 'path';
 import PostModel from './models/post';
 import CommentModel from './models/comment';
