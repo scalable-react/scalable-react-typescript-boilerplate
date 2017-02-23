@@ -1,5 +1,5 @@
 import { ParagraphSize, SizeMap, Margin, MarginSizeMap } from './types';
-import remStringFromPX from 'utils/remStringFromPX';
+import remStringFromPX from '../utils';
 
 const sizeMap: SizeMap = {
   small: 14,

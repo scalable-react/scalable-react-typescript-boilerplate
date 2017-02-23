@@ -1,5 +1,5 @@
 import { HeadlineSize, SizeMap } from './types';
-import remStringFromPX from 'utils/remStringFromPX';
+import remStringFromPX from '../utils';
 
 const sizeMap: SizeMap = {
   small: 30,

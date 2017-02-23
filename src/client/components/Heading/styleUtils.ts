@@ -1,5 +1,5 @@
 import { Tag } from './types';
-import remStringFromPX from 'utils/remStringFromPX';
+import remStringFromPX from '../utils';
 
 const sizeMap = {
   h1: 36,
