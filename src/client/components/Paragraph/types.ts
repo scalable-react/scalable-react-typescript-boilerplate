@@ -1,3 +1,4 @@
+import * as React from 'react';
 import Paragraph from './index';
 export type ParagraphSize = 'small' | 'medium' | 'large' | 'xlarge';
 export type Margin = 'none' | 'small' | 'medium' | 'large';
@@ -21,6 +22,4 @@ export interface ParagraphProps extends React.Props<Paragraph> {
   textAlign?: string;
   size?: ParagraphSize;
   margin?: Margin;
-  className?: string;
-  style?: any;
 }

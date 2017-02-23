@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Margin } from '../Paragraph/types';
 import Heading from './index';
 export type TextAligment = 'center' | 'left' | 'right' | 'justify';
@@ -19,6 +20,4 @@ export interface HeadingProps extends React.Props<Heading> {
   truncate?: boolean;
   upcase?: boolean;
   margin?: Margin;
-  className?: string;
-  style?: any;
 }

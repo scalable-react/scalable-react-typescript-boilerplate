@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Component from './styles';
-import IBoxProps from './types';
+import BoxProps from './types';
 
-export default function Box(props: IBoxProps) {
+export default function Box(props: BoxProps) {
   const { children, ...rest } = props;
   return (
     <Component {...rest}>

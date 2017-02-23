@@ -24,7 +24,7 @@ class Home extends React.Component<any, any> {
               <Heading margin="small" tag="h1" color="#007acc">
                 Scalable React TypeScript Boilerplate
               </Heading>
-              <Paragraph style={{ fontStyle: 'italic' }} margin="small" size="large">
+              <Paragraph margin="small" size="large">
                 Scaling JavaScript apps has never been easier
               </Paragraph>
             </HeadingContainer>
