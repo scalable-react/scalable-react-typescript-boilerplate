@@ -1,0 +1,9 @@
+exports[`<Avatar {...props} /> should render with proper props 1`] = `
+<styled.div>
+  <styled.div
+    avatarUrl="https://avatars3.githubusercontent.com/u/19292575" />
+  <styled.p>
+    Abhishek Ghosh
+  </styled.p>
+</styled.div>
+`;
