@@ -16,7 +16,7 @@ class Blog extends React.Component<BlogProps, any> {
         full={{ vertical: true }}
         backgroundColor="#f5f5f5"
       >
-        <Headline>
+        <Headline fontWeight={700}>
           Blog
           <StyledHr />
         </Headline>
