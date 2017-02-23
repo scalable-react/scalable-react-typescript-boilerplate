@@ -13,4 +13,3 @@ export default new GraphQLObjectType({
     post: { type: new GraphQLNonNull(GraphQLID) },
   }),
 });
-

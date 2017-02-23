@@ -20,4 +20,3 @@ export default new GraphQLSchema({
   query: RootQuery,
   mutation: RootMutation,
 });
-

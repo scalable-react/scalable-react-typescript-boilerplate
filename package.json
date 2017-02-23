@@ -31,6 +31,11 @@
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
   },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint --silent"
+    }
+  },
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
     "start": "node devServer.js",
@@ -40,6 +45,7 @@
     "compile": "./node_modules/.bin/tsc",
     "setup:yarn": "yarn",
     "preserve": "npm run compile",
+    "lint": "tslint \"src/**/*.ts{,x}\"",
     "serve": "cross-env NODE_ENV=server node server.js",
     "postinstall": "npm run deploy",
     "generator": "plop --plopfile ./config/generators/cli.js",
@@ -86,6 +92,7 @@
     "exports-loader": "^0.6.3",
     "express": "^4.14.1",
     "extract-text-webpack-plugin": "^2.0.0-beta",
+    "ghooks": "^2.0.0",
     "github-markdown-css": "^2.4.1",
     "graphql": "^0.9.1",
     "graphql-server-express": "^0.6.0",
