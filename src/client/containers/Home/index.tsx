@@ -16,7 +16,7 @@ class Home extends React.Component<any, any> {
               </HeroLogo>
             </HeroLogoRow>
             <HeadingContainer>
-              <Heading color="#007acc">
+              <Heading tag="h2" color="#007acc">
                 Scalable React TS Boilerplate
               </Heading>
             </HeadingContainer>

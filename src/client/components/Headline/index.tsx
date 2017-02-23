@@ -1,22 +1,19 @@
 import * as React from 'react';
-const { HeadlineStyled } = require('./styles');
+import { HeadlineStyled } from './styles';
+import { HeadlineProps } from './types';
 
-type TextAligment = 'center' | 'left' | 'right' | 'justify';
-
-interface IProps extends React.Props<Headline> {
-  color?: string;
-  textAlign?: string;
-};
-
-class Headline extends React.Component<IProps, any> {
-  public static defaultProps: IProps = {
+class Headline extends React.Component<HeadlineProps, any> {
+  public static defaultProps: HeadlineProps = {
     color: '#000000',
     textAlign: 'center',
+    size: 'medium',
+    fontWeight: 400,
   };
   public render() {
+    const { children, ...rest } = this.props;
     return (
-      <HeadlineStyled textAlign={this.props.textAlign} color={this.props.color}>
-        {this.props.children}
+      <HeadlineStyled {...rest}>
+        {children}
       </HeadlineStyled>
     );
   }

@@ -1,24 +1,49 @@
 import * as React from 'react';
-const H1 = require('./styles').H1;
+import { HeadingProps } from './types';
+import { H1, H2, H3, H4, H5 } from './styles';
 
-type TextAligment = 'center' | 'left' | 'right' | 'justify';
-
-interface IProps extends React.Props<Heading> {
-  color?: string;
-  textAlign?: string;
-};
-
-class Heading extends React.Component<IProps, any> {
-  public static defaultProps: IProps = {
+class Heading extends React.Component<HeadingProps, any> {
+  public static defaultProps: HeadingProps = {
     color: '#007acc',
     textAlign: 'center',
+    tag: 'h1',
+    truncate: false,
+    upcase: false,
   };
   public render() {
-    return (
-      <H1 textAlign={this.props.textAlign} color={this.props.color}>
-        {this.props.children}
-      </H1>
-    );
+    const { children, tag, ...rest } = this.props;
+    switch (tag) {
+      case 'h2':
+       return (
+        <H2 tag={tag} {...rest}>
+          {children}
+        </H2>
+       );
+      case 'h3':
+       return (
+        <H3 tag={tag} {...rest}>
+          {children}
+        </H3>
+       );
+      case 'h4':
+       return (
+        <H4 tag={tag} {...rest}>
+          {children}
+        </H4>
+       );
+      case 'h5':
+       return (
+        <H5 tag={tag} {...rest}>
+          {children}
+        </H5>
+       );
+      default:
+        return (
+          <H1 tag={tag} {...rest}>
+            {children}
+          </H1>
+        );
+    }
   }
 }
 

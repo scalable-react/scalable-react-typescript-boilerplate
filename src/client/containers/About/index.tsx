@@ -25,7 +25,7 @@ class About extends React.Component<any, any> {
     return (
       <Container>
         <AboutSection id="about-section-1">
-          <Headline textAlign="left">
+          <Headline fontWeight={700}>
             About
             <StyledHr />
           </Headline>
@@ -36,7 +36,7 @@ class About extends React.Component<any, any> {
           </AboutSectionInner>
         </AboutSection>
         <AboutSection id="about-section-two" padBottom>
-          <Headline>
+          <Headline fontWeight={700}>
             Team Members
             <StyledHr/>
           </Headline>
