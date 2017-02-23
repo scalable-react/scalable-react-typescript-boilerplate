@@ -32,9 +32,6 @@ class Home extends React.Component<any, any> {
           </Hero>
         </Section>
         <Features />
-        <Section alignItems="center" pad="medium" backgroundColor="#f3f3f3">
-          <GetStartedButtonRow />
-        </Section>
       </Container>
     );
   }
