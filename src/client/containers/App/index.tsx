@@ -49,12 +49,14 @@ class App extends React.Component<AppProps, any> {
         />
         {React.cloneElement(this.props.children, this.props)}
         <Footer>
-          <Heading>
-            React + TypeScript
-          </Heading>
-          <Paragraph>
-            Scalable React TS Boilerplate
-          </Paragraph>
+          <Box alignItems="center">
+            <Heading>
+              React + TypeScript
+            </Heading>
+            <Paragraph margin="none">
+              Scalable React TS Boilerplate
+            </Paragraph>
+          </Box>
           <Author>
             <span>By </span>
             <Anchor color="#007acc" href="http://www.ryancollins.io/">Ryan C. Collins</Anchor>
