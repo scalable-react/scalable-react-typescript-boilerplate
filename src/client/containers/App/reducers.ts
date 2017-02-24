@@ -35,12 +35,12 @@ export const initialState: AppState = {
 
 const appReducer = (state: AppState = initialState, action: Action<any>): AppState => {
   switch (action.type) {
-    case SET_MOBILE:
-      return Object.assign({}, state, {
-        isMobile: action.payload.isMobile,
-      });
-    default:
-      return state;
+  case SET_MOBILE:
+    return Object.assign({}, state, {
+      isMobile: action.payload.isMobile,
+    });
+  default:
+    return state;
   }
 };
 
