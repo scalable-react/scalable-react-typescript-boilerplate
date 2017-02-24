@@ -1,0 +1,39 @@
+exports[`<Button /> should render a hero button with boolean true 1`] = `
+<styled.button
+  backgroundColor="#c05b4d"
+  borderColor="#732419"
+  color="#fefefe"
+  size={16}
+  style={Object {}}>
+  Button Text
+</styled.button>
+`;
+
+exports[`<Button /> should render a hero button with other props 1`] = `
+<styled.button
+  backgroundColor="#ffffff"
+  borderColor="#000000"
+  color="blue"
+  size="large"
+  style="text-align: center;">
+  Button Text
+</styled.button>
+`;
+
+exports[`<Button /> should render a plain button with default props 1`] = `
+<styled.button
+  backgroundColor="#c05b4d"
+  color="#fefefe"
+  size={16}>
+  Button Text
+</styled.button>
+`;
+
+exports[`<Button /> should render a plain button with other props 1`] = `
+<styled.button
+  backgroundColor="#ffffff"
+  color="blue"
+  size="large">
+  Button Text
+</styled.button>
+`;
