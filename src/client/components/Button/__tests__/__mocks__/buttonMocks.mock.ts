@@ -1,12 +1,10 @@
-export const heroButtonTrue = {
-  isHero: true,
-};
+import { ButtonSize } from '../../../Button';
 
 export const buttonProps = {
   color: 'blue',
   backgroundColor: '#ffffff',
   borderColor: '#000000',
-  size: 'large',
+  size: ButtonSize.xlarge,
   style: 'text-align: center;',
 };
 
@@ -15,6 +13,6 @@ export const heroButtonProps = {
   color: 'blue',
   backgroundColor: '#ffffff',
   borderColor: '#000000',
-  size: 'large',
+  size: ButtonSize.large,
   style: 'text-align: center;',
 };
