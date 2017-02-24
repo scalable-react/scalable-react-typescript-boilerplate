@@ -10,12 +10,12 @@ const {
   Anchor,
 } = require('./styles');
 
-interface IProps extends React.Props<NavBar> {
+interface NavBarProps extends React.Props<NavBar> {
   logoText: string;
   links: Array<{ url: string, text: string }>;
 };
 
-class NavBar extends React.Component<IProps, any> {
+class NavBar extends React.Component<NavBarProps, any> {
   public render() {
     return (
       <Nav>

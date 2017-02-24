@@ -1,13 +1,13 @@
 import * as React from 'react';
 const { AvatarContainer, AvatarDiv, AvatarName } = require('./styles');
 
-interface IProps extends React.Props<Avatar> {
+interface AvatarProps extends React.Props<Avatar> {
   avatarUrl: string;
   name?: string;
 }
 
-class Avatar extends React.Component<IProps, any> {
-  public static defaultProps: IProps = {
+class Avatar extends React.Component<AvatarProps, any> {
+  public static defaultProps: AvatarProps = {
     avatarUrl: 'https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/no-user.png',
     name: 'Contributor',
   };

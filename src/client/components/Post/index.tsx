@@ -3,7 +3,7 @@ import { Markdown, Image, Headline, Comment, AddComment } from 'components';
 import { ImageSize } from 'components/Image';
 import { Article, Content } from './styles';
 
-interface IPostComments {
+interface PostComment {
   body: string;
   author: string;
 }
@@ -12,7 +12,7 @@ export default function Post(props: {
   content: string;
   image: string;
   title: string;
-  comments?: IPostComments[];
+  comments?: PostComment[];
   comment: {
     onSubmit: Function;
     onChange: Function;
