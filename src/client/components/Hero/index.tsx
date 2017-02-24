@@ -1,12 +1,12 @@
 import * as React from 'react';
 const HeroDiv = require('./styles').HeroDiv;
 
-interface IProps extends React.Props<Hero> {
+interface HeroProps extends React.Props<Hero> {
   color?: string;
 };
 
-class Hero extends React.Component<IProps, any> {
-  public static defaultProps: IProps = {
+class Hero extends React.Component<HeroProps, any> {
+  public static defaultProps: HeroProps = {
     color: '#2d2d2d',
   };
   public render() {

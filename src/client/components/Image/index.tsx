@@ -10,13 +10,13 @@ export enum ImageSize {
   xlarge = 600,
 };
 
-interface IProps extends React.Props<Image> {
+interface ImageProps extends React.Props<Image> {
   size?: ImageSize;
   src: string;
   alt: string;
 };
 
-class Image extends React.Component<IProps, any> {
+class Image extends React.Component<ImageProps, any> {
   public static defaultProps = {
     size: ImageSize.xsmall,
   };

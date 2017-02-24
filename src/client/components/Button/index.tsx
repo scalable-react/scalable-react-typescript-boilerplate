@@ -9,7 +9,7 @@ export enum ButtonSize {
   xlarge = 24,
 }
 
-interface IProps extends React.Props<Button> {
+interface ButtonProps extends React.Props<Button> {
   color?: string;
   backgroundColor?: string;
   onClick?: (x: any) => any;
@@ -19,8 +19,8 @@ interface IProps extends React.Props<Button> {
   style?: any;
 };
 
-class Button extends React.Component<IProps, any> {
-  public static defaultProps: IProps = {
+class Button extends React.Component<ButtonProps, any> {
+  public static defaultProps: ButtonProps = {
     color: '#fefefe',
     backgroundColor: '#c05b4d',
     borderColor: '#732419',

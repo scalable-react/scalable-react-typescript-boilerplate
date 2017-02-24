@@ -3,11 +3,11 @@ const ReactMarkdown = require('react-markdown');
 require('github-markdown-css/github-markdown.css');
 const Box = require('./styles').Box;
 
-interface IProps extends React.Props<Markdown> {
+interface MarkdownProps extends React.Props<Markdown> {
   content: string;
 };
 
-class Markdown extends React.Component<IProps, any> {
+class Markdown extends React.Component<MarkdownProps, any> {
   public render() {
     return (
       <Box className="markdown-body">

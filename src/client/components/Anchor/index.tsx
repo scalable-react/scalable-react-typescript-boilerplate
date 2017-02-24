@@ -1,13 +1,13 @@
 import * as React from 'react';
 const AnchorComponent = require('./styles').AnchorComponent;
 
-interface IProps extends React.Props<Anchor> {
+interface AnchorProps extends React.Props<Anchor> {
   href?: string;
   label?: string;
   color?: string;
 };
 
-class Anchor extends React.Component<IProps, any> {
+class Anchor extends React.Component<AnchorProps, any> {
   public static defaultProps = {
     color: '#007acc',
   };

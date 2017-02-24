@@ -3,12 +3,12 @@ import * as React from 'react';
 import SvgIcon, { Circle } from './styles';
 import { Box } from 'components';
 
-interface IProps extends React.Props<LoadingIndicator> {
+interface LoadingIndicatorProps extends React.Props<LoadingIndicator> {
   isLoading: boolean;
 };
 
 // tslint:disable
-class LoadingIndicator extends React.Component<IProps, any> {
+class LoadingIndicator extends React.Component<LoadingIndicatorProps, any> {
   public render() {
     if (this.props.isLoading) {
       return (

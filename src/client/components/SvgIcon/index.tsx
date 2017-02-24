@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface IProps extends React.Props<SvgIcon> {
+interface SvgIconProps extends React.Props<SvgIcon> {
   viewBox?: string;
   width?: number;
   height?: number;
@@ -8,8 +8,8 @@ interface IProps extends React.Props<SvgIcon> {
   className?: string;
 };
 
-class SvgIcon extends React.Component<IProps, any> {
-  public static defaultProps: IProps = {
+class SvgIcon extends React.Component<SvgIconProps, any> {
+  public static defaultProps: SvgIconProps = {
     viewBox: '0 0 24 24',
   };
   public render() {
