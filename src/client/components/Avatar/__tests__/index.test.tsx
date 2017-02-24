@@ -5,10 +5,10 @@ import Avatar from '../';
 import props from './__mocks__/avatarMocks.mock';
 
 describe('<Avatar {...props} />', () => {
-    it('should render with proper props', () => {
-        const wrapper = shallow(
-            <Avatar {...props} />,
-        );
-        expect(shallowToJson(wrapper)).toMatchSnapshot();
-    });
+  it('should render with proper props', () => {
+    const wrapper = shallow(
+      <Avatar {...props} />,
+    );
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
+  });
 });
