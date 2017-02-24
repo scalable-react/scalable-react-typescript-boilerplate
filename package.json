@@ -31,12 +31,8 @@
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
   },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run lint --silent"
-    }
-  },
   "scripts": {
+    "precommit": "npm run lint --silent && npm run test",
     "build": "webpack --config ./webpack.config.js",
     "start": "node devServer.js",
     "predeploy": "rimraf build/public/*.*",
@@ -92,13 +88,13 @@
     "exports-loader": "^0.6.3",
     "express": "^4.14.1",
     "extract-text-webpack-plugin": "^2.0.0-beta",
-    "ghooks": "^2.0.0",
     "github-markdown-css": "^2.4.1",
     "graphql": "^0.9.1",
     "graphql-server-express": "^0.6.0",
     "graphql-tag": "^1.2.4",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.24.1",
+    "husky": "^0.13.1",
     "imports-loader": "^0.7.0",
     "isomorphic-fetch": "^2.2.1",
     "jest": "^18.1.0",
