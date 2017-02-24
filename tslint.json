@@ -1,13 +1,11 @@
 {
   "extends": [
     "tslint:latest",
-    "tslint-react"
+    "tslint-react",
+    "tslint-eslint-rules"
   ],
   "rules": {
-    "indent": [
-      true,
-      "spaces"
-    ],
+    "ter-indent": [true, 2],
     "quotemark": [
       true,
       "single",
