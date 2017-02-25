@@ -10,7 +10,6 @@
     "npm": "3.10.8"
   },
   "jest": {
-    "collectCoverage": true,
     "moduleFileExtensions": [
       "ts",
       "tsx",
