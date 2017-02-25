@@ -31,6 +31,10 @@ class About extends React.Component<any, any> {
           </Headline>
           <AboutSectionInner>
             <Article
+              pad="large"
+              backgroundColor="#fff"
+              margin={{ vertical: 'medium' }}
+              size={{ horizontal: 'xxlarge' }}
               content={`${about.aboutContent}`}
             />
           </AboutSectionInner>

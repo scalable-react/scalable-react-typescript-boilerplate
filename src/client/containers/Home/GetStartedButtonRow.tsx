@@ -7,7 +7,7 @@ const GetStartedButtonRow = () =>
   <GetStartedButtons>
     <Anchor
       color="#fff"
-      href="/docs"
+      path="/docs"
     >
       <Button
         style={{ margin: 10 }}
@@ -21,7 +21,7 @@ const GetStartedButtonRow = () =>
     </Anchor>
     <Anchor
       color="#fff"
-      href="/todo-app"
+      path="/todo-app"
     >
       <Button
         style={{ margin: 10 }}

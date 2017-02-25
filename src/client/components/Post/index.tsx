@@ -22,7 +22,11 @@ export default function Post(props: {
 }) {
   const { content, title, image, comments, comment } = props;
   return (
-    <Article>
+    <Article
+      pad="large"
+      margin={{ vertical: 'medium' }}
+      size={{ horizontal: 'xxlarge' }}
+    >
       <Image alt={title} size={ImageSize.large} src={image} />
       <Headline>
         {title}

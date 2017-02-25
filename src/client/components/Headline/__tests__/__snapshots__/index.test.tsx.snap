@@ -1,0 +1,21 @@
+exports[`<Headline /> should render with default props 1`] = `
+<styled.h1
+  color="#000000"
+  fontWeight={400}
+  margin="medium"
+  size="medium"
+  textAlign="center">
+  Headline
+</styled.h1>
+`;
+
+exports[`<Headline /> should render with different props 1`] = `
+<styled.h1
+  color="#fff"
+  fontWeight={400}
+  margin="medium"
+  size="medium"
+  textAlign="center">
+  Headline
+</styled.h1>
+`;

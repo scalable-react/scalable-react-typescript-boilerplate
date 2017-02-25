@@ -10,12 +10,15 @@
     "npm": "3.10.8"
   },
   "jest": {
-    "collectCoverage": true,
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js"
     ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/testing/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/config/testing/__mocks__/styleMock.js"
+    },
     "testPathIgnorePatterns": [
       "<rootDir>/(build|docs|node_modules)/",
       "/__mocks__/"

@@ -1,17 +1,11 @@
 import * as types from './constants';
-
-interface Action<P> {
-  type: string;
-  payload?: P;
-};
+import { Action, ErrorType } from './types';
 
 export interface DocsState {
   markdownContent?: string;
-  error?: {
-    message: string;
-  };
+  error?: ErrorType;
   isLoading: boolean;
-};
+}
 
 export const initialState: DocsState = {
   markdownContent: null,

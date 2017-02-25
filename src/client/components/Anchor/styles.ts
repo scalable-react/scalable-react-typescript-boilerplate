@@ -4,5 +4,5 @@ export const AnchorComponent = styled.a`
   color: ${(props) => props.color};
   font-size: 1.1875rem;
   line-height: 24px;
-  font-weight: 600;
+  font-weight: 400;
 `;
