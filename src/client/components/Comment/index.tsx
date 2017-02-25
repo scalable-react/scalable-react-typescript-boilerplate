@@ -11,7 +11,7 @@ import {
 export default function Comment(props: {
   body: string;
   author: string;
-}) {
+}): JSX.Element {
   const { body, author } = props;
   return (
     <Wrapper>

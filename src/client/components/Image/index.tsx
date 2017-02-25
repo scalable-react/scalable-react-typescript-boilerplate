@@ -8,13 +8,13 @@ export enum ImageSize {
   medium = 400,
   large = 500,
   xlarge = 600,
-};
+}
 
 interface ImageProps extends React.Props<Image> {
   size?: ImageSize;
   src: string;
   alt: string;
-};
+}
 
 class Image extends React.Component<ImageProps, any> {
   public static defaultProps = {

@@ -19,7 +19,7 @@ export default function Post(props: {
     input: string;
     onKeyUp: Function;
   }
-}) {
+}): JSX.Element {
   const { content, title, image, comments, comment } = props;
   return (
     <Article

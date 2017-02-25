@@ -17,7 +17,7 @@ interface ButtonProps extends React.Props<Button> {
   isHero?: boolean;
   borderColor?: string;
   style?: any;
-};
+}
 
 class Button extends React.Component<ButtonProps, any> {
   public static defaultProps: ButtonProps = {

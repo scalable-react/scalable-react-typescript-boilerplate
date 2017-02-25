@@ -5,7 +5,7 @@ const Box = require('./styles').Box;
 
 interface MarkdownProps extends React.Props<Markdown> {
   content: string;
-};
+}
 
 class Markdown extends React.Component<MarkdownProps, any> {
   public render() {

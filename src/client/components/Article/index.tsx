@@ -7,7 +7,7 @@ require('github-markdown-css/github-markdown.css');
 interface ArticleProps extends BoxProps {
   content?: string;
   children?: JSX.Element;
-};
+}
 
 class Article extends React.Component<ArticleProps, any> {
   private static renderContent(content) {

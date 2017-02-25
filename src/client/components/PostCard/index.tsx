@@ -17,7 +17,7 @@ export default function PostCard(props: {
   id: string;
   image: string;
   title: string;
-}) {
+}): JSX.Element {
   const { content, image, title, id } = props;
   return (
     <Card>

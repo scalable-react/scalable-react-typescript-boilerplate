@@ -16,7 +16,7 @@ export default function AddComment(props: {
   onSubmit: Function;
   onChange: Function;
   onKeyUp: Function;
-}) {
+}): JSX.Element {
   const { onSubmit, input, onChange, onKeyUp } = props;
   return (
     <Wrapper>
