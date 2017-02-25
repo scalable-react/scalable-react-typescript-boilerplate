@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { AddCommentProps } from './types';
 import {
   Wrapper,
   CommentWrapper,
@@ -11,13 +12,12 @@ import {
   ActionButton,
 } from './styles';
 
-export default function AddComment(props: {
-  input: string;
-  onSubmit: Function;
-  onChange: Function;
-  onKeyUp: Function;
-}): JSX.Element {
-  const { onSubmit, input, onChange, onKeyUp } = props;
+export default function AddComment({
+  onSubmit,
+  input,
+  onChange,
+  onKeyUp,
+}: AddCommentProps): JSX.Element {
   return (
     <Wrapper>
       <PicWrapper>
