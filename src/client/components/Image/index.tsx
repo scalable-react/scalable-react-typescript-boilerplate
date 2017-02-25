@@ -1,24 +1,10 @@
 import * as React from 'react';
-const Img = require('./styles').Img;
-
-export enum ImageSize {
-  xxsmall = 100,
-  xsmall = 200,
-  small = 300,
-  medium = 400,
-  large = 500,
-  xlarge = 600,
-};
-
-interface ImageProps extends React.Props<Image> {
-  size?: ImageSize;
-  src: string;
-  alt: string;
-};
+import { Img } from './styles';
+import { ImageProps, ImageSize } from './types';
 
 class Image extends React.Component<ImageProps, undefined> {
   public static defaultProps = {
-    size: ImageSize.xsmall,
+    size: 'small',
   };
   public render() {
     return (

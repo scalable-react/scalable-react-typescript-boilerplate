@@ -12,7 +12,7 @@ const {
 interface NavBarProps extends React.Props<NavBar> {
   logoText: string;
   links: Array<{ url: string, text: string }>;
-};
+}
 
 class NavBar extends React.Component<NavBarProps, undefined> {
   public render() {

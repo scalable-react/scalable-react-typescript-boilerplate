@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => ({
 class Docs extends React.Component<DocsProps, any> {
   public componentDidMount() {
     const { markdownContent } = this.props;
-    if (typeof markdownContent !== 'string') {
+    if (!markdownContent) {
       this.props.actions.loadMarkdown();
     }
   }

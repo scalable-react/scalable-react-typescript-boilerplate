@@ -8,6 +8,13 @@ import {
   loadDataSuccess,
   loadDataFailure,
 } from './actions';
+import {
+  {{ properCase name }}Props,
+  {{ properCase name }}DispatchProps,
+  {{ properCase name }}PropTypes,
+} from './types';
+{{else}}
+import { {{ properCase name }}PropTypes } from './types';
 {{/if}}
 {{#if wantSelectors}}
 import {
@@ -17,29 +24,7 @@ import {
 } from './selectors';
 {{/if}}
 import { Heading, Section } from './styles';
-
-{{#unless wantActionsAndReducer}}
-interface {{ properCase name }}PropTypes extends React.Props<any> {
-
-};
-
-{{/unless}}
 {{#if wantActionsAndReducer}}
-interface {{ properCase name }}Props extends React.Props<any> {
-  isLoading: boolean;
-  error?: { message: string };
-  data?: any;
-};
-
-interface {{ properCase name }}DispatchProps {
-  actions: {
-    loadDataInitiation: Function;
-    loadDataSuccess: Function;
-    loadDataFailure: Function;
-  };
-};
-
-type {{ properCase name }}PropTypes = {{ properCase name }}Props & {{ properCase name }}DispatchProps;
 
 {{#if wantSelectors}}
 const mapStateToProps = (state: {{ properCase name }}State): {{ properCase name }}Props => ({
@@ -66,8 +51,6 @@ const mapDispatchToProps = (dispatch): {{ properCase name }}DispatchProps => ({
   ),
 });
 
-{{/if}}
-{{#if wantActionsAndReducer}}
 class {{ properCase name }} extends React.Component<{{ properCase name }}PropTypes, {{ properCase name }}State> {
 {{else}}
 class {{ properCase name }} extends React.Component<{{ properCase name }}PropTypes, any> {

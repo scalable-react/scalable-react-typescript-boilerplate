@@ -98,6 +98,13 @@ module.exports = {
         abortOnFail: true
       });
 
+      actions.push( {
+        type: 'add',
+        path: `${containerPath}/types.ts`,
+        templateFile: './container/types.ts.hbs',
+        abortOnFail: true
+      })
+
       // Reducer
       actions.push({
         type: 'add',
