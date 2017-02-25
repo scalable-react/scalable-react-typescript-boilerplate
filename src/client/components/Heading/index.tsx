@@ -2,7 +2,7 @@ import * as React from 'react';
 import { HeadingProps } from './types';
 import { H1, H2, H3, H4, H5 } from './styles';
 
-class Heading extends React.Component<HeadingProps, any> {
+class Heading extends React.Component<HeadingProps, undefined> {
   public static defaultProps: HeadingProps = {
     color: '#007acc',
     textAlign: 'center',

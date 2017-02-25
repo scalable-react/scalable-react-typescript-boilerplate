@@ -7,7 +7,7 @@ interface MarkdownProps extends React.Props<Markdown> {
   content: string;
 };
 
-class Markdown extends React.Component<MarkdownProps, any> {
+class Markdown extends React.Component<MarkdownProps, undefined> {
   public render() {
     return (
       <Box className="markdown-body">

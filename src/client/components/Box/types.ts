@@ -15,7 +15,7 @@ export interface SizeStyle {
   width: string;
 };
 
-interface BoxProps extends React.Props<any> {
+interface BoxProps extends React.Props<undefined> {
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
   flexDirection?: 'row' | 'column';
   justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';

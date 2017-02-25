@@ -16,7 +16,7 @@ interface ImageProps extends React.Props<Image> {
   alt: string;
 };
 
-class Image extends React.Component<ImageProps, any> {
+class Image extends React.Component<ImageProps, undefined> {
   public static defaultProps = {
     size: ImageSize.xsmall,
   };
