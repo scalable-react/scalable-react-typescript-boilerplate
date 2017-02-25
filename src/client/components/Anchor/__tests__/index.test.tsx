@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import * as React from 'react';
 import Anchor from '../';
-import pathProps, { hrefProps } from './__mocks__/AnchorMocks.mock';
+import pathProps, { hrefProps } from './__mocks__/anchorMocks.mock';
 
 describe('<Anchor />', () => {
   it('should render with default props', () => {
