@@ -2,25 +2,15 @@ import * as React from 'react';
 import { Markdown, Image, Headline, Comment, AddComment } from 'components';
 import { ImageSize } from 'components/Image';
 import { Article, Content } from './styles';
+import { PostProps } from './types';
 
-interface PostComment {
-  body: string;
-  author: string;
-}
-
-export default function Post(props: {
-  content: string;
-  image: string;
-  title: string;
-  comments?: PostComment[];
-  comment: {
-    onSubmit: Function;
-    onChange: Function;
-    input: string;
-    onKeyUp: Function;
-  }
-}): JSX.Element {
-  const { content, title, image, comments, comment } = props;
+export default function Post({
+  content,
+  title,
+  image,
+  comments,
+  comment,
+}: PostProps): JSX.Element {
   return (
     <Article
       pad="large"

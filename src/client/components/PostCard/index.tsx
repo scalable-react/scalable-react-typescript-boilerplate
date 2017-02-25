@@ -11,14 +11,14 @@ import {
   Anchor,
   CardContents,
 } from './styles';
+import { PostCardProps } from './types';
 
-export default function PostCard(props: {
-  content: string;
-  id: string;
-  image: string;
-  title: string;
-}): JSX.Element {
-  const { content, image, title, id } = props;
+export default function PostCard({ 
+  content, 
+  image, 
+  title, 
+  id,
+}: PostCardProps): JSX.Element {
   return (
     <Card>
       <CardThumbnail image={image} />
