@@ -22,7 +22,10 @@ const mapDispatchToProps = (dispatch) => ({
 
 class Docs extends React.Component<DocsProps, any> {
   public componentDidMount() {
-    this.props.actions.loadMarkdown();
+    const { markdownContent } = this.props;
+    if (typeof markdownContent !== 'string') {
+      this.props.actions.loadMarkdown();
+    }
   }
   public render() {
     const {
