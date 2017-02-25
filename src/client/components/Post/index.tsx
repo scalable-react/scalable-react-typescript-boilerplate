@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Markdown, Image, Headline, Comment, AddComment } from 'components';
-import { ImageSize } from 'components/Image';
 import { Article, Content } from './styles';
 import { PostProps } from './types';
 
@@ -17,7 +16,7 @@ export default function Post({
       margin={{ vertical: 'medium' }}
       size={{ horizontal: 'xxlarge' }}
     >
-      <Image alt={title} size={ImageSize.large} src={image} />
+      <Image alt={title} size="large" src={image} />
       <Headline>
         {title}
       </Headline>

@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { Heading, Headline, Image, Button, Markdown, Anchor } from 'components';
-import { ImageSize } from 'components/Image';
-const {
+import {
   Container,
   FeatureImage,
   Card,
   FeaturesSection,
   Feature,
   FeatureSectionInner,
-} = require('./styles');
+} from './styles';
 const features = require('./features').default;
 
 class Features extends React.Component<any, any> {
@@ -22,7 +21,7 @@ class Features extends React.Component<any, any> {
           <FeatureSectionInner>
             <Feature>
               <Image
-                size={ImageSize.small}
+                size="small"
                 alt="Type-Script Logo"
                 src="https://raw.githubusercontent.com/RyanCCollins/cdn/master/stsb-images/ts-resized-2.png"
               />
@@ -65,7 +64,7 @@ class Features extends React.Component<any, any> {
             </Feature>
             <Feature>
               <Image
-                size={ImageSize.small}
+                size="small"
                 alt="Styled-components logo"
                 src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc.png?raw=true"
               />
@@ -73,7 +72,7 @@ class Features extends React.Component<any, any> {
           </FeatureSectionInner>
           <FeatureImage>
             <Image
-              size={ImageSize.medium}
+              size="medium"
               alt="Styled-components example"
               src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc-example.png?raw=true"
             />
@@ -83,7 +82,7 @@ class Features extends React.Component<any, any> {
           <FeatureSectionInner>
             <Feature>
               <Image
-                size={ImageSize.small}
+                size="small"
                 alt="feature-first logo"
                 src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first.png?raw=true"
               />
@@ -99,7 +98,7 @@ class Features extends React.Component<any, any> {
           </FeatureSectionInner>
           <FeatureImage>
             <Image
-              size={ImageSize.medium}
+              size="medium"
               alt="feature-first example"
               src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first-example.png?raw=true"
             />
