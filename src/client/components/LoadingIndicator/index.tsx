@@ -8,7 +8,7 @@ interface LoadingIndicatorProps extends React.Props<LoadingIndicator> {
 }
 
 // tslint:disable
-class LoadingIndicator extends React.Component<LoadingIndicatorProps, any> {
+class LoadingIndicator extends React.Component<LoadingIndicatorProps, undefined> {
   public render() {
     if (this.props.isLoading) {
       return (

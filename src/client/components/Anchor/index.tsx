@@ -15,7 +15,7 @@ interface AnchorProps extends React.Props<Anchor> {
   }
 }
 
-class Anchor extends React.Component<AnchorProps, any> {
+class Anchor extends React.Component<AnchorProps, undefined> {
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);

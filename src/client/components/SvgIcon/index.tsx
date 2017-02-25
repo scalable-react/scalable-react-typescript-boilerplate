@@ -8,7 +8,7 @@ interface SvgIconProps extends React.Props<SvgIcon> {
   className?: string;
 };
 
-class SvgIcon extends React.Component<SvgIconProps, any> {
+class SvgIcon extends React.Component<SvgIconProps, undefined> {
   public static defaultProps: SvgIconProps = {
     viewBox: '0 0 24 24',
   };

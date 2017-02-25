@@ -19,7 +19,7 @@ interface ButtonProps extends React.Props<Button> {
   style?: any;
 }
 
-class Button extends React.Component<ButtonProps, any> {
+class Button extends React.Component<ButtonProps, undefined> {
   public static defaultProps: ButtonProps = {
     color: '#fefefe',
     backgroundColor: '#c05b4d',
