@@ -2,19 +2,10 @@ import * as React from 'react';
 import { Article, Headline, LoadingIndicator, Box, Section } from 'components';
 import * as DocsActionCreators from './actions';
 import { selectError, selectIsLoading, selectMarkdownContent } from './selectors';
+import { StyledHr } from './styles';
+import { DocsProps } from './types';
 const connect = require('react-redux').connect;
 const bindActionCreators = require('redux').bindActionCreators;
-const { StyledHr } = require('./styles');
-
-interface DocsProps extends React.Props<any> {
-  error?: {
-    message: string;
-  };
-  docs?: string;
-  isLoading: boolean;
-  actions: any;
-  markdownContent: string;
-};
 
 const mapStateToProps = (state) => ({
   error: selectError(state),
@@ -65,6 +56,7 @@ class Docs extends React.Component<DocsProps, any> {
         {typeof markdownContent === 'string' &&
           <Article
             pad="large"
+            backgroundColor="#fff"
             margin={{ vertical: 'medium' }}
             size={{ horizontal: 'xxlarge' }}
             content={markdownContent}

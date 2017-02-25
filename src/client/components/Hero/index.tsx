@@ -3,7 +3,7 @@ const HeroDiv = require('./styles').HeroDiv;
 
 interface HeroProps extends React.Props<Hero> {
   color?: string;
-};
+}
 
 class Hero extends React.Component<HeroProps, any> {
   public static defaultProps: HeroProps = {
