@@ -2,7 +2,7 @@ import * as React from 'react';
 import Component from './styles';
 import { ParagraphProps } from './types';
 
-class Paragraph extends React.Component<ParagraphProps, any> {
+class Paragraph extends React.Component<ParagraphProps, undefined> {
   public static defaultProps: ParagraphProps = {
     color: '#fff',
     textAlign: 'center',

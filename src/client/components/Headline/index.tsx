@@ -2,7 +2,7 @@ import * as React from 'react';
 import { HeadlineStyled } from './styles';
 import { HeadlineProps } from './types';
 
-class Headline extends React.Component<HeadlineProps, any> {
+class Headline extends React.Component<HeadlineProps, undefined> {
   public static defaultProps: HeadlineProps = {
     color: '#000000',
     textAlign: 'center',

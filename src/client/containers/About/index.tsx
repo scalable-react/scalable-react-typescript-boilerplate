@@ -20,7 +20,7 @@ const {
 const about = require('./about').default;
 import contributors from './contributors';
 
-class About extends React.Component<any, any> {
+class About extends React.Component<undefined, undefined> {
   public render() {
     return (
       <Container>

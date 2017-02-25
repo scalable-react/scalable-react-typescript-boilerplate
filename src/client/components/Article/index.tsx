@@ -9,7 +9,7 @@ interface ArticleProps extends BoxProps {
   children?: JSX.Element;
 };
 
-class Article extends React.Component<ArticleProps, any> {
+class Article extends React.Component<ArticleProps, undefined> {
   private static renderContent(content) {
     if (!content) {
       return null;

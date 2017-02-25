@@ -14,7 +14,7 @@ interface NavBarProps extends React.Props<NavBar> {
   links: Array<{ url: string, text: string }>;
 };
 
-class NavBar extends React.Component<NavBarProps, any> {
+class NavBar extends React.Component<NavBarProps, undefined> {
   public render() {
     return (
       <Nav>

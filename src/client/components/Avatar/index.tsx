@@ -6,7 +6,7 @@ interface AvatarProps extends React.Props<Avatar> {
   name?: string;
 }
 
-class Avatar extends React.Component<AvatarProps, any> {
+class Avatar extends React.Component<AvatarProps, undefined> {
   public static defaultProps: AvatarProps = {
     avatarUrl: 'https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/no-user.png',
     name: 'Contributor',

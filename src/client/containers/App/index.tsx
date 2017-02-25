@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
   ),
 });
 
-class App extends React.Component<AppProps, any> {
+class App extends React.Component<AppProps, undefined> {
   constructor() {
     super();
     this.handleMobile = this.handleMobile.bind(this);

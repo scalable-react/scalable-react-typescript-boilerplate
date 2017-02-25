@@ -5,7 +5,7 @@ interface HeroProps extends React.Props<Hero> {
   color?: string;
 }
 
-class Hero extends React.Component<HeroProps, any> {
+class Hero extends React.Component<HeroProps, undefined> {
   public static defaultProps: HeroProps = {
     color: '#2d2d2d',
   };

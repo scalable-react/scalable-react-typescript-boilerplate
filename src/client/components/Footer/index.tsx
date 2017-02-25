@@ -5,7 +5,7 @@ interface FooterProps extends React.Props<Footer> {
   color: string;
 };
 
-class Footer extends React.Component<any, any> {
+class Footer extends React.Component<any, undefined> {
   public static defaultProps: FooterProps = {
     color: '#0a0a0a',
   };
