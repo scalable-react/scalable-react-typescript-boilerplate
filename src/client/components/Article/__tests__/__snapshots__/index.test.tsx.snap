@@ -1,0 +1,33 @@
+exports[`<Article /> should render with content 1`] = `
+<styled.article
+  backgroundColor="#f5f5f5"
+  className="markdown-body"
+  pad="medium"
+  size="large">
+  <ReactMarkdown
+    containerTagName="div"
+    source="# Awesome" />
+</styled.article>
+`;
+
+exports[`<Article /> should render with default props 1`] = `
+<styled.article
+  className="markdown-body" />
+`;
+
+exports[`<Article /> should render with default props and children 1`] = `
+<styled.article
+  className="markdown-body">
+  👶👶👶
+</styled.article>
+`;
+
+exports[`<Article /> should render with different props 1`] = `
+<styled.article
+  backgroundColor="#f5f5f5"
+  className="markdown-body"
+  pad="medium"
+  size="large">
+  👶👶👶
+</styled.article>
+`;

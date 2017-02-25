@@ -1,18 +1,30 @@
 import * as React from 'react';
+import Component from './styles';
+import BoxProps from '../Box/types';
 const Markdown = require('react-markdown');
 require('github-markdown-css/github-markdown.css');
-const ArticleComponent = require('./styles').ArticleComponent;
 
-interface ArticleProps extends React.Props<Article> {
-  content: string;
+interface ArticleProps extends BoxProps {
+  content?: string;
+  children?: JSX.Element;
 };
 
 class Article extends React.Component<ArticleProps, any> {
-  public render() {
+  private static renderContent(content) {
+    if (!content) {
+      return null;
+    }
     return (
-      <ArticleComponent className="markdown-body">
-        <Markdown source={this.props.content} />
-      </ArticleComponent>
+      <Markdown source={content} />
+    );
+  }
+  public render() {
+    const { content, children, ...rest } = this.props;
+    return (
+      <Component {...rest} className="markdown-body">
+        {Article.renderContent(content)}
+        {children}
+      </Component>
     );
   }
 }

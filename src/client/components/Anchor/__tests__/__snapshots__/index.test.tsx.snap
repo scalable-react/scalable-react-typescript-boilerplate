@@ -1,0 +1,30 @@
+exports[`<Anchor /> should render href props 1`] = `
+<Anchor
+  color="#fff"
+  href="https://github.com/RyanCCollins/scalable-react-ts-boilerplate"
+  label="Scalable React"
+  method="push" />
+`;
+
+exports[`<Anchor /> should render path props 1`] = `
+<Anchor
+  color="#fff"
+  label="Docs"
+  method="push"
+  path="/docs" />
+`;
+
+exports[`<Anchor /> should render with children 1`] = `
+<Anchor
+  color="#007acc"
+  method="push"
+  path="/about">
+  About 👶
+</Anchor>
+`;
+
+exports[`<Anchor /> should render with default props 1`] = `
+<Anchor
+  color="#007acc"
+  method="push" />
+`;

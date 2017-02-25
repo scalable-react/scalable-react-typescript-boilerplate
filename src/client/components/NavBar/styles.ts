@@ -21,11 +21,6 @@ export const LeftMenu = styled.div`
   margin-left: 1rem;
 `;
 
-export const LeftMenuText = styled.a`
-  color: #007acc;
-  font-weight: 700;
-`;
-
 export const RightMenu = styled.div`
   max-width: 400px;
   margin-right: 1rem;
@@ -39,11 +34,10 @@ export const Menu = styled.ul`
 export const MenuItem = styled.li`
   display: table-cell;
   vertical-align: middle;
-`;
-
-export const Anchor = styled.a`
-  color: #fff;
-  display: block;
-  padding: .7rem 1rem;
-  line-height: 1;
+  a {
+    color: #fff;
+    display: block;
+    padding: .7rem 1rem;
+    line-height: 1;
+  }
 `;

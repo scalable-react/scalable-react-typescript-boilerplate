@@ -63,7 +63,12 @@ class Docs extends React.Component<DocsProps, any> {
         }
         <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&
-          <Article content={markdownContent} />
+          <Article
+            pad="large"
+            margin={{ vertical: 'medium' }}
+            size={{ horizontal: 'xxlarge' }}
+            content={markdownContent}
+          />
         }
       </Section>
     );

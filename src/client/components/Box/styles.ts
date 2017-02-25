@@ -1,4 +1,5 @@
 const styled = require('styled-components').default;
+const { css } = require('styled-components');
 import {
   calculateFlexWrap,
   calculateFullStyle,
@@ -6,7 +7,7 @@ import {
   boxSizeToStyle,
 } from './styleUtils';
 
-export default styled.div`
+export const BoxStyles = css`
   display: flex;
   background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
   justify-content: ${({ justifyContent }) => justifyContent || 'flex-start'};
@@ -20,4 +21,8 @@ export default styled.div`
   flex-basis: auto;
   min-height: ${({ full }) => calculateFullStyle(full, 'vh')};
   min-width: ${({ full }) => calculateFullStyle(full, 'vw')};
+`;
+
+export default styled.div`
+  ${BoxStyles}
 `;

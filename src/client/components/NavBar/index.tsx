@@ -1,13 +1,12 @@
 import * as React from 'react';
+import { Anchor } from 'components';
 const {
   Nav,
   InnerNav,
   LeftMenu,
-  LeftMenuText,
   RightMenu,
   Menu,
   MenuItem,
-  Anchor,
 } = require('./styles');
 
 interface NavBarProps extends React.Props<NavBar> {
@@ -21,16 +20,16 @@ class NavBar extends React.Component<NavBarProps, any> {
       <Nav>
         <InnerNav>
           <LeftMenu>
-            <LeftMenuText href="/">
+            <Anchor path="/" color="#007acc">
               {this.props.logoText}
-            </LeftMenuText>
+            </Anchor>
           </LeftMenu>
           <RightMenu>
             <Menu>
               {this.props.links.map((item, i) =>
                 <MenuItem key={i}>
                   <Anchor
-                    href={item.url}
+                    path={item.url}
                   >
                     {item.text}
                   </Anchor>
