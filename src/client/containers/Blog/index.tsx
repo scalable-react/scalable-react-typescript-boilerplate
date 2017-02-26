@@ -23,7 +23,7 @@ class Blog extends React.Component<BlogProps, any> {
         {error &&
           <Box
             backgroundColor="#ff324d"
-            size={{ horizontal: 'medium' }}
+            boxSize={{ horizontal: 'medium' }}
             pad="small"
             alignItems="center"
           >
@@ -32,11 +32,11 @@ class Blog extends React.Component<BlogProps, any> {
         }
         <LoadingIndicator isLoading={loading} />
         <Section
-          wrap
+          flexWrap
           justifyContent="center"
           alignItems="center"
           flexDirection="row"
-          size={{ horizontal: 'full' }}
+          boxSize={{ horizontal: 'full' }}
         >
           {posts && posts.map((item, i) =>
             <Box key={i} pad="medium">

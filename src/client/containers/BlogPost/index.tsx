@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { LoadingIndicator, Post, Section } from 'components';
+import { LoadingIndicator, Post, Section, Error } from 'components';
 import POST_QUERY from './post.graphql';
 import COMMENT_MUTATION from './comments.graphql';
 import { BlogProps } from './types';
@@ -52,7 +52,7 @@ class Blog extends React.Component<BlogProps, any> {
         full={{ vertical: true }}
         backgroundColor="#f5f5f5"
       >
-        {error && <p>{error.message}</p>}
+        {error && <Error message={error.message} />}
         <LoadingIndicator isLoading={loading} />
         {post &&
           <Post

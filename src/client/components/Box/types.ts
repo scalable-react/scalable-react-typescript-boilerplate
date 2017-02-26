@@ -16,19 +16,19 @@ export interface SizeStyle {
   width: string;
 }
 
-interface BoxProps extends React.Props<typeof Box> {
+interface BoxProps extends React.HTMLProps<typeof Box> {
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
   flexDirection?: 'row' | 'column';
   justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
-  wrap?: boolean;
+  flexWrap?: boolean;
   reverse?: boolean;
-  size?: BoxSize | BoxSizeObject;
+  boxSize?: BoxSize | BoxSizeObject;
   pad?: Size | SizeObject;
   children?: JSX.Element;
   margin?: Size | SizeObject;
   backgroundColor?: string;
   backgroundImage?: string;
   full?: boolean | { horizontal?: boolean, vertical?: boolean };
-}
+};
 
 export default BoxProps;

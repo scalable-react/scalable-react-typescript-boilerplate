@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Article, Headline, LoadingIndicator, Box, Section } from 'components';
+import { Article, Headline, LoadingIndicator, Section, Error } from 'components';
 import { StyledHr } from './styles';
 import { LoadInitiationAction, LoadSuccessAction, LoadFailureAction } from './actions';
 
@@ -46,21 +46,12 @@ export default class Docs extends React.Component<DocsProps, undefined> {
           Documentation
           <StyledHr />
         </Headline>
-        {error &&
-          <Box
-            backgroundColor="#ff324d"
-            size={{ horizontal: 'medium' }}
-            pad="small"
-            alignItems="center"
-          >
-            <p style={{ color: 'white' }}>{error}</p>
-          </Box>
-        }
+        {error && <Error message={error} />}
         <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&
           <Article
             pad="large"
-            size={{ horizontal: 'xxlarge' }}
+            boxSize={{ horizontal: 'xxlarge' }}
             margin={{ vertical: 'large' }}
             backgroundColor="#FFF"
             content={markdownContent}
