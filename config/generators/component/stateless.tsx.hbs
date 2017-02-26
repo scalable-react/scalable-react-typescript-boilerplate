@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { Box } from './styles';
+import Component from './styles';
+import { {{ properCase name }}Props } from './types';
 
-export default function {{ properCase name }}(props: { content: string; }) {
-  const { content } = props;
+export default function {{ properCase name }}({
+  children,
+}: {{ properCase name }}Props): JSX.Element {
   return (
-    <Box>
-      {content}
-    </Box>
+    <Component>
+      {children}
+    </Component>
   );
 };

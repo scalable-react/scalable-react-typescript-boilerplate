@@ -5,7 +5,7 @@ import { Box } from 'components';
 
 interface LoadingIndicatorProps extends React.Props<LoadingIndicator> {
   isLoading: boolean;
-};
+}
 
 // tslint:disable
 class LoadingIndicator extends React.Component<LoadingIndicatorProps, undefined> {

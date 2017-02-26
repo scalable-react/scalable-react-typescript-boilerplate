@@ -3,7 +3,7 @@ import actionCreators from './actionCreators';
 import { selectError, selectIsLoading, selectMarkdownContent } from './selectors';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Docs, {StateProps, DispatchProps } from './presentation';
+import Docs, { StateProps, DispatchProps } from './presentation';
 
 // tslint:disable-next-line
 interface OwnProps  { }; // for props that are not passed down to inner component

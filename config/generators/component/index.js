@@ -44,6 +44,11 @@ module.exports = {
       abortOnFail: true
     }, {
       type: 'add',
+      path: `${componentPath}/types.ts`,
+      templateFile: './component/types.ts.hbs',
+      abortOnFail: true
+    }, {
+      type: 'add',
       path: `${componentPath}/styles.ts`,
       templateFile: './component/styles.ts.hbs',
       abortOnFail: true

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { CommentProps } from './types';
 import {
   Wrapper,
   CommentWrapper,
@@ -8,11 +9,7 @@ import {
   Footer,
 } from './styles';
 
-export default function Comment(props: {
-  body: string;
-  author: string;
-}) {
-  const { body } = props;
+export default function Comment({ body }: CommentProps): JSX.Element {
   return (
     <Wrapper>
       <PicWrapper>

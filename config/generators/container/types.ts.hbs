@@ -1,0 +1,24 @@
+import {{ properCase name }} from './';
+
+{{#if wantActionsAndReducer}}
+export interface {{ properCase name }}Props extends React.Props<typeof {{ properCase name }}> {
+  isLoading: boolean;
+  error?: { message: string };
+  data?: any;
+}
+
+export interface {{ properCase name }}DispatchProps {
+  actions: {
+    loadDataInitiation: Function;
+    loadDataSuccess: Function;
+    loadDataFailure: Function;
+  };
+}
+
+export type {{ properCase name }}PropTypes = {{ properCase name }}Props & {{ properCase name }}DispatchProps;
+{{else}}
+export interface {{ properCase name }}PropTypes extends React.Props<{{ properCase name }}> {
+
+}
+
+{{/if}}
