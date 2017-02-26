@@ -14,7 +14,7 @@ export default function Error({
       onClick={onClose}
       alignItems="center"
     >
-      <Paragraph color="white">{message}</Paragraph>
+      <Paragraph size="large" color="white">{message}</Paragraph>
     </Box>
   );
 };
