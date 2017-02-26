@@ -1,18 +1,28 @@
-import * as T from './constants';
-import { {{ properCase name }}Action } from './types';
+import { PayloadAction } from '../../types';
+import { ErrorType } from './types';
+import {
+  LOAD_INITIATION_TYPE,
+  LOAD_SUCCESS_TYPE,
+  LOAD_FAILURE_TYPE,
+  LOAD_CANCEL_TYPE,
+} from './types';
 
-export const loadDataInitiation = (): {{ properCase name }}Action => ({
-  type: T.LOAD_DATA_INITIATION,
-});
+export interface LoadInitiationAction extends PayloadAction<undefined> {
+  type: LOAD_INITIATION_TYPE;
+}
 
-export const loadDataSuccess = (data: any): {{ properCase name }}Action => ({
-  type: T.LOAD_DATA_SUCCESS,
-  data,
-});
+export interface LoadSuccessAction extends PayloadAction<any> {
+  type: LOAD_SUCCESS_TYPE;
+  payload: any;
+}
 
-export const loadDataFailure = (
-  error: { message: string },
-): {{ properCase name }}Action => ({
-  type: T.LOAD_DATA_FAILURE,
-  error,
-});
+export interface LoadFailureAction extends PayloadAction<ErrorType> {
+  type: LOAD_FAILURE_TYPE;
+  payload: ErrorType;
+}
+
+export interface LoadCancelAction extends PayloadAction<undefined> {
+  type: LOAD_CANCEL_TYPE;
+}
+
+export type {{ properCase name }}ActionType = LoadInitiationAction | LoadSuccessAction | LoadFailureAction | LoadCancelAction;

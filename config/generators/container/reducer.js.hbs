@@ -16,19 +16,19 @@ const {{ camelCase name }}Reducer = (
   action: {{ properCase name }}Action,
 ): {{ properCase name }}State => {
   switch (action.type) {
-  case T.LOAD_DATA_INITIATION:
+  case T.LOAD_INITIATION:
     return Object.assign({}, state, {
       isLoading: true,
     });
-  case T.LOAD_DATA_SUCCESS:
+  case T.LOAD_SUCCESS:
     return Object.assign({}, state, {
       isLoading: false,
-      data: action.data,
+      data: action.payload,
     });
-  case T.LOAD_DATA_FAILURE:
+  case T.LOAD_FAILURE:
     return Object.assign({}, state, {
       isLoading: false,
-      error: action.error,
+      error: action.payload,
     });
   default:
     return state;
