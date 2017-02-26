@@ -14,7 +14,7 @@ export const fetchLogic = createLogic({
   },
   
   process({ httpClient }) { 
-    return  httpClient.get(url)
+    return httpClient.get(url)
       .then((response) => response.data);
   },
 });

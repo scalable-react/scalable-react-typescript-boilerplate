@@ -7,7 +7,7 @@ export interface StateProps {
   markdownContent: string;
   error?: string;
   isLoading: boolean;
-};
+}
 
 export interface DispatchProps { 
   actions: {
@@ -15,9 +15,9 @@ export interface DispatchProps {
     loadSuccess: (data: string) => LoadSuccessAction,
     loadFailure: (error: string) => LoadFailureAction,
   };
-};
+}
 
-export type  DocsProps = React.Props<Docs> & StateProps & DispatchProps;
+export type DocsProps = React.Props<Docs> & StateProps & DispatchProps;
 
 export default class Docs extends React.Component<DocsProps, undefined> {
   constructor(props) {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Img } from './styles';
-import { ImageProps, ImageSize } from './types';
+import { ImageProps } from './types';
 
 class Image extends React.Component<ImageProps, undefined> {
   public static defaultProps = {

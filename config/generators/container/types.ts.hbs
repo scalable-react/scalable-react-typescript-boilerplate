@@ -1,9 +1,27 @@
 import {{ properCase name }} from './';
 
 {{#if wantActionsAndReducer}}
+export interface ErrorType { message: string }
+
+export type LOAD_DATA_INITIATION_TYPE = '{{ uppercase name }}/LOAD_DATA_INITIATION';
+export type LOAD_DATA_SUCCESS_TYPE = '{{ uppercase name }}/LOAD_DATA_SUCCESS';
+export type LOAD_DATA_FAILURE_TYPE = '{{ uppercase name }}/LOAD_DATA_FAILURE';
+
 export interface {{ properCase name }}Props extends React.Props<typeof {{ properCase name }}> {
   isLoading: boolean;
-  error?: { message: string };
+  error?: ErrorType;
+  data?: any;
+}
+
+export interface {{ properCase name }}State {
+  isLoading: boolean;
+  error?: ErrorType;
+  data?: any;
+}
+
+export interface {{ properCase name }}Action {
+  type: LOAD_DATA_INITIATION_TYPE | LOAD_DATA_SUCCESS_TYPE | LOAD_DATA_FAILURE_TYPE;
+  error?: ErrorType;
   data?: any;
 }
 

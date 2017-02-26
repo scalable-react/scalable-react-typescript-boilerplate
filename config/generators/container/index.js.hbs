@@ -2,6 +2,7 @@ import * as React from 'react';
 {{#if wantActionsAndReducer}}
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { State } from '../../state';
 import { {{ properCase name }}State } from './reducer';
 import {
   loadDataInitiation,
@@ -27,7 +28,7 @@ import { Heading, Section } from './styles';
 {{#if wantActionsAndReducer}}
 
 {{#if wantSelectors}}
-const mapStateToProps = (state: {{ properCase name }}State): {{ properCase name }}Props => ({
+const mapStateToProps = (state: State): {{ properCase name }}Props => ({
   isLoading: selectIsLoading(state),
   error: selectError(state),
   data: selectData(state),
