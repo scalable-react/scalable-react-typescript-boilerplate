@@ -8,7 +8,7 @@ Checkout [our website](https://scalable-react-ts-boilerplate.herokuapp.com/) for
 
 This project was initially inspired by the [Scalable React Boilerplate](https://github.com/RyanCCollins/scalable-react-boilerplate). It inherits the [Feature-First](https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.8nerdsqhd) organizational pattern.
 
-The main feature of this project is that it embraces [TypeScript](https://www.typescriptlang.org/) as its main language.  The reasons to use static types are plentiful, but if you need more convincing, check the resources section below.
+The main feature of this project is that it uses [TypeScript](https://www.typescriptlang.org/) as its main language.  The reasons to use static types for front-end engineering are plentiful, but if you need more convincing, check the resources section below.
 
 ## Getting Started
 1. Clone the Repo
@@ -25,7 +25,7 @@ Run `npm run start` then browse http://localhost:1337 to see your running app.
 ## What is Feature First?
 In most projects and frameworks, files are organized in a File type first fashion. For example, your tests exist in a test folder, your styles in a styles folder. This boilerplate takes a different approach.
 
-We encourage encapsulation of features by asking that you organize each feature into the same folder. With React, this means that your containers and components exist in their own folders, along with literally every other file that pertains to that one component. Your actions, reducers, tests, styles, and everything else are all internal to the component they represent. By decoupling your features from the rest of your app, you set yourself up to reuse your UI components in future projects. You can thank us later!
+We encourage encapsulation of features by asking that you organize each feature into the same folder. With React, this means that your containers and components exist in their own folders, along with literally every other file that pertains to that one feature. In other words, your actions, reducers, tests, styles, types and everything else are all internal to the feature they represent. By decoupling your features from the rest of your app, you set yourself up to reuse your UI components in future projects. You can thank us later!
 
 Give it a try! We promise you will enjoy it.
 
@@ -35,7 +35,7 @@ This project embraces [styled-components](https://github.com/styled-components/s
 Check the components directory for examples.
 
 ## Full Stack
-This boilerplate contains setup to quickly get started with a Full Stack application.  Within the `src/` directory, you will find a server and a client folder.
+This boilerplate contains setup to quickly get started with a full stack application.  Within the [`src/`](https://github.com/scalable-react/scalable-react-typescript-boilerplate/tree/master/src) directory, you will find a server and a client folder.
 
 ## File Tree Structure
 
@@ -165,7 +165,7 @@ Included is a test framework for all of your React testing needs.  We are using 
 
 Tests should be collocated within the component / container they represent. Test files should be named `index.test.tsx` and mocks must be named `myMock.mock.ts`.
 
-Please reference the `[Box](https://github.com/RyanCCollins/scalable-react-typescript-boilerplate/tree/master/src/client/components/Box)` and `(Section)[https://github.com/RyanCCollins/scalable-react-typescript-boilerplate/tree/master/src/client/components/Section]` components for example tests.  More will be added at a later time. 
+Please reference the [`Box`](https://github.com/RyanCCollins/scalable-react-typescript-boilerplate/tree/master/src/client/components/Box) and [`Section`](https://github.com/RyanCCollins/scalable-react-typescript-boilerplate/tree/master/src/client/components/Section) components for example tests.  More will be added at a later time. 
 
 Note that the test are not compiled by TypeScript, that way there is no code duplication and you can use static types in your tests.
 
