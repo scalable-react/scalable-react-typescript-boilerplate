@@ -12,7 +12,7 @@ export default function Comment(props: {
   body: string;
   author: string;
 }) {
-  const { body, author } = props;
+  const { body } = props;
   return (
     <Wrapper>
       <PicWrapper>
