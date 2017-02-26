@@ -22,8 +22,8 @@ export type DocsProps = React.Props<Docs> & StateProps & DispatchProps;
 export default class Docs extends React.Component<DocsProps, undefined> {
   constructor(props) {
     super(props);   
-    const { markdownContent } = this.props;
-    if ( markdownContent !== null ) { 
+    const { markdownContent } = props;
+    if ( markdownContent === null ) {
       this.props.actions.loadInitiation();
     }
   };
@@ -58,7 +58,13 @@ export default class Docs extends React.Component<DocsProps, undefined> {
         }
         <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&
-          <Article content={markdownContent} />
+          <Article
+            pad="large"
+            size={{ horizontal: 'xxlarge' }}
+            margin={{ vertical: 'large' }}
+            backgroundColor="#FFF"
+            content={markdownContent}
+          />
         }
       </Section>
     );
