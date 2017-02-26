@@ -4,11 +4,10 @@ import * as actionTypes from '../constants';
 import appLogic from '../logic';
 
 const dependencies = { 
-  httpClient: { //simulate an async fetch
-    get(url) { return Promise.resolve({data: 'testData'}); }
-  }
+  httpClient: { // simulate an async fetch
+    get(url) { return Promise.resolve({data: 'testData'}); },
+  },
 };
-
 
 describe('appLogic tests', () => {
   describe('appLogic test without reducers', () => {
@@ -20,12 +19,12 @@ describe('appLogic tests', () => {
       });
     });
 
-    it('should do something', done => {
+    it('should do something', (done) => {
       store.dispatch({type: actionTypes.LOAD_INTIATION});
       store.whenComplete(() => {
         expect(store.actions).toEqual([
           { type: actionTypes.LOAD_INTIATION},
-          { type: actionTypes.LOAD_SUCCESS, payload: 'testData'}
+          { type: actionTypes.LOAD_SUCCESS, payload: 'testData'},
         ]);
         done();
       });

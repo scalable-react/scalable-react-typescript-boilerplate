@@ -21,8 +21,11 @@ export type  DocsProps = React.Props<Docs> & StateProps & DispatchProps;
 
 export default class Docs extends React.Component<DocsProps, undefined> {
   constructor(props) {
-    super(props);    
-    this.props.actions.loadInitiation();
+    super(props);   
+    const { markdownContent } = this.props;
+    if ( markdownContent !== null ) { 
+      this.props.actions.loadInitiation();
+    }
   };
 
   public render() {

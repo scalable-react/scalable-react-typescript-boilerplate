@@ -51,7 +51,7 @@ const composeEnhancers =
 const store = createStore(
   rootReducer,
   initialState,
-  composeEnhancers(...enhancers)
+  composeEnhancers(...enhancers),
 );
 
 export const history = isClient ?
