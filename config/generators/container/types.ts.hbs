@@ -1,7 +1,7 @@
 import {{ properCase name }} from './';
 {{#if wantActionsAndReducer}}
+import { ActionCreatorsMapObject } from 'redux';
 import {
-  {{ properCase name }}ActionType,
   LoadInitiationAction,
   LoadSuccessAction,
   LoadFailureAction,
@@ -13,6 +13,7 @@ export type LOAD_INITIATION_TYPE = '{{ uppercase name }}/LOAD_INITIATION';
 export type LOAD_SUCCESS_TYPE = '{{ uppercase name }}/LOAD_SUCCESS';
 export type LOAD_FAILURE_TYPE = '{{ uppercase name }}/LOAD_FAILURE';
 export type LOAD_CANCEL_TYPE = '{{ uppercase name }}/LOAD_CANCEL';
+export type ActionType = LOAD_INITIATION_TYPE | LOAD_SUCCESS_TYPE | LOAD_FAILURE_TYPE | LOAD_CANCEL_TYPE;
 
 export interface {{ properCase name }}Props extends React.Props<typeof {{ properCase name }}> {
   isLoading: boolean;
@@ -27,18 +28,19 @@ export interface {{ properCase name }}State {
 }
 
 export interface {{ properCase name }}Action {
-  type: {{ properCase name }}ActionType;
-  error?: ErrorType;
-  data?: any;
+  type: ActionType;
+  payload?: any;
+}
+
+interface ActionMap extends ActionCreatorsMapObject {
+  loadInitiation: () => LoadInitiationAction;
+  loadSuccess: (data: any) => LoadSuccessAction;
+  loadFailure: (error: ErrorType) => LoadFailureAction;
+  loadCancel: () => LoadCancelAction;
 }
 
 export interface {{ properCase name }}DispatchProps {
-  actions: {
-    loadInitiation: () => LoadInitiationAction;
-    loadSuccess: (data: any) => LoadSuccessAction;
-    loadFailure: (error: ErrorType) => LoadFailureAction;
-    loadCancel: () => LoadCancelAction;
-  };
+  actions: ActionMap;
 }
 
 export type {{ properCase name }}PropTypes = {{ properCase name }}Props & {{ properCase name }}DispatchProps;
