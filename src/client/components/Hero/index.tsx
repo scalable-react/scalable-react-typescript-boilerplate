@@ -1,18 +1,13 @@
 import * as React from 'react';
-const HeroDiv = require('./styles').HeroDiv;
-
-interface HeroProps extends React.Props<Hero> {
-  color?: string;
-}
+import { HeroDiv } from './styles';
+import { HeroProps } from './types';
 
 class Hero extends React.Component<HeroProps, undefined> {
-  public static defaultProps: HeroProps = {
-    color: '#2d2d2d',
-  };
   public render() {
+    const { backgroundColor, children } = this.props;
     return (
-      <HeroDiv color={this.props.color}>
-        {this.props.children}
+      <HeroDiv backgroundColor={backgroundColor}>
+        {children}
       </HeroDiv>
     );
   }

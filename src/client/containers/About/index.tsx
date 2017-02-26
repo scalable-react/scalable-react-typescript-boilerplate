@@ -6,7 +6,7 @@ import {
   Anchor,
   Article,
 } from 'components';
-const {
+import {
   Container,
   AboutSection,
   AboutSectionInner,
@@ -16,8 +16,8 @@ const {
   Github,
   Card,
   CardFooter,
-} = require('./styles');
-const about = require('./about').default;
+} from './styles';
+import about from './about';
 import contributors from './contributors';
 
 class About extends React.Component<undefined, undefined> {

@@ -1,9 +1,16 @@
 import * as React from 'react';
 import { Button, Anchor } from 'components';
 import { ButtonSize } from 'components/Button';
-const { GetStartedButtons } = require('./styles');
+const { withTheme } = require('styled-components');
+import { GetStartedButtons } from './styles';
 
-const GetStartedButtonRow = () =>
+interface Props {
+  theme: any;
+}
+
+const GetStartedButtonRow = ({
+  theme,
+}: Props): JSX.Element =>
   <GetStartedButtons>
     <Anchor
       color="#fff"
@@ -13,7 +20,7 @@ const GetStartedButtonRow = () =>
         style={{ margin: 10 }}
         size={ButtonSize.xlarge}
         isHero
-        backgroundColor="#c05b4d"
+        backgroundColor={theme.secondary}
         borderColor="#732419"
       >
         Read the docs
@@ -27,7 +34,7 @@ const GetStartedButtonRow = () =>
         style={{ margin: 10 }}
         size={ButtonSize.xlarge}
         isHero
-        backgroundColor="#c05b4d"
+        backgroundColor={theme.secondary}
         borderColor="#732419"
       >
         View Example App
@@ -35,4 +42,4 @@ const GetStartedButtonRow = () =>
     </Anchor>
   </GetStartedButtons>;
 
-export default GetStartedButtonRow;
+export default withTheme(GetStartedButtonRow);
