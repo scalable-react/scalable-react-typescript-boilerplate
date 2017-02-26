@@ -1,0 +1,12 @@
+exports[`<Hero /> rendering behavior should render the Hero component with default props 1`] = `
+<styled.div>
+  Some content
+</styled.div>
+`;
+
+exports[`<Hero /> rendering behavior should render with other props 1`] = `
+<styled.div
+  backgroundColor="ff6600">
+  Some content
+</styled.div>
+`;
