@@ -5,7 +5,7 @@ import { Box } from 'components';
 
 interface LoadingIndicatorProps extends React.Props<LoadingIndicator> {
   isLoading: boolean;
-};
+}
 
 // tslint:disable
 class LoadingIndicator extends React.Component<LoadingIndicatorProps, undefined> {
@@ -13,7 +13,7 @@ class LoadingIndicator extends React.Component<LoadingIndicatorProps, undefined>
     if (this.props.isLoading) {
       return (
         <Box
-          size={{ horizontal: 'small' }}
+          boxSize={{ horizontal: 'small' }}
           pad="medium"
           alignItems="center"
           justifyContent="center"

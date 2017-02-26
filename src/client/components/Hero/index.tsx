@@ -1,5 +1,5 @@
 import * as React from 'react';
-const HeroDiv = require('./styles').HeroDiv;
+import { HeroDiv } from './styles';
 
 interface HeroProps extends React.Props<Hero> {
   color?: string;

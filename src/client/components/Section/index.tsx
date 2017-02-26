@@ -5,7 +5,7 @@ import BoxProps from '../Box/types';
 export default function Section({
   children,
   ...rest,
-}: BoxProps) {
+}: BoxProps): JSX.Element {
   return (
     <Component {...rest}>
       {children}

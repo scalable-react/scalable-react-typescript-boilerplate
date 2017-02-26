@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { Headline, LoadingIndicator, PostCard, Section, Box } from 'components';
+import { Headline, LoadingIndicator, PostCard, Section, Box, Error } from 'components';
 import POST_QUERY from './posts.graphql';
 import { StyledHr } from './styles';
 import { BlogProps } from './types';
@@ -20,23 +20,14 @@ class Blog extends React.Component<BlogProps, any> {
           Blog
           <StyledHr />
         </Headline>
-        {error &&
-          <Box
-            backgroundColor="#ff324d"
-            size={{ horizontal: 'medium' }}
-            pad="small"
-            alignItems="center"
-          >
-            <p style={{ color: 'white' }}>{error.message}</p>
-          </Box>
-        }
+        {error && <Error message={error.message} />}
         <LoadingIndicator isLoading={loading} />
         <Section
-          wrap
+          flexWrap
           justifyContent="center"
           alignItems="center"
           flexDirection="row"
-          size={{ horizontal: 'full' }}
+          boxSize={{ horizontal: 'full' }}
         >
           {posts && posts.map((item, i) =>
             <Box key={i} pad="medium">

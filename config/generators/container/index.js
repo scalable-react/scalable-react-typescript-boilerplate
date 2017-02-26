@@ -43,6 +43,7 @@ module.exports = {
     const containerPath = path.resolve(process.cwd(), `${data.path}/{{properCase name}}/`);
     const rootPath = path.resolve(process.cwd(), `./src/client/containers/index.ts`);
     const reducersPath = path.resolve(process.cwd(), './src/client/reducers.ts');
+    const statePath = path.resolve(process.cwd(), './src/client/state.ts');
     const actions = [{
       type: 'add',
       path: `${containerPath}/index.tsx`,
@@ -85,6 +86,13 @@ module.exports = {
       // Actions
       actions.push({
         type: 'add',
+        path: `${containerPath}/actionCreators.ts`,
+        templateFile: './container/actionCreators.js.hbs',
+        abortOnFail: true
+      });
+
+      actions.push({
+        type: 'add',
         path: `${containerPath}/actions.ts`,
         templateFile: './container/actions.js.hbs',
         abortOnFail: true
@@ -98,6 +106,13 @@ module.exports = {
         abortOnFail: true
       });
 
+      actions.push( {
+        type: 'add',
+        path: `${containerPath}/types.ts`,
+        templateFile: './container/types.ts.hbs',
+        abortOnFail: true
+      })
+
       // Reducer
       actions.push({
         type: 'add',
@@ -109,7 +124,7 @@ module.exports = {
       actions.push({
         type: 'modify',
         path: reducersPath,
-        pattern: /(\/\* GENERATOR-IMPORT \*\/)/g,
+        pattern: /(\/\* GENERATOR-IMPORT-REDUCER \*\/)/g,
         template: trimTemplateFile('./config/generators/container/reducer.import.js.hbs'),
         abortOnFail: false
       });
@@ -124,7 +139,15 @@ module.exports = {
 
       actions.push({
         type: 'modify',
-        path: reducersPath,
+        path: statePath,
+        pattern: /(\/\* GENERATOR-IMPORT-STATE \*\/)/g,
+        template: trimTemplateFile('./config/generators/container/state.import.js.hbs'),
+        abortOnFail: false
+      });
+
+      actions.push({
+        type: 'modify',
+        path: statePath,
         pattern: /(\/\* GENERATOR-EXPORT-STATE \*\/)/g,
         template: trimTemplateFile('./config/generators/container/reducer.export-state.js.hbs'),
         abortOnFail: false
@@ -132,7 +155,7 @@ module.exports = {
 
       actions.push({
         type: 'modify',
-        path: reducersPath,
+        path: statePath,
         pattern: /(\/\* GENERATOR-EXPORT-STATE-TYPE \*\/)/g,
         template: trimTemplateFile('./config/generators/container/state-type.js.hbs'),
         abortOnFail: false

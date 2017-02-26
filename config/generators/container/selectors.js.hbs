@@ -1,18 +1,20 @@
-import { createSelector } from 'reselect';
+import { State } from '../../state';
+import { {{ properCase name }}State, ErrorType } from './types';
+import { createSelector, Selector } from 'reselect';
 
-export const select{{ properCase name }} = () => (state) => state.{{ camelCase name }};
+export const select{{ properCase name }} = () => (state: State): {{ properCase name }}State => state.{{ camelCase name }};
 
-export const selectIsLoading = createSelector(
+export const selectIsLoading: Selector<State, boolean> = createSelector(
   select{{ properCase name }}(),
   ({{ camelCase name }}) => {{ camelCase name }}.isLoading,
 );
 
-export const selectError = createSelector(
+export const selectError: Selector<State, ErrorType> = createSelector(
   select{{ properCase name }}(),
   ({{ camelCase name }}) => {{ camelCase name }}.error,
 );
 
-export const selectData = createSelector(
+export const selectData: Selector<State, string> = createSelector(
   select{{ properCase name }}(),
   ({{ camelCase name }}) => {{ camelCase name }}.data,
 );

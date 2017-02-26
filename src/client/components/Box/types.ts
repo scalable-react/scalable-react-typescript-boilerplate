@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Box from './';
 
 export type Size = 'none' | 'small' | 'medium' | 'large';
 export interface SizeObject { horizontal?: Size; vertical?: Size; };
@@ -13,15 +14,15 @@ export type Px = number;
 export interface SizeStyle {
   height: string;
   width: string;
-};
+}
 
-interface BoxProps extends React.Props<undefined> {
+interface BoxProps extends React.HTMLProps<typeof Box> {
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
   flexDirection?: 'row' | 'column';
   justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
-  wrap?: boolean;
+  flexWrap?: boolean;
   reverse?: boolean;
-  size?: BoxSize | BoxSizeObject;
+  boxSize?: BoxSize | BoxSizeObject;
   pad?: Size | SizeObject;
   children?: JSX.Element;
   margin?: Size | SizeObject;

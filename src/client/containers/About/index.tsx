@@ -34,7 +34,7 @@ class About extends React.Component<undefined, undefined> {
               pad="large"
               backgroundColor="#fff"
               margin={{ vertical: 'medium' }}
-              size={{ horizontal: 'xxlarge' }}
+              boxSize={{ horizontal: 'xxlarge' }}
               content={`${about.aboutContent}`}
             />
           </AboutSectionInner>

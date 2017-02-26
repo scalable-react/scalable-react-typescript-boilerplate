@@ -13,11 +13,11 @@ export const BoxStyles = css`
   justify-content: ${({ justifyContent }) => justifyContent || 'flex-start'};
   align-items: ${({ alignItems }) => alignItems || 'flex-start'};
   flex-direction: ${({ flexDirection }) => flexDirection || 'column'};
-  flex-wrap: ${({ wrap, reverse }) => calculateFlexWrap(wrap, reverse)};
+  flex-wrap: ${({ flexWrap, reverse }) => calculateFlexWrap(flexWrap, reverse)};
   padding: ${({ pad }) => sizeToString(pad)};
   margin: ${({ margin }) => sizeToString(margin)};
-  width: ${({ size }) => boxSizeToStyle(size).width};
-  height: ${({ size }) => boxSizeToStyle(size).height};
+  width: ${({ boxSize }) => boxSizeToStyle(boxSize).width};
+  height: ${({ boxSize }) => boxSizeToStyle(boxSize).height};
   flex-basis: auto;
   min-height: ${({ full }) => calculateFullStyle(full, 'vh')};
   min-width: ${({ full }) => calculateFullStyle(full, 'vw')};

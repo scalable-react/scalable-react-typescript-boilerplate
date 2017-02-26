@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Article, Headline, LoadingIndicator, Box, Section } from 'components';
+import { Article, Headline, LoadingIndicator, Section, Error } from 'components';
 import { StyledHr } from './styles';
 import { LoadInitiationAction, LoadSuccessAction, LoadFailureAction } from './actions';
 
@@ -7,7 +7,7 @@ export interface StateProps {
   markdownContent: string;
   error?: string;
   isLoading: boolean;
-};
+}
 
 export interface DispatchProps { 
   actions: {
@@ -15,15 +15,15 @@ export interface DispatchProps {
     loadSuccess: (data: string) => LoadSuccessAction,
     loadFailure: (error: string) => LoadFailureAction,
   };
-};
+}
 
-export type  DocsProps = React.Props<Docs> & StateProps & DispatchProps;
+export type DocsProps = React.Props<Docs> & StateProps & DispatchProps;
 
 export default class Docs extends React.Component<DocsProps, undefined> {
   constructor(props) {
     super(props);   
-    const { markdownContent } = this.props;
-    if ( markdownContent !== null ) { 
+    const { markdownContent } = props;
+    if ( markdownContent === null ) {
       this.props.actions.loadInitiation();
     }
   };
@@ -46,19 +46,16 @@ export default class Docs extends React.Component<DocsProps, undefined> {
           Documentation
           <StyledHr />
         </Headline>
-        {error &&
-          <Box
-            backgroundColor="#ff324d"
-            size={{ horizontal: 'medium' }}
-            pad="small"
-            alignItems="center"
-          >
-            <p style={{ color: 'white' }}>{error}</p>
-          </Box>
-        }
+        {error && <Error message={error} />}
         <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&
-          <Article content={markdownContent} />
+          <Article
+            pad="large"
+            boxSize={{ horizontal: 'xxlarge' }}
+            margin={{ vertical: 'large' }}
+            backgroundColor="#FFF"
+            content={markdownContent}
+          />
         }
       </Section>
     );

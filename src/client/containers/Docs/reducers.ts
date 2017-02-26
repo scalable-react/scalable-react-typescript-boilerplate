@@ -1,6 +1,6 @@
 import * as types from './constants';
 import { DocsAction } from './actions';
-import {State, initialState} from './state';
+import { State, initialState } from './state';
 
 const docsReducer = (state: State = initialState, action: DocsAction): State => {
   switch (action.type) {

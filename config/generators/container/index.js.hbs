@@ -1,13 +1,18 @@
 import * as React from 'react';
 {{#if wantActionsAndReducer}}
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, Dispatch } from 'redux';
+import { State } from '../../state';
+import { {{ properCase name }}ActionType } from './actions';
 import { {{ properCase name }}State } from './reducer';
+import actionCreators from './actionCreators';
 import {
-  loadDataInitiation,
-  loadDataSuccess,
-  loadDataFailure,
-} from './actions';
+  {{ properCase name }}Props,
+  {{ properCase name }}DispatchProps,
+  {{ properCase name }}PropTypes,
+} from './types';
+{{else}}
+import { {{ properCase name }}PropTypes } from './types';
 {{/if}}
 {{#if wantSelectors}}
 import {
@@ -17,57 +22,29 @@ import {
 } from './selectors';
 {{/if}}
 import { Heading, Section } from './styles';
-
-{{#unless wantActionsAndReducer}}
-interface {{ properCase name }}PropTypes extends React.Props<any> {
-
-};
-
-{{/unless}}
 {{#if wantActionsAndReducer}}
-interface {{ properCase name }}Props extends React.Props<any> {
-  isLoading: boolean;
-  error?: { message: string };
-  data?: any;
-};
-
-interface {{ properCase name }}DispatchProps {
-  actions: {
-    loadDataInitiation: Function;
-    loadDataSuccess: Function;
-    loadDataFailure: Function;
-  };
-};
-
-type {{ properCase name }}PropTypes = {{ properCase name }}Props & {{ properCase name }}DispatchProps;
 
 {{#if wantSelectors}}
-const mapStateToProps = (state: {{ properCase name }}State): {{ properCase name }}Props => ({
+const mapStateToProps = (state: State): {{ properCase name }}Props => ({
   isLoading: selectIsLoading(state),
   error: selectError(state),
   data: selectData(state),
 });
 {{else}}
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: State): {{ properCase name }}Props => ({
   isLoading: state.{{ camelCase name }}.isLoading,
   error: state.{{ camelCase name }}.error,
   data: state.{{ camelCase name }}.data,
 });
 {{/if}}
 
-const mapDispatchToProps = (dispatch): {{ properCase name }}DispatchProps => ({
+const mapDispatchToProps = (dispatch: Dispatch<{{ properCase name }}ActionType>): {{ properCase name }}DispatchProps => ({
   actions: bindActionCreators(
-    {
-      loadDataInitiation,
-      loadDataSuccess,
-      loadDataFailure,
-    },
+    actionCreators,
     dispatch,
   ),
 });
 
-{{/if}}
-{{#if wantActionsAndReducer}}
 class {{ properCase name }} extends React.Component<{{ properCase name }}PropTypes, {{ properCase name }}State> {
 {{else}}
 class {{ properCase name }} extends React.Component<{{ properCase name }}PropTypes, any> {

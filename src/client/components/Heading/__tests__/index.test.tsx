@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import * as React from 'react';
 import Heading from '../';
-import { h2Props, h3Props, h4Props, h5Props } from './__mocks__/headingProps.mocks';
+import { h2Props, h3Props, h4Props, h5Props } from './__mocks__/headingProps.mock';
 
 describe('<Heading />', () => {
   it('should render with default props', () => {
