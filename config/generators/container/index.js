@@ -86,6 +86,13 @@ module.exports = {
       // Actions
       actions.push({
         type: 'add',
+        path: `${containerPath}/actionCreators.ts`,
+        templateFile: './container/actionCreators.js.hbs',
+        abortOnFail: true
+      });
+
+      actions.push({
+        type: 'add',
         path: `${containerPath}/actions.ts`,
         templateFile: './container/actions.js.hbs',
         abortOnFail: true
