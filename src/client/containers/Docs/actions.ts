@@ -1,38 +1,22 @@
+import { PayloadAction } from '../../types';
 import * as types from './constants';
-const url = 'https://raw.githubusercontent.com/RyanCCollins/scalable-react-ts-boilerplate/master/README.md';
-import { ErrorType, Action, Data } from './types';
-import { Dispatch } from 'redux';
 
-declare var fetch: any;
+export interface LoadInitiationAction extends PayloadAction<undefined> {
+  type: types.LOAD_INTIATION_TYPE;
+}
 
-export const loadInitiation = (): Action<any> => ({
-  type: types.LOAD_INTIATION,
-});
+export interface LoadSuccessAction extends PayloadAction<string> {
+  type: types.LOAD_SUCCESS_TYPE;
+  payload: string;
+}
 
-export const loadSuccess = (data: Data): Action<{ data: Data }> => ({
-  type: types.LOAD_SUCCESS,
-  payload: {
-    data,
-  },
-});
+export interface LoadFailureAction extends PayloadAction<string> {
+  type: types.LOAD_FAILURE_TYPE;
+  payload: string;
+}
 
-export const loadFailure = (error: ErrorType): Action<{ error: ErrorType }> => ({
-  type: types.LOAD_FAILURE,
-  payload: {
-    error,
-  },
-});
+export interface LoadCancelAction extends PayloadAction<string> {
+  type: types.LOAD_CANCEL_TYPE;
+}
 
-export const loadMarkdown = () => (dispatch: Dispatch<any>) => {
-  dispatch(loadInitiation());
-  setTimeout(() => {
-    fetch(url)
-      .then((res) => res.text())
-      .then((text) => {
-        dispatch(loadSuccess(text));
-      })
-      .catch((err) => {
-        dispatch(loadFailure(err));
-      });
-  }, 1000);
-};
+export type DocsAction = LoadInitiationAction | LoadSuccessAction | LoadFailureAction | LoadCancelAction;

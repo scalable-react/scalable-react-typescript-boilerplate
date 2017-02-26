@@ -9,7 +9,7 @@ import {
   Footer,
 } from './styles';
 
-export default function Comment({ body, author }: CommentProps): JSX.Element {
+export default function Comment({ body }: CommentProps): JSX.Element {
   return (
     <Wrapper>
       <PicWrapper>

@@ -1,19 +1,8 @@
 import * as types from './constants';
-import { Action, ErrorType } from './types';
+import { DocsAction } from './actions';
+import { State, initialState } from './state';
 
-export interface DocsState {
-  markdownContent?: string;
-  error?: ErrorType;
-  isLoading: boolean;
-}
-
-export const initialState: DocsState = {
-  markdownContent: null,
-  error: null,
-  isLoading: false,
-};
-
-const docsReducer = (state: DocsState = initialState, action: Action<any>): DocsState => {
+const docsReducer = (state: State = initialState, action: DocsAction): State => {
   switch (action.type) {
   case types.LOAD_INTIATION:
     return Object.assign({}, state, {
@@ -22,12 +11,12 @@ const docsReducer = (state: DocsState = initialState, action: Action<any>): Docs
   case types.LOAD_SUCCESS:
     return Object.assign({}, state, {
       isLoading: false,
-      markdownContent: action.payload.data,
+      markdownContent: action.payload,
     });
   case types.LOAD_FAILURE:
     return Object.assign({}, state, {
       isLoading: false,
-      error: action.payload.error,
+      error: action.payload,
     });
   default:
     return state;

@@ -1,76 +1,31 @@
 import * as React from 'react';
-import { Article, Headline, LoadingIndicator, Box, Section } from 'components';
-import * as DocsActionCreators from './actions';
+import { connect } from 'react-redux';
+import { bindActionCreators, Dispatch } from 'redux';
+import { State } from '../../state';
+import actionCreators from './actionCreators';
 import { selectError, selectIsLoading, selectMarkdownContent } from './selectors';
-import { StyledHr } from './styles';
-import { DocsProps } from './types';
-const connect = require('react-redux').connect;
-const bindActionCreators = require('redux').bindActionCreators;
+import Docs, { StateProps, DispatchProps } from './presentation';
+import { DocsAction } from './actions';
 
-const mapStateToProps = (state) => ({
+// tslint:disable-next-line
+interface OwnProps  { }; // for props that are not passed down to inner component
+
+const mapStateToProps = (state: State): StateProps => ({
   error: selectError(state),
   markdownContent: selectMarkdownContent(state),
   isLoading: selectIsLoading(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch: Dispatch<DocsAction>): DispatchProps => ({
   actions: bindActionCreators(
-    DocsActionCreators,
+    actionCreators,
     dispatch,
   ),
 });
 
-class Docs extends React.Component<DocsProps, any> {
-  public componentDidMount() {
-    const { markdownContent } = this.props;
-    if (!markdownContent) {
-      this.props.actions.loadMarkdown();
-    }
-  }
-  public render() {
-    const {
-      markdownContent,
-      isLoading,
-      error,
-    } = this.props;
-    return (
-      <Section
-        alignItems="center"
-        flexDirection="column"
-        pad="medium"
-        full={{ vertical: true }}
-        backgroundColor="#f5f5f5"
-      >
-        <Headline fontWeight={700}>
-          Documentation
-          <StyledHr />
-        </Headline>
-        {error &&
-          <Box
-            backgroundColor="#ff324d"
-            size={{ horizontal: 'medium' }}
-            pad="small"
-            alignItems="center"
-          >
-            <p style={{ color: 'white' }}>{error.message}</p>
-          </Box>
-        }
-        <LoadingIndicator isLoading={isLoading} />
-        {typeof markdownContent === 'string' &&
-          <Article
-            pad="large"
-            backgroundColor="#fff"
-            margin={{ vertical: 'medium' }}
-            size={{ horizontal: 'xxlarge' }}
-            content={markdownContent}
-          />
-        }
-      </Section>
-    );
-  }
-}
-
-export default connect(
+const DocsContainer: React.ComponentClass<OwnProps> = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(Docs);
+
+export default DocsContainer;

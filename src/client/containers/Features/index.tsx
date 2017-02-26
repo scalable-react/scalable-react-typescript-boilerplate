@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Heading, Headline, Image, Button, Markdown, Anchor } from 'components';
+import { FeaturesProps } from './types';
 import {
   Container,
   FeatureImage,
@@ -9,8 +10,9 @@ import {
   FeatureSectionInner,
 } from './styles';
 const features = require('./features').default;
+const { withTheme } = require('styled-components');
 
-class Features extends React.Component<any, any> {
+class Features extends React.Component<FeaturesProps, undefined> {
   public render() {
     return (
       <Container>
@@ -109,4 +111,4 @@ class Features extends React.Component<any, any> {
   }
 }
 
-export default Features;
+export default withTheme(Features);

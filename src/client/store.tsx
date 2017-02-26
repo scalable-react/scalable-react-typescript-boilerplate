@@ -1,13 +1,17 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, Middleware, GenericStoreEnhancer, compose } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
-import { rootReducer, initialState as clientState } from './reducers';
-import client from './apolloClient';
+import { createLogicMiddleware } from 'redux-logic';
+import axios from 'axios';
+import { rootReducer} from './reducers';
+import { initialState as defaultInitialState} from './state';
+import apolloClient from './apolloClient';
+import Logics from './logic';
 
 const isClient = typeof document !== 'undefined';
 
 declare var window: { __INITIAL_STATE__: any };
-const initialState = isClient ? window.__INITIAL_STATE__ : clientState;
+const initialState = isClient ? window.__INITIAL_STATE__ : defaultInitialState;
 
 function createThunkMiddleware() {
   return ({ dispatch, getState }) => (next) => (action) => {
@@ -19,14 +23,35 @@ function createThunkMiddleware() {
   };
 }
 
+const dependencies = {
+  httpClient: axios,
+};
+
 const thunk = createThunkMiddleware();
-const middlewares = [thunk, client.middleware()];
-const middleWare = applyMiddleware(...middlewares);
+const logicMiddleware = createLogicMiddleware(Logics, dependencies);
+const apolloClientMiddleware = apolloClient.middleware();
+
+const middlewares: Middleware[] = [
+  thunk,
+  apolloClientMiddleware,
+  logicMiddleware,
+];
+
+const enhancers: GenericStoreEnhancer[] = [
+  applyMiddleware(...middlewares),
+];
+
+const ReduxExtentionComposeName: string = '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__';
+const composeEnhancers =
+  process.env.NODE_ENV !== 'production' &&
+  typeof window === 'object' &&
+    window[ReduxExtentionComposeName] ?
+    window[ReduxExtentionComposeName] : compose;
 
 const store = createStore(
   rootReducer,
   initialState,
-  middleWare,
+  composeEnhancers(...enhancers),
 );
 
 export const history = isClient ?

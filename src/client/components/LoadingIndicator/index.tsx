@@ -13,7 +13,7 @@ class LoadingIndicator extends React.Component<LoadingIndicatorProps, undefined>
     if (this.props.isLoading) {
       return (
         <Box
-          size={{ horizontal: 'small' }}
+          boxSize={{ horizontal: 'small' }}
           pad="medium"
           alignItems="center"
           justifyContent="center"

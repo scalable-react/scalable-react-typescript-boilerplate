@@ -16,7 +16,7 @@ class Home extends React.Component<HomeProps, undefined> {
           flexDirection="column"
           full={{ horizontal: true }}
         >
-          <Hero backgroundColor={theme.dark2}>
+          <Hero backgroundColor={theme.black2}>
             <HeroLogoRow>
               <HeroLogo>
                 TS

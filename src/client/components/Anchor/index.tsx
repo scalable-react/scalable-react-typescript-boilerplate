@@ -41,10 +41,8 @@ class Anchor extends React.Component<AnchorProps, undefined> {
       children,
       color,
       href,
-      path,
-      router,
     } = this.props;
-    const computedHref = href && !path ? router.createPath(href) : null;
+
     return (
       <AnchorComponent href={href} color={color} onClick={this.handleClick}>
         {label || children}
