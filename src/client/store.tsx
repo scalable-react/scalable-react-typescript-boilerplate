@@ -43,8 +43,8 @@ const enhancers: GenericStoreEnhancer[] = [
 
 const ReduxExtentionComposeName: string = '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__';
 const composeEnhancers =
-  // process.env.NODE_ENV !== 'production' &&
-  //  typeof window === 'object' &&
+  process.env.NODE_ENV !== 'production' &&
+  typeof window === 'object' &&
     window[ReduxExtentionComposeName] ?
     window[ReduxExtentionComposeName] : compose;
 
