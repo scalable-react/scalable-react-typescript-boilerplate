@@ -7,9 +7,9 @@ describe('docs reducer', () => {
   it('should return the initial state', () => {
     expect(
       reducer(undefined, actionCreators.loadInitiation()),
-    ).toEqual(initialState),
-  })
-}
+    ).toEqual(initialState);
+  });
+});
 
 //   it('should handle ADD_TODO', () => {
 //     expect(
