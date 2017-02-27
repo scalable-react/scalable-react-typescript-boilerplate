@@ -1,0 +1,29 @@
+exports[`<NavBar /> default should render NavBar with links and text 1`] = `
+<styled.nav>
+  <styled.div>
+    <styled.div>
+      <withRouter(Anchor)
+        color="#007acc"
+        path="/">
+        NavBar Test
+      </withRouter(Anchor)>
+    </styled.div>
+    <styled.div>
+      <styled.ul>
+        <styled.li>
+          <withRouter(Anchor)
+            path="https://medium.com">
+            Medium
+          </withRouter(Anchor)>
+        </styled.li>
+        <styled.li>
+          <withRouter(Anchor)
+            path="https://www.ryancollins.io/">
+            RyanCollins
+          </withRouter(Anchor)>
+        </styled.li>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.nav>
+`;
