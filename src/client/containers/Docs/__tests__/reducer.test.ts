@@ -6,7 +6,7 @@ import {initialState} from '../state';
 describe('docs reducer', () => {
   it('should return the initial state', () => {
     expect(
-      reducer(undefined, actionCreators.loadInitiation()),
+      reducer(undefined, actionCreators.defaultAction()),
     ).toEqual(initialState);
   });
 });

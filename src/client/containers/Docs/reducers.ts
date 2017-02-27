@@ -1,8 +1,8 @@
 import * as types from './constants';
-import { DocsAction } from './actions';
+import { DocsAction, OtherAction } from './actions';
 import { State, initialState } from './state';
 
-const docsReducer = (state: State = initialState, action: DocsAction): State => {
+const docsReducer = (state: State = initialState, action: DocsAction = OtherAction): State => {
   switch (action.type) {
   case types.LOAD_INTIATION:
     return { ...state, 

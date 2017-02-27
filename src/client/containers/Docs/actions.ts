@@ -20,4 +20,13 @@ export interface LoadCancelAction extends Action {
   type: types.LOAD_CANCEL_TYPE,
 };
 
-export type DocsAction = LoadInitiationAction | LoadSuccessAction | LoadFailureAction | LoadCancelAction;
+export interface DefaultAction extends Action {
+  type: ''
+}
+
+export type DocsAction = 
+LoadInitiationAction | 
+LoadSuccessAction | 
+LoadFailureAction | 
+LoadCancelAction | 
+DefaultAction;
