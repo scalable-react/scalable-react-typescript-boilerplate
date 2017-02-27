@@ -1,0 +1,28 @@
+exports[`<NavBar /> default should render NavBar with links and text 1`] = `
+<styled.nav>
+  <styled.div>
+    <styled.div>
+      <styled.a
+        href="/">
+        NavBar Test
+      </styled.a>
+    </styled.div>
+    <styled.div>
+      <styled.ul>
+        <styled.li>
+          <styled.a
+            href="https://medium.com">
+            Medium
+          </styled.a>
+        </styled.li>
+        <styled.li>
+          <styled.a
+            href="https://www.ryancollins.io/">
+            RyanCollins
+          </styled.a>
+        </styled.li>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.nav>
+`;
