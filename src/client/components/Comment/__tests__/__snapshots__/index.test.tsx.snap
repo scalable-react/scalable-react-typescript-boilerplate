@@ -2,7 +2,7 @@ exports[`<Comment /> default should render a plain comment with other props 1`] 
 <styled.div>
   <styled.div>
     <styled.div
-      picUrl="https://github.com/RyanCCollins/cdn/blob/master/misc/missing.png?raw=true" />
+      url="https://github.com/RyanCCollins/cdn/blob/master/misc/missing.png?raw=true" />
   </styled.div>
   <styled.div>
     <styled.p>
@@ -20,7 +20,7 @@ exports[`<Comment /> default should render a plain comment with required props 1
 <styled.div>
   <styled.div>
     <styled.div
-      picUrl="https://github.com/RyanCCollins/cdn/blob/master/misc/missing.png?raw=true" />
+      url="https://github.com/RyanCCollins/cdn/blob/master/misc/missing.png?raw=true" />
   </styled.div>
   <styled.div>
     <styled.p>

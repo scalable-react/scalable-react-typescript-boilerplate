@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button, Anchor } from 'components';
 import { ButtonSize } from 'components/Button';
-const { GetStartedButtons } = require('./styles');
+import { GetStartedButtons } from './styles';
 
 const GetStartedButtonRow = () =>
   <GetStartedButtons>

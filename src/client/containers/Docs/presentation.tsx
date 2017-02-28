@@ -1,7 +1,12 @@
 import * as React from 'react';
 import { Article, Headline, LoadingIndicator, Section, Error } from 'components';
 import { StyledHr } from './styles';
-import { LoadInitiationAction, LoadSuccessAction, LoadFailureAction } from './actions';
+import {
+  LoadInitiationAction,
+  LoadSuccessAction,
+  LoadFailureAction,
+  ClearErrorAction,
+} from './actions';
 
 export interface StateProps {
   markdownContent: string;
@@ -14,6 +19,7 @@ export interface DispatchProps {
     loadInitiation: () => LoadInitiationAction,
     loadSuccess: (data: string) => LoadSuccessAction,
     loadFailure: (error: string) => LoadFailureAction,
+    clearError: () => ClearErrorAction,
   };
 }
 
@@ -21,7 +27,7 @@ export type DocsProps = React.Props<Docs> & StateProps & DispatchProps;
 
 export default class Docs extends React.Component<DocsProps, undefined> {
   constructor(props) {
-    super(props);   
+    super(props);
     const { markdownContent } = props;
     if ( markdownContent === null ) {
       this.props.actions.loadInitiation();
@@ -46,7 +52,14 @@ export default class Docs extends React.Component<DocsProps, undefined> {
           Documentation
           <StyledHr />
         </Headline>
-        {error && <Error message={error} />}
+        {error &&
+          <Error
+            onClose={() => {
+              console.log('Called on close');
+            }}
+            message={error}
+          />
+        }
         <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&
           <Article

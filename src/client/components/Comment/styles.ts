@@ -33,7 +33,7 @@ export const Pic = styled.div`
   width: 2.25rem;
   border-radius: 50%;
   background-size: contain;
-  background-image: url('${(props) => props.picUrl}');
+  background-image: url('${(props) => props.url}');
 `;
 
 export const Footer = styled.footer`

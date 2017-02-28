@@ -19,4 +19,9 @@ export interface LoadCancelAction extends PayloadAction<string> {
   type: types.LOAD_CANCEL_TYPE;
 }
 
-export type DocsAction = LoadInitiationAction | LoadSuccessAction | LoadFailureAction | LoadCancelAction;
+export interface ClearErrorAction extends PayloadAction<undefined> {
+  type: types.CLEAR_ERROR_TYPE;
+}
+
+export type DocsAction = LoadInitiationAction | LoadSuccessAction
+  | LoadFailureAction | LoadCancelAction | ClearErrorAction;

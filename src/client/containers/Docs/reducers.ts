@@ -18,6 +18,11 @@ const docsReducer = (state: State = initialState, action: DocsAction): State => 
       isLoading: false,
       error: action.payload,
     });
+  case types.CLEAR_ERROR:
+    return {
+      ...state,
+      error: null,
+    };
   default:
     return state;
   }
