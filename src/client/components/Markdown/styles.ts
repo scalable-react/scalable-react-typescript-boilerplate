@@ -1,5 +1,5 @@
 const styled = require('styled-components').default;
 
-export const Box = styled.div`
+export default styled.div`
   box-sizing: border-box;
 `;

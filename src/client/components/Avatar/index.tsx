@@ -1,30 +1,19 @@
 import * as React from 'react';
-const { AvatarContainer, AvatarDiv, AvatarName } = require('./styles');
+import { AvatarProps } from './types';
+import { AvatarContainer, AvatarDiv, AvatarName } from './styles';
 
-interface AvatarProps extends React.Props<Avatar> {
-  avatarUrl: string;
-  name?: string;
-}
-
-class Avatar extends React.Component<AvatarProps, undefined> {
-  public static defaultProps: AvatarProps = {
-    avatarUrl: 'https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/no-user.png',
-    name: 'Contributor',
-  };
-  public render() {
-    const {
-      avatarUrl,
-      name,
-    } = this.props;
-    return (
-      <AvatarContainer>
-        <AvatarDiv avatarUrl={avatarUrl} />
-        <AvatarName>
-          {name}
-        </AvatarName>
-      </AvatarContainer>
-    );
-  }
-}
-
-export default Avatar;
+export default function Avatar({
+  avatarUrl,
+  name,
+}: AvatarProps): JSX.Element {
+  const url = avatarUrl || 'https://github.com/RyanCCollins/cdn/blob/master/alumni-webapp/no-user.png';
+  const username = name || 'Contributor';
+  return (
+    <AvatarContainer>
+      <AvatarDiv avatarUrl={url} />
+      <AvatarName>
+        {username}
+      </AvatarName>
+    </AvatarContainer>
+  );
+};

@@ -29,6 +29,7 @@ interface BoxProps extends React.HTMLProps<typeof Box> {
   backgroundColor?: string;
   backgroundImage?: string;
   full?: boolean | { horizontal?: boolean, vertical?: boolean };
+  selectable?: boolean;
 };
 
 export default BoxProps;

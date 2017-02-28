@@ -21,6 +21,7 @@ export const BoxStyles = css`
   flex-basis: auto;
   min-height: ${({ full }) => calculateFullStyle(full, 'vh')};
   min-width: ${({ full }) => calculateFullStyle(full, 'vw')};
+  cursor: ${({ selectable }) => selectable ? 'pointer' : ''};
 `;
 
 export default styled.div`

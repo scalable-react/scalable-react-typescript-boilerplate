@@ -1,38 +1,32 @@
 // Adapted from https://grommet.github.io/docs/spinning
 import * as React from 'react';
-import SvgIcon, { Circle } from './styles';
 import { Box } from 'components';
+import { LoadingIndicatorProps } from './types';
+import SvgIcon, { Circle } from './styles';
 
-interface LoadingIndicatorProps extends React.Props<LoadingIndicator> {
-  isLoading: boolean;
-}
-
-// tslint:disable
-class LoadingIndicator extends React.Component<LoadingIndicatorProps, undefined> {
-  public render() {
-    if (this.props.isLoading) {
-      return (
-        <Box
-          boxSize={{ horizontal: 'small' }}
-          pad="medium"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <SvgIcon viewBox="0 0 48 48">
-            <Circle
-              cx="24"
-              cy="24"
-              r="21"
-              stroke="#007acc"
-              strokeWidth="6"
-              fill="none"
-            />
-          </SvgIcon>
-        </Box>
-      );
-    }
+export default function LoadingIndicator({
+  isLoading,
+}: LoadingIndicatorProps): JSX.Element {
+  if (!isLoading) {
     return null;
   }
-}
-
-export default LoadingIndicator;
+  return (
+    <Box
+      boxSize={{ horizontal: 'small' }}
+      pad="medium"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <SvgIcon viewBox="0 0 48 48">
+        <Circle
+          cx="24"
+          cy="24"
+          r="21"
+          stroke="#007acc"
+          strokeWidth="6"
+          fill="none"
+        />
+      </SvgIcon>
+    </Box>
+  );
+};

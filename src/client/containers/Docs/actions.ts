@@ -2,7 +2,7 @@ import { PayloadAction } from '../../types';
 import * as types from './constants';
 
 export interface LoadInitiationAction extends PayloadAction<undefined> {
-  type: types.LOAD_INTIATION_TYPE;
+  type: types.LOAD_INITIATION_TYPE;
 }
 
 export interface LoadSuccessAction extends PayloadAction<string> {
@@ -19,4 +19,9 @@ export interface LoadCancelAction extends PayloadAction<string> {
   type: types.LOAD_CANCEL_TYPE;
 }
 
-export type DocsAction = LoadInitiationAction | LoadSuccessAction | LoadFailureAction | LoadCancelAction;
+export interface ClearErrorAction extends PayloadAction<undefined> {
+  type: types.CLEAR_ERROR_TYPE;
+}
+
+export type DocsAction = LoadInitiationAction | LoadSuccessAction
+  | LoadFailureAction | LoadCancelAction | ClearErrorAction;
