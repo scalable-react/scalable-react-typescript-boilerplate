@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<AddComment /> rendering should render with supplied props 1`] = `
 <styled.div>
   <styled.div>
@@ -13,12 +15,14 @@ exports[`<AddComment /> rendering should render with supplied props 1`] = `
         onKeyUp={[Function]}
         placeholder="Add comment..."
         rows="3"
-        value="Mock input for test" />
+        value="Mock input for test"
+      />
     </form>
     <styled.footer>
       <styled.ul>
         <styled.li
-          onClick={[Function]}>
+          onClick={[Function]}
+        >
           <styled.a>
             Submit
           </styled.a>
