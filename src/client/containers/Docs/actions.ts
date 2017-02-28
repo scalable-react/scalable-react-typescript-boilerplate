@@ -2,7 +2,7 @@ import { PayloadAction } from '../../types';
 import * as types from './constants';
 
 export interface LoadInitiationAction extends PayloadAction<undefined> {
-  type: types.LOAD_INTIATION_TYPE;
+  type: types.LOAD_INITIATION_TYPE;
 }
 
 export interface LoadSuccessAction extends PayloadAction<string> {

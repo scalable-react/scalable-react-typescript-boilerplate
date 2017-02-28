@@ -8,7 +8,7 @@ import {
 } from './actions';
 
 export const loadInitiation = (): LoadInitiationAction => ({
-  type: types.LOAD_INTIATION,
+  type: types.LOAD_INITIATION,
 });
 
 export const loadSuccess = (data: string): LoadSuccessAction => ({

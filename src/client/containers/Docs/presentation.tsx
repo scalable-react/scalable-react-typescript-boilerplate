@@ -39,6 +39,7 @@ export default class Docs extends React.Component<DocsProps, undefined> {
       markdownContent,
       isLoading,
       error,
+      actions,
     } = this.props;
     return (
       <Section
@@ -48,15 +49,13 @@ export default class Docs extends React.Component<DocsProps, undefined> {
         full={{ vertical: true }}
         backgroundColor="#f5f5f5"
       >
-        <Headline>
+        <Headline fontWeight={700}>
           Documentation
           <StyledHr />
         </Headline>
         {error &&
           <Error
-            onClose={() => {
-              console.log('Called on close');
-            }}
+            onClose={actions.clearError}
             message={error}
           />
         }

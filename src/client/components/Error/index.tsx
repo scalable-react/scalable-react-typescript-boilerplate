@@ -14,6 +14,7 @@ export default function Error({
       pad="small"
       onClick={onCloseCallback}
       alignItems="center"
+      selectable
     >
       <Paragraph size="large" color="white">{message}</Paragraph>
     </Box>
