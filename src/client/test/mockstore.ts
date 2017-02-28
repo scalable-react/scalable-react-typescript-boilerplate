@@ -2,7 +2,6 @@
 import configureMockStore from 'redux-mock-store';
 import { Middleware } from 'redux';
 import { createLogicMiddleware } from 'redux-logic';
-//import apolloClient from '../apolloClient';
 import appLogic from '../logic';
 import axios from 'axios';
 
@@ -11,10 +10,8 @@ const dependencies = {
 };
 
 const logicMiddleware = createLogicMiddleware(appLogic, dependencies);
-//const apolloClientMiddleware = apolloClient.middleware();
 
 const middlewares: Middleware[] = [
-  //apolloClientMiddleware,
   logicMiddleware,
 ];
 
