@@ -95,6 +95,7 @@
     "husky": "^0.13.1",
     "imports-loader": "^0.7.0",
     "isomorphic-fetch": "^2.2.1",
+    "jest": "^19.0.2",
     "json-loader": "^0.5.4",
     "markdown-loader": "^0.1.7",
     "mongoose": "^4.8.2",

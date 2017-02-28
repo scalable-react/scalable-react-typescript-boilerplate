@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Anchor } from 'components';
-const {
+import {
   Nav,
   InnerNav,
   LeftMenu,
   RightMenu,
   Menu,
   MenuItem,
-} = require('./styles');
+} from './styles';
 
 interface NavBarProps extends React.Props<NavBar> {
   logoText: string;

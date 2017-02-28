@@ -33,7 +33,7 @@ export const Pic = styled.div`
   width: 2.25rem;
   border-radius: 50%;
   background-size: contain;
-  background-image: url('https://github.com/RyanCCollins/cdn/blob/master/misc/missing.png?raw=true');
+  background-image: url('${(props) => props.picUrl}');
 `;
 
 export const Footer = styled.footer`
