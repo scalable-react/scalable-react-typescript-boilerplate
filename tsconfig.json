@@ -13,8 +13,7 @@
     "noUnusedLocals": true,
     "paths": {
       "components/*": ["./src/client/components/*"],
-      "containers/*": ["./src/client/containers/*"],
-      "mockStore": ["./test/mockstore"]
+      "containers/*": ["./src/client/containers/*"]
     }
   },
   "include": [

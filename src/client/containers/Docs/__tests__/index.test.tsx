@@ -1,4 +1,5 @@
 import configureStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import * as React from 'react';
@@ -14,14 +15,16 @@ const testState: State = {
 };
 
 describe('DocsContainer ', () => {
-
+  let store: any;
   beforeEach(() => {
-    const store = mockStore(testState);     
+    store = mockStore(testState);     
   });
 
   it('should render with default props', () => {
     const wrapper = shallow(
-      <DocsContainer/>,
+      <Provider store={store}>
+        <DocsContainer/>
+      </Provider>,
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });  
