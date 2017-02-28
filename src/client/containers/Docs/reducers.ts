@@ -16,7 +16,7 @@ const docsReducer = (state: State = initialState, action: DocsAction = defaultAc
   case types.LOAD_FAILURE:
     return { ...state, 
       isLoading: false,
-      error: action.payload,
+      error: action.error,
     };
   default:
     return state;

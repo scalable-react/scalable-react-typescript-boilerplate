@@ -12,7 +12,7 @@ export const loadSuccess = (data: string): LoadSuccessAction => ({
 
 export const loadFailure = (error: string): LoadFailureAction => ({
   type: types.LOAD_FAILURE,
-  payload: error,
+  error,
 });
 
 export const loadCancel = (): LoadCancelAction => ({

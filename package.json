@@ -26,12 +26,6 @@
     "transform": {
       ".*": "<rootDir>/config/testing/preprocessor.js"
     },
-    "globals": {
-      "__TS_CONFIG__": {
-        "module": "commonjs",
-        "jsx": "react"
-      }
-    },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
   },
   "scripts": {
@@ -101,7 +95,6 @@
     "husky": "^0.13.1",
     "imports-loader": "^0.7.0",
     "isomorphic-fetch": "^2.2.1",
-    "jest": "^18.1.0",
     "json-loader": "^0.5.4",
     "markdown-loader": "^0.1.7",
     "mongoose": "^4.8.2",
@@ -144,6 +137,9 @@
     "webpack-manifest-plugin": "^1.1.0"
   },
   "devDependencies": {
-    "redux-logic-test": "^1.0.3"
+    "jest": "^19.0.2",
+    "redux-logic-test": "^1.0.3",
+    "redux-mock-store": "^1.2.2",
+    "ts-jest": "^19.0.0"
   }
 }

@@ -9,7 +9,7 @@ export interface StateProps {
   isLoading: boolean;
 }
 
-export interface DispatchProps { 
+export interface DispatchProps {
   actions: {
     loadInitiation: () => LoadInitiationAction,
     loadSuccess: (data: string) => LoadSuccessAction,
@@ -21,9 +21,9 @@ export type DocsProps = React.Props<Docs> & StateProps & DispatchProps;
 
 export default class Docs extends React.Component<DocsProps, undefined> {
   constructor(props) {
-    super(props);   
+    super(props);
     const { markdownContent } = props;
-    if ( markdownContent === null ) {
+    if (markdownContent === null) {
       this.props.actions.loadInitiation();
     }
   };

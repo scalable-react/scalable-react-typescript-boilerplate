@@ -11,9 +11,9 @@ export interface LoadSuccessAction extends PayloadAction<string> {
   payload: string;
 }
 
-export interface LoadFailureAction extends PayloadAction<string> {
+export interface LoadFailureAction extends Action {
   type: types.LOAD_FAILURE_TYPE;
-  payload: string;
+  error: string;
 }
 
 export interface LoadCancelAction extends Action {
