@@ -1,55 +1,69 @@
 import reducer from '../reducers';
 import * as types from '../constants';
-import { actionCreators } from '../actionCreators';
-import {initialState} from '../state';
+import { selectIsLoading, selectMarkdownContent, selectError } from '../selectors';
+import { State } from '../../../State';
 
-describe('docs reducer', () => {
-  it('should return the initial state with default action', () => {
-    expect(
-      reducer(undefined, actionCreators.defaultAction()),
-    ).toEqual(initialState);
-  });
-  
-  it('should handle LOAD_INTIATION', () => {
-    expect(
-      reducer(initialState, actionCreators.loadInitiation()),
-    ).toEqual({
-      markdownContent: null,
-      error: null,
-      isLoading: true,
+const testError: string = 'some error';
+const testMarkDown: string = '#Test Markdown';
+
+const testState: State = {
+  app: {},
+  docs: {
+    error: null,
+    isLoading: false,
+    markdownContent: null,
+  },
+};
+
+const testState2: State = {
+  app: {},
+  docs: {
+    error: testError,
+    isLoading: true,
+    markdownContent: testMarkDown,
+  },
+};
+
+describe('docs selectors', () => {
+  describe('docs selectIsLoading', () => {
+    it('should return false', () => {
+      expect(
+        selectIsLoading(testState))
+        .toBe(false);
+    });
+
+    it('should return true', () => {
+      expect(
+        selectIsLoading(testState2))
+        .toBe(true);
     });
   });
 
-  it('should handle LOAD_SUCCESS', () => {
-    const testData: string = 'test string';
-    expect(
-      reducer(initialState, actionCreators.loadSuccess(testData)),
-    ).toEqual({
-      markdownContent: testData,
-      error: null,
-      isLoading: false,
+  describe('docs selectError', () => {
+    it('should return null', () => {
+      expect(
+        selectError(testState))
+        .toBe(null);
+    });
+
+    it('should return string', () => {
+      expect(
+        selectIsLoading(testState2))
+        .toBe(true);
     });
   });
 
-  it('should handle LOAD_FAILURE', () => {
-    const testMessage: string = 'test error message';
-    expect(
-      reducer(initialState, actionCreators.loadFailure(testMessage)),
-    ).toEqual({
-      markdownContent: null,
-      error: testMessage,
-      isLoading: false,
+  describe('docs selectMarkdownContent', () => {
+    it('should return null', () => {
+      expect(
+        selectError(testState))
+        .toBe(null);
     });
-  });
 
-  it('should handle LOAD_CANCEL', () => {
-    const testMessage: string = 'test error message';
-    expect(
-      reducer(initialState, actionCreators.loadCancel()),
-    ).toEqual({
-      markdownContent: null,
-      error: null,
-      isLoading: false,
+    it('should return string', () => {
+      expect(
+        selectIsLoading(testState2))
+        .toBe(true);
     });
   });
 
