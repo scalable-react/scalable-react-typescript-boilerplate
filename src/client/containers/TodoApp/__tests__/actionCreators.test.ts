@@ -4,7 +4,7 @@ import actionCreators from '../actionCreators';
 import { initialState } from '../state';
 
 describe('todoApp actionCreators', () => {
-  it ('should have a type of ADD_TODO', () => {
+  it('should have a type of ADD_TODO', () => {
     const todo = { text: 'foo' };
     const expected = { type: T.ADD_TODO, todo };
     expect(actionCreators.addTodo(todo)).toEqual(expected);
