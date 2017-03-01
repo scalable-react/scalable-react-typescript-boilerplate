@@ -124,6 +124,7 @@
     "redux-async-connect": "^1.0.0-rc4",
     "redux-connect": "^5.0.0",
     "redux-logic": "^0.11.6",
+    "redux-mock-provider": "^1.0.0",
     "reselect": "^2.5.4",
     "rimraf": "^2.5.4",
     "rxjs": "^5.2.0",

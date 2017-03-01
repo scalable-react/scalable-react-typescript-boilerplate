@@ -1,8 +1,9 @@
+import { Reducer } from 'redux';
 import * as types from './constants';
 import { DocsAction } from './actions';
 import { State, initialState } from './state';
 
-const docsReducer = (state: State = initialState, action: DocsAction): State => {
+const docsReducer: Reducer<State> = (state: State = initialState, action: DocsAction) => {
   switch (action.type) {
   case types.LOAD_INITIATION:
     return {
