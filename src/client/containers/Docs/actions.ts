@@ -1,27 +1,37 @@
 import { PayloadAction } from '../../types';
 import * as types from './constants';
+import {Action} from 'redux';
 
-export interface LoadInitiationAction extends PayloadAction<undefined> {
-  type: types.LOAD_INITIATION_TYPE;
-}
+export interface LoadInitiationAction extends Action {
+  type: types.LOAD_INITIATION_TYPE,
+};
 
 export interface LoadSuccessAction extends PayloadAction<string> {
   type: types.LOAD_SUCCESS_TYPE;
   payload: string;
 }
 
-export interface LoadFailureAction extends PayloadAction<string> {
+export interface LoadFailureAction extends Action {
   type: types.LOAD_FAILURE_TYPE;
-  payload: string;
+  error: string;
 }
 
-export interface LoadCancelAction extends PayloadAction<string> {
-  type: types.LOAD_CANCEL_TYPE;
-}
+export interface LoadCancelAction extends Action {
+  type: types.LOAD_CANCEL_TYPE,
+};
 
-export interface ClearErrorAction extends PayloadAction<undefined> {
+export interface ClearErrorAction extends Action {
   type: types.CLEAR_ERROR_TYPE;
 }
 
-export type DocsAction = LoadInitiationAction | LoadSuccessAction
-  | LoadFailureAction | LoadCancelAction | ClearErrorAction;
+export interface DefaultAction extends Action {
+  type: ''
+}
+
+export type DocsAction = 
+LoadInitiationAction | 
+LoadSuccessAction | 
+LoadFailureAction | 
+LoadCancelAction | 
+ClearErrorAction |
+DefaultAction;

@@ -1,24 +1,27 @@
 import { Reducer } from 'redux';
 import * as types from './constants';
 import { DocsAction } from './actions';
+import { defaultAction } from './actionCreators';
 import { State, initialState } from './state';
 
-const docsReducer: Reducer<State> = (state: State = initialState, action: DocsAction) => {
+const reducer: Reducer<State> = (state: State = initialState, action: DocsAction = defaultAction()) => {
   switch (action.type) {
   case types.LOAD_INITIATION:
-    return {
-      ...state,
+    return { 
+      ...state, 
       isLoading: true,
     };
   case types.LOAD_SUCCESS:
-    return {
+    return { 
+      ...state, 
       isLoading: false,
       markdownContent: action.payload,
     };
   case types.LOAD_FAILURE:
-    return {
+    return { 
+      ...state, 
       isLoading: false,
-      error: action.payload,
+      error: action.error,
     };
   case types.CLEAR_ERROR:
     return {
@@ -32,4 +35,4 @@ const docsReducer: Reducer<State> = (state: State = initialState, action: DocsAc
   }
 };
 
-export default docsReducer;
+export default reducer;

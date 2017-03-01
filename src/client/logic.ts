@@ -1,7 +1,7 @@
 import docs2Logic from './containers/Docs/logic';
 
-const appLogic = [
+const rootLogic = [
   ...docs2Logic,
 ];
 
-export default appLogic;
+export default rootLogic;
