@@ -4,7 +4,7 @@ import {Action} from 'redux';
 
 export interface LoadInitiationAction extends Action {
   type: types.LOAD_INITIATION_TYPE,
-};
+}
 
 export interface LoadSuccessAction extends PayloadAction<string> {
   type: types.LOAD_SUCCESS_TYPE;
