@@ -7,19 +7,19 @@ import { State, initialState } from './state';
 const reducer: Reducer<State> = (state: State = initialState, action: DocsAction = defaultAction()) => {
   switch (action.type) {
   case types.LOAD_INITIATION:
-    return { 
-      ...state, 
+    return {
+      ...state,
       isLoading: true,
     };
   case types.LOAD_SUCCESS:
-    return { 
-      ...state, 
+    return {
+      ...state,
       isLoading: false,
       markdownContent: action.payload,
     };
   case types.LOAD_FAILURE:
-    return { 
-      ...state, 
+    return {
+      ...state,
       isLoading: false,
       error: action.error,
     };
