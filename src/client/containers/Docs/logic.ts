@@ -4,7 +4,7 @@ import * as actionTypes from './constants';
 const url = 'https://raw.githubusercontent.com/RyanCCollins/scalable-react-ts-boilerplate/master/README.md';
 
 export const fetchLogic = createLogic({
-  type: actionTypes.LOAD_INTIATION,
+  type: actionTypes.LOAD_INITIATION,
   cancelType: actionTypes.LOAD_CANCEL,
   latest: true, // take latest only
   processOptions: {

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Features } from 'containers';
 import { Heading, Section, Hero, Paragraph } from 'components';
-const { Container, HeroLogo, HeroLogoRow, HeadingContainer } = require('./styles');
-const GetStartedButtonRow = require('./GetStartedButtonRow').default;
+import GetStartedButtonRow from './presentation';
+import { Container, HeroLogo, HeroLogoRow, HeadingContainer } from './styles';
 
 class Home extends React.Component<any, any> {
   public render() {

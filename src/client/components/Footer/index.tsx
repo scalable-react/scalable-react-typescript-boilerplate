@@ -1,21 +1,15 @@
 import * as React from 'react';
-const FooterComponent = require('./styles').FooterComponent;
+import { FooterComponent } from './styles';
+import { FooterProps } from './types';
 
-interface FooterProps extends React.Props<Footer> {
-  color: string;
+export default function Footer({
+  color,
+  children,
+}: FooterProps): JSX.Element {
+  const colorProp = color || '#0a0a0a';
+  return (
+    <FooterComponent color={colorProp}>
+      {children}
+    </FooterComponent>
+  );
 };
-
-class Footer extends React.Component<any, undefined> {
-  public static defaultProps: FooterProps = {
-    color: '#0a0a0a',
-  };
-  public render() {
-    return (
-      <FooterComponent color={this.props.color}>
-        {this.props.children}
-      </FooterComponent>
-    );
-  }
-}
-
-export default Footer;

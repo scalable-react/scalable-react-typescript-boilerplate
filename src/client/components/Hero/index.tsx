@@ -1,21 +1,15 @@
 import * as React from 'react';
-import { HeroDiv } from './styles';
+import Component from './styles';
+import { HeroProps } from './types';
 
-interface HeroProps extends React.Props<Hero> {
-  color?: string;
-}
-
-class Hero extends React.Component<HeroProps, undefined> {
-  public static defaultProps: HeroProps = {
-    color: '#2d2d2d',
-  };
-  public render() {
-    return (
-      <HeroDiv color={this.props.color}>
-        {this.props.children}
-      </HeroDiv>
-    );
-  }
-}
-
-export default Hero;
+export default function Hero({
+  children,
+  color,
+}: HeroProps): JSX.Element {
+  const colorProp = color || '#2d2d2d';
+  return (
+    <Component color={colorProp}>
+      {children}
+    </Component>
+  );
+};
