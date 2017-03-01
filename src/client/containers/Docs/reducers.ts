@@ -2,7 +2,6 @@ import { Reducer } from 'redux';
 import * as types from './constants';
 import { DocsAction } from './actions';
 import { State, initialState } from './state';
-declare var _exhaustiveCheck: never;
 
 const docsReducer: Reducer<State> = (state: State = initialState, action: DocsAction) => {
   switch (action.type) {
@@ -29,7 +28,6 @@ const docsReducer: Reducer<State> = (state: State = initialState, action: DocsAc
   case types.LOAD_CANCEL:
     return initialState;
   default:
-    _exhaustiveCheck = action;
     return state;
   }
 };
