@@ -10,7 +10,7 @@ describe('docs actionCreators', () => {
   it('properly creates LOAD_INTIATION action', () => {
     expect(actionCreators.loadInitiation(),
     ).toEqual({
-      type: types.LOAD_INTIATION,
+      type: types.LOAD_INITIATION,
     });
   });
 
@@ -37,6 +37,15 @@ describe('docs actionCreators', () => {
       type: types.LOAD_FAILURE,
       error: testMessage,
     });
+
+    it('properly creates LOAD_SUCCESS action', () => {
+      const testMessage: string = 'test error Message';
+      expect(actionCreators.clearError(),
+      ).toEqual({
+        type: types.CLEAR_ERROR,
+      });
+    });
+    
   });
 
 });

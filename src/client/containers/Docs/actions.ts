@@ -3,7 +3,7 @@ import * as types from './constants';
 import {Action} from 'redux';
 
 export interface LoadInitiationAction extends Action {
-  type: types.LOAD_INTIATION_TYPE,
+  type: types.LOAD_INITIATION_TYPE,
 };
 
 export interface LoadSuccessAction extends PayloadAction<string> {
@@ -20,8 +20,7 @@ export interface LoadCancelAction extends Action {
   type: types.LOAD_CANCEL_TYPE,
 };
 
-
-export interface ClearErrorAction extends PayloadAction<undefined> {
+export interface ClearErrorAction extends Action {
   type: types.CLEAR_ERROR_TYPE;
 }
 
@@ -29,11 +28,10 @@ export interface DefaultAction extends Action {
   type: ''
 }
 
-
 export type DocsAction = 
 LoadInitiationAction | 
 LoadSuccessAction | 
 LoadFailureAction | 
 LoadCancelAction | 
-ClearErrorAction
+ClearErrorAction |
 DefaultAction;
