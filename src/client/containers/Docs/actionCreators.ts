@@ -30,7 +30,7 @@ export const clearError = (): ClearErrorAction => ({
   type: types.CLEAR_ERROR,
 });
 
-export const defaultAction = (): DefaultAction => ({ 
+export const defaultAction = (): DefaultAction => ({
   type: types.DEFAULT_ACTION_TYPE,
 });
 

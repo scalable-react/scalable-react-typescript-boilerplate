@@ -16,7 +16,7 @@ describe('<TodoApp /> container', () => {
   it('should render as expected', () => {
     const wrapper = shallow(
       <MockProvider store={store}>
-        <TodoAppContainer />    
+        <TodoAppContainer />
       </MockProvider>,
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();

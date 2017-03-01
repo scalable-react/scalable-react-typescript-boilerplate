@@ -1,4 +1,4 @@
-import * as React from 'react'; 
+import * as React from 'react';
 import Image from './';
 
 export type ImageSize = 'xxsmall' | 'xmall' | 'small' | 'medium' | 'large' | 'xlarge';

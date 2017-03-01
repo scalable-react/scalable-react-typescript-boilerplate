@@ -3,7 +3,7 @@ import { createStore, applyMiddleware, Middleware } from 'redux';
 import * as actionTypes from '../constants';
 import rootLogic from '../logic';
 
-const dependencies = { 
+const dependencies = {
   httpClient: { // simulate an async fetch
     get(url) { return Promise.resolve({ data: 'testData' }); },
   },

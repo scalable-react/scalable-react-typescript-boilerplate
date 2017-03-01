@@ -9,7 +9,7 @@ describe('docs reducer', () => {
       reducer(undefined, actionCreators.defaultAction()),
     ).toEqual(initialState);
   });
-  
+
   it('should handle LOAD_INTIATION', () => {
     expect(
       reducer(initialState, actionCreators.loadInitiation()),

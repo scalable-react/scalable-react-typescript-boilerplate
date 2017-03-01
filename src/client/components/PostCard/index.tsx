@@ -13,10 +13,10 @@ import {
 } from './styles';
 import { PostCardProps } from './types';
 
-export default function PostCard({ 
-  content, 
-  image, 
-  title, 
+export default function PostCard({
+  content,
+  image,
+  title,
   id,
 }: PostCardProps): JSX.Element {
   return (

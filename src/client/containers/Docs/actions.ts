@@ -28,10 +28,10 @@ export interface DefaultAction extends Action {
   type: ''
 }
 
-export type DocsAction = 
-LoadInitiationAction | 
-LoadSuccessAction | 
-LoadFailureAction | 
-LoadCancelAction | 
+export type DocsAction =
+LoadInitiationAction |
+LoadSuccessAction |
+LoadFailureAction |
+LoadCancelAction |
 ClearErrorAction |
 DefaultAction;

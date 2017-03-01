@@ -17,7 +17,7 @@ const testState: State = {
 describe('DocsContainer ', () => {
   let store: any;
   beforeEach(() => {
-    store = mockStore(testState);     
+    store = mockStore(testState);
   });
 
   it('should render with default props', () => {
@@ -27,5 +27,5 @@ describe('DocsContainer ', () => {
       </Provider>,
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
-  });  
+  });
 });

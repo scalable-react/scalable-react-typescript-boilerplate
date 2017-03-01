@@ -45,7 +45,7 @@ describe('docs actionCreators', () => {
         type: types.CLEAR_ERROR,
       });
     });
-    
+
   });
 
 });
