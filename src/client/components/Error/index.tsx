@@ -6,7 +6,11 @@ export default function Error({
   message,
   onClose,
 }: ErrorProps): JSX.Element {
+
+  // Box extends HtmlProps so onClick will not accept a "Function" type input.
+  // Cast the onClose prop to a React.Eventhandler type to allow a function. 
   const onCloseCallback = onClose as React.EventHandler<any>;
+
   return (
     <Box
       backgroundColor="#ff324d"
