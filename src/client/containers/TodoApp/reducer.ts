@@ -2,6 +2,7 @@ import { Reducer } from 'redux';
 import * as T from './constants';
 import { ActionTypes } from './actions';
 import { State, initialState } from './state';
+declare var _exhaustiveCheck: never;
 
 const reducer: Reducer<State> = (state: State = initialState, action: ActionTypes) => {
   switch (action.type) {
@@ -28,6 +29,7 @@ const reducer: Reducer<State> = (state: State = initialState, action: ActionType
       ],
     };
   default:
+    _exhaustiveCheck = action;
     return state;
   }
 };
