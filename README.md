@@ -155,10 +155,7 @@ We've included some generators so that you can easily scaffold out components & 
 To use the generators, run `npm run generator` and select the options you want to use.  The generators will create your component or container and their accompanying imports / exports.
 
 ## Server Rendering
-This project embraces server-side rendering.  Included in the setup is an [Express server](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/server.tsx) that will server render.  Note that the server-rendering will not work with the TypeScript source code, so you must compile the project into the Build directory first.  Also, you must copy any other assets (images, markdown, etc.) into the build folder.
-
-## Code Generation
-A big feature of the [Scalable React Boilerplate](https://github.com/RyanCCollins/scalable-react-boilerplate) project is the code generation tools. They will be incorporated into this project at a later time.  If you are interested in contributing, please let us know!
+We have included setup to get you server-rendering out of the box.  Included in the setup is an [Express server](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/server.tsx) that will server render.  Note that the server-rendering will not work with the TypeScript source code, so you must compile the project into the Build directory first.  Also, you must copy any other assets (images, markdown, etc.) into the build folder.
 
 ## Testing
 Included is a test framework for all of your React testing needs.  We are using Jest to run the test suite and generate snapshots, plus Enzyme for component introspection.
