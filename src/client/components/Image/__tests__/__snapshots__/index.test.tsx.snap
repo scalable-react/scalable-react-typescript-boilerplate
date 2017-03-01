@@ -1,12 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<Button /> default should render a plain button with default props and required props (src, alt) 1`] = `
 <styled.img
   alt="alt text"
-  src="src string" />
+  src="src string"
+/>
 `;
 
 exports[`<Button /> default should render a plain button with other props 1`] = `
 <styled.img
   alt="Some alt text"
   size="medium"
-  src="A source string" />
+  src="A source string"
+/>
 `;

@@ -1,13 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<Footer /> should render with default props 1`] = `
 <styled.footer
-  color="#0a0a0a">
+  color="#0a0a0a"
+>
   <div />
 </styled.footer>
 `;
 
 exports[`<Footer /> should render with different props 1`] = `
 <styled.footer
-  color="#0b0b0b">
+  color="#0b0b0b"
+>
   <div />
 </styled.footer>
 `;

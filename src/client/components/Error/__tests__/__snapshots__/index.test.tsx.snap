@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<Error /> default should render an Error element with only the required props 1`] = `
 <Box
   alignItems="center"
@@ -8,10 +10,12 @@ exports[`<Error /> default should render an Error element with only the required
     }
   }
   pad="small"
-  selectable={true}>
+  selectable={true}
+>
   <Paragraph
     color="white"
-    size="large">
+    size="large"
+  >
     Mock error message
   </Paragraph>
 </Box>
@@ -28,10 +32,12 @@ exports[`<Error /> default should render an Error element with other props 1`] =
   }
   onClick={[Function]}
   pad="small"
-  selectable={true}>
+  selectable={true}
+>
   <Paragraph
     color="white"
-    size="large">
+    size="large"
+  >
     Mock error message
   </Paragraph>
 </Box>
