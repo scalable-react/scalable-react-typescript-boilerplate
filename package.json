@@ -26,12 +26,6 @@
     "transform": {
       ".*": "<rootDir>/config/testing/preprocessor.js"
     },
-    "globals": {
-      "__TS_CONFIG__": {
-        "module": "commonjs",
-        "jsx": "react"
-      }
-    },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
   },
   "scripts": {
@@ -144,6 +138,9 @@
     "webpack-manifest-plugin": "^1.1.0"
   },
   "devDependencies": {
-    "redux-logic-test": "^1.0.3"
+    "jest": "^19.0.2",
+    "redux-logic-test": "^1.0.3",
+    "redux-mock-store": "^1.2.2",
+    "ts-jest": "^19.0.0"
   }
 }

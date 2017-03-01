@@ -10,7 +10,11 @@
     "outDir": "build/src",
     "jsx": "preserve",
     "allowJs": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "paths": {
+      "components/*": ["./src/client/components/*"],
+      "containers/*": ["./src/client/containers/*"]
+    }
   },
   "include": [
     "src/**/*"

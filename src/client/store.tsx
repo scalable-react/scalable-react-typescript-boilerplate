@@ -5,7 +5,7 @@ import { rootReducer} from './reducers';
 import { initialState as defaultInitialState} from './state';
 import { createLogicMiddleware } from 'redux-logic';
 import apolloClient from './apolloClient';
-import Logics from './logic';
+import rootLogic from './logic';
 import axios from 'axios';
 
 const isClient = typeof document !== 'undefined';
@@ -28,7 +28,7 @@ const dependencies = {
 };
 
 const thunk = createThunkMiddleware();
-const logicMiddleware = createLogicMiddleware(Logics, dependencies);
+const logicMiddleware = createLogicMiddleware(rootLogic, dependencies);
 const apolloClientMiddleware = apolloClient.middleware();
 
 const middlewares: Middleware[] = [
