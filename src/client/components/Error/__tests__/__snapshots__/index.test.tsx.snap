@@ -7,12 +7,11 @@ exports[`<Error /> default should render an Error element with only the required
       "horizontal": "medium",
     }
   }
-  pad="small">
+  pad="small"
+  selectable={true}>
   <Paragraph
     color="white"
-    margin="medium"
-    size="large"
-    textAlign="center">
+    size="large">
     Mock error message
   </Paragraph>
 </Box>
@@ -28,12 +27,11 @@ exports[`<Error /> default should render an Error element with other props 1`] =
     }
   }
   onClick={[Function]}
-  pad="small">
+  pad="small"
+  selectable={true}>
   <Paragraph
     color="white"
-    margin="medium"
-    size="large"
-    textAlign="center">
+    size="large">
     Mock error message
   </Paragraph>
 </Box>
