@@ -11,6 +11,9 @@ const docsReducer = (state: State = initialState, action: DocsAction = defaultAc
     };
   case types.LOAD_SUCCESS:
     return { ...state, isLoading: false,
+    return {
+	  ...state,
+      isLoading: false,
       markdownContent: action.payload,
     };
   case types.LOAD_FAILURE:

@@ -20,13 +20,20 @@ export interface LoadCancelAction extends Action {
   type: types.LOAD_CANCEL_TYPE,
 };
 
+
+export interface ClearErrorAction extends PayloadAction<undefined> {
+  type: types.CLEAR_ERROR_TYPE;
+}
+
 export interface DefaultAction extends Action {
   type: ''
 }
+
 
 export type DocsAction = 
 LoadInitiationAction | 
 LoadSuccessAction | 
 LoadFailureAction | 
 LoadCancelAction | 
+ClearErrorAction
 DefaultAction;

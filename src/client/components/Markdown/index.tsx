@@ -1,20 +1,15 @@
 import * as React from 'react';
+import { MarkdownProps } from './types';
+import Component from './styles';
 const ReactMarkdown = require('react-markdown');
 require('github-markdown-css/github-markdown.css');
-const Box = require('./styles').Box;
 
-interface MarkdownProps extends React.Props<Markdown> {
-  content: string;
+export default function Markdown({
+  content,
+}: MarkdownProps): JSX.Element {
+  return (
+    <Component className="markdown-body">
+      <ReactMarkdown source={content} />
+    </Component>
+  );
 }
-
-class Markdown extends React.Component<MarkdownProps, undefined> {
-  public render() {
-    return (
-      <Box className="markdown-body">
-        <ReactMarkdown source={this.props.content} />
-      </Box>
-    );
-  }
-}
-
-export default Markdown;

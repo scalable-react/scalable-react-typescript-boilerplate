@@ -17,7 +17,7 @@ export interface MarginSizeMap {
   large: number;
 }
 
-export interface ParagraphProps extends React.Props<Paragraph> {
+export interface ParagraphProps extends React.Props<typeof Paragraph> {
   color?: string;
   textAlign?: string;
   size?: ParagraphSize;

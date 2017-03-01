@@ -13,6 +13,6 @@ const imageSizeMap = {
 export const Img = styled.img`
   max-width: 100%;
   height: auto;
-  max-height: ${(props) => remStringFromPx(imageSizeMap[props.size])};
+  max-height: ${(props) => remStringFromPx(imageSizeMap[props.size || 'small'])};
   display:block
 `;

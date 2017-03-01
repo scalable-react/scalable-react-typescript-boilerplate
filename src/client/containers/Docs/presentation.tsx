@@ -1,7 +1,12 @@
 import * as React from 'react';
 import { Article, Headline, LoadingIndicator, Section, Error } from 'components';
 import { StyledHr } from './styles';
-import { LoadInitiationAction, LoadSuccessAction, LoadFailureAction } from './actions';
+import {
+  LoadInitiationAction,
+  LoadSuccessAction,
+  LoadFailureAction,
+  ClearErrorAction,
+} from './actions';
 
 export interface StateProps {
   markdownContent: string;
@@ -14,6 +19,7 @@ export interface DispatchProps {
     loadInitiation: () => LoadInitiationAction,
     loadSuccess: (data: string) => LoadSuccessAction,
     loadFailure: (error: string) => LoadFailureAction,
+    clearError: () => ClearErrorAction,
   };
 }
 
@@ -33,6 +39,7 @@ export default class Docs extends React.Component<DocsProps, undefined> {
       markdownContent,
       isLoading,
       error,
+      actions,
     } = this.props;
     return (
       <Section
@@ -42,11 +49,16 @@ export default class Docs extends React.Component<DocsProps, undefined> {
         full={{ vertical: true }}
         backgroundColor="#f5f5f5"
       >
-        <Headline>
+        <Headline fontWeight={700}>
           Documentation
           <StyledHr />
         </Headline>
-        {error && <Error message={error} />}
+        {error &&
+          <Error
+            onClose={actions.clearError}
+            message={error}
+          />
+        }
         <LoadingIndicator isLoading={isLoading} />
         {typeof markdownContent === 'string' &&
           <Article

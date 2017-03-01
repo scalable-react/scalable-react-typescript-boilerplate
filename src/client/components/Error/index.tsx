@@ -6,13 +6,15 @@ export default function Error({
   message,
   onClose,
 }: ErrorProps): JSX.Element {
+  const onCloseCallback = onClose as React.EventHandler<any>;
   return (
     <Box
       backgroundColor="#ff324d"
       boxSize={{ horizontal: 'medium' }}
       pad="small"
-      onClick={onClose}
+      onClick={onCloseCallback}
       alignItems="center"
+      selectable
     >
       <Paragraph size="large" color="white">{message}</Paragraph>
     </Box>
