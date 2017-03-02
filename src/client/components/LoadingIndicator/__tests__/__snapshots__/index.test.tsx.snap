@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingIndicator /> default should render the element when isLoading is true 1`] = `
+<Box
+  alignItems="center"
+  boxSize={
+    Object {
+      "horizontal": "small",
+    }
+  }
+  justifyContent="center"
+  pad="medium"
+>
+  <styled.svg
+    viewBox="0 0 48 48"
+  >
+    <styled.circle
+      cx="24"
+      cy="24"
+      fill="none"
+      r="21"
+      stroke="#007acc"
+      strokeWidth="6"
+    />
+  </styled.svg>
+</Box>
+`;
