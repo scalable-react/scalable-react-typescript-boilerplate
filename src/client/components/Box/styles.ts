@@ -16,12 +16,12 @@ export const BoxStyles = css`
   flex-wrap: ${({ flexWrap, reverse }) => calculateFlexWrap(flexWrap, reverse)};
   padding: ${({ pad }) => sizeToString(pad)};
   margin: ${({ margin }) => sizeToString(margin)};
-  width: ${({ boxSize }) => boxSizeToStyle(boxSize).width};
+  max-width: ${({ boxSize }) => boxSizeToStyle(boxSize).width};
   height: ${({ boxSize }) => boxSizeToStyle(boxSize).height};
   flex-basis: auto;
   min-height: ${({ full }) => calculateFullStyle(full, 'vh')};
   min-width: ${({ full }) => calculateFullStyle(full, 'vw')};
-  cursor: ${({ selectable }) => selectable ? 'pointer' : ''};
+  cursor: ${({ selectable }) => selectable ? 'pointer' : 'inherit'};
 `;
 
 export default styled.div`
