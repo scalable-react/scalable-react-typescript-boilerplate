@@ -47,7 +47,7 @@
     "test:update": "npm run test -- --u"
   },
   "dependencies": {
-    "@types/body-parser": "latest",
+    "@types/body-parser": "^0.0.34",
     "@types/compression": "latest",
     "@types/enzyme": "^2.7.4",
     "@types/express": "latest",
