@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Markdown, Image, Headline, Comment, AddComment } from 'components';
-import { Article, Content } from './styles';
+import { Markdown, Image, Headline, Comment, AddComment, Article, Box } from 'components';
 import { PostProps } from './types';
 
 export default function Post({
@@ -12,24 +11,26 @@ export default function Post({
 }: PostProps): JSX.Element {
   return (
     <Article
-      pad="large"
+      pad="medium"
+      backgroundColor="#fff"
+      alignItems="center"
       margin={{ vertical: 'medium' }}
-      size={{ horizontal: 'xxlarge' }}
+      boxSize={{ horizontal: 'xxlarge' }}
     >
-      <Image alt={title} size="large" src={image} />
-      <Headline>
-        {title}
-      </Headline>
-      <Content>
+      <Box pad="medium" alignItems="center">
+        <Image alt={title} size="large" src={image} />
+        <Headline>
+          {title}
+        </Headline>
         <Markdown content={content} />
-      </Content>
-      <h1>Comments</h1>
-      <AddComment
-        {...comment}
-      />
-      {comments && comments.map((item, i) =>
-        <Comment key={i} {...item} />,
-      )}
+        <h1>Comments</h1>
+        <AddComment
+          {...comment}
+        />
+        {comments && comments.map((item, i) =>
+          <Comment key={i} {...item} />,
+        )}
+      </Box>
     </Article>
   );
 };
