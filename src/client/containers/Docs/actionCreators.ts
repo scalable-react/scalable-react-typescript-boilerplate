@@ -5,6 +5,7 @@ import {
   LoadFailureAction,
   LoadCancelAction,
   ClearErrorAction,
+  DefaultAction,
 } from './actions';
 
 export const loadInitiation = (): LoadInitiationAction => ({
@@ -18,7 +19,7 @@ export const loadSuccess = (data: string): LoadSuccessAction => ({
 
 export const loadFailure = (error: string): LoadFailureAction => ({
   type: types.LOAD_FAILURE,
-  payload: error,
+  error,
 });
 
 export const loadCancel = (): LoadCancelAction => ({
@@ -29,12 +30,17 @@ export const clearError = (): ClearErrorAction => ({
   type: types.CLEAR_ERROR,
 });
 
+export const defaultAction = (): DefaultAction => ({
+  type: types.DEFAULT_ACTION_TYPE,
+});
+
 export const actionCreators = {
   loadInitiation,
   loadSuccess,
   loadFailure,
   loadCancel,
   clearError,
+  defaultAction,
 };
 
 export default actionCreators;

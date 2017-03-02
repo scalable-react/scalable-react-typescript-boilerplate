@@ -1,13 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<Hero /> rendering behavior should render the Hero component with default props 1`] = `
 <styled.div
-  color="#2d2d2d">
+  color="#2d2d2d"
+>
   Some content
 </styled.div>
 `;
 
 exports[`<Hero /> rendering behavior should render with other props 1`] = `
 <styled.div
-  color="ff6600">
+  color="ff6600"
+>
   Some content
 </styled.div>
 `;

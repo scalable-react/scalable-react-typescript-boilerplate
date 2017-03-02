@@ -1,20 +1,20 @@
 import { createMockStore } from 'redux-logic-test';
 import { createStore, applyMiddleware, Middleware } from 'redux';
 import * as actionTypes from '../constants';
-import appLogic from '../logic';
+import rootLogic from '../logic';
 
-const dependencies = { 
+const dependencies = {
   httpClient: { // simulate an async fetch
     get(url) { return Promise.resolve({ data: 'testData' }); },
   },
 };
 
-describe('appLogic tests', () => {
-  describe('appLogic test without reducers', () => {
+describe('rootLogic tests', () => {
+  describe('rootLogic test without reducers', () => {
     let store;
     beforeEach(() => {
       store = createMockStore({
-        logic: appLogic,
+        logic: rootLogic,
         injectedDeps: dependencies,
       });
     });

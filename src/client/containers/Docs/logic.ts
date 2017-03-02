@@ -12,8 +12,8 @@ export const fetchLogic = createLogic({
     successType: actionTypes.LOAD_SUCCESS,
     failType: actionTypes.LOAD_FAILURE,
   },
-  
-  process({ httpClient }) { 
+
+  process({ httpClient }) {
     return httpClient.get(url)
       .then((response) => response.data);
   },

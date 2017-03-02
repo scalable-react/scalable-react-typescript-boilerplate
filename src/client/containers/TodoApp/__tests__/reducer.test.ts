@@ -55,5 +55,5 @@ describe('todo app reducer', () => {
     expect(
       reducer(stateBefore, actionCreators.input(input)),
     ).toEqual(stateAfter);
-  }); 
+  });
 });

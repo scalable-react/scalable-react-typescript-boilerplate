@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<TodoApp /> container should render as expected 1`] = `
 <Provider
   store={
@@ -9,7 +11,8 @@ exports[`<TodoApp /> container should render as expected 1`] = `
       "replaceReducer": [Function],
       "subscribe": [Function],
     }
-  }>
+  }
+>
   <Connect(TodoApp) />
 </Provider>
 `;
@@ -27,7 +30,8 @@ exports[`<TodoAppPresentation /> should render as expected 1`] = `
           onChange={[Function]}
           onKeyPress={[Function]}
           placeholder="Start typing to add a Todo..."
-          value="foo" />
+          value="foo"
+        />
       </styled.header>
       <styled.section>
         <styled.ul>
@@ -36,14 +40,16 @@ exports[`<TodoAppPresentation /> should render as expected 1`] = `
               foo
             </styled.label>
             <styled.button
-              onClick={[Function]} />
+              onClick={[Function]}
+            />
           </styled.li>
           <styled.li>
             <styled.label>
               bar
             </styled.label>
             <styled.button
-              onClick={[Function]} />
+              onClick={[Function]}
+            />
           </styled.li>
         </styled.ul>
       </styled.section>

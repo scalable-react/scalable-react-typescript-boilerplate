@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<Section /> should render with default props 1`] = `
 <styled.section>
   <div />
@@ -8,7 +10,8 @@ exports[`<Section /> should render with different props 1`] = `
 <styled.section
   backgroundColor="#f5f5f5"
   pad="medium"
-  size="large">
+  size="large"
+>
   <div />
 </styled.section>
 `;
