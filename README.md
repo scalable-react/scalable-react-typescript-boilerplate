@@ -223,16 +223,14 @@ See here for the [license](https://github.com/RyanCCollins/scalable-react-typesc
 ### v1.0.2
 
 - [X] Add CI
-- [ ] Integrate storybook
-- [ ] Add a no any rule and update source to use it
-- [ ] Add more reusable modules, ala box / section
-- [ ] Standardize the tslint configuration
-- [ ] Introduce an async redux workflow
+- [x] Introduce an async redux workflow
   - Redux logic
-  - Redux Side-effect
-  - Sagas
-  - Etc.
+- [x] Integrate storybook
+- [x] Standardize the tslint configuration
+- [x] Add more reusable modules, ala box / section
+- [ ] Add a no any rule and update source to use it
 - [ ] Remove requires and use es6 imports for all libs
+- [ ] Refactor reusable modules into uikit
 
 ## Troubleshooting
 Make sure to use the right version of node.  You can reference the version in the `.nvmrc` file.  For help installing and using NVM, please refer to this [gist](https://gist.github.com/RyanCCollins/1a5686ff9dd51b72eb2d4dc70aa6c1f4).
