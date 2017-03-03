@@ -56,7 +56,7 @@
     "@types/jest": "^18.1.1",
     "@types/mongoose": "^4.7.5",
     "@types/morgan": "latest",
-    "@types/node": "^6.0.54",
+    "@types/node": "^6.0.64",
     "@types/react": "^15.0.12",
     "@types/react-dom": "^0.14.23",
     "@types/react-redux": "^4.4.35",
