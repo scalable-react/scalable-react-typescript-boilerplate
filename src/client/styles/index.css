@@ -27,24 +27,3 @@ a {
   line-height: inherit;
   cursor: pointer;
 }
-
-@keyframes draw {
-  0% {
-    transform: rotate(-90deg);
-    stroke-dashoffset: 151px;
-  }
-
-  100% {
-    stroke-dashoffset: -131px
-  }
-}
-
-@keyframes color {
-  0% {
-    stroke: #007acc;
-  }
-
-  100% {
-    stroke: #293953;
-  }
-}

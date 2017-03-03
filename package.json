@@ -44,9 +44,11 @@
     "generator": "plop --plopfile ./config/generators/cli.js",
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "npm run test -- --watch",
-    "test:update": "npm run test -- --u"
+    "test:update": "npm run test -- --u",
+    "storybook": "start-storybook -p 9001 -c ./config/.storybook"
   },
   "dependencies": {
+    "@kadira/storybook": "^2.35.3",
     "@types/body-parser": "latest",
     "@types/compression": "latest",
     "@types/enzyme": "^2.7.4",

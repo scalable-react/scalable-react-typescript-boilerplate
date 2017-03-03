@@ -176,6 +176,12 @@ P.S. If you are looking to contribute, this would be a great first contribution!
 
 The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/) built for this boilerplate is deployed to Heroku.  Included is a Procfile that will run the server.  The deployment is automated completely.  After the install script, the deploy script will run on the server in order to compile the bundle and prepare the build folder for server-rendering.
 
+## React Storybook
+We've included react storybook to make it easy for you to test your ui kit components.
+Run `npm run storybook` and navigate to `http://localhost:9001` to see your stories. 
+
+You can add more stories as you are building out your components within the `./config/.storybook/stories` folder.  Simply create a story and export it in the `stories/index.js` file.
+
 ## Scripts
 - `npm run setup:yarn`
   - Install the package dependencies via yarn
@@ -195,6 +201,8 @@ The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/
   - Run the test suite in watch mode
 - `npm run test:update`
   - Update the failing snapshot tests
+- `npm run storybook`
+  - Run the storybook server
 
 ## Resources
 - [JavaScript Code Quality with Free Tools](https://dev-blog.apollodata.com/javascript-code-quality-with-free-tools-9a6d80e29f2d#.1unvvh8vw)
