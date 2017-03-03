@@ -149,6 +149,15 @@ Included in this project are a few primitive components that you can use to boot
 - [SvgIcon](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/SvgIcon/index.tsx)
 - And more!
 
+## React Storybook
+We've included react storybook to make it easy for you to test your ui kit components.
+Run `npm run storybook` and navigate to `http://localhost:9001` to see your stories. 
+
+You can add more stories as you are building out your components within the `./config/.storybook/stories` folder.
+Simply create a story and export it in the `stories/index.js` file.
+
+Note: the components are currently being served from the `build` directory, so please make sure you have compiled (`npm run compile`) the app before running.
+
 ## Generators
 We've included some generators so that you can easily scaffold out components & containers from the command line.
 
@@ -175,12 +184,6 @@ P.S. If you are looking to contribute, this would be a great first contribution!
 </a>
 
 The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/) built for this boilerplate is deployed to Heroku.  Included is a Procfile that will run the server.  The deployment is automated completely.  After the install script, the deploy script will run on the server in order to compile the bundle and prepare the build folder for server-rendering.
-
-## React Storybook
-We've included react storybook to make it easy for you to test your ui kit components.
-Run `npm run storybook` and navigate to `http://localhost:9001` to see your stories. 
-
-You can add more stories as you are building out your components within the `./config/.storybook/stories` folder.  Simply create a story and export it in the `stories/index.js` file.
 
 ## Scripts
 - `npm run setup:yarn`

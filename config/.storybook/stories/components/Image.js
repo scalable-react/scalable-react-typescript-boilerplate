@@ -46,4 +46,10 @@ storiesOf('Image', module)
       size="xlarge"
       src="https://slack-imgs.com/?c=1&url=http%3A%2F%2Fmedia3.giphy.com%2Fmedia%2FoccaD2XA4l5FC%2Fgiphy-downsized.gif"
     />
+  ).add('full image', () =>
+    <Image
+      alt="tree shaking"
+      size="full"
+      src="https://slack-imgs.com/?c=1&url=http%3A%2F%2Fmedia3.giphy.com%2Fmedia%2FoccaD2XA4l5FC%2Fgiphy-downsized.gif"
+    />
   );

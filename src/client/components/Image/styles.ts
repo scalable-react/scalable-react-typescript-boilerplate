@@ -1,6 +1,7 @@
 import remStringFromPx from '../utils';
 import { Props } from './types';
-import styled, { css } from 'styled-components';
+const styled = require('styled-components').default;
+const { css } = require('styled-components');
 
 const imageSizeMap = {
   thumb: 50,
@@ -10,12 +11,20 @@ const imageSizeMap = {
   medium: 400,
   large: 500,
   xlarge: 600,
+  full: 1200,
 };
 
 export const imageCss = ({ size }: Props) => {
-  const imageSize = size || 'small';
-  const rem = remStringFromPx(imageSize);
-  if (props.size === 'thumb') {
+  const sizeWithDefault = size || 'small';
+  const px = imageSizeMap[sizeWithDefault];
+  const rem = remStringFromPx(px);
+  if (sizeWithDefault === 'full') {
+    return css`
+      width: 100vw;
+      height: auto;
+    `;
+  }
+  if (sizeWithDefault === 'thumb') {
     return css`
       width: ${rem};
       height: ${rem};
@@ -27,7 +36,7 @@ export const imageCss = ({ size }: Props) => {
     max-width: 100%;
     height: auto;
     min-height: ${rem};
-    display:block
+    display: block;
   `;
 };
 
