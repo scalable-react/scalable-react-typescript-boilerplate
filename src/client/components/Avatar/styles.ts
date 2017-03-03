@@ -1,6 +1,7 @@
 import remStringFromPx from '../utils';
 import map from './maps';
 import { Props } from './types';
+import defaultUrl from './default';
 const styled = require('styled-components').default;
 const { css } = require('styled-components');
 
@@ -15,7 +16,7 @@ const propsToSize = ({ size }: Props) => {
 };
 
 export default styled.div`
-  background: url(${(props) => props.src});
+  background: url(${({ src }) => src || defaultUrl});
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
