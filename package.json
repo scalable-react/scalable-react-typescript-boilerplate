@@ -48,7 +48,9 @@
     "storybook": "start-storybook -p 9001 -c ./config/.storybook"
   },
   "dependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.35.3",
+    "@kadira/storybook-addon-knobs": "^1.7.1",
     "@types/body-parser": "^0.0.34",
     "@types/compression": "latest",
     "@types/express": "latest",
