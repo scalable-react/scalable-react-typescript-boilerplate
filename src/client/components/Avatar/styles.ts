@@ -1,15 +1,21 @@
+import remStringFromPx from '../utils';
+import map from './maps';
+import { Props } from './types';
 const styled = require('styled-components').default;
+const { css } = require('styled-components');
 
-export const AvatarContainer = styled.div`
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-`;
+const propsToSize = ({ size }: Props) => {
+  const imageSize = size || 'medium';
+  const px = map[imageSize];
+  const rem = remStringFromPx(px);
+  return css`
+    width: ${rem};
+    min-height: ${rem};
+  `;
+};
 
-export const AvatarDiv = styled.div`
-  background: url(${(props) => props.avatarUrl});
+export default styled.div`
+  background: url(${(props) => props.src});
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -18,16 +24,5 @@ export const AvatarDiv = styled.div`
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 50%;
-  width: 150px;
-  min-height: 150px !important;
-  transform: translate(0px, -75px);
-  position: absolute;
-`;
-
-export const AvatarName = styled.p`
-  font-size: 2.5rem;
-  margin-top: .5em;
-  margin-bottom: .5em;
-  margin-top: 85px;
-  font-family: 'Hind';
+  ${propsToSize}
 `;
