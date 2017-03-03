@@ -21,7 +21,7 @@ class Features extends React.Component<any, any> {
           <FeatureSectionInner>
             <Feature>
               <Image
-                size="xsmall"
+                size="small"
                 alt="Type-Script Logo"
                 src="https://raw.githubusercontent.com/RyanCCollins/cdn/master/stsb-images/ts-resized-2.png"
               />
