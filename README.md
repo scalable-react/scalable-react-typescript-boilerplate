@@ -154,7 +154,7 @@ We've included react storybook to make it easy for you to test your ui kit compo
 Run `npm run storybook` and navigate to `http://localhost:9001` to see your stories. 
 
 You can add more stories as you are building out your components within the `./config/.storybook/stories` folder.
-Simply create a story and export it in the `stories/index.js` file.
+Simply [write a story](https://getstorybook.io/docs/react-storybook/basics/writing-stories) and export it in the `stories/index.js` file. Checkout the [React Storybook](https://getstorybook.io/) docs for more info!
 
 Note: the components are currently being served from the `build` directory, so please make sure you have compiled (`npm run compile`) the app before running.
 
