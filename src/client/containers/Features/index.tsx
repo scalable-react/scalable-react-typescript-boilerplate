@@ -72,7 +72,7 @@ class Features extends React.Component<any, any> {
           </FeatureSectionInner>
           <FeatureImage>
             <Image
-              size="medium"
+              size="small"
               alt="Styled-components example"
               src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc-example.png?raw=true"
             />

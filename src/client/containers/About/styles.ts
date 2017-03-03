@@ -16,11 +16,12 @@ export const AboutSection = styled.section`
 export const AboutSectionInner = styled.div`
   padding: 30px 60px;
   display: flex;
+  margin-top: 60px;
   flex-direction: row;
   @media screen and (max-width: 768px) {
     flex-wrap: ${(props) => props.reverse ? 'wrap-reverse' : 'wrap'};
     padding: 60px 20px;
-    padding-top:
+    margin-top: 0px;
   }
 `;
 
@@ -53,17 +54,24 @@ export const StyledHr = styled.hr`
   border-top: 4px solid;
 `;
 
+export const Transform = styled.div`
+  transform: translate(0px, -75px);
+  position: absolute;
+`;
+
 export const AvatarContainer = styled.div`
   width: 100%;
+  align-items: center;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 `;
 
-export const Div = styled.div`
+export const Content = styled.div`
   flex-grow: 1;
   padding: 30px;
   max-height: 238px;
+  margin-top: 50px;
   box-sizing: border-box;
   text-align: justify;
   text-justify: inter-word;
@@ -78,6 +86,7 @@ export const CardFooter = styled.footer`
   align-items: flex-end;
   justify-content: center;
   flex-grow: 1;
+  padding: 30px;
 `;
 
 export const Divider = styled.div`
@@ -86,11 +95,4 @@ export const Divider = styled.div`
   top:10%;
   bottom:10%;
   border-left:1px solid black;
-`;
-
-export const Github = styled.p`
-  width: 100px;
-  height: 82px;
-  background: url(/src/containers/About/github.svg);
-  background-size: 100px 82px;
 `;
