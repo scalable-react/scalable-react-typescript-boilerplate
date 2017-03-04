@@ -25,7 +25,7 @@ module.exports = {
       'redux-async-connect',
       'redux-connect',
       'redux',
-      'rx-js',
+      'rxjs',
       'axios',
       'redux-logic',
       'react-apollo',
