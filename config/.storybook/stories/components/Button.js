@@ -2,39 +2,60 @@ import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import { Button } from 'components';
 import { ButtonSize } from 'components/Button';
+import {
+  withKnobs,
+  boolean,
+  color,
+  select,
+  text
+} from '@kadira/storybook-addon-knobs';
 
-storiesOf('Button', module)
+const stories = storiesOf('Button', module);
+stories.addDecorator(withKnobs);
+
+stories
   .addWithInfo(
     'default Button',
     `
-      This is a default button with a \`onClick\` handler. Usage: 
+      This is a default button with a \`onClick\` handler. 
+      
+      Usage: 
+
       ~~~js
-        <Button onClick={this.props.handleClick} />
+        <Button 
+          onClick={this.props.handleClick} 
+        >
+          Default Button
+        </Button>
       ~~~
     `,
      () => (
       <Button
       onClick={action('clicked the default button')}
-      backgroundColor="#c05b4d"
-      borderColor="#732419"
+      backgroundColor={color('backgroundColor','#c05b4d')}
       >
-        Default button
+        {text('Label','Default button')}
       </Button>
      ),
      {
        inline: true,
-       propTable: [Button]
+       propTables: false,
      }
   )
   .addWithInfo(
-    'hero button',
+    'hero Button',
     `
-      This is a button with \`isHero\` prop set to \`true\`. Usage: 
+      Properties:
+
+      \`isHero: true|false\`
+      
       ~~~js
         <Button 
           isHero,
           onClick={this.props.handleClick} 
-        />
+        >
+          Hero Button
+        </Button>
       ~~~
     `,
      () => (
@@ -42,14 +63,15 @@ storiesOf('Button', module)
         onClick={action('clicked the hero button')}
         style={{ margin: 10 }}
         size={ButtonSize.xlarge}
-        isHero
-        backgroundColor="#c05b4d"
+        isHero={boolean('isHero','true')}
+        backgroundColor={color('backgroundColor','#c05b4d')}
         borderColor="#732419"
       >
-        Hero Button
+        {text('Label','Hero Button')}
       </Button>
      ),
      {
        inline: true,
+       propTables: false,
      }
   );
