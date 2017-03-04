@@ -23,11 +23,11 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, loaders: ['babel', 'ts-loader'], include: path.join(__dirname, 'src') },
-      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'], include: path.join(__dirname, 'src') },
+      { test: /\.tsx?$/, loaders: ['babel-loader', 'ts-loader'], include: path.join(__dirname, 'src') },
+      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel-loader'], include: path.join(__dirname, 'src') },
       { test: /\.css$/, loader: 'style-loader!css-loader' },
-      { test: /\.json$/, loader: 'json' },
-      { test: /\.md$/, loader: 'html!markdown' },
+      { test: /\.json$/, loader: 'json-loader' },
+      { test: /\.md$/, loader: 'html!markdown-loader' },
     ],
   },
   plugins: [
