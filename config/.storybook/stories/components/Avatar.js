@@ -11,50 +11,36 @@ const contributor = {
   src: 'https://avatars0.githubusercontent.com/u/13810084?v=3&s=460',
 };
 
-const stories = storiesOf('Avatar stories', module);
+const stories = storiesOf('Avatar', module);
 stories.addDecorator(withKnobs);
 
 stories
   .addWithInfo(
-    'with src Avatar',
+    'default avatar',
     `
-      Some documentation!
+      Default Avatar
     `,
      () => (
-    <Avatar
-      name={text('Name', 'Ryan Collins')}
-      src={text('URL','https://avatars0.githubusercontent.com/u/13810084?v=3&s=460')}
-    />
+      <Avatar />
     ),
     {
       inline: true,
-    }
-  );
-  /*.addWithInfo(
-    'Default Avatar',
-    `
-      This is the basic usage of \`<Avatar /> \` component. It gets default props: \`name: Contributor \`
-      and a default url for avatar image.
-      ~~~js
-        <Avatar />
-      ~~~
-    `,
-    () => (
-      <div>
-        <Avatar />
-      </div>
-    ),
-    {
-      inline: true,
+      propTables: false,
     }
   )
   .addWithInfo(
-    'size="thumb"',
+    'with size prop',
     `
+      Properties:
+
+      \`size: thumb | small | medium | large \` 
+
+      You can try out the different prop values in the \`knobs\` section below!
+      
       \`Usage:\`
       ~~~js
         <Avatar 
-          size="thumb"
+          size='small'
           name='John Doe'
           src='/src/to/avatar' 
         />
@@ -63,81 +49,14 @@ stories
     () => (
       <div>
         <Avatar 
-          {...contributor}
-          size="thumb" 
+          name={text('name',contributor.name)}
+          src={text('src',contributor.src)}
+          size={text('size', 'small')} 
         />
       </div>
     ),
     {
       inline: true,
+      propTables: false,
     }
-  ).addWithInfo(
-    'size="small"',
-    `
-      \`Usage:\`
-      ~~~js
-        <Avatar 
-          size="small"
-          name='John Doe'
-          src='/src/to/avatar' 
-        />
-      ~~~
-    `,
-    () => (
-      <div>
-        <Avatar 
-          {...contributor}
-          size="small" 
-        />
-      </div>
-    ),
-    {
-      inline: true,
-    }
-  ).addWithInfo(
-    'size="medium"',
-    `
-      \`Usage:\`
-      ~~~js
-        <Avatar 
-          size="medium"
-          name='John Doe'
-          src='/src/to/avatar' 
-        />
-      ~~~
-    `,
-    () => (
-      <div>
-        <Avatar 
-          {...contributor}
-          size="medium" 
-        />
-      </div>
-    ),
-    {
-      inline: true,
-    }
-  ).addWithInfo(
-    'size="large"',
-    `
-      \`Usage:\`
-      ~~~js
-        <Avatar 
-          size="large"
-          name='John Doe'
-          src='/src/to/avatar' 
-        />
-      ~~~
-    `,
-    () => (
-      <div>
-        <Avatar 
-          {...contributor}
-          size="large" 
-        />
-      </div>
-    ),
-    {
-      inline: true,
-    }
-  );*/
+  );
