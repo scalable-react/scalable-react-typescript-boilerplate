@@ -15,7 +15,7 @@ const colorMap: ThemeColorMap = {
   white1: '#fff',
   white2: '#f3f3f3',
   white3: '#e6e8ec',
-  offwhite: 'f5f5f5',
+  offwhite: '#f5f5f5',
   black1: '#0a0a0a',
   black2: '#2d2d2d',
   black3: '#555555',

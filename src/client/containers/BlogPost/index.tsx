@@ -3,27 +3,42 @@ import { Dispatch, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { FormControlEventTarget } from '../../types';
 import BlogPresentation from './presentation';
-import { Props, ActionCreatorTypes, ActionTypes, Input } from './types';
+import { ThemeColorMap } from '../../types';
+import { Props, ActionCreatorTypes, ActionTypes, Input, ErrorType, Post, SubmitComment } from './types';
 import { State } from '../../state';
 import withApollo from './apollo';
 import { selectInput } from './selectors';
 import actionCreators from './actionCreators';
+const { withTheme } = require('styled-components');
 
-const mapStateToProps = (state: State): StateProps => ({
+type MapStateToProps = (state: State) => StateProps;
+const mapStateToProps: MapStateToProps = (state) => ({
   input: selectInput(state),
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<ActionTypes>): DispatchProps => ({
+type MapDispatch = (dispatch: Dispatch<ActionTypes>) => DispatchProps;
+const mapDispatchToProps: MapDispatch = (dispatch) => ({
   actions: bindActionCreators(
     actionCreators,
     dispatch,
   ),
 });
 
+export interface Props extends React.Props<any> {
+  loading: boolean;
+  error?: ErrorType;
+  post?: Post;
+  theme: ThemeColorMap;
+  submitComment?: SubmitComment;
+  refetch: () => void;
+  params: {
+    postId: String;
+  };
+}
+
 export interface StateProps extends React.Props<BlogPost> {
   input: Input,
 }
-
 export interface DispatchProps {
   actions: ActionCreatorTypes;
 }
@@ -47,7 +62,7 @@ class BlogPost extends React.Component<PropTypes, undefined> {
     this.props.submitComment({
       body: input,
       author,
-      post: postId,
+      post: postId as string,
     }).then(() => {
       this.props.refetch();
       this.props.actions.input('');
@@ -71,8 +86,7 @@ class BlogPost extends React.Component<PropTypes, undefined> {
   }
 }
 
-const BlogWithApollo = withApollo(BlogPost);
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(BlogWithApollo);
+)(withTheme(withApollo(BlogPost)));

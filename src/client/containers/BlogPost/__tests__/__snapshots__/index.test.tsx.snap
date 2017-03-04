@@ -13,7 +13,7 @@ exports[`<BlogPost /> container should render as expected 1`] = `
     }
   }
 >
-  <Connect(Apollo(Apollo(BlogPost))) />
+  <Connect(_class) />
 </Provider>
 `;
 

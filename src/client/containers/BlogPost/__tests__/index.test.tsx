@@ -6,6 +6,7 @@ import { initialState } from '../state';
 import BlogPost from '../';
 import BlogPostPresentation from '../presentation';
 import props from './__mocks__/blogPostPresentation.mock';
+import colors from '../../../theming';
 
 const store = getMockStore({
   key: 'blogPost',
@@ -26,7 +27,7 @@ describe('<BlogPost /> container', () => {
 describe('<BlogPostPresentation />', () => {
   it('should render as expected', () => {
     const wrapper = shallow(
-      <BlogPostPresentation {...props} />,
+      <BlogPostPresentation {...props} theme={colors} />,
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
