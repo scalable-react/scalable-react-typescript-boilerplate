@@ -10,6 +10,7 @@ import {
   text
 } from '@kadira/storybook-addon-knobs';
 
+
 const stories = storiesOf('Button', module);
 stories.addDecorator(withKnobs);
 
@@ -17,10 +18,21 @@ stories
   .addWithInfo(
     'default Button',
     `
-      This is a default button with a \`onClick\` handler. 
-      
-      Usage: 
+      Properties:
 
+      \`size: xsmall|small|medium|large|xlarge \`
+      
+      Button size
+
+      \` borderColor: {string}\`
+      
+      Border color for the button
+
+      \`backgroundColor: {string} \`
+      
+      Background color for the button
+
+      \`Usage:\` 
       ~~~js
         <Button 
           onClick={this.props.handleClick} 
@@ -31,10 +43,11 @@ stories
     `,
      () => (
       <Button
-      onClick={action('clicked the default button')}
-      backgroundColor={color('backgroundColor','#c05b4d')}
+        onClick={action('clicked the default button')}
+        borderColor={color('borderColor','#c05b4d')}
+        backgroundColor={color('backgroundColor','#c05b4d')}
       >
-        {text('Label','Default button')}
+        {text('Label','Default Button')}
       </Button>
      ),
      {
@@ -42,12 +55,26 @@ stories
        propTables: false,
      }
   )
-  .addWithInfo(
+  .addWithInfo( 
     'hero Button',
     `
       Properties:
 
+      \`size: xsmall|small|medium|large|xlarge \`
+      
+      Button size
+
       \`isHero: true|false\`
+
+      Whether the button is a Hero
+      
+      \` borderColor: {string}\`
+      
+      Border color for the button
+
+      \`backgroundColor: {string} \`
+      
+      Background color for the button
       
       ~~~js
         <Button 
@@ -65,7 +92,7 @@ stories
         size={ButtonSize.xlarge}
         isHero={boolean('isHero','true')}
         backgroundColor={color('backgroundColor','#c05b4d')}
-        borderColor="#732419"
+        borderColor={color('borderColor','#732419')}
       >
         {text('Label','Hero Button')}
       </Button>
