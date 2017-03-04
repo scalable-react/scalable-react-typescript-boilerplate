@@ -1,13 +1,17 @@
 import * as React from 'react';
 import { withRouter } from 'react-router';
-const AnchorComponent = require('./styles').AnchorComponent;
+import {AnchorComponent} from './styles';
+
+type MethodType = 'push' | 'replace';
+const MethodTypePush = 'push';
+const MethodTypeReplace = 'replace';
 
 interface AnchorProps extends React.Props<Anchor> {
   path?: string;
   href?: string;
   label?: string;
   color?: string;
-  method?: 'push' | 'replace';
+  method?: MethodType;
   router?: {
     push: Function,
     replace: Function,
@@ -16,25 +20,23 @@ interface AnchorProps extends React.Props<Anchor> {
 }
 
 class Anchor extends React.Component<AnchorProps, undefined> {
-  constructor() {
-    super();
-    this.handleClick = this.handleClick.bind(this);
-  }
-  public static defaultProps = {
+  public static defaultProps: AnchorProps = {
     color: '#007acc',
-    method: 'push',
+    method: MethodTypePush,
   };
-  private handleClick(e: Event): void {
+
+  private handleClick = (e: React.MouseEvent<HTMLAnchorElement>): void => {
     const { method, path, router } = this.props;
     if (path) {
       e.preventDefault();
-      if (method === 'push') {
+      if (method === MethodTypePush) {
         router.push(path);
-      } else if (method === 'replace') {
+      } else if (method === MethodTypeReplace) {
         router.replace(path);
       }
     }
   }
+
   public render() {
     const {
       label,
