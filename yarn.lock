@@ -143,9 +143,9 @@
   version "0.8.6"
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.8.6.tgz#b34fb880493ba835b0c067024ee70130d6f9bb68"
 
-"@types/history@^2":
-  version "2.0.45"
-  resolved "https://registry.yarnpkg.com/@types/history/-/history-2.0.45.tgz#c76d79a65d189220d9d50f62e0143bdac30a564b"
+"@types/history@^3":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-3.2.1.tgz#0039ab0e0be2a0cc22bac171d27a44588103d123"
 
 "@types/isomorphic-fetch@0.0.33", "@types/isomorphic-fetch@^0.0.33":
   version "0.0.33"
@@ -195,24 +195,23 @@
     "@types/react" "*"
     redux "^3.6.0"
 
-"@types/react-router-redux@^4.0.35":
-  version "4.0.39"
-  resolved "https://registry.yarnpkg.com/@types/react-router-redux/-/react-router-redux-4.0.39.tgz#3f9251d100dbc9ea887f77331a3a8dcf9833ce1b"
+"@types/react-router-redux@^4.0.42":
+  version "4.0.42"
+  resolved "https://registry.yarnpkg.com/@types/react-router-redux/-/react-router-redux-4.0.42.tgz#b6d723fd9d1a2ed2048d606a069440b855b620b5"
   dependencies:
-    "@types/history" "^2"
-    "@types/react-router" "*"
+    "@types/history" "^3"
     redux "^3.6.0"
 
-"@types/react-router@*", "@types/react-router@^2.0.41":
-  version "2.0.46"
-  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-2.0.46.tgz#01ed3e2cc443046bc6c8b6daa6deee3bcd370532"
+"@types/react-router@^3.0.6":
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-3.0.6.tgz#8e127d4b8bd9d816bd252b42abbbc95911e492f3"
   dependencies:
-    "@types/history" "^2"
+    "@types/history" "^3"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^15.0.12":
-  version "15.0.12"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.12.tgz#aea95e45631bd745be45d65c2dc02327848212f2"
+"@types/react@*", "@types/react@^15.0.14":
+  version "15.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.14.tgz#07a739b20b0d4cf946f52444d3c40a94d4a234b1"
 
 "@types/reselect@^2.0.27":
   version "2.0.27"
@@ -2223,7 +2222,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
     create-hash "^1.1.0"
     inherits "^2.0.1"
 
-cross-env@^3.1.3:
+cross-env@3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-3.1.4.tgz#56e8bca96f17908a6eb1bc2012ca126f92842130"
   dependencies:
@@ -3653,10 +3652,6 @@ graphql-server-express:
 graphql-server-module-graphiql@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/graphql-server-module-graphiql/-/graphql-server-module-graphiql-0.6.0.tgz#e37634b05f000731981e8ed13103f9a5861e5da0"
-
-graphql-tag@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-1.2.4.tgz#90c59bea41378513fd7213dc92537fcd20e4570f"
 
 graphql-tag@^1.3.1:
   version "1.3.1"
@@ -6663,11 +6658,11 @@ react-redux@^5.0.3:
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
 
-react-router-redux@^4.0.7:
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.7.tgz#9b1fde4e70106c50f47214e12bdd888cfb96e2a6"
+react-router-redux@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.8.tgz#227403596b5151e182377dab835b5d45f0f8054e"
 
-react-router@^3.0.0:
+react-router@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-3.0.2.tgz#5a19156678810e01d81901f9c0fef63284b8a514"
   dependencies:
@@ -6837,10 +6832,6 @@ redux-actions@^1.2.0:
     invariant "^2.2.1"
     lodash "^4.13.1"
     reduce-reducers "^0.1.0"
-
-redux-async-connect@^1.0.0-rc4:
-  version "1.0.0-rc4"
-  resolved "https://registry.yarnpkg.com/redux-async-connect/-/redux-async-connect-1.0.0-rc4.tgz#a22cd737b54486cf8826aa05a65937aea721ff4c"
 
 redux-connect@^5.0.0:
   version "5.0.0"
