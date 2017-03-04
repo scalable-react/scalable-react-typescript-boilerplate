@@ -59,11 +59,12 @@ class BlogPost extends React.Component<PropTypes, undefined> {
     const { input } = this.props;
     const author = 'Unknown';
     const { postId } = this.props.params;
-    this.props.submitComment({
-      body: input,
-      author,
+    const variables = {
       post: postId as string,
-    }).then(() => {
+      author,
+      body: input,
+    };
+    this.props.submitComment({ variables }).then(() => {
       this.props.refetch();
       this.props.actions.input('');
     });

@@ -1,57 +1,24 @@
 import mongoose from 'mongoose';
 import path from 'path';
 import PostModel from './models/post';
-import CommentModel from './models/comment';
-import uuid from './utils/uuid';
 
-const postId = uuid();
-function seedComments() {
+function seedPosts() {
   return [
     {
-      author: 'Admin User',
-      body: 'This is the first comment!',
-      post: postId,
-    },
-  ];
-}
-
-function seedPosts(comments) {
-  return [
-    {
-      id: postId,
       title: 'Welcome!',
       content: 'Hey there!  Welcome to the blog of Scalable-React-TypeScript! ' +
         'This is just an introductory post, but stay tuned for more!',
       image: 'https://raw.githubusercontent.com/RyanCCollins/cdn/master/stsb-images/ts-resized-2.png',
-      comments,
     },
   ];
 }
 
-function createSeedPosts(comments) {
+function createSeedPosts() {
   return new Promise((res, rej) => {
     PostModel.find().exec((err, docs) => {
       if (docs.length === 0) {
         PostModel.create(
-          seedPosts(comments),
-          (err, data) => {
-            if (err) {
-              rej(err);
-            }
-            res(data);
-          },
-        );
-      }
-    });
-  });
-}
-
-function createSeedComments() {
-  return new Promise((res, rej) => {
-    CommentModel.find().exec((err, docs) => {
-      if (docs.length === 0) {
-        CommentModel.create(
-          seedComments(),
+          seedPosts(),
           (err, data) => {
             if (err) {
               rej(err);
@@ -66,10 +33,8 @@ function createSeedComments() {
 
 function createSeedData() {
   return new Promise((res, rej) => {
-    createSeedComments().then((comments) => {
-      createSeedPosts(comments).then(() => {
-        res();
-      });
+    createSeedPosts().then(() => {
+      res();
     }).catch((err) => rej(err));
   });
 }

@@ -34,9 +34,11 @@ export type Body = string;
 export type Author = string;
 export type PostId = string;
 export interface PostSubmission {
-  body: Body;
-  author: Author;
-  post: PostId;
+  variables: {
+    body: Body;
+    author: Author;
+    post: PostId;
+  }
 };
 
 export type SubmitComment = (post: PostSubmission) => Promise<undefined>;
