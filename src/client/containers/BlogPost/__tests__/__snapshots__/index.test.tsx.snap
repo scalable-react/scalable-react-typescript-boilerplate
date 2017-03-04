@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BlogPost /> container should render as expected 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(_class) />
+</Provider>
+`;
+
+exports[`<BlogPostPresentation /> should render as expected 1`] = `
+<Section
+  alignItems="center"
+  backgroundColor="#f5f5f5"
+  flexDirection="column"
+  full={
+    Object {
+      "vertical": true,
+    }
+  }
+  pad={
+    Object {
+      "horizontal": "small",
+      "vertical": "large",
+    }
+  }
+>
+  <Error
+    message="oops"
+  />
+  <LoadingIndicator
+    isLoading={false}
+  />
+  <Post
+    comment={
+      Object {
+        "input": "foo",
+        "onChange": [Function],
+        "onKeyUp": [Function],
+        "onSubmit": [Function],
+      }
+    }
+    comments={
+      Array [
+        Object {
+          "author": "Admin User",
+          "body": "This is the first comment!",
+        },
+      ]
+    }
+    content="Hey there!  Welcome to the blog of Scalable-React-TypeScript! This is just an introductory post, but stay tuned for more!"
+    id="58a0ccb112b4c56440f5d6a7"
+    image="https://raw.githubusercontent.com/RyanCCollins/cdn/master/stsb-images/ts-resized-2.png"
+    title="Welcome!"
+  />
+</Section>
+`;

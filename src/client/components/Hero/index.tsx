@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Component from './styles';
-import { HeroProps } from './types';
+import Props from './types';
 
 export default function Hero({
   children,
-  color,
-}: HeroProps): JSX.Element {
-  const colorProp = color || '#2d2d2d';
+  backgroundColor,
+}: Props): JSX.Element {
+  const colorProp = backgroundColor || '#2d2d2d';
   return (
-    <Component color={colorProp}>
+    <Component backgroundColor={colorProp}>
       {children}
     </Component>
   );

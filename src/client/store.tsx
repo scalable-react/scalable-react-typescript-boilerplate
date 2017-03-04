@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware, Middleware, GenericStoreEnhancer, compose } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
+import { createLogicMiddleware } from 'redux-logic';
 import { rootReducer} from './reducers';
 import { initialState as defaultInitialState} from './state';
-import { createLogicMiddleware } from 'redux-logic';
 import apolloClient from './apolloClient';
 import rootLogic from './logic';
 import axios from 'axios';

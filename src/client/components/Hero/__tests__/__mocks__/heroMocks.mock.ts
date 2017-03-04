@@ -1,3 +1,3 @@
 export const heroProps = {
-  color: 'ff6600',
+  backgroundColor: 'ff6600',
 };

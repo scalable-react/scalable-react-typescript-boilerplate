@@ -22,7 +22,15 @@ module.exports = {
       'react-router',
       'react-router-redux',
       'react-markdown',
+      'redux-async-connect',
+      'redux-connect',
       'redux',
+      'rxjs',
+      'axios',
+      'redux-logic',
+      'react-apollo',
+      'graphql-tag',
+      'apollo-client',
     ]
   },
   output: {

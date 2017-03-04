@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.js',
-    publicPath: '/static/',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
