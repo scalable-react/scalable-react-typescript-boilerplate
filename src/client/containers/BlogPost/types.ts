@@ -19,6 +19,6 @@ export interface BlogProps extends React.Props<any> {
   submitComment?: Function;
   refetch: Function;
   params: {
-    postId: String;
+    postId: string;
   };
 };
