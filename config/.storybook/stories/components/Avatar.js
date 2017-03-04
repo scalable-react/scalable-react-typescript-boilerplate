@@ -14,6 +14,7 @@ const contributor = {
 
 const sizeOptions = {
   thumb: 'thumb',
+  small: 'small',
   medium: 'medium',
   large: 'large',
 }
