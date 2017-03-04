@@ -1,94 +1,93 @@
 import * as React from 'react';
-import { graphql } from 'react-apollo';
-import { LoadingIndicator, Post, Section, Error } from 'components';
-import POST_QUERY from './post.graphql';
-import COMMENT_MUTATION from './comments.graphql';
-import { BlogProps } from './types';
+import { Dispatch, bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { FormControlEventTarget } from '../../types';
+import BlogPresentation from './presentation';
+import { ThemeColorMap } from '../../types';
+import { Props, ActionCreatorTypes, ActionTypes, Input, ErrorType, Post, SubmitComment } from './types';
+import { State } from '../../state';
+import withApollo from './apollo';
+import { selectInput } from './selectors';
+import actionCreators from './actionCreators';
+const { withTheme } = require('styled-components');
 
-class Blog extends React.Component<BlogProps, any> {
+type MapStateToProps = (state: State) => StateProps;
+const mapStateToProps: MapStateToProps = (state) => ({
+  input: selectInput(state),
+});
+
+type MapDispatch = (dispatch: Dispatch<ActionTypes>) => DispatchProps;
+const mapDispatchToProps: MapDispatch = (dispatch) => ({
+  actions: bindActionCreators(
+    actionCreators,
+    dispatch,
+  ),
+});
+
+export interface Props extends React.Props<any> {
+  loading: boolean;
+  error?: ErrorType;
+  post?: Post;
+  theme: ThemeColorMap;
+  submitComment?: SubmitComment;
+  refetch: () => void;
+  params: {
+    postId: String;
+  };
+}
+
+export interface StateProps extends React.Props<BlogPost> {
+  input: Input,
+}
+export interface DispatchProps {
+  actions: ActionCreatorTypes;
+}
+export type PropTypes = StateProps & DispatchProps & Props;
+class BlogPost extends React.Component<PropTypes, undefined> {
   constructor() {
     super();
     this.handleAddingComment = this.handleAddingComment.bind(this);
-    this.handleChangingCommentInput = this.handleChangingCommentInput.bind(this);
+    this.handleInput = this.handleInput.bind(this);
     this.handleEnterKeyUp = this.handleEnterKeyUp.bind(this);
-    this.state = {
-      input: '',
-    };
   }
-  private handleChangingCommentInput({ target }) {
-    this.setState({
-      input: target.value,
-    });
+  private handleInput(e: React.SyntheticEvent<undefined>) {
+    e.preventDefault();
+    const input = (e.target as FormControlEventTarget).value;
+    this.props.actions.input(input);
   }
   private handleAddingComment() {
-    const { input } = this.state;
+    const { input } = this.props;
     const author = 'Unknown';
     const { postId } = this.props.params;
-    this.props.submitComment({
-      body: input,
+    const variables = {
+      post: postId as string,
       author,
-      post: postId,
-    }).then(() => {
+      body: input,
+    };
+    this.props.submitComment({ variables }).then(() => {
       this.props.refetch();
-      alert('Sorry, but this is just a demonstration.  Please don\'t hate us');
-      this.setState({
-        input: '',
-      });
+      this.props.actions.input('');
     });
   }
-  private handleEnterKeyUp(e) {
+  private handleEnterKeyUp(e: React.KeyboardEvent<undefined>) {
     if (e.keyCode === 13) {
       e.preventDefault();
       this.handleAddingComment();
     }
   }
   public render() {
-    const { loading, post, error } = this.props;
     return (
-      <Section
-        alignItems="center"
-        flexDirection="column"
-        pad={{ vertical: 'large', horizontal: 'small' }}
-        full={{ vertical: true }}
-        backgroundColor="#f5f5f5"
-      >
-        {error && <Error message={error.message} />}
-        <LoadingIndicator isLoading={loading} />
-        {post &&
-          <Post
-            comment={{
-              input: this.state.input,
-              onChange: this.handleChangingCommentInput,
-              onSubmit: this.handleAddingComment,
-              onKeyUp: this.handleEnterKeyUp,
-            }}
-            {...post}
-          />
-        }
-      </Section>
+      <BlogPresentation
+        onChange={this.handleInput}
+        onSubmit={this.handleAddingComment}
+        onKeyUp={this.handleEnterKeyUp}
+        {...this.props}
+      />
     );
   }
 }
 
-const withData = graphql(POST_QUERY, {
-  skip: ({ params }) => !params || (params && !params.postId),
-  options: ({ params }) => ({
-    variables: {
-      id: params.postId,
-    },
-  }),
-  props: ({ data: { loading, post, error, refetch } }) => ({
-    loading,
-    post,
-    error,
-    refetch,
-  }),
-});
-
-const withMutation = graphql(COMMENT_MUTATION, {
-  props: ({ mutate }) => ({
-    submitComment: mutate,
-  }),
-});
-
-export default withData(withMutation(Blog));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(withTheme(withApollo(BlogPost)));

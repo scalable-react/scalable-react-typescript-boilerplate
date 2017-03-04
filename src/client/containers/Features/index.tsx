@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Heading, Headline, Image, Button, Markdown, Anchor } from 'components';
+import { Props } from './types';
 import {
   Container,
   FeatureImage,
@@ -8,10 +9,12 @@ import {
   Feature,
   FeatureSectionInner,
 } from './styles';
-const features = require('./features').default;
+import features from './features';
+const { withTheme } = require('styled-components');
 
-class Features extends React.Component<any, any> {
+class Features extends React.Component<Props, undefined> {
   public render() {
+    const { theme } = this.props;
     return (
       <Container>
         <FeaturesSection id="features-section-one" background="#f3f3f3">
@@ -36,7 +39,7 @@ class Features extends React.Component<any, any> {
                   color="#fff"
                   href="http://www.typescriptlang.org/docs/tutorial.html"
                 >
-                  <Button color="#c05b4d">
+                  <Button color={theme.secondary}>
                     View Website
                   </Button>
                 </Anchor>
@@ -109,4 +112,4 @@ class Features extends React.Component<any, any> {
   }
 }
 
-export default Features;
+export default withTheme(Features);

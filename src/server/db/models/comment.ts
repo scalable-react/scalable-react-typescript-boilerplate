@@ -6,7 +6,6 @@ const CommentSchema = new mongoose.Schema({
   post: {
     type: String,
     ref: 'Post',
-    required: true,
   },
 });
 

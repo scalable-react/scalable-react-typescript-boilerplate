@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { ApolloProvider } from 'react-apollo';
+import { ThemeProvider } from 'styled-components';
 import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
 import client from './apolloClient';
 import store, { history } from './store';
 import { App, Home, Docs, About, TodoApp, Blog, BlogPost } from './containers';
+import colors from './theming';
 
 const ReactGA = require('react-ga');
 
@@ -33,11 +35,13 @@ export const routes = (
 
 const RouterApp = () => (
   <ApolloProvider store={store} client={client}>
-    <ReactRouter
-      onUpdate={logPage}
-      history={history}
-      routes={routes}
-    />
+    <ThemeProvider theme={colors}>
+      <ReactRouter
+        onUpdate={logPage}
+        history={history}
+        routes={routes}
+      />
+    </ThemeProvider>
   </ApolloProvider>
 );
 

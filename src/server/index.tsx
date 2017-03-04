@@ -6,6 +6,8 @@ import morgan from 'morgan';
 import express from 'express';
 import compression from 'compression';
 import path from 'path';
+import { ThemeProvider } from 'styled-components';
+import theme from '../client/theming';
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import store from '../client/store';
 import { routes } from '../client/routes';
@@ -63,7 +65,9 @@ graphQlEntry(expressApp).then((app) => {
 
           const component = (
             <ApolloProvider store={store} client={client}>
-              <RouterContext {...renderProps} />
+              <ThemeProvider theme={theme}>
+                <RouterContext {...renderProps} />
+              </ThemeProvider>
             </ApolloProvider>
           );
           getDataFromTree(component).then(() => {

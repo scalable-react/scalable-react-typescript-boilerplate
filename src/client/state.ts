@@ -1,13 +1,15 @@
 /* GENERATOR-IMPORT-STATE */
-import { initialState as appState, AppState } from 'containers/App/reducers';
+import { initialState as appState, AppState } from 'containers/App/reducer';
 import { initialState as docsState, State as DocsState } from 'containers/Docs/state';
 import { initialState as todoAppState, State as TodoAppState } from 'containers/TodoApp/state';
+import { initialState as blogPostState, State as BlogPostState } from 'containers/BlogPost/state';
 
 export interface State {
   /* GENERATOR-EXPORT-STATE-TYPE */
   todoApp: TodoAppState;
   app: AppState;
   docs: DocsState;
+  blogPost: BlogPostState;
 }
 
 export const initialState: State = {
@@ -15,4 +17,5 @@ export const initialState: State = {
   app: appState,
   docs: docsState,
   todoApp: todoAppState,
+  blogPost: blogPostState,
 };
