@@ -85,7 +85,7 @@
     "json-loader": "^0.5.4",
     "markdown-loader": "^2.0.0",
     "mongoose": "^4.8.5",
-    "morgan": "^1.7.0",
+    "morgan": "^1.8.1",
     "node-env-file": "^0.1.8",
     "plop": "^1.7.4",
     "precss": "^1.4.0",
