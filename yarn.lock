@@ -1486,9 +1486,9 @@ base64-js@^1.0.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.0.tgz#a39992d723584811982be5e290bb6a53d86700f1"
 
-basic-auth@~1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-1.0.4.tgz#030935b01de7c9b94a824b29f3fccb750d3a5290"
+basic-auth@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-1.1.0.tgz#45221ee429f7ee1e5035be3f51533f1cdfd29884"
 
 bcrypt-pbkdf@^1.0.0:
   version "1.0.0"
@@ -5124,15 +5124,14 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-markdown-loader@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/markdown-loader/-/markdown-loader-0.1.7.tgz#2ab6616fd17652a7cbfe66540781b55e4f19e267"
+markdown-loader@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-loader/-/markdown-loader-2.0.0.tgz#421862d38c4224fd3615eb648017ea385b562d78"
   dependencies:
-    loader-utils "^0.2.7"
-    marked "^0.3.2"
-    object-assign "^2.0.0"
+    loader-utils "^0.2.16"
+    marked "^0.3.6"
 
-marked@^0.3.2:
+marked@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
@@ -5304,12 +5303,12 @@ mongoose@^4.8.5:
     regexp-clone "0.0.1"
     sliced "1.0.1"
 
-morgan@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.7.0.tgz#eb10ca8e50d1abe0f8d3dad5c0201d052d981c62"
+morgan@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.8.1.tgz#f93023d3887bd27b78dfd6023cea7892ee27a4b1"
   dependencies:
-    basic-auth "~1.0.3"
-    debug "~2.2.0"
+    basic-auth "~1.1.0"
+    debug "2.6.1"
     depd "~1.1.0"
     on-finished "~2.3.0"
     on-headers "~1.0.1"
@@ -5584,10 +5583,6 @@ number-is-nan@^1.0.0:
 oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
-
-object-assign@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-2.1.1.tgz#43c36e5d569ff8e4816c4efa8be02d26967c18aa"
 
 object-assign@^3.0.0:
   version "3.0.0"
@@ -6620,9 +6615,9 @@ react-komposer@^2.0.0:
     react-stubber "^1.0.0"
     shallowequal "^0.2.2"
 
-react-markdown@^2.4.2:
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-2.4.4.tgz#26d825438d292e7ca6e292fe76201e1dbf2cfeee"
+react-markdown@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-2.4.5.tgz#e8fd1b7d90a7c616fc66fd66d85c678ebb1120f6"
   dependencies:
     commonmark "^0.24.0"
     commonmark-react-renderer "^4.2.4"
