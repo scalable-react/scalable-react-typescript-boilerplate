@@ -1,7 +1,8 @@
 import * as React from 'react';
 import Hero from './';
 
-export interface HeroProps extends React.Props<Hero> {
+interface Props extends React.Props<typeof Hero> {
   backgroundColor?: string;
-  children?: JSX.Element;
 }
+
+export default Props;

@@ -1,5 +1,6 @@
 // tslint:disable
 export default {
+  githubLogo: 'https://github.com/RyanCCollins/cdn/blob/master/misc/github-512.png?raw=true',
   aboutContent: `
 # Scalable React TypeScript Boilerplate
 

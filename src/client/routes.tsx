@@ -5,7 +5,7 @@ import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
 import client from './apolloClient';
 import store, { history } from './store';
 import { App, Home, Docs, About, TodoApp, Blog, BlogPost } from './containers';
-import colors from './styles/theming';
+import colors from './theming';
 
 const ReactGA = require('react-ga');
 

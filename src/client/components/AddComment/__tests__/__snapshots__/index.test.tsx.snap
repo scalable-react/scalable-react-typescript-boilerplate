@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddComment /> rendering should render with supplied props 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div />
+  </styled.div>
+  <styled.div>
+    <form>
+      <styled.textarea
+        cols="30"
+        id="comment-input"
+        name="comment-input"
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        placeholder="Add comment..."
+        rows="3"
+        value="Mock input for test"
+      />
+    </form>
+    <styled.footer>
+      <styled.ul>
+        <styled.li
+          onClick={[Function]}
+        >
+          <styled.a>
+            Submit
+          </styled.a>
+        </styled.li>
+      </styled.ul>
+    </styled.footer>
+  </styled.div>
+</styled.div>
+`;

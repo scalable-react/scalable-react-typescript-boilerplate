@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoApp /> container should render as expected 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(TodoApp) />
+</Provider>
+`;
+
+exports[`<TodoAppPresentation /> should render as expected 1`] = `
+<styled.div>
+  <styled.h1>
+    Example Todo App
+  </styled.h1>
+  <styled.div>
+    <styled.section>
+      <styled.header>
+        <styled.input
+          autoFocus={true}
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Start typing to add a Todo..."
+          value="foo"
+        />
+      </styled.header>
+      <styled.section>
+        <styled.ul>
+          <styled.li>
+            <styled.label>
+              foo
+            </styled.label>
+            <styled.button
+              onClick={[Function]}
+            />
+          </styled.li>
+          <styled.li>
+            <styled.label>
+              bar
+            </styled.label>
+            <styled.button
+              onClick={[Function]}
+            />
+          </styled.li>
+        </styled.ul>
+      </styled.section>
+    </styled.section>
+  </styled.div>
+</styled.div>
+`;

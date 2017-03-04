@@ -5,6 +5,8 @@ import {
   Avatar,
   Anchor,
   Article,
+  Image,
+  Heading,
 } from 'components';
 import {
   Container,
@@ -12,10 +14,10 @@ import {
   AboutSectionInner,
   StyledHr,
   AvatarContainer,
-  Div,
-  Github,
+  Content,
   Card,
   CardFooter,
+  Transform,
 } from './styles';
 import about from './about';
 import contributors from './contributors';
@@ -48,16 +50,21 @@ class About extends React.Component<undefined, undefined> {
             {contributors.map((contributor, index) =>
               <Card key={index}>
                 <AvatarContainer>
-                  <Avatar
-                    name={contributor.name}
-                    avatarUrl={contributor.avatar}
-                  />
-                  <Div>
+                  <Transform>
+                    <Avatar
+                      name={contributor.name}
+                      src={contributor.avatar}
+                    />
+                  </Transform>
+                  <Content>
+                    <Heading textAlign="center">
+                      {contributor.name}
+                    </Heading>
                     <Markdown content={contributor.bio} />
-                  </Div>
+                  </Content>
                   <CardFooter>
                     <Anchor href={contributor.github}>
-                      <Github />
+                      <Image alt="github logo" src={about.githubLogo} size="thumb" />
                     </Anchor>
                   </CardFooter>
                 </AvatarContainer>

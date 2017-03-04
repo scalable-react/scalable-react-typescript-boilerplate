@@ -1,8 +1,14 @@
 import * as React from 'react';
 import Box from './';
 
-export type Size = 'none' | 'small' | 'medium' | 'large';
+export type Size = 'none' | 'small' | 'medium' | 'large' | 'xlarge';
 export interface SizeObject { horizontal?: Size; vertical?: Size; };
+export type Breakpoint = 'mobile' | 'tablet' | 'desktop';
+export interface ResponsiveSize {
+  mobile?: Size | SizeObject,
+  tablet?: Size | SizeObject,
+  desktop?: Size | SizeObject,
+}
 export type BoxSize =  'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'full';
 export interface BoxSizeObject { horizontal?: BoxSize; vertical?: BoxSize; };
 export interface FullObject { horizontal: boolean; vertical: boolean; };
@@ -29,6 +35,7 @@ interface BoxProps extends React.HTMLProps<typeof Box> {
   backgroundColor?: string;
   backgroundImage?: string;
   full?: boolean | { horizontal?: boolean, vertical?: boolean };
+  selectable?: boolean;
 };
 
 export default BoxProps;

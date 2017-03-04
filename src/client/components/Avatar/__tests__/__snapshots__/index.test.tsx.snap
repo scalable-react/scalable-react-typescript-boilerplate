@@ -1,9 +1,40 @@
-exports[`<Avatar {...props} /> should render with proper props 1`] = `
-<styled.div>
-  <styled.div
-    avatarUrl="https://avatars3.githubusercontent.com/u/19292575" />
-  <styled.p>
-    Abhishek Ghosh
-  </styled.p>
-</styled.div>
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar {...props} /> should render with default props 1`] = `
+<styled.div
+  name="Abhishek Ghosh"
+  src="https://avatars3.githubusercontent.com/u/19292575"
+/>
+`;
+
+exports[`<Avatar {...props} /> should render with large size 1`] = `
+<styled.div
+  name="Abhishek Ghosh"
+  size="large"
+  src="https://avatars3.githubusercontent.com/u/19292575"
+/>
+`;
+
+exports[`<Avatar {...props} /> should render with medium size 1`] = `
+<styled.div
+  name="Abhishek Ghosh"
+  size="medium"
+  src="https://avatars3.githubusercontent.com/u/19292575"
+/>
+`;
+
+exports[`<Avatar {...props} /> should render with small size 1`] = `
+<styled.div
+  name="Abhishek Ghosh"
+  size="small"
+  src="https://avatars3.githubusercontent.com/u/19292575"
+/>
+`;
+
+exports[`<Avatar {...props} /> should render with thumb size 1`] = `
+<styled.div
+  name="Abhishek Ghosh"
+  size="thumb"
+  src="https://avatars3.githubusercontent.com/u/19292575"
+/>
 `;

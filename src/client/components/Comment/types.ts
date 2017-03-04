@@ -1,7 +1,8 @@
 import * as React from 'react';
-import Comment from './';
+import Comment from '../';
 
 export interface CommentProps extends React.Props<typeof Comment> {
-  body: string;
-  author: string;
+  author?: string;
+  body?: string;
+  picUrl?: string;
 }

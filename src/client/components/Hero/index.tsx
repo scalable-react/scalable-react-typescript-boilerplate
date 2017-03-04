@@ -1,16 +1,15 @@
 import * as React from 'react';
-import { HeroDiv } from './styles';
-import { HeroProps } from './types';
+import Component from './styles';
+import Props from './types';
 
-class Hero extends React.Component<HeroProps, undefined> {
-  public render() {
-    const { backgroundColor, children } = this.props;
-    return (
-      <HeroDiv backgroundColor={backgroundColor}>
-        {children}
-      </HeroDiv>
-    );
-  }
-}
-
-export default Hero;
+export default function Hero({
+  children,
+  backgroundColor,
+}: Props): JSX.Element {
+  const colorProp = backgroundColor || '#2d2d2d';
+  return (
+    <Component backgroundColor={colorProp}>
+      {children}
+    </Component>
+  );
+};

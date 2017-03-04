@@ -1,6 +1,10 @@
+const { css } = require('styled-components');
+import { BREAKPOINTS } from './maps';
 import {
   Size,
   SizeObject,
+  ResponsiveSize,
+  Breakpoint,
   BoxSize,
   BoxSizeObject,
   Full,
@@ -24,7 +28,7 @@ export function calculateFlexWrap(wrap?: boolean, reverse?: boolean): WrapOption
   }
 }
 
-export function sizeToString(size: Size | SizeObject): string {
+export function sizeToString(size: Size | SizeObject, smallSize: boolean = false): string {
   let returnVal;
   if (typeof size === 'string') {
     returnVal = `${remFromPX(SIZE_MAP[size])}rem`;
@@ -93,3 +97,24 @@ export function calculateFullStyle(full: Full, postFix: 'vw' | 'vh'): string {
   }
   return 'auto';
 }
+
+export const breakPointCss = (breakPoint: Breakpoint) => {
+  const selector = breakPoint === 'desktop'
+    ? 'min-width'
+    : 'max-width';
+  return css`
+    @media screen and (${selector}: ${BREAKPOINTS.phone}) {
+      padding: ${({ pad }) => sizeToString(pad)};
+    }
+  `;
+};
+
+export const breakPoints = (size: ResponsiveSize) => {
+  if (size.desktop || size.mobile || size.tablet) {
+    const css = Object.keys(size).map((key) =>
+      breakPointCss(key as Breakpoint),
+    ).join('; \n');
+    return css;
+  }
+  return '';
+};

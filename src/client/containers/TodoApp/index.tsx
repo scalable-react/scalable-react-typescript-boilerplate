@@ -1,108 +1,72 @@
 import * as React from 'react';
-const {
-  Container,
-  DeleteButton,
-  Section,
-  Input,
-  Header,
-  InnerContainer,
-  Ul,
-  Li,
-  Todos,
-  Todo,
-  H1,
-} = require('./styles');
+import { Dispatch, bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { FormControlEventTarget } from '../../types';
+import { State } from '../../state';
+import actionCreators from './actionCreators';
+import Presentation from './presentation';
+import { Todo, Input as In, ActionCreatorTypes, ActionTypes, Index } from './types';
+import {
+  selectTodos,
+  selectInput,
+} from './selectors';
 
-interface TodoAppState {
-  todos?: Array<{ text: string }>;
-  input?: string;
+const mapStateToProps = (state: State): StateProps => ({
+  todos: selectTodos(state),
+  input: selectInput(state),
+});
+
+const mapDispatchToProps = (dispatch: Dispatch<ActionTypes>): DispatchProps => ({
+  actions: bindActionCreators(
+    actionCreators,
+    dispatch,
+  ),
+});
+
+export interface StateProps extends React.Props<TodoApp> {
+  todos: Todo[],
+  input: In,
 }
-
-class TodoApp extends React.Component<any, TodoAppState> {
+export interface DispatchProps {
+  actions: ActionCreatorTypes;
+}
+export type Props = DispatchProps & StateProps;
+class TodoApp extends React.Component<Props, undefined> {
   constructor() {
     super();
-    this.handleAddTodo = this.handleAddTodo.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.state = {
-      todos: [],
-      input: '',
-    };
+    this.handleAddition = this.handleAddition.bind(this);
+    this.handleInput = this.handleInput.bind(this);
+    this.handleDeletion = this.handleDeletion.bind(this);
   }
-  private handleAddTodo(e) {
+  private handleAddition(e: React.KeyboardEvent<undefined>) {
     if (e.key === 'Enter') {
       e.preventDefault();
-      const { input } = this.state;
-      if (!input) {
-        return;
-      }
-      const newTodos = [
-        ...this.state.todos,
-        {
-          text: this.state.input,
-        },
-      ];
-      this.setState({
-        todos: newTodos,
-        input: '',
-      });
+      const { input, actions } = this.props;
+      actions.addTodo({ text: input });
     }
   }
-  private handleChange(e) {
+  private handleInput(e: React.SyntheticEvent<undefined>) {
     e.preventDefault();
-    const input = e.target.value;
-    this.setState({
-      input,
-    });
+    const input = (e.target as FormControlEventTarget).value;
+    this.props.actions.input(input);
   }
-  private handleDeletion(i) {
-    const todos = [
-      ...this.state.todos.slice(0, i),
-      ...this.state.todos.slice(i + 1),
-    ];
-    this.setState({
-      todos,
-    });
+  private handleDeletion(i: Index) {
+    this.props.actions.deleteTodo(i);
   }
   public render() {
-    const {
-      todos,
-      input,
-    } = this.state;
     return (
-      <Container>
-        <H1>
-          Example Todo App
-        </H1>
-        <InnerContainer>
-          <Section>
-            <Header>
-              <Input
-                value={input}
-                onChange={this.handleChange}
-                onKeyPress={this.handleAddTodo}
-                autoFocus
-                placeholder="Start typing to add a Todo..."
-              />
-            </Header>
-            <Todos>
-              <Ul>
-                {todos.map((item, i) =>
-                  <Li key={i}>
-                    <Todo>
-                      {item.text}
-                    </Todo>
-                    <DeleteButton
-                      onClick={this.handleDeletion.bind(this, i)}
-                    />
-                  </Li>,
-                )}
-              </Ul>
-            </Todos>
-          </Section>
-        </InnerContainer>
-      </Container>
+      <Presentation
+        todos={this.props.todos}
+        input={this.props.input}
+        onInput={this.handleInput}
+        onAddition={this.handleAddition}
+        onDeletion={this.handleDeletion}
+      />
     );
   }
 }
 
-export default TodoApp;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(TodoApp);

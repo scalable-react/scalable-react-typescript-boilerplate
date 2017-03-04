@@ -149,16 +149,22 @@ Included in this project are a few primitive components that you can use to boot
 - [SvgIcon](https://github.com/scalable-react/scalable-react-typescript-boilerplate/blob/master/src/client/components/SvgIcon/index.tsx)
 - And more!
 
+## React Storybook
+We've included react storybook to make it easy for you to test your ui kit components.
+Run `npm run storybook` and navigate to `http://localhost:9001` to see your stories. 
+
+You can add more stories as you are building out your components within the `./config/.storybook/stories` folder.
+Simply [write a story](https://getstorybook.io/docs/react-storybook/basics/writing-stories) and export it in the `stories/index.js` file. Checkout the [React Storybook](https://getstorybook.io/) docs for more info!
+
+Note: the components are currently being served from the `build` directory, so please make sure you have compiled (`npm run compile`) the app before running.
+
 ## Generators
 We've included some generators so that you can easily scaffold out components & containers from the command line.
 
 To use the generators, run `npm run generator` and select the options you want to use.  The generators will create your component or container and their accompanying imports / exports.
 
 ## Server Rendering
-This project embraces server-side rendering.  Included in the setup is an [Express server](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/server.tsx) that will server render.  Note that the server-rendering will not work with the TypeScript source code, so you must compile the project into the Build directory first.  Also, you must copy any other assets (images, markdown, etc.) into the build folder.
-
-## Code Generation
-A big feature of the [Scalable React Boilerplate](https://github.com/RyanCCollins/scalable-react-boilerplate) project is the code generation tools. They will be incorporated into this project at a later time.  If you are interested in contributing, please let us know!
+We have included setup to get you server-rendering out of the box.  Included in the setup is an [Express server](https://github.com/RyanCCollins/scalable-react-ts-boilerplate/blob/master/src/server.tsx) that will server render.  Note that the server-rendering will not work with the TypeScript source code, so you must compile the project into the Build directory first.  Also, you must copy any other assets (images, markdown, etc.) into the build folder.
 
 ## Testing
 Included is a test framework for all of your React testing needs.  We are using Jest to run the test suite and generate snapshots, plus Enzyme for component introspection.
@@ -198,6 +204,8 @@ The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/
   - Run the test suite in watch mode
 - `npm run test:update`
   - Update the failing snapshot tests
+- `npm run storybook`
+  - Run the storybook server
 
 ## Resources
 - [JavaScript Code Quality with Free Tools](https://dev-blog.apollodata.com/javascript-code-quality-with-free-tools-9a6d80e29f2d#.1unvvh8vw)

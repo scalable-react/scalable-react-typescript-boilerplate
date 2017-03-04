@@ -3,11 +3,24 @@ import { graphql } from 'react-apollo';
 import { Headline, LoadingIndicator, PostCard, Section, Box, Error } from 'components';
 import POST_QUERY from './posts.graphql';
 import { StyledHr } from './styles';
-import { BlogProps } from './types';
+import { BlogProps, BlogState } from './types';
 
-class Blog extends React.Component<BlogProps, any> {
+class Blog extends React.Component<BlogProps, BlogState> {
+  constructor() {
+    super();
+    this.handleClearError = this.handleClearError.bind(this);
+    this.state = {
+      showError: true,
+    };
+  }
+  private handleClearError() {
+    this.setState({
+      showError: false,
+    });
+  }
   public render() {
     const { loading, posts, error } = this.props;
+    const { showError } = this.state;
     return (
       <Box
         alignItems="center"
@@ -20,7 +33,9 @@ class Blog extends React.Component<BlogProps, any> {
           Blog
           <StyledHr />
         </Headline>
-        {error && <Error message={error.message} />}
+        {error && showError &&
+          <Error onClose={this.handleClearError} message={error.message} />
+        }
         <LoadingIndicator isLoading={loading} />
         <Section
           flexWrap

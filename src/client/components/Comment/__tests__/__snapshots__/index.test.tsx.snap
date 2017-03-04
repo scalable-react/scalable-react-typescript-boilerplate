@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Comment /> default should render a plain comment with other props 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div
+      url="https://github.com/RyanCCollins/cdn/blob/master/misc/missing.png?raw=true"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.p>
+      Comment Body
+    </styled.p>
+    <styled.footer>
+      Comment Author
+       | Aug 24, 2014 @ 2:35 PM
+    </styled.footer>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Comment /> default should render a plain comment with required props 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div
+      url="https://github.com/RyanCCollins/cdn/blob/master/misc/missing.png?raw=true"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.p>
+      Comment Body
+    </styled.p>
+    <styled.footer>
+      Comment Author
+       | Aug 24, 2014 @ 2:35 PM
+    </styled.footer>
+  </styled.div>
+</styled.div>
+`;

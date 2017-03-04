@@ -6,6 +6,15 @@
         "react-hot-loader/babel"
       ]
     },
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-webpack-alias", {
+            "config": "./webpack.config.prod.js"
+          }
+        ]
+      ]
+    },
     "server": {
       "plugins": [
         [

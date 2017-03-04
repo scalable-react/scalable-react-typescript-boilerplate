@@ -1,20 +1,11 @@
 import * as React from 'react';
 import { Img } from './styles';
-import { ImageProps } from './types';
+import { Props } from './types';
 
-class Image extends React.Component<ImageProps, undefined> {
-  public static defaultProps = {
-    size: 'small',
-  };
-  public render() {
-    return (
-      <Img
-        alt={this.props.alt}
-        size={this.props.size}
-        src={this.props.src}
-      />
-    );
-  }
-}
-
-export default Image;
+export default function Image({
+  ...props,
+}: Props): JSX.Element {
+  return(
+    <Img {...props} />
+  );
+};

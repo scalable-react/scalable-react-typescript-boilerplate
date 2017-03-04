@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<Box /> should render with default props 1`] = `
 <styled.div>
   <div />
@@ -7,7 +9,8 @@ exports[`<Box /> should render with default props 1`] = `
 exports[`<Box /> should render with different props 1`] = `
 <styled.div
   pad="medium"
-  size="large">
+  size="large"
+>
   <div />
 </styled.div>
 `;
