@@ -353,12 +353,12 @@ anymatch@^1.3.0:
     arrify "^1.0.0"
     micromatch "^2.1.5"
 
-apollo-client@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-0.10.0.tgz#ab3c0e7f9c9f97e2678f245c4378fe84d21808b3"
+apollo-client@^0.10.1, "apollo-client@^0.9.0 || ^0.10.0":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-0.10.1.tgz#c0c8a18d14ea095a6c8e4e6a7e98c789bdda202b"
   dependencies:
     graphql-anywhere "^2.1.0"
-    graphql-tag "^1.1.1"
+    graphql-tag "^1.3.1"
     redux "^3.4.0"
     symbol-observable "^1.0.2"
     whatwg-fetch "^2.0.0"
@@ -367,12 +367,13 @@ apollo-client@^0.10.0:
     "@types/graphql" "^0.8.0"
     "@types/isomorphic-fetch" "0.0.33"
 
-apollo-codegen:
-  version "0.10.6"
-  resolved "https://registry.yarnpkg.com/apollo-codegen/-/apollo-codegen-0.10.6.tgz#3ef94476bfaa801b496142995576806845f48865"
+apollo-codegen@^0.10.8:
+  version "0.10.8"
+  resolved "https://registry.yarnpkg.com/apollo-codegen/-/apollo-codegen-0.10.8.tgz#ef9b41e761d3e4f22aa4d45748ce5b914bba16c8"
   dependencies:
     babel-runtime "^6.20.0"
     change-case "^3.0.0"
+    glob "^7.0.5"
     graphql "^0.9.1"
     inflected "^1.1.7"
     mkdirp "^0.5.1"
@@ -3653,9 +3654,13 @@ graphql-server-module-graphiql@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/graphql-server-module-graphiql/-/graphql-server-module-graphiql-0.6.0.tgz#e37634b05f000731981e8ed13103f9a5861e5da0"
 
-graphql-tag, graphql-tag@^1.1.1:
+graphql-tag@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-1.2.4.tgz#90c59bea41378513fd7213dc92537fcd20e4570f"
+
+graphql-tag@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-1.3.1.tgz#16cdf13635f10bbc968c6f2c6265ffe883a906da"
 
 growly@^1.3.0:
   version "1.3.0"
@@ -6524,11 +6529,13 @@ react-addons-test-utils:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-apollo:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-0.10.0.tgz#8f53a94fbd89210dde38d66f72df3f0f9c6a3810"
+react-apollo@^0.13.2:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-0.13.2.tgz#d380e852375e3519fe728416dd8e3a1e3d419649"
   dependencies:
+    apollo-client "^0.9.0 || ^0.10.0"
     graphql-anywhere "^2.0.0"
+    graphql-tag "^1.3.1"
     hoist-non-react-statics "^1.2.0"
     invariant "^2.2.1"
     lodash.flatten "^4.2.0"
