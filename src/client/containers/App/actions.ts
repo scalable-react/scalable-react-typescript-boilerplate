@@ -1,5 +1,5 @@
 import * as types from './constants';
-import { Action } from './reducers';
+import { Action } from './reducer';
 
 export const appSetMobile =
   (isMobile: boolean):

@@ -1,15 +1,18 @@
 import * as React from 'react';
-import HomePresentation from './presentation';
 import { Features } from 'containers';
+import { ThemeColorMap } from '../../types';
+import HomePresentation from './presentation';
+const { withTheme } = require('styled-components');
 
-class Home extends React.Component<undefined, undefined> {
+interface Props { theme: ThemeColorMap; }
+class Home extends React.Component<Props, undefined> {
   public render() {
     return (
-      <HomePresentation>
+      <HomePresentation theme={this.props.theme}>
         <Features />
       </HomePresentation>
     );
   }
 }
 
-export default Home;
+export default withTheme(Home);

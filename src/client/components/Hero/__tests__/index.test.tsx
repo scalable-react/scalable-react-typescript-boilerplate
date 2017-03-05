@@ -27,6 +27,6 @@ describe('<Hero /> rendering behavior', () => {
         Some content
       </Hero>,
     );
-    expect(shallowToJson(wrapper).props.color).toEqual(heroProps.color);
+    expect(shallowToJson(wrapper).props.backgroundColor).toEqual(heroProps.backgroundColor);
   });
 });

@@ -1,7 +1,7 @@
-import reducer from '../reducers';
+import reducer from '../reducer';
 import * as types from '../constants';
 import { actionCreators } from '../actionCreators';
-import {initialState} from '../state';
+import { initialState } from '../state';
 
 describe('docs reducer', () => {
   it('should return the initial state with default action', () => {

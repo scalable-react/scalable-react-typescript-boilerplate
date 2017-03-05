@@ -1,3 +1,18 @@
+import * as React from 'react';
+import { Props } from './';
+import { State } from './state';
+import { ActionCreatorTypes } from './actionCreators';
+import { ActionTypes } from './actions';
+
+export { Props };
+export { State };
+export { ActionCreatorTypes };
+export { ActionTypes };
+
+export type OnInput = (e: React.SyntheticEvent<undefined>) => void;
+export type OnSubmit = () => void;
+export type OnKeyUp = (e: React.KeyboardEvent<undefined>) => void;
+
 export interface PostComment {
   body: string;
   author: string;
@@ -5,20 +20,25 @@ export interface PostComment {
 
 export interface Post {
   id: string;
-  tags: Array<{ name: string }>;
   title: string;
   image: string;
   content: string;
   comments: PostComment[];
 }
 
-export interface BlogProps extends React.Props<any> {
-  loading: boolean;
-  error?: { message: string };
-  post?: Post;
-  submitComment?: Function;
-  refetch: Function;
-  params: {
-    postId: String;
-  };
+export interface ErrorType { message: string; }
+
+export type Input = string;
+
+export type Body = string;
+export type Author = string;
+export type PostId = string;
+export interface PostSubmission {
+  variables: {
+    body: Body;
+    author: Author;
+    post: PostId;
+  }
 };
+
+export type SubmitComment = (post: PostSubmission) => Promise<undefined>;

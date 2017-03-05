@@ -22,7 +22,14 @@ module.exports = {
       'react-router',
       'react-router-redux',
       'react-markdown',
+      'redux-connect',
       'redux',
+      'rxjs',
+      'axios',
+      'redux-logic',
+      'react-apollo',
+      'graphql-tag',
+      'apollo-client',
     ]
   },
   output: {
@@ -43,8 +50,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.tsx?$/, loaders: ['babel', 'ts-loader'], include: path.join(__dirname, 'src') },
-      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'], include: path.join(__dirname, 'src') },
+      { test: /\.tsx?$/, loaders: ['babel-loader', 'ts-loader'], include: path.join(__dirname, 'src') },
+      { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel-loader'], include: path.join(__dirname, 'src') },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
@@ -52,8 +59,8 @@ module.exports = {
           use: 'css-loader!postcss-loader'
         }),
       },
-      { test: /\.json$/, loader: 'json' },
-      { test: /\.md$/, loader: 'html!markdown' },
+      { test: /\.json$/, loader: 'json-loader' },
+      { test: /\.md$/, loader: 'html!markdown-loader' },
     ]
   },
   plugins: [
@@ -73,7 +80,6 @@ module.exports = {
       'process.env.API_URL': JSON.stringify(process.env.API_URL || 'http://localhost:1338/api'),
     }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: false
     }),

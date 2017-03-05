@@ -3,12 +3,15 @@ import { Button, Anchor } from 'components';
 import { ButtonSize } from 'components/Button';
 import { Heading, Section, Hero, Paragraph } from 'components';
 import { Container, HeroLogo, HeroLogoRow, HeadingContainer, GetStartedButtons } from './styles';
+import { ThemeColorMap } from '../../types';
 
 interface Props extends React.Props<typeof HomePresentation> {
   children?: JSX.Element;
+  theme: ThemeColorMap;
 }
 export default function HomePresentation({
   children,
+  theme,
 }: Props): JSX.Element {
   return (
     <Container>
@@ -16,16 +19,16 @@ export default function HomePresentation({
         alignItems="center"
         flexDirection="column"
         full={{ horizontal: true }}
-        backgroundColor="#f5f5f5"
+        backgroundColor={theme.offwhite}
       >
-        <Hero>
+        <Hero backgroundColor={theme.black2}>
           <HeroLogoRow>
             <HeroLogo>
               TS
             </HeroLogo>
           </HeroLogoRow>
           <HeadingContainer>
-            <Heading margin="small" tag="h1" color="#007acc">
+            <Heading margin="small" tag="h1" color={theme.primary}>
               Scalable React TypeScript Boilerplate
             </Heading>
             <Paragraph margin="small" size="large">
@@ -34,29 +37,29 @@ export default function HomePresentation({
           </HeadingContainer>
           <GetStartedButtons>
             <Anchor
-              color="#fff"
+              color={theme.white1}
               path="/docs"
             >
               <Button
                 style={{ margin: 10 }}
                 size={ButtonSize.xlarge}
                 isHero
-                backgroundColor="#c05b4d"
-                borderColor="#732419"
+                backgroundColor={theme.secondary}
+                borderColor="#733529"
               >
                 Read the docs
               </Button>
             </Anchor>
             <Anchor
-              color="#fff"
+              color={theme.white1}
               path="/todo-app"
             >
               <Button
                 style={{ margin: 10 }}
                 size={ButtonSize.xlarge}
                 isHero
-                backgroundColor="#c05b4d"
-                borderColor="#732419"
+                backgroundColor={theme.secondary}
+                borderColor="#733529"
               >
                 View Example App
               </Button>
