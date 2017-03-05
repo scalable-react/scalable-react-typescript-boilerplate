@@ -48,8 +48,8 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader!postcss-loader'
+          fallback: 'style-loader',
+          use: 'css-loader!postcss-loader'
         }),
       },
       { test: /\.json$/, loader: 'json' },
