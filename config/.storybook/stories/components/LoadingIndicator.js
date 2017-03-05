@@ -1,10 +1,28 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import { LoadingIndicator } from 'components';
+import {
+  withKnobs,
+  boolean
+} from '@kadira/storybook-addon-knobs';
 
-storiesOf('Loading Indicator', module)
-  .add('is loading', () =>
-    <LoadingIndicator
-      isLoading
-    />
+const stories = storiesOf('Loading Indicator', module);
+stories.addDecorator(withKnobs);
+
+stories
+  .addWithInfo(
+    'is loading',
+    `
+      Properties:
+
+      \`isLoading: true|false\`
+    `,
+     () =>
+      <LoadingIndicator
+        isLoading={boolean('isLoading','true')}
+      />,
+    {
+      inline: true,
+      propTables: false,
+    }
   );

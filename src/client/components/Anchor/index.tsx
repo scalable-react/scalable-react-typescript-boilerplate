@@ -1,17 +1,16 @@
 import * as React from 'react';
 import { withRouter } from 'react-router';
-import {AnchorComponent} from './styles';
+import { AnchorComponent } from './styles';
 
-type MethodType = 'push' | 'replace';
 const MethodTypePush = 'push';
 const MethodTypeReplace = 'replace';
-
-interface AnchorProps extends React.Props<Anchor> {
+type Method = 'push' | 'replace';
+export interface Props extends React.Props<Anchor> {
   path?: string;
   href?: string;
   label?: string;
   color?: string;
-  method?: MethodType;
+  method?: Method;
   router?: {
     push: Function,
     replace: Function,
@@ -19,8 +18,8 @@ interface AnchorProps extends React.Props<Anchor> {
   }
 }
 
-class Anchor extends React.Component<AnchorProps, undefined> {
-  public static defaultProps: AnchorProps = {
+class Anchor extends React.Component<Props, undefined> {
+  public static defaultProps: Props = {
     color: '#007acc',
     method: MethodTypePush,
   };
