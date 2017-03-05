@@ -18,7 +18,8 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       components: path.resolve(ROOT_PATH, 'src/client/components'),
-      containers: path.resolve(ROOT_PATH, 'src/client/containers')
+      containers: path.resolve(ROOT_PATH, 'src/client/containers'),
+      actionCreators$: path.resolve(ROOT_PATH, 'src/client/actionCreators.ts')
     },
   },
   module: {

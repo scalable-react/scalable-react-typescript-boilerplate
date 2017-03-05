@@ -1,47 +1,19 @@
-import { SET_MOBILE } from './constants';
+import { Reducer } from 'redux';
+import * as types from './constants';
+import { FeatureAction } from './actions';
+import { defaultAction } from 'actionCreators';
+import { State, initialState } from './state';
 
-export interface Action<P> {
-  type: string;
-  payload: P;
-};
-
-export interface AppState {
-  isMobile: boolean;
-  navLinks: [{
-    text: string;
-    url: string;
-  }];
-  logoText: string;
-};
-
-export const initialState: AppState = {
-  isMobile: false,
-  navLinks: [
-    {
-      text: 'Docs',
-      url: '/docs',
-    },
-    {
-      text: 'About',
-      url: '/about',
-    },
-    {
-      text: 'Blog',
-      url: '/blog',
-    },
-  ],
-  logoText: 'React + TypeScript',
-};
-
-const appReducer = (state: AppState = initialState, action: Action<any>): AppState => {
+const reducer: Reducer<State> = (state: State = initialState, action: FeatureAction = defaultAction()) => {
   switch (action.type) {
-  case SET_MOBILE:
-    return Object.assign({}, state, {
-      isMobile: action.payload.isMobile,
-    });
+  case types.SET_MOBILE:
+    return {
+      ...state,
+      isMobile: action.isMobile,
+    };
   default:
     return state;
   }
 };
 
-export default appReducer;
+export default reducer;

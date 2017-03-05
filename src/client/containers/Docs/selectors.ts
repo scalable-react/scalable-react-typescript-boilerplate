@@ -1,20 +1,20 @@
 import { createSelector, Selector } from 'reselect';
-import { State } from '../../state';
-import { State as DocsState } from './types';
+import { State } from 'state';
+import { State as FeatureState } from './state';
 
-const selectDocs = () => (state: State): DocsState  => state.docs;
+const selectFeature = () => (state: State): FeatureState  => state.docs;
 
 export const selectError: Selector<State, string> = createSelector(
-  selectDocs(),
-  (docs) => docs.error,
+  selectFeature(),
+  (feature) => feature.error,
 );
 
 export const selectIsLoading: Selector<State, boolean> = createSelector(
-  selectDocs(),
-  (docs) => docs.isLoading,
+  selectFeature(),
+  (feature) => feature.isLoading,
 );
 
 export const selectMarkdownContent: Selector<State, string> = createSelector(
-  selectDocs(),
-  (docs) => docs.markdownContent,
+  selectFeature(),
+  (feature) => feature.markdownContent,
 );

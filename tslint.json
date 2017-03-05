@@ -46,7 +46,7 @@
     "no-duplicate-variable": true,
     "no-empty": true,
     "no-eval": true,
-    "ban-types": false,
+    "ban-types": true,
     "no-string-literal": true,
     "no-switch-case-fall-through": true,
     "no-trailing-whitespace": true,

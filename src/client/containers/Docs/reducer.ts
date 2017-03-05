@@ -1,10 +1,10 @@
 import { Reducer } from 'redux';
 import * as types from './constants';
-import { DocsAction } from './actions';
-import { defaultAction } from './actionCreators';
+import { FeatureAction } from './actions';
+import { defaultAction } from 'actionCreators';
 import { State, initialState } from './state';
 
-const reducer: Reducer<State> = (state: State = initialState, action: DocsAction = defaultAction()) => {
+const reducer: Reducer<State> = (state: State = initialState, action: FeatureAction = defaultAction()) => {
   switch (action.type) {
   case types.LOAD_INITIATION:
     return {

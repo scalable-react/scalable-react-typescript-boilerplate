@@ -13,7 +13,8 @@
     "noUnusedLocals": true,
     "paths": {
       "components/*": ["./components/*"],
-      "containers/*": ["./containers/*"]
+      "containers/*": ["./containers/*"],
+      "actionCreators": ["./actionCreators"]      
     }
   },
   "include": [
