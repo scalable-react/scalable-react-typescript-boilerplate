@@ -46,7 +46,7 @@ module.exports = {
     alias: {
       components: path.resolve(ROOT_PATH, 'src/client/components'),
       containers: path.resolve(ROOT_PATH, 'src/client/containers'),
-      actionCreators$: path.resolve(ROOT_PATH, 'src/client/actionCreators.ts')
+      shared: path.resolve(ROOT_PATH, 'src/client/shared')
     },
   },
   module: {

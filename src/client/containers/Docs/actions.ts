@@ -1,4 +1,4 @@
-import { DefaultAction } from 'actions';
+import { DefaultAction } from 'shared/actions';
 import * as types from './constants';
 import { Action } from 'redux';
 

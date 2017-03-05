@@ -1,5 +1,5 @@
 import * as types from './constants';
-import {defaultAction} from 'actionCreators';
+import { defaultAction } from 'shared/actionCreators';
 import {
   LoadInitiationAction,
   LoadSuccessAction,

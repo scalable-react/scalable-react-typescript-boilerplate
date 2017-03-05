@@ -1,2 +1,0 @@
-export type DEFAULT_ACTION_TYPE = '';
-export const DEFAULT_ACTION_TYPE: DEFAULT_ACTION_TYPE = '';
