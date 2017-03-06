@@ -1,11 +1,12 @@
+import { DefaultAction } from 'shared/actions';
 import * as types from './constants';
-import { Action } from './reducer';
+import { Action } from 'redux';
 
-export const appSetMobile =
-  (isMobile: boolean):
-    Action<{ isMobile: boolean }> => ({
-      type: types.SET_MOBILE,
-      payload: {
-        isMobile,
-      },
-    });
+export interface SetIsMobileAction extends Action {
+  type: types.SET_MOBILE_TYPE,
+  isMobile: boolean
+}
+
+export type FeatureAction =
+  SetIsMobileAction |
+  DefaultAction;

@@ -1,4 +1,4 @@
-import reducer from '../reducers';
+import reducer from '../reducer';
 import * as types from '../constants';
 import { actionCreators } from '../actionCreators';
 import { initialState } from '../state';

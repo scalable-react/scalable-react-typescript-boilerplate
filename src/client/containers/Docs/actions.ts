@@ -1,12 +1,12 @@
-import { PayloadAction } from '../../types';
+import { DefaultAction } from 'shared/actions';
 import * as types from './constants';
-import {Action} from 'redux';
+import { Action } from 'redux';
 
 export interface LoadInitiationAction extends Action {
   type: types.LOAD_INITIATION_TYPE,
 }
 
-export interface LoadSuccessAction extends PayloadAction<string> {
+export interface LoadSuccessAction extends Action {
   type: types.LOAD_SUCCESS_TYPE;
   payload: string;
 }
@@ -24,14 +24,10 @@ export interface ClearErrorAction extends Action {
   type: types.CLEAR_ERROR_TYPE;
 }
 
-export interface DefaultAction extends Action {
-  type: ''
-}
-
-export type DocsAction =
-LoadInitiationAction |
-LoadSuccessAction |
-LoadFailureAction |
-LoadCancelAction |
-ClearErrorAction |
-DefaultAction;
+export type FeatureAction =
+  LoadInitiationAction |
+  LoadSuccessAction |
+  LoadFailureAction |
+  LoadCancelAction |
+  ClearErrorAction |
+  DefaultAction;

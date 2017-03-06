@@ -1,7 +1,7 @@
-import docs2Logic from './containers/Docs/logic';
+import docsLogic from './containers/Docs/logic';
 
 const rootLogic = [
-  ...docs2Logic,
+  ...docsLogic,
 ];
 
 export default rootLogic;

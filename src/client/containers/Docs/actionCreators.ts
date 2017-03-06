@@ -1,11 +1,11 @@
 import * as types from './constants';
+import { defaultAction } from 'shared/actionCreators';
 import {
   LoadInitiationAction,
   LoadSuccessAction,
   LoadFailureAction,
   LoadCancelAction,
   ClearErrorAction,
-  DefaultAction,
 } from './actions';
 
 export const loadInitiation = (): LoadInitiationAction => ({
@@ -28,10 +28,6 @@ export const loadCancel = (): LoadCancelAction => ({
 
 export const clearError = (): ClearErrorAction => ({
   type: types.CLEAR_ERROR,
-});
-
-export const defaultAction = (): DefaultAction => ({
-  type: types.DEFAULT_ACTION_TYPE,
 });
 
 export const actionCreators = {

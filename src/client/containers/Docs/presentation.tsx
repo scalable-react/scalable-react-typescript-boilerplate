@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {State} from './state';
 import { Article, Headline, LoadingIndicator, Section, Error } from 'components';
 import { StyledHr } from './styles';
 import {
@@ -8,11 +9,7 @@ import {
   ClearErrorAction,
 } from './actions';
 
-export interface StateProps {
-  markdownContent: string;
-  error?: string;
-  isLoading: boolean;
-}
+export type StateProps = State;
 
 export interface DispatchProps {
   actions: {
@@ -23,9 +20,9 @@ export interface DispatchProps {
   };
 }
 
-export type DocsProps = React.Props<Docs> & StateProps & DispatchProps;
+export type FeatureProps = React.Props<Feature> & StateProps & DispatchProps;
 
-export default class Docs extends React.Component<DocsProps, undefined> {
+export default class Feature extends React.Component<FeatureProps, undefined> {
   constructor(props) {
     super(props);
     const { markdownContent } = props;
