@@ -14,7 +14,7 @@ const testState: State = {
   navLinks: [{
     text: 'demo',
     url: 'www.google.com',
-  },{
+  }, {
     text: 'demo2',
     url: 'www.gmail.com',
   }],
@@ -29,7 +29,7 @@ describe('DocsContainer ', () => {
   it('should render with default props', () => {
     const wrapper = shallow(
       <Provider store={store}>
-        <Container/>
+        <Container />
       </Provider>,
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
