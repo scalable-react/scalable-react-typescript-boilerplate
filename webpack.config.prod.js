@@ -46,7 +46,8 @@ module.exports = {
     alias: {
       components: path.resolve(ROOT_PATH, 'src/client/components'),
       containers: path.resolve(ROOT_PATH, 'src/client/containers'),
-      shared: path.resolve(ROOT_PATH, 'src/client/shared')
+      shared: path.resolve(ROOT_PATH, 'src/client/shared'),
+      openui: path.resolve(ROOT_PATH, 'packages/openui/src'),
     },
   },
   module: {

@@ -30,7 +30,7 @@
   },
   "scripts": {
     "precommit": "npm run lint --silent && npm run test",
-    "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js",
+    "build": "webpack --config ./webpack.config.js",
     "start": "node devServer.js",
     "predeploy": "rimraf build/public/*.*",
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js",
