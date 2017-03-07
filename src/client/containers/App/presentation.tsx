@@ -1,18 +1,9 @@
 import * as React from 'react';
+import { NavBar } from 'components';
+import { Box, Heading, Footer, Paragraph, SvgIcon, Anchor } from 'openui';
+import { SetIsMobileAction } from './actions';
 import { State } from './state';
 import { Author, Main } from './styles';
-import {
-  NavBar,
-  Footer,
-  Heading,
-  Paragraph,
-  SvgIcon,
-  Anchor,
-  Box,
-} from 'components';
-import {
-  SetIsMobileAction,
-} from './actions';
 
 export type StateProps = State;
 
@@ -62,8 +53,8 @@ export default class Feature extends React.Component<FeatureProps, undefined> {
           <Box alignItems="center" >
             <Heading>
               React + TypeScript
-        </Heading>
-            < Paragraph margin="none" >
+            </Heading>
+            <Paragraph margin="none">
               Scalable React TS Boilerplate
             </Paragraph>
           </Box>

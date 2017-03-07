@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {State} from './state';
-import { Article, Headline, LoadingIndicator, Section, Error } from 'components';
+import { Article, Headline, LoadingIndicator, Section, Error } from 'openui';
 import { StyledHr } from './styles';
+import { State } from './state';
 import {
   LoadInitiationAction,
   LoadSuccessAction,

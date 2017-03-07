@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Paragraph } from 'components';
+import { Box, Paragraph } from '../';
 import { ErrorProps } from './types';
 
 export default function Error({

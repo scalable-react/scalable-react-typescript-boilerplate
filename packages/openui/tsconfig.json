@@ -1,21 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/client",
-    "module": "es6",
+    "baseUrl": "src",
+    "module": "commonjs",
     "target": "es6",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "sourceMap": true,
-    "outDir": "build/src",
+    "outDir": "dist",
     "jsx": "preserve",
     "allowJs": true,
-    "noUnusedLocals": true,
-    "paths": {
-      "components/*": ["./components/*"],
-      "containers/*": ["./containers/*"],
-      "openui": ["../../packages/openui/src/index"]
-    }
+    "noUnusedLocals": true
   },
   "include": [
     "src/**/*"

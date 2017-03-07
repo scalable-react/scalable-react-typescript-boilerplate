@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Heading, Headline, Image, Button, Markdown, Anchor } from 'components';
+import { Heading, Headline, Image, Button, Markdown, Anchor } from 'openui';
 import { Props } from './types';
 import {
   Container,

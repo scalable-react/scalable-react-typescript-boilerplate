@@ -1,10 +1,12 @@
 const styled = require('styled-components').default;
+import remStringFromPX from '../utils';
+import { sizeMap } from './maps';
 
 export const ButtonComponent = styled.button`
   text-align: center;
   background-color: ${(props) => props.backgroundColor};
   color: ${(props) => props.color};
-  font-size: ${(props) => props.size}px;
+  font-size: ${(props) => remStringFromPX(sizeMap[props.size])};
   border: none;
   color: white;
   padding: 15px 32px;
@@ -19,7 +21,7 @@ export const HeroButton = styled.button`
   color: ${(props) => props.color};
   padding: 20px 20px;
   line-height: 16px;
-  font-size: ${(props) => props.size}px;
+  font-size: ${(props) => remStringFromPX(sizeMap[props.size])};
   transition: 150ms;
   display: inline-block;
   border-style: solid;

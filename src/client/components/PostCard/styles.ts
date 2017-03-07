@@ -1,4 +1,4 @@
-import SvgIcon from '../SvgIcon';
+import { SvgIcon } from 'openui';
 const styled = require('styled-components').default;
 
 export const Card = styled.div`
