@@ -196,7 +196,7 @@ The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/
   - Build the project
 - `npm run deploy`
   - Create a production bundle for deployment
-- `npm run run serve`
+- `npm run serve`
   - Serve the production bundle on port 1337
 - `npm run test`
   - Run the test suite
