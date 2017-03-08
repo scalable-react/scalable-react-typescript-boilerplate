@@ -36,6 +36,7 @@ exports[`<BlogPostPresentation /> should render as expected 1`] = `
 >
   <Error
     message="oops"
+    status="error"
   />
   <LoadingIndicator
     isLoading={false}

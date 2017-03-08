@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { Box, Headline, Section, LoadingIndicator, Error } from 'openui';
+import { Box, Headline, Section, LoadingIndicator, Notification } from 'ui';
 import { PostCard } from 'components';
 import POST_QUERY from './posts.graphql';
 import { StyledHr } from './styles';
@@ -35,7 +35,11 @@ class Blog extends React.Component<BlogProps, BlogState> {
           <StyledHr />
         </Headline>
         {error && showError &&
-          <Error onClose={this.handleClearError} message={error.message} />
+          <Notification
+            status="error"
+            onClose={this.handleClearError}
+            message={error.message}
+          />
         }
         <LoadingIndicator isLoading={loading} />
         <Section

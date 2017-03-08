@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Heading, Section, Hero, Paragraph, Button, Anchor } from 'openui';
+import { Heading, Section, Hero, Paragraph, Button, Anchor } from 'ui';
 import { Container, HeroLogo, HeroLogoRow, HeadingContainer, GetStartedButtons } from './styles';
 import { ThemeColorMap } from '../../types';
 

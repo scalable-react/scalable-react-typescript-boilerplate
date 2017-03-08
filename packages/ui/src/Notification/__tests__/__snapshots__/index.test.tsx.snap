@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Error /> default should render an Error element with only the required props 1`] = `
-<Box
+<Styled(Box)
   alignItems="center"
-  backgroundColor="#ff324d"
   boxSize={
     Object {
       "horizontal": "medium",
@@ -11,6 +10,7 @@ exports[`<Error /> default should render an Error element with only the required
   }
   pad="small"
   selectable={true}
+  status="none"
 >
   <Paragraph
     color="white"
@@ -18,13 +18,12 @@ exports[`<Error /> default should render an Error element with only the required
   >
     Mock error message
   </Paragraph>
-</Box>
+</Styled(Box)>
 `;
 
 exports[`<Error /> default should render an Error element with other props 1`] = `
-<Box
+<Styled(Box)
   alignItems="center"
-  backgroundColor="#ff324d"
   boxSize={
     Object {
       "horizontal": "medium",
@@ -33,6 +32,7 @@ exports[`<Error /> default should render an Error element with other props 1`] =
   onClick={[Function]}
   pad="small"
   selectable={true}
+  status="none"
 >
   <Paragraph
     color="white"
@@ -40,5 +40,5 @@ exports[`<Error /> default should render an Error element with other props 1`] =
   >
     Mock error message
   </Paragraph>
-</Box>
+</Styled(Box)>
 `;

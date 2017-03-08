@@ -14,7 +14,7 @@
     "paths": {
       "components/*": ["./components/*"],
       "containers/*": ["./containers/*"],
-      "openui": ["../../packages/openui/src/index"]
+      "ui": ["../../packages/ui/src/index"]
     }
   },
   "include": [

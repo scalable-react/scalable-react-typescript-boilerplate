@@ -18,7 +18,7 @@ module.exports = {
       components: path.resolve(ROOT_PATH, 'build/src/client/components'),
       containers: path.resolve(ROOT_PATH, 'build/src/client/containers'),
       shared: path.resolve(ROOT_PATH, 'build/src/client/shared'),
-      openui: path.resolve(ROOT_PATH, 'packages/openui/src'),
+      ui: path.resolve(ROOT_PATH, 'packages/ui/src'),
     },
   },
   module: {

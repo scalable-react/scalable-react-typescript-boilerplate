@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Article, Headline, LoadingIndicator, Section, Error } from 'openui';
+import { Article, Headline, LoadingIndicator, Section, Notification } from 'ui';
 import { StyledHr } from './styles';
 import { State } from './state';
 import {
@@ -51,7 +51,8 @@ export default class Feature extends React.Component<FeatureProps, undefined> {
           <StyledHr />
         </Headline>
         {error &&
-          <Error
+          <Notification
+            status="error"
             onClose={actions.clearError}
             message={error}
           />
