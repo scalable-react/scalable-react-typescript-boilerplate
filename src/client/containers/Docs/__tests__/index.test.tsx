@@ -1,8 +1,7 @@
-import configureStore from 'redux-mock-store';
+import * as React from 'react';
 import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
-import * as React from 'react';
 import DocsContainer from '../';
 import State from '../State';
 

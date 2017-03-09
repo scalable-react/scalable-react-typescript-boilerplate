@@ -1,5 +1,4 @@
 import reducer from '../reducer';
-import * as types from '../constants';
 import { actionCreators } from '../actionCreators';
 import { initialState } from '../state';
 
@@ -12,45 +11,28 @@ describe('docs reducer', () => {
 
   it('should handle LOAD_INTIATION', () => {
     expect(
-      reducer(initialState, actionCreators.loadInitiation()),
-    ).toEqual({
-      markdownContent: null,
-      error: null,
-      isLoading: true,
-    });
+      reducer(initialState, actionCreators.loadInitiation()).isLoading,
+    ).toEqual(true);
   });
 
   it('should handle LOAD_SUCCESS', () => {
     const testData: string = 'test string';
     expect(
-      reducer(initialState, actionCreators.loadSuccess(testData)),
-    ).toEqual({
-      markdownContent: testData,
-      error: null,
-      isLoading: false,
-    });
+      reducer(initialState, actionCreators.loadSuccess(testData)).markdownContent,
+    ).toEqual(testData);
   });
 
   it('should handle LOAD_FAILURE', () => {
     const testMessage: string = 'test error message';
     expect(
-      reducer(initialState, actionCreators.loadFailure(testMessage)),
-    ).toEqual({
-      markdownContent: null,
-      error: testMessage,
-      isLoading: false,
-    });
+      reducer(initialState, actionCreators.loadFailure(testMessage)).error,
+    ).toEqual(testMessage);
   });
 
   it('should handle LOAD_CANCEL', () => {
-    const testMessage: string = 'test error message';
     expect(
-      reducer(initialState, actionCreators.loadCancel()),
-    ).toEqual({
-      markdownContent: null,
-      error: null,
-      isLoading: false,
-    });
+      reducer(initialState, actionCreators.loadCancel()).isLoading,
+    ).toEqual(false);
   });
 
 });

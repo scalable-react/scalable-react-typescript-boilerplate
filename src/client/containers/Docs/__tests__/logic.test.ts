@@ -1,5 +1,4 @@
 import { createMockStore } from 'redux-logic-test';
-import { createStore, applyMiddleware, Middleware } from 'redux';
 import * as actionTypes from '../constants';
 import rootLogic from '../logic';
 
