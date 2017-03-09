@@ -1,4 +1,4 @@
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import * as React from 'react';
 import { navbarProps } from './__mocks__/navBarMocks.mock';

@@ -1,7 +1,5 @@
-import reducer from '../reducer';
-import * as types from '../constants';
 import { actionCreators } from '../actionCreators';
-import { initialState } from '../state';
+import * as types from '../constants';
 
 // Action Creator Test as a rule return very little value. Focus on tests that give more value first
 

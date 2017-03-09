@@ -52,6 +52,7 @@
     "no-trailing-whitespace": true,
     "no-unused-expression": true,
     "no-use-before-declare": true,
+    "no-unused-variable":[true, "react"],
     "radix": true,
     "switch-default": true,
     "interface-name": [true, "never-prefix"],
