@@ -5,6 +5,9 @@
   "main": "/dist/index.js",
   "repository": "https://github.com/scalable-react/scalable-react-typescript-boilerplate",
   "license": "MIT",
+  "scripts": {
+    "prepublish": "tsc"
+  },
   "dependencies": {
     "add": "^2.0.6",
     "github-markdown-css": "^2.4.1",

@@ -822,6 +822,18 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
+openui@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/openui/-/openui-1.0.0.tgz#e2325cbe1731671538609ce88192857e0685033c"
+  dependencies:
+    add "^2.0.6"
+    github-markdown-css "^2.4.1"
+    react "^15.4.2"
+    react-dom "^15.4.2"
+    react-markdown "^2.4.5"
+    styled-components "^1.4.4"
+    yarn "^0.21.3"
+
 os-homedir@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
