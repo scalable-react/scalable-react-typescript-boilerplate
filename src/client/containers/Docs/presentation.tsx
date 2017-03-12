@@ -47,7 +47,7 @@ export default class Feature extends React.Component<FeatureProps, undefined> {
         backgroundColor="#f5f5f5"
       >
         <Headline fontWeight={700}>
-          Documentation
+          Hey there!
           <StyledHr />
         </Headline>
         {error &&
