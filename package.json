@@ -88,6 +88,7 @@
     "mongoose": "^4.8.5",
     "morgan": "^1.8.1",
     "node-env-file": "^0.1.8",
+    "openui": "^1.0.0",
     "plop": "^1.7.4",
     "precss": "^1.4.0",
     "react": "^15.4.1",

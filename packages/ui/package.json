@@ -6,14 +6,14 @@
   "repository": "https://github.com/scalable-react/scalable-react-typescript-boilerplate",
   "license": "MIT",
   "scripts": {
-    "prepublish": "tsc"
+    "prepublish": "rimraf dist && tsc"
   },
   "dependencies": {
-    "add": "^2.0.6",
     "github-markdown-css": "^2.4.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-markdown": "^2.4.5",
+    "rimraf": "^2.6.1",
     "styled-components": "^1.4.4",
     "yarn": "^0.21.3"
   }

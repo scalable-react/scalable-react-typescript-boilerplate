@@ -6,10 +6,6 @@ abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
 
-add@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
-
 ajv@^4.9.1:
   version "4.11.4"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.4.tgz#ebf3a55d4b132ea60ff5847ae85d2ef069960b45"
@@ -822,18 +818,6 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-openui@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/openui/-/openui-1.0.0.tgz#e2325cbe1731671538609ce88192857e0685033c"
-  dependencies:
-    add "^2.0.6"
-    github-markdown-css "^2.4.1"
-    react "^15.4.2"
-    react-dom "^15.4.2"
-    react-markdown "^2.4.5"
-    styled-components "^1.4.4"
-    yarn "^0.21.3"
-
 os-homedir@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
@@ -988,7 +972,7 @@ retry@^0.10.0:
   version "0.10.1"
   resolved "https://registry.yarnpkg.com/retry/-/retry-0.10.1.tgz#e76388d217992c252750241d3d3956fed98d8ff4"
 
-rimraf@2, rimraf@^2.5.0:
+rimraf@2, rimraf@^2.5.0, rimraf@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
   dependencies:
