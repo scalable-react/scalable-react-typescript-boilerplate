@@ -48,11 +48,13 @@ module.exports = {
       containers: path.resolve(ROOT_PATH, 'src/client/containers'),
       shared: path.resolve(ROOT_PATH, 'src/client/shared'),
       ui: path.resolve(ROOT_PATH, 'packages/ui/src'),
+      test: path.resolve(ROOT_PATH, 'src/client/test'),
+      root: path.resolve(ROOT_PATH, 'src/client/'),
     },
   },
   module: {
     loaders: [
-      { test: /\.tsx?$/, loaders: ['babel-loader', 'ts-loader'], include: path.join(__dirname, 'src') },
+      { test: /\.tsx?$/, loaders: ['babel-loader', 'ts-loader'], include: [path.join(__dirname, 'src'), path.resolve(__dirname, 'packages')] },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel-loader'], include: path.join(__dirname, 'src') },
       {
         test: /\.css$/,
@@ -84,22 +86,6 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: false
-    }),
-    new HtmlwebpackPlugin({
-      template: 'config/templates/_index.prod.html',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true,
-      },
-      inject: true,
     }),
     new webpack.LoaderOptionsPlugin({
       debug: false,

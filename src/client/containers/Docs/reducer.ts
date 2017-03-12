@@ -29,7 +29,10 @@ const reducer: Reducer<State> = (state: State = initialState, action: FeatureAct
       error: null,
     };
   case types.LOAD_CANCEL:
-    return initialState;
+    return {
+      ...state,
+      isLoading: false,
+    };
   default:
     return state;
   }

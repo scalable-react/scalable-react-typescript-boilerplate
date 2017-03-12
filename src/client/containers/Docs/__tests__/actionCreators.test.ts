@@ -1,7 +1,5 @@
-import reducer from '../reducer';
 import * as types from '../constants';
 import { actionCreators } from '../actionCreators';
-import { initialState } from '../state';
 
 // Action Creator Test as a rule return very little value. Focus on tests that give more value first
 
@@ -39,7 +37,6 @@ describe('docs actionCreators', () => {
     });
 
     it('properly creates LOAD_SUCCESS action', () => {
-      const testMessage: string = 'test error Message';
       expect(actionCreators.clearError(),
       ).toEqual({
         type: types.CLEAR_ERROR,

@@ -1,12 +1,10 @@
-import configureStore from 'redux-mock-store';
-import { Provider } from 'react-redux';
-import { shallow } from 'enzyme';
-import { shallowToJson } from 'enzyme-to-json';
 import * as React from 'react';
 import Container from '../';
 import State from '../State';
-
-import mockStore from '../../../test/mockstore';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
+import { Provider } from 'react-redux';
+import mockStore from 'test/mockstore';
 
 const testState: State = {
   isMobile: true,

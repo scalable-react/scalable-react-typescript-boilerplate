@@ -1,5 +1,4 @@
 import reducer from '../reducer';
-import * as T from '../constants';
 import actionCreators from '../actionCreators';
 import { initialState } from '../state';
 

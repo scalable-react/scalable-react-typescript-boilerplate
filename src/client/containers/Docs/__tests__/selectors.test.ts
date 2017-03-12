@@ -1,6 +1,4 @@
-import reducer from '../reducers';
-import * as types from '../constants';
-import { selectIsLoading, selectMarkdownContent, selectError } from '../selectors';
+import { selectIsLoading, selectError } from '../selectors';
 import { State } from '../../../State';
 
 const testError: string = 'some error';
@@ -8,6 +6,8 @@ const testMarkDown: string = '#Test Markdown';
 
 const testState: State = {
   app: {},
+  todoApp: null,
+  blogPost: null,
   docs: {
     error: null,
     isLoading: false,
@@ -17,6 +17,8 @@ const testState: State = {
 
 const testState2: State = {
   app: {},
+  todoApp: null,
+  blogPost: null,
   docs: {
     error: testError,
     isLoading: true,

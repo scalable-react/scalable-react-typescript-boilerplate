@@ -1,10 +1,5 @@
-import reducer from '../reducers';
-import * as types from '../constants';
 import { selectIsMobile, selectLogoText, selectNavLinks } from '../selectors';
 import { State } from '../../../State';
-
-const testError: string = 'some error';
-const testMarkDown: string = '#Test Markdown';
 
 const testState: State = {
   app: {
