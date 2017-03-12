@@ -1,6 +1,6 @@
 {
   "name": "openui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An open ui kit made with React and TypeScript",
   "main": "/dist/index.js",
   "repository": "https://github.com/scalable-react/scalable-react-typescript-boilerplate",

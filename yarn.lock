@@ -289,10 +289,6 @@ acorn@^3.0.0, acorn@^3.0.4:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
 
-add@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
-
 airbnb-js-shims@^1.0.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/airbnb-js-shims/-/airbnb-js-shims-1.1.1.tgz#27224f0030f244e6570442ed1020772c1434aec2"
@@ -5830,15 +5826,15 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-openui@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/openui/-/openui-1.0.0.tgz#e2325cbe1731671538609ce88192857e0685033c"
+openui@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/openui/-/openui-1.0.1.tgz#9e074c6604d8cfab1dad232db5312f6ef55178a8"
   dependencies:
-    add "^2.0.6"
     github-markdown-css "^2.4.1"
     react "^15.4.2"
     react-dom "^15.4.2"
     react-markdown "^2.4.5"
+    rimraf "^2.6.1"
     styled-components "^1.4.4"
     yarn "^0.21.3"
 
