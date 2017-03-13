@@ -1,6 +1,17 @@
 ![TypeScript](https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png)
 
-# Scalable React TS Boilerplate [![Build Status](https://travis-ci.org/scalable-react/scalable-react-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/scalable-react/scalable-react-typescript-boilerplate) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+# Scalable React TS Boilerplate
+[![Build Status](https://travis-ci.org/scalable-react/scalable-react-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/scalable-react/scalable-react-typescript-boilerplate)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![PRs Welcome][prs-badge]][prs]
+[![Donate][donate-badge]][donate]
+[![Code of Conduct][coc-badge]][coc]
+[![Roadmap][roadmap-badge]][roadmap]
+[![Examples][examples-badge]][examples]
+
+[![Watch on GitHub][github-watch-badge]][github-watch]
+[![Star on GitHub][github-star-badge]][github-star]
+[![Tweet][twitter-badge]][twitter]
 
 Checkout [our website](https://scalable-react-ts-boilerplate.herokuapp.com/) for documentation and examples.
 
