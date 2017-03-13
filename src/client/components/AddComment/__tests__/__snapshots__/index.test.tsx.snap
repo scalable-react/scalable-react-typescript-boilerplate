@@ -8,13 +8,13 @@ exports[`<AddComment /> rendering should render with supplied props 1`] = `
   <styled.div>
     <form>
       <styled.textarea
-        cols="30"
+        cols={30}
         id="comment-input"
         name="comment-input"
         onChange={[Function]}
         onKeyUp={[Function]}
         placeholder="Add comment..."
-        rows="3"
+        rows={3}
         value="Mock input for test"
       />
     </form>

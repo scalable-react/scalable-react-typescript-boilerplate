@@ -6,8 +6,7 @@ import client from './apolloClient';
 import store, { history } from './store';
 import { App, Home, Docs, About, TodoApp, Blog, BlogPost } from './containers';
 import colors from './theming';
-
-const ReactGA = require('react-ga');
+import { ReactGA } from 'react-ga';
 
 if (typeof window !== 'undefined') {
   ReactGA.initialize('UA-89939143-1');
