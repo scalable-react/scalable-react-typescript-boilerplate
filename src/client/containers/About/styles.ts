@@ -1,25 +1,32 @@
-const styled = require('styled-components').default;
+import styled from 'styled-components';
 
 export const Container = styled.div`
   min-height: calc(100vh - 54px);
   width: 100vw;
 `;
 
+interface AboutSectionProps {
+ padBottom?: boolean
+}
+
 export const AboutSection = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: #f5f5f5;
-  padding-bottom: ${(props) => props.padBottom ? 100 : 0}px;
+  padding-bottom: ${(props: AboutSectionProps) => props.padBottom ? 100 : 0}px;
 `;
 
+interface AboutSectionInnerProps {
+ reverse?: boolean
+}
 export const AboutSectionInner = styled.div`
   padding: 30px 60px;
   display: flex;
   margin-top: 60px;
   flex-direction: row;
   @media screen and (max-width: 768px) {
-    flex-wrap: ${(props) => props.reverse ? 'wrap-reverse' : 'wrap'};
+    flex-wrap: ${(props: AboutSectionInnerProps) => props.reverse ? 'wrap-reverse' : 'wrap'};
     padding: 60px 20px;
     margin-top: 0px;
   }

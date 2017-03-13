@@ -9,9 +9,9 @@ export interface PostProps {
   title: string;
   comments?: PostComment[];
   comment: {
-    onSubmit: Function;
-    onChange: Function;
     input: string;
-    onKeyUp: Function;
+    onSubmit: React.EventHandler<React.MouseEvent<HTMLLIElement>>;
+    onChange: React.EventHandler<React.FormEvent<HTMLTextAreaElement>>;
+    onKeyUp: React.EventHandler<React.KeyboardEvent<HTMLTextAreaElement>>;
   }
 }

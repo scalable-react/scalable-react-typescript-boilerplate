@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Features } from 'containers';
 import { ThemeColorMap } from '../../types';
 import HomePresentation from './presentation';
-const { withTheme } = require('styled-components');
+import { withTheme } from 'styled-components';
 
 interface Props { theme: ThemeColorMap; }
 class Home extends React.Component<Props, undefined> {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 import RouterApp from './routes';
-const { AppContainer } = require('react-hot-loader');
+import { AppContainer } from 'react-hot-loader';
 import './theming/globalCss';
 
 declare var module: { hot: any };

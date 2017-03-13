@@ -10,7 +10,7 @@ import {
   FeatureSectionInner,
 } from './styles';
 import features from './features';
-const { withTheme } = require('styled-components');
+import { withTheme } from 'styled-components';
 
 class Features extends React.Component<Props, undefined> {
   public render() {
