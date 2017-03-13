@@ -3,15 +3,10 @@
 # Scalable React TS Boilerplate
 [![Build Status](https://travis-ci.org/scalable-react/scalable-react-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/scalable-react/scalable-react-typescript-boilerplate)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![PRs Welcome][prs-badge]][prs]
-[![Donate][donate-badge]][donate]
-[![Code of Conduct][coc-badge]][coc]
-[![Roadmap][roadmap-badge]][roadmap]
-[![Examples][examples-badge]][examples]
-
-[![Watch on GitHub][github-watch-badge]][github-watch]
-[![Star on GitHub][github-star-badge]][github-star]
-[![Tweet][twitter-badge]][twitter]
+[![Roadmap](https://camo.githubusercontent.com/de5f01c39b77893278b0f44ebf20ecca32adb13c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2546302539462539332539342d726f61646d61702d4344393532332e7376673f7374796c653d666c61742d737175617265)](https://github.com/scalable-react/scalable-react-typescript-boilerplate#roadmap)
+[![Star on Github](https://img.shields.io/github/stars/scalable-react/scalable-react-typescript-boilerplate.svg?style=social)](https://github.com/scalable-react/scalable-react-typescript-boilerplate/stargazers)
+[![Watch on Github](https://img.shields.io/github/watchers/scalable-react/scalable-react-typescript-boilerplate.svg?style=social)](https://github.com/scalable-react/scalable-react-typescript-boilerplate/watchers)
+[![Tweet](https://img.shields.io/twitter/url/https/github.com/scalable-react/scalable-react-typescript-boilerplate.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20scalable-react-typescript-boilerplate!%20https://github.com/scalable-react/scalable-react-typescript-boilerplate%20%F0%9F%91%8D)
 
 Checkout [our website](https://scalable-react-ts-boilerplate.herokuapp.com/) for documentation and examples.
 
