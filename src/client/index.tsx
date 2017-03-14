@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import RouterApp from './routes';
 import { AppContainer } from 'react-hot-loader';
 import './theming/globalCss';
+import NextApp from './routes';
 
 declare var module: { hot: any };
 
@@ -17,7 +18,6 @@ render(
 
 if (module.hot) {
   module.hot.accept('./routes', () => {
-    const NextApp = require('./routes').default;
     render(
       <AppContainer>
          <NextApp />

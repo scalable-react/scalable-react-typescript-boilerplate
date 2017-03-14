@@ -19,7 +19,7 @@ export default function Error({
       alignItems="center"
       selectable
     >
-      <Paragraph size="large" color="white">{message}</Paragraph>
+      <Paragraph paragraphSize="large" color="white">{message}</Paragraph>
     </Box>
   );
 };

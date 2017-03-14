@@ -208,6 +208,10 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-ga@^1.4.7":
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/@types/react-ga/-/react-ga-1.4.7.tgz#1cc7737e3e22ef84f73fb43b08168e9cf0eaa2c3"
+
 "@types/react-redux@^4.4.35":
   version "4.4.36"
   resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-4.4.36.tgz#5d1e768f3291c66c8e54d8a48e42f7cb554a7d87"

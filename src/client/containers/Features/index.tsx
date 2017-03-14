@@ -24,7 +24,7 @@ class Features extends React.Component<Props, undefined> {
           <FeatureSectionInner>
             <Feature>
               <Image
-                size="small"
+                imageSize="small"
                 alt="Type-Script Logo"
                 src="https://raw.githubusercontent.com/RyanCCollins/cdn/master/stsb-images/ts-resized-2.png"
               />
@@ -67,7 +67,7 @@ class Features extends React.Component<Props, undefined> {
             </Feature>
             <Feature>
               <Image
-                size="small"
+                imageSize="small"
                 alt="Styled-components logo"
                 src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc.png?raw=true"
               />
@@ -75,7 +75,7 @@ class Features extends React.Component<Props, undefined> {
           </FeatureSectionInner>
           <FeatureImage>
             <Image
-              size="small"
+              imageSize="small"
               alt="Styled-components example"
               src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/sc-example.png?raw=true"
             />
@@ -85,7 +85,7 @@ class Features extends React.Component<Props, undefined> {
           <FeatureSectionInner>
             <Feature>
               <Image
-                size="small"
+                imageSize="small"
                 alt="feature-first logo"
                 src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first.png?raw=true"
               />
@@ -101,7 +101,7 @@ class Features extends React.Component<Props, undefined> {
           </FeatureSectionInner>
           <FeatureImage>
             <Image
-              size="medium"
+              imageSize="medium"
               alt="feature-first example"
               src="https://github.com/RyanCCollins/cdn/blob/master/stsb-images/feature-first-example.png?raw=true"
             />
