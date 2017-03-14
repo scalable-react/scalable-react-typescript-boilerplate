@@ -1,3 +1,4 @@
+![WIP](http://vignette3.wikia.nocookie.net/gotascent/images/c/c0/Work_In_Progress.png/revision/latest?cb=20140715110801)
 __NOTICE__: This repository is in active development.  We encourage usage and pull requests, but please be advised that it is changing fast!
 
 ![TypeScript](https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png)
