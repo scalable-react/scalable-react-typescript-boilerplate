@@ -20,6 +20,7 @@ import Markdown from './Markdown';
 import Headline from './Headline';
 import LoadingIndicator from './LoadingIndicator';
 import Avatar from './Avatar';
+import Pic from './Pic';
 
 export {
   /* GENERATOR-EXPORT */
@@ -44,4 +45,5 @@ export {
   Markdown,
   Headline,
   LoadingIndicator,
+  Pic,
 };

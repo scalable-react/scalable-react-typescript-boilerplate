@@ -1,4 +1,4 @@
-const styled = require('styled-components').default;
+import styled from 'styled-components';
 
 export const FooterComponent = styled.footer`
   background: ${(props) => props.color};

@@ -31,8 +31,8 @@ export default function AddComment({
             onChange={onChange}
             name="comment-input"
             id="comment-input"
-            cols="30"
-            rows="3"
+            cols={30}
+            rows={3}
             placeholder="Add comment..."
           />
         </form>

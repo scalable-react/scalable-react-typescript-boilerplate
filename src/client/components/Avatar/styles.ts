@@ -1,9 +1,8 @@
 import remStringFromPx from '../utils';
 import map from './maps';
-import { Props } from './types';
+import { Props } from './index';
 import defaultUrl from './default';
-const styled = require('styled-components').default;
-const { css } = require('styled-components');
+import { css } from 'styled-components';
 
 const propsToSize = ({ size }: Props) => {
   const imageSize = size || 'medium';
@@ -15,7 +14,7 @@ const propsToSize = ({ size }: Props) => {
   `;
 };
 
-export default styled.div`
+export const AvatarStyle = css`
   background: url(${({ src }) => src || defaultUrl});
   background-size: cover;
   background-position: center;

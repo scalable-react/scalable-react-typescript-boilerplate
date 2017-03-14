@@ -1,5 +1,5 @@
 import * as React from 'react';
-const { HeroButton, ButtonComponent} = require('./styles');
+import { HeroButton, ButtonComponent} from './styles';
 
 export enum ButtonSize {
   xsmall = 10,

@@ -1,4 +1,4 @@
-import { Tag } from './types';
+import { Tag } from './index';
 import remStringFromPX from '../utils';
 
 const sizeMap = {

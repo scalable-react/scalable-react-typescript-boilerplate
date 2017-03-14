@@ -1,4 +1,4 @@
-const styled = require('styled-components').default;
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   min-height: 5.3125rem;

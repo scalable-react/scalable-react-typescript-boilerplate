@@ -12,12 +12,12 @@ exports[`<Error /> default should render an Error element with only the required
   pad="small"
   selectable={true}
 >
-  <Paragraph
+  <styled.p
     color="white"
-    size="large"
+    paragraphSize="large"
   >
     Mock error message
-  </Paragraph>
+  </styled.p>
 </Box>
 `;
 
@@ -30,15 +30,14 @@ exports[`<Error /> default should render an Error element with other props 1`] =
       "horizontal": "medium",
     }
   }
-  onClick={[Function]}
   pad="small"
   selectable={true}
 >
-  <Paragraph
+  <styled.p
     color="white"
-    size="large"
+    paragraphSize="large"
   >
     Mock error message
-  </Paragraph>
+  </styled.p>
 </Box>
 `;

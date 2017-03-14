@@ -1,12 +1,11 @@
-import { Margin } from './types';
+import { css } from 'styled-components';
+import { Margin, ParagraphProps } from './index';
 import calculateSize, { calculateMargin } from './styleUtils';
-const styled = require('styled-components').default;
-const { css } = require('styled-components');
 
-const defaultProps = {
+const defaultProps: ParagraphProps = {
   color: '#fff',
   textAlign: 'center',
-  size: 'medium',
+  paragraphSize: 'medium',
   margin: 'medium',
 };
 
@@ -17,10 +16,12 @@ export function marginCss(margin: Margin) {
   `;
 };
 
-export default styled.p`
+export const style = css`
   max-width: 630px;
-  text-align: ${(props) => props.textAlign || defaultProps.textAlign};
+  text-align: ${(props: ParagraphProps) => props.textAlign || defaultProps.textAlign};
   color: ${(props) => props.color || defaultProps.color};
-  ${(props) => marginCss(props.margin || defaultProps.margin)};
-  font-size: ${(props) => calculateSize(props.size || defaultProps.size)};
+  ${(props: ParagraphProps) => marginCss(props.margin || defaultProps.margin)};
+  font-size: ${(props: ParagraphProps) => calculateSize(props.paragraphSize || defaultProps.paragraphSize)};
 `;
+
+export default style;
