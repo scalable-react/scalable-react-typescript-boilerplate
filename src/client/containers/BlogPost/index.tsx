@@ -6,10 +6,10 @@ import BlogPresentation from './presentation';
 import { ThemeColorMap } from '../../types';
 import { Props, ActionCreatorTypes, ActionTypes, Input, ErrorType, Post, SubmitComment } from './types';
 import { State } from '../../state';
-import withApollo from './apollo';
 import { selectInput } from './selectors';
 import actionCreators from './actionCreators';
-const { withTheme } = require('styled-components');
+import withApollo from './apollo';
+import { withTheme } from 'styled-components';
 
 type MapStateToProps = (state: State) => StateProps;
 const mapStateToProps: MapStateToProps = (state) => ({
@@ -87,7 +87,10 @@ class BlogPost extends React.Component<PropTypes, undefined> {
   }
 }
 
+const ComponentWithData = withApollo(BlogPost);
+const ComponentWithTheme = withTheme(ComponentWithData as typeof BlogPost);
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(withTheme(withApollo(BlogPost)));
+)(ComponentWithTheme);

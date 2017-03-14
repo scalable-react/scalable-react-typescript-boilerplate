@@ -1,4 +1,5 @@
 import { graphql } from 'react-apollo';
+import BlogPost from './';
 import PostQuery from './postQuery.graphql';
 import CommentMutation from './commentMutation.graphql';
 
@@ -23,5 +24,7 @@ export const withMutation = graphql(CommentMutation, {
   }),
 });
 
-export default (component) =>
+const withApollo = (component: typeof BlogPost): typeof BlogPost =>
   withData(withMutation(component));
+
+export default withApollo;
