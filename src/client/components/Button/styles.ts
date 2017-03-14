@@ -23,7 +23,7 @@ interface HeroButtonProps {
 }
 
 export const HeroButton = styled.button`
-  background-color: ${(props:HeroButtonProps) => props.backgroundColor};
+  background-color: ${(props: HeroButtonProps) => props.backgroundColor};
   color: ${(props) => props.color};
   padding: 20px 20px;
   line-height: 16px;

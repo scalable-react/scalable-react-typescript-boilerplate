@@ -1,6 +1,3 @@
-import * as React from 'react';
-import Box from './';
-
 export type Size = 'none' | 'small' | 'medium' | 'large' | 'xlarge';
 export interface SizeObject { horizontal?: Size; vertical?: Size; };
 export type Breakpoint = 'mobile' | 'tablet' | 'desktop';
@@ -22,7 +19,7 @@ export interface SizeStyle {
   width: string;
 }
 
-interface BoxProps extends React.HTMLProps<typeof Box> {
+interface BoxProps {
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
   flexDirection?: 'row' | 'column';
   justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
@@ -36,6 +33,7 @@ interface BoxProps extends React.HTMLProps<typeof Box> {
   backgroundImage?: string;
   full?: boolean | { horizontal?: boolean, vertical?: boolean };
   selectable?: boolean;
+  onClick?: React.EventHandler<React.MouseEvent<HTMLDivElement>>;
 };
 
 export default BoxProps;

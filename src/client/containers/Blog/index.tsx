@@ -34,7 +34,7 @@ class Blog extends React.Component<BlogProps, BlogState> {
           <StyledHr />
         </Headline>
         {error && showError &&
-          <Error onClose={this.handleClearError} message={error.message} />
+          <Error onClick={this.handleClearError} message={error.message} />
         }
         <LoadingIndicator isLoading={loading} />
         <Section

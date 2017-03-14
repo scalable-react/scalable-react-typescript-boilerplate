@@ -1,11 +1,7 @@
-import styled from 'styled-components';
-import { PicProps } from './types';
+import { css } from 'styled-components';
+import {PicProps} from './index';
 
-export interface PicProps {
-  url?: string;
-}
-
-export const Pic = styled.div`
+export const PicStyle = css`
   height: 2.25rem;
   width: 2.25rem;
   border-radius: 50%;

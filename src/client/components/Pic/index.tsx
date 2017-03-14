@@ -1,18 +1,12 @@
-import * as React from 'react';
-import { PicProps } from './types';
-import {
-  StyledPic,
-} from './styles';
+import styled from 'styled-components';
+import {PicStyle} from './styles';
 
-export interface PicProps extends React.Props<typeof Pic> {
+export interface PicProps {
   url?: string;
 }
 
-export default function Pic({
-  url,
-}: PicProps): JSX.Element {
+export const Pic = styled.div`
+  ${PicStyle}
+`;
 
-  return (
-    <StyledPic url={url}/>
-  );
-}
+export default Pic;

@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 interface AboutSectionProps {
- padBottom?: boolean
+  padBottom?: boolean
 }
 
 export const AboutSection = styled.section`
@@ -18,7 +18,7 @@ export const AboutSection = styled.section`
 `;
 
 interface AboutSectionInnerProps {
- reverse?: boolean
+  reverse?: boolean
 }
 export const AboutSectionInner = styled.div`
   padding: 30px 60px;
