@@ -1,6 +1,3 @@
-import * as React from 'react';
-import Box from './';
-
 export type Size = 'none' | 'small' | 'medium' | 'large' | 'xlarge';
 export interface SizeObject { horizontal?: Size; vertical?: Size; };
 export type Breakpoint = 'mobile' | 'tablet' | 'desktop';
@@ -11,7 +8,7 @@ export interface ResponsiveSize {
 }
 export type BoxSize =  'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'full';
 export interface BoxSizeObject { horizontal?: BoxSize; vertical?: BoxSize; };
-export interface FullObject { horizontal: boolean; vertical: boolean; };
+export interface FullObject { horizontal?: boolean; vertical?: boolean; };
 export type Full = boolean | FullObject;
 export type WrapOption = 'wrap' | 'wrap-reverse' | 'nowrap';
 export type Rem = number;
@@ -22,7 +19,7 @@ export interface SizeStyle {
   width: string;
 }
 
-interface BoxProps extends React.HTMLProps<typeof Box> {
+export interface BoxProps {
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
   flexDirection?: 'row' | 'column';
   justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
@@ -34,8 +31,9 @@ interface BoxProps extends React.HTMLProps<typeof Box> {
   margin?: Size | SizeObject;
   backgroundColor?: string;
   backgroundImage?: string;
-  full?: boolean | { horizontal?: boolean, vertical?: boolean };
+  full?: Full;
   selectable?: boolean;
+  onClick?: React.EventHandler<React.MouseEvent<HTMLDivElement>>;
 };
 
 export default BoxProps;

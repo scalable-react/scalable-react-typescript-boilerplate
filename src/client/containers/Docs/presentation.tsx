@@ -52,7 +52,7 @@ export default class Feature extends React.Component<FeatureProps, undefined> {
         </Headline>
         {error &&
           <Error
-            onClose={actions.clearError}
+            onClick={actions.clearError}
             message={error}
           />
         }

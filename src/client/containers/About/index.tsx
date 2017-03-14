@@ -64,7 +64,7 @@ class About extends React.Component<undefined, undefined> {
                   </Content>
                   <CardFooter>
                     <Anchor href={contributor.github}>
-                      <Image alt="github logo" src={about.githubLogo} size="thumb" />
+                      <Image alt="github logo" src={about.githubLogo} imageSize="small"/>
                     </Anchor>
                   </CardFooter>
                 </AvatarContainer>

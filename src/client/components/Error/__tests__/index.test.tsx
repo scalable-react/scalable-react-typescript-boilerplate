@@ -19,19 +19,19 @@ describe('<Error /> default', () => {
   });
 });
 
-describe('The onClose prop should trigger with an onClick event', () => {
+describe('The onClick prop should trigger with an onClick event', () => {
   let mockFunction;
   let error;
 
   beforeEach(() => {
     mockFunction = jest.fn();
     error = mount(
-      <Error {...ErrorPropsRequired} onClose={mockFunction} />,
+      <Error {...ErrorPropsRequired} onClick={mockFunction} />,
     );
   });
 
-  it('Error requires onClose prop', () => {
-    expect(error.props().onClose).toBeDefined();
+  it('Error requires onClick prop', () => {
+    expect(error.props().onClick).toBeDefined();
   });
 
   it('Error rendered with Box - an HTML div element', () => {
