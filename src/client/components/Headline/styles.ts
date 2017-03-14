@@ -1,12 +1,13 @@
 import { marginCss } from '../Paragraph/styles';
 import calculateSize from './styleUtils';
-const styled = require('styled-components').default;
+import {css} from 'styled-components';
+import { HeadlineProps } from './index';
 
-export const HeadlineStyled = styled.h1`
+export const HeadlineStyle = css`
   text-align: center;
-  font-size: ${(props) => calculateSize(props.size)};
-  text-align: ${(props) => props.textAlign};
-  color: ${(props) => props.color};
-  font-weight: ${(props) => props.fontWeight};
-  ${(props) => marginCss(props.margin)};
+  font-size: ${(props: HeadlineProps) => calculateSize(props.size)};
+  text-align: ${(props: HeadlineProps) => props.textAlign};
+  color: ${(props: HeadlineProps) => props.color};
+  font-weight: ${(props: HeadlineProps) => props.fontWeight};
+  ${(props: HeadlineProps) => marginCss(props.margin)};
 `;

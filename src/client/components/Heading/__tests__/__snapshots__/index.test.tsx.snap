@@ -1,66 +1,161 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Heading /> should render with default props 1`] = `
-<styled.h1
+<h1
+  0="
+  font-size: "
+  1={[Function]}
+  10=";
+  "
+  11={[Function]}
+  12=";
+"
+  2=";
+  text-align: "
+  3={[Function]}
+  4=";
+  color: "
+  5={[Function]}
+  6=";
+  "
+  7={[Function]}
+  8=";
+  "
+  9={[Function]}
   color="#007acc"
   margin="medium"
-  tag="h1"
   textAlign="center"
   truncate={false}
   upcase={false}
 >
   Test
-</styled.h1>
+</h1>
 `;
 
 exports[`<Heading /> should render with h2 props 1`] = `
-<styled.h2
+<h2
+  0="
+  font-size: "
+  1={[Function]}
+  10=";
+  "
+  11={[Function]}
+  12=";
+"
+  2=";
+  text-align: "
+  3={[Function]}
+  4=";
+  color: "
+  5={[Function]}
+  6=";
+  "
+  7={[Function]}
+  8=";
+  "
+  9={[Function]}
   color="#333"
   margin="none"
-  tag="h2"
   textAlign="left"
   truncate={true}
   upcase={false}
 >
   Test
-</styled.h2>
+</h2>
 `;
 
 exports[`<Heading /> should render with h3 props 1`] = `
-<styled.h3
+<h3
+  0="
+  font-size: "
+  1={[Function]}
+  10=";
+  "
+  11={[Function]}
+  12=";
+"
+  2=";
+  text-align: "
+  3={[Function]}
+  4=";
+  color: "
+  5={[Function]}
+  6=";
+  "
+  7={[Function]}
+  8=";
+  "
+  9={[Function]}
   color="#333"
   margin="none"
-  tag="h3"
   textAlign="left"
   truncate={true}
   upcase={false}
 >
   Test
-</styled.h3>
+</h3>
 `;
 
 exports[`<Heading /> should render with h4 props 1`] = `
-<styled.h4
+<h4
+  0="
+  font-size: "
+  1={[Function]}
+  10=";
+  "
+  11={[Function]}
+  12=";
+"
+  2=";
+  text-align: "
+  3={[Function]}
+  4=";
+  color: "
+  5={[Function]}
+  6=";
+  "
+  7={[Function]}
+  8=";
+  "
+  9={[Function]}
   color="#333"
   margin="none"
-  tag="h4"
   textAlign="left"
   truncate={true}
   upcase={false}
 >
   Test
-</styled.h4>
+</h4>
 `;
 
 exports[`<Heading /> should render with h5 props 1`] = `
-<styled.h5
+<h5
+  0="
+  font-size: "
+  1={[Function]}
+  10=";
+  "
+  11={[Function]}
+  12=";
+"
+  2=";
+  text-align: "
+  3={[Function]}
+  4=";
+  color: "
+  5={[Function]}
+  6=";
+  "
+  7={[Function]}
+  8=";
+  "
+  9={[Function]}
   color="#333"
   margin="none"
-  tag="h5"
   textAlign="left"
   truncate={true}
   upcase={false}
 >
   Test
-</styled.h5>
+</h5>
 `;

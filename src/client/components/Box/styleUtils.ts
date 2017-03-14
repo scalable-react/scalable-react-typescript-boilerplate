@@ -1,4 +1,4 @@
-const { css } = require('styled-components');
+import { css } from 'styled-components';
 import { BREAKPOINTS } from './maps';
 import {
   Size,
@@ -99,12 +99,10 @@ export function calculateFullStyle(full: Full, postFix: 'vw' | 'vh'): string {
 }
 
 export const breakPointCss = (breakPoint: Breakpoint) => {
-  const selector = breakPoint === 'desktop'
-    ? 'min-width'
-    : 'max-width';
+  const selector = breakPoint === 'desktop' ? 'min-width' : 'max-width';
   return css`
     @media screen and (${selector}: ${BREAKPOINTS.phone}) {
-      padding: ${({ pad }) => sizeToString(pad)};
+      padding: ${({ pad }: any) => sizeToString(pad)};
     }
   `;
 };

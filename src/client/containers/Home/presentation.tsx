@@ -31,7 +31,7 @@ export default function HomePresentation({
             <Heading margin="small" tag="h1" color={theme.primary}>
               Scalable React TypeScript Boilerplate
             </Heading>
-            <Paragraph margin="small" size="large">
+            <Paragraph margin="small" paragraphSize="large">
               Scaling JavaScript apps has never been easier
             </Paragraph>
           </HeadingContainer>

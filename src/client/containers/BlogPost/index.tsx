@@ -9,6 +9,7 @@ import { State } from '../../state';
 import withApollo from './apollo';
 import { selectInput } from './selectors';
 import actionCreators from './actionCreators';
+// import { withTheme } from 'styled-components';
 const { withTheme } = require('styled-components');
 
 type MapStateToProps = (state: State) => StateProps;

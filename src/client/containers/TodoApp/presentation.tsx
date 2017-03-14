@@ -15,9 +15,9 @@ import {
 } from './styles';
 
 interface Props extends StateProps {
-  onInput: Function;
-  onDeletion: Function;
-  onAddition: Function;
+  onInput: React.EventHandler<React.FormEvent<HTMLInputElement>>;
+  onDeletion: (index: number) => void;
+  onAddition: React.EventHandler<React.KeyboardEvent<HTMLInputElement>>;
 }
 class TodoAppPresentation extends React.Component<Props, undefined> {
   public render() {
