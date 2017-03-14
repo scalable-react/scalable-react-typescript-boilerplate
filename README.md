@@ -1,3 +1,5 @@
+__NOTICE__: This repository is in active development.  We encourage usage and pull requests, but please be advised that it is changing fast!
+
 ![TypeScript](https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png)
 
 # Scalable React TS Boilerplate
