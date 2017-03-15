@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Margin } from '../Paragraph/types';
+import styled from 'styled-components';
 import { HeaderStyle } from './styles';
 
 export type Tag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
@@ -26,11 +27,13 @@ class Heading extends React.Component<HeadingProps, undefined> {
     const { children, tag, ...rest } = this.props;
     const Tag = `${tag}`;
     return (
-      <Tag {...HeaderStyle} {...rest}>
+      <Tag {...rest}>
         {children}
       </Tag>
     );
   }
 }
 
-export default Heading;
+export default styled(Heading)`
+  ${HeaderStyle}
+`;
