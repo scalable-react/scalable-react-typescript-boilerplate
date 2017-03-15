@@ -30,6 +30,10 @@ const globalCss = injectGlobal`
     line-height: inherit;
     cursor: pointer;
   }
+
+  .markdown-body {
+    max-width: 100% !important;
+  }
 `;
 
 export default globalCss;

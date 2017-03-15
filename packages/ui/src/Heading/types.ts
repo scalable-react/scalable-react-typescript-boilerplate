@@ -1,1 +1,1 @@
-export * from './index';
+export { Props, Tag } from './index';

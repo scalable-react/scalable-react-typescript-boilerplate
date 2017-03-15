@@ -1,8 +1,7 @@
 import * as React from 'react';
+import { Markdown } from 'ui';
 import Component from './styles';
 import { ArticleProps } from './types';
-import Markdown from 'react-markdown';
-import 'github-markdown-css/github-markdown.css';
 
 export default function Article({
   content,
@@ -12,7 +11,7 @@ export default function Article({
   return (
     <Component {...rest} className="markdown-body">
       {content && typeof content === 'string' &&
-        <Markdown source={content} />
+        <Markdown content={content} />
       }
       {children}
     </Component>
