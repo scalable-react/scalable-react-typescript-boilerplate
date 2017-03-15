@@ -1,12 +1,12 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import { Notification } from 'ui';
+import { Toast } from 'ui';
 import { 
   withKnobs,
   string,
   color,
   select
- } from '@kadira/storybook-addon-knobs';
+} from '@kadira/storybook-addon-knobs';
 
 const statusOptions = {
   none: 'none',
@@ -15,12 +15,12 @@ const statusOptions = {
   error: 'error',
 };
 
-const stories = storiesOf('Notification', module);
+const stories = storiesOf('Toast', module);
 stories.addDecorator(withKnobs);
 
 stories
   .addWithInfo(
-    'default notification',
+    'default toast',
     `
       Properties:
 
@@ -28,24 +28,24 @@ stories
       
       A node containing a message to show on the notification.
 
-      \`onClick?: {function()}\`
+      \`onClose?: {function()}\`
 
-      A callback to handle closing the notification on click.
+      A callback to handle closing the notification on clicking the closer.
 
       \`status?: {'ok' | 'warning' | 'error' | 'none'}\`
 
-      Status of the notification, which determines color of the background box.
+      Status of the toast, which determines color of the background box.
 
       ~~~js
-        <Notification
+        <Toast
           onClick={this.handleClose}
           status="warning"
           message="All systems failed."
         />
       ~~~
     `, () =>
-        <Notification
-          onClick={action('Clicked notification onClick')}
+        <Toast
+          onClose={action('Clicked notification onClick')}
           status={select('status', statusOptions, 'warning')}
           message="All systems failed."
         />,

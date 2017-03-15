@@ -7,7 +7,6 @@ import { Status } from './types';
 export interface Props extends BoxProps {
   message?: JSX.Element;
   children?: JSX.Element;
-  isVisible?: boolean;
   onClose?: () => void;
   status?: Status;
 }

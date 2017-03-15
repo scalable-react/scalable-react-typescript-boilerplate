@@ -9,6 +9,13 @@ import {
   text
 } from '@kadira/storybook-addon-knobs';
 
+const sizeOptions = {
+  xsmall: 'xsmall',
+  small: 'small',
+  medium: 'medium',
+  large: 'large',
+  xlarge: 'xlarge'
+};
 
 const stories = storiesOf('Button', module);
 stories.addDecorator(withKnobs);
@@ -19,9 +26,9 @@ stories
     `
       Properties:
 
-      \`size: xsmall|small|medium|large|xlarge \`
+      \`fontSize: xsmall|small|medium|large|xlarge \`
       
-      Button size
+      Button font size
 
       \` borderColor: {string}\`
       
@@ -43,6 +50,7 @@ stories
      () => (
       <Button
         onClick={action('clicked the default button')}
+        fontSize={select('fontSize', sizeOptions, 'xlarge')}
         borderColor={color('borderColor','#c05b4d')}
         backgroundColor={color('backgroundColor','#c05b4d')}
       >
@@ -59,9 +67,9 @@ stories
     `
       Properties:
 
-      \`size: xsmall|small|medium|large|xlarge \`
+      \`fontSize: xsmall|small|medium|large|xlarge \`
       
-      Button size
+      Button font size
 
       \`isHero: true|false\`
 
@@ -88,7 +96,7 @@ stories
       <Button
         onClick={action('clicked the hero button')}
         style={{ margin: 10 }}
-        size="xlarge"
+        fontSize={select('fontSize', sizeOptions, 'xlarge')}
         isHero={boolean('isHero','true')}
         backgroundColor={color('backgroundColor','#c05b4d')}
         borderColor={color('borderColor','#732419')}

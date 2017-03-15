@@ -27,13 +27,13 @@ stories
     `
       Properties: 
 
-      \`size: thumb|xxsmall|xsmall|small|medium|large|full\`
+      \`imageSize: thumb|xxsmall|xsmall|small|medium|large|full\`
       
       Usage:
 
       ~~~js
         <Image
-          size='small'
+          imageSize='small'
           alt='alt text'
           src='/src/to/image'
         />
@@ -41,7 +41,7 @@ stories
     `,
      () => (
         <Image
-          size={select('size', sizeOptions, 'thumb')}
+          imageSize={select('size', sizeOptions, 'thumb')}
           alt='tree shaking'
           src={srcUrl}
         />
