@@ -2,7 +2,7 @@
   "name": "openui",
   "version": "1.0.1",
   "description": "An open ui kit made with React and TypeScript",
-  "main": "/dist/index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/scalable-react/scalable-react-typescript-boilerplate",
   "license": "MIT",
   "scripts": {
@@ -16,5 +16,8 @@
     "rimraf": "^2.6.1",
     "styled-components": "^1.4.4",
     "yarn": "^0.21.3"
+  },
+  "devDependencies": {
+    "typescript": "^2.2.1"
   }
 }

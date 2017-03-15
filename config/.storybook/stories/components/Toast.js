@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import { Toast } from 'ui';
+import { Toast } from 'openui';
 import { 
   withKnobs,
   string,

@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     main: [
-      './src/client/index.tsx'
+      './src/client/index.tsx',
     ],
     vendor: [
       'react',
@@ -47,7 +47,6 @@ module.exports = {
       components: path.resolve(ROOT_PATH, 'src/client/components'),
       containers: path.resolve(ROOT_PATH, 'src/client/containers'),
       shared: path.resolve(ROOT_PATH, 'src/client/shared'),
-      ui: path.resolve(ROOT_PATH, 'packages/ui/src'),
       test: path.resolve(ROOT_PATH, 'src/client/test'),
       root: path.resolve(ROOT_PATH, 'src/client/'),
     },

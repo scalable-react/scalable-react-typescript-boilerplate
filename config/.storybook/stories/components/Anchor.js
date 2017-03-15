@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import { Anchor } from 'ui';
+import { Anchor } from 'openui';
 import { 
   withKnobs,
   string,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import { Button } from 'ui';
+import { Button } from 'openui';
 import {
   withKnobs,
   boolean,

@@ -7,7 +7,8 @@ import {
   Markdown,
   Heading,
   Headline,
-} from 'ui';
+} from 'openui';
+
 import {
   Container,
   AboutSection,

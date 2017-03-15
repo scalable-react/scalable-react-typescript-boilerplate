@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import { Image } from 'ui';
+import { Image } from 'openui';
 import {
   withKnobs,
   select
