@@ -12,7 +12,7 @@
     "github-markdown-css": "^2.4.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-markdown": "^2.4.5",
+    "react-markdown": "2.4.5",
     "rimraf": "^2.6.1",
     "styled-components": "^1.4.4",
     "yarn": "^0.21.3"
