@@ -1,4 +1,4 @@
-const styled = require('styled-components').default;
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   min-height: 5.3125rem;
@@ -27,13 +27,16 @@ export const PicWrapper = styled.div`
   padding-top: 0.625rem;
   width: 3.5rem;
 `;
+interface PicProps {
+  url?: string;
+}
 
 export const Pic = styled.div`
   height: 2.25rem;
   width: 2.25rem;
   border-radius: 50%;
   background-size: contain;
-  background-image: url('${(props) => props.url}');
+  background-image: url(${(props: PicProps) => props.url});
 `;
 
 export const Footer = styled.footer`

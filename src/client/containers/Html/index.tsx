@@ -1,5 +1,5 @@
 import * as React from 'react';
-const serialize = require('serialize-javascript');
+import { serialize } from 'serialize-javascript';
 
 const Html = (props: {
   content: string,

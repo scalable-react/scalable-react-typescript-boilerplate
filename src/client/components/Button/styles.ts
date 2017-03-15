@@ -1,8 +1,11 @@
-const styled = require('styled-components').default;
+import styled from 'styled-components';
 
+interface ButtonComponentProps {
+  backgroundColor: string;
+}
 export const ButtonComponent = styled.button`
   text-align: center;
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props: ButtonComponentProps) => props.backgroundColor};
   color: ${(props) => props.color};
   font-size: ${(props) => props.size}px;
   border: none;
@@ -14,8 +17,13 @@ export const ButtonComponent = styled.button`
   cursor: pointer;
 `;
 
+interface HeroButtonProps {
+  backgroundColor: string;
+  borderColor: string;
+}
+
 export const HeroButton = styled.button`
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props: HeroButtonProps) => props.backgroundColor};
   color: ${(props) => props.color};
   padding: 20px 20px;
   line-height: 16px;

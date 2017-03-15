@@ -1,4 +1,5 @@
-const styled = require('styled-components').default;
+import styled from 'styled-components';
+
 import {
   BoxStyles,
 } from '../Box/styles';

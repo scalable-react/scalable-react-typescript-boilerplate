@@ -1,4 +1,4 @@
-const bio = require('./about').default;
+import bio from './about';
 
 interface Contributor {
   name: string;

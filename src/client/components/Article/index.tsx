@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Component from './styles';
 import { ArticleProps } from './types';
-const Markdown = require('react-markdown');
-require('github-markdown-css/github-markdown.css');
+import Markdown from 'react-markdown';
+import 'github-markdown-css/github-markdown.css';
 
 export default function Article({
   content,

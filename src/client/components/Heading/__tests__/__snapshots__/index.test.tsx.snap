@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Heading /> should render with default props 1`] = `
-<styled.h1
+<Heading
+  className="pPtPZ"
   color="#007acc"
   margin="medium"
   tag="h1"
@@ -10,11 +11,12 @@ exports[`<Heading /> should render with default props 1`] = `
   upcase={false}
 >
   Test
-</styled.h1>
+</Heading>
 `;
 
 exports[`<Heading /> should render with h2 props 1`] = `
-<styled.h2
+<Heading
+  className="loWbZD"
   color="#333"
   margin="none"
   tag="h2"
@@ -23,11 +25,12 @@ exports[`<Heading /> should render with h2 props 1`] = `
   upcase={false}
 >
   Test
-</styled.h2>
+</Heading>
 `;
 
 exports[`<Heading /> should render with h3 props 1`] = `
-<styled.h3
+<Heading
+  className="kjpymt"
   color="#333"
   margin="none"
   tag="h3"
@@ -36,11 +39,12 @@ exports[`<Heading /> should render with h3 props 1`] = `
   upcase={false}
 >
   Test
-</styled.h3>
+</Heading>
 `;
 
 exports[`<Heading /> should render with h4 props 1`] = `
-<styled.h4
+<Heading
+  className="fAvSlm"
   color="#333"
   margin="none"
   tag="h4"
@@ -49,11 +53,12 @@ exports[`<Heading /> should render with h4 props 1`] = `
   upcase={false}
 >
   Test
-</styled.h4>
+</Heading>
 `;
 
 exports[`<Heading /> should render with h5 props 1`] = `
-<styled.h5
+<Heading
+  className="ZnkAX"
   color="#333"
   margin="none"
   tag="h5"
@@ -62,5 +67,5 @@ exports[`<Heading /> should render with h5 props 1`] = `
   upcase={false}
 >
   Test
-</styled.h5>
+</Heading>
 `;

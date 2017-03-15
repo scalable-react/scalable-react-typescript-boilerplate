@@ -1,25 +1,32 @@
-const styled = require('styled-components').default;
+import styled from 'styled-components';
 
 export const Container = styled.div`
   min-height: 100vh;
   width: 100vw;
 `;
 
+interface FeaturesSectionProps {
+  background: string
+}
+
 export const FeaturesSection = styled.section`
   width: 100%;
-  background: ${(props) => props.background}
+  background: ${(props: FeaturesSectionProps) => props.background}
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
+interface FeatureSectionInnerProps {
+  reverse?: boolean;
+}
 export const FeatureSectionInner = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 1000px;
   padding: 60px 120px;
   @media screen and (max-width: 768px) {
-    flex-wrap: ${(props) => props.reverse ? 'wrap-reverse' : 'wrap'};
+    flex-wrap: ${(props: FeatureSectionInnerProps) => props.reverse ? 'wrap-reverse' : 'wrap'};
     padding: 60px 20px;
     padding-top:
   }

@@ -1,5 +1,9 @@
+import styled from 'styled-components';
 import SvgIcon from '../SvgIcon';
-const styled = require('styled-components').default;
+
+export interface CardThumbnailProps {
+  image: string;
+}
 
 export const Card = styled.div`
   width: 384px;
@@ -11,7 +15,7 @@ export const Card = styled.div`
 `;
 
 export const CardThumbnail = styled.div`
-  background: url('${(props) => props.image}') center center / cover no-repeat;
+  background: url('${(props: CardThumbnailProps) => props.image}') center center / cover no-repeat;
   min-height: 192px;
   align-items: center;
   justify-content: center;

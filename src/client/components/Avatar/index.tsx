@@ -1,11 +1,15 @@
-import * as React from 'react';
-import { Props } from './types';
-import Component from './styles';
+import { AvatarStyle } from './styles';
+import styled from 'styled-components';
 
-export default function Avatar({
-  ...props,
-}: Props): JSX.Element {
-  return (
-    <Component {...props} />
-  );
-};
+export type ImageSize = 'thumb' | 'small' | 'medium' | 'large';
+export interface Props {
+  src: string;
+  name?: string;
+  size?: ImageSize;
+}
+
+const Avatar = styled.div`
+${AvatarStyle}
+`;
+
+export default Avatar;

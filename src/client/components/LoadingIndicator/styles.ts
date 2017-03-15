@@ -1,5 +1,4 @@
-const styled = require('styled-components').default;
-const { keyframes } = require('styled-components');
+import styled, { keyframes } from 'styled-components';
 
 const draw = keyframes`
   0% {

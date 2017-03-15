@@ -1,4 +1,4 @@
-const styled = require('styled-components').default;
+import styled from 'styled-components';
 
 export const Author = styled.div`
   color: white;

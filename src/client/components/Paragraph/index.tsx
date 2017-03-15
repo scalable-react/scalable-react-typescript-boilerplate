@@ -1,14 +1,32 @@
-import * as React from 'react';
-import Component from './styles';
-import { ParagraphProps } from './types';
+import styled from 'styled-components';
+import { style } from './styles';
 
-export default function Paragraph({
-  children,
-  ...rest,
-}: ParagraphProps): JSX.Element {
-  return (
-    <Component {...rest}>
-      {children}
-    </Component>
-  );
-};
+export type ParagraphSize = 'small' | 'medium' | 'large' | 'xlarge';
+export type Margin = 'none' | 'small' | 'medium' | 'large';
+
+export interface SizeMap {
+  small: number;
+  medium: number;
+  large: number;
+  xlarge: number;
+}
+
+export interface MarginSizeMap {
+  none: number;
+  small: number;
+  medium: number;
+  large: number;
+}
+
+export interface ParagraphProps {
+  color?: string;
+  textAlign?: string;
+  paragraphSize?: ParagraphSize;
+  margin?: Margin;
+}
+
+const Paragraph = styled.p`
+  ${style}
+`;
+
+export default Paragraph;

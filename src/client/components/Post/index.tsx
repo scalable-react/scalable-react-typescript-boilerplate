@@ -18,7 +18,7 @@ export default function Post({
       boxSize={{ horizontal: 'xxlarge' }}
     >
       <Box pad="medium" alignItems="center">
-        <Image alt={title} size="large" src={image} />
+        <Image alt={title} imageSize="large" src={image} />
         <Headline>
           {title}
         </Headline>
