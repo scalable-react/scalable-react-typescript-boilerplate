@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SvgIcon from '../SvgIcon';
+import { SvgIcon } from 'ui';
 
 export interface CardThumbnailProps {
   image: string;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Headline /> should render with default props 1`] = `
+<styled.h1
+  color="#000000"
+  fontSize="medium"
+  fontWeight={400}
+  margin="medium"
+  textAlign="center"
+>
+  Headline
+</styled.h1>
+`;
+
+exports[`<Headline /> should render with different props 1`] = `
+<styled.h1
+  color="#fff"
+  fontSize="medium"
+  fontWeight={400}
+  margin="medium"
+  textAlign="center"
+>
+  Headline
+</styled.h1>
+`;

@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { Button, Anchor } from 'components';
-import { ButtonSize } from 'components/Button';
-import { Heading, Section, Hero, Paragraph } from 'components';
+import { Heading, Section, Hero, Paragraph, Button, Anchor } from 'ui';
 import { Container, HeroLogo, HeroLogoRow, HeadingContainer, GetStartedButtons } from './styles';
 import { ThemeColorMap } from '../../types';
 
@@ -42,7 +40,7 @@ export default function HomePresentation({
             >
               <Button
                 style={{ margin: 10 }}
-                size={ButtonSize.xlarge}
+                fontSize="xlarge"
                 isHero
                 backgroundColor={theme.secondary}
                 borderColor="#733529"
@@ -56,7 +54,7 @@ export default function HomePresentation({
             >
               <Button
                 style={{ margin: 10 }}
-                size={ButtonSize.xlarge}
+                fontSize="xlarge"
                 isHero
                 backgroundColor={theme.secondary}
                 borderColor="#733529"

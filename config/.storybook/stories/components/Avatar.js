@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import { Avatar } from 'components';
+import { Avatar } from 'ui';
 import { 
   withKnobs, 
   text, 

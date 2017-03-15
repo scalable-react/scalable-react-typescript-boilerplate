@@ -5,3 +5,4 @@ export Image from './components/Image';
 export Avatar from './components/Avatar';
 export Comment from './components/Comment';
 export Pic from './components/Pic';
+export Notification from './components/Notification';

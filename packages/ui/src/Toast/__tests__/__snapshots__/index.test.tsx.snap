@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toast /> should render with default props 1`] = `
+<styled.div
+  isUnmounting={false}
+  isVisible={true}
+  status="none"
+>
+  <Box
+    alignItems="center"
+    boxSize={60}
+    flexDirection="row"
+    justifyContent="center"
+    pad="medium"
+    style={
+      Object {
+        "width": "100vw",
+      }
+    }
+  >
+    <Box
+      style={
+        Object {
+          "flexGrow": 2,
+        }
+      }
+    >
+      Jello
+    </Box>
+    <Box
+      alignItems="center"
+      justifyContent="center"
+    >
+      <styled.button
+        onClick={[Function]}
+      >
+        ✕
+      </styled.button>
+    </Box>
+  </Box>
+</styled.div>
+`;
+
+exports[`<Toast /> should render with different props 1`] = `
+<styled.div
+  isUnmounting={false}
+  isVisible={true}
+  status="ok"
+>
+  <Box
+    alignItems="center"
+    boxSize={60}
+    flexDirection="row"
+    justifyContent="center"
+    pad="medium"
+    style={
+      Object {
+        "width": "100vw",
+      }
+    }
+  >
+    <Box
+      style={
+        Object {
+          "flexGrow": 2,
+        }
+      }
+    >
+      Foobar
+    </Box>
+    <Box
+      alignItems="center"
+      justifyContent="center"
+    >
+      <styled.button
+        onClick={[Function]}
+      >
+        ✕
+      </styled.button>
+    </Box>
+  </Box>
+</styled.div>
+`;
