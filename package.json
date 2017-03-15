@@ -89,6 +89,7 @@
     "mongoose": "^4.8.5",
     "morgan": "^1.8.1",
     "node-env-file": "^0.1.8",
+    "openui": "1.0.1",
     "plop": "^1.7.4",
     "precss": "^1.4.0",
     "react": "^15.4.1",
@@ -146,6 +147,7 @@
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.17.1",
-    "webpack-manifest-plugin": "^1.1.0"
+    "webpack-manifest-plugin": "^1.1.0",
+    "lerna": "2.0.0-beta.38"
   }
 }

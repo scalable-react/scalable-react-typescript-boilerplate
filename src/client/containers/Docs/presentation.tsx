@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {State} from './state';
-import { Article, Headline, LoadingIndicator, Section, Error } from 'components';
+import { Article, Headline, LoadingIndicator, Section, Notification } from 'ui';
 import { StyledHr } from './styles';
+import { State } from './state';
 import {
   LoadInitiationAction,
   LoadSuccessAction,
@@ -47,11 +47,12 @@ export default class Feature extends React.Component<FeatureProps, undefined> {
         backgroundColor="#f5f5f5"
       >
         <Headline fontWeight={700}>
-          Documentation
+          Docs
           <StyledHr />
         </Headline>
         {error &&
-          <Error
+          <Notification
+            status="error"
             onClick={actions.clearError}
             message={error}
           />

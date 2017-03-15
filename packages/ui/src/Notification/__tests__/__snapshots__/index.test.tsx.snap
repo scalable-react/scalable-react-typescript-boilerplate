@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification /> default should render an Notification element with only the required props 1`] = `
+<Styled(Box)
+  alignItems="center"
+  boxSize={
+    Object {
+      "horizontal": "medium",
+    }
+  }
+  pad="small"
+  selectable={true}
+  status="none"
+>
+  <styled.p
+    color="white"
+    paragraphSize="large"
+  >
+    Mock error message
+  </styled.p>
+</Styled(Box)>
+`;
+
+exports[`<Notification /> default should render an Notification element with other props 1`] = `
+<Styled(Box)
+  alignItems="center"
+  boxSize={
+    Object {
+      "horizontal": "medium",
+    }
+  }
+  onClick={[Function]}
+  pad="small"
+  selectable={true}
+  status="none"
+>
+  <styled.p
+    color="white"
+    paragraphSize="large"
+  >
+    Mock error message
+  </styled.p>
+</Styled(Box)>
+`;

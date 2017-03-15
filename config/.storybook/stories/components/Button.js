@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import { Button } from 'components';
-import { ButtonSize } from 'components/Button';
+import { Button } from 'ui';
 import {
   withKnobs,
   boolean,
@@ -89,7 +88,7 @@ stories
       <Button
         onClick={action('clicked the hero button')}
         style={{ margin: 10 }}
-        size={ButtonSize.xlarge}
+        size="xlarge"
         isHero={boolean('isHero','true')}
         backgroundColor={color('backgroundColor','#c05b4d')}
         borderColor={color('borderColor','#732419')}

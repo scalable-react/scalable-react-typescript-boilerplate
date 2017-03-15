@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { LoadingIndicator, Post, Section, Error } from 'components';
+import { Post } from 'components';
+import { LoadingIndicator, Section, Notification } from 'ui';
 import { ErrorType, Post as PostType, OnInput, OnSubmit, OnKeyUp } from './types';
 import { ThemeColorMap } from '../../types';
 
@@ -24,7 +25,7 @@ export default class BlogPostPresentation extends React.Component<Props, any> {
         full={{ vertical: true }}
         backgroundColor={theme.offwhite}
       >
-        {error && <Error message={error.message} />}
+        {error && <Notification status="error" message={error.message} />}
         <LoadingIndicator isLoading={loading} />
         {post &&
           <Post

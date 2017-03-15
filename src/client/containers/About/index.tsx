@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {
-  Headline,
-  Markdown,
   Avatar,
   Anchor,
   Article,
   Image,
+  Markdown,
   Heading,
-} from 'components';
+  Headline,
+} from 'ui';
 import {
   Container,
   AboutSection,
