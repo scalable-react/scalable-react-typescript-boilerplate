@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter, InjectedRouter } from 'react-router';
 import { AnchorComponent } from './styles';
 
 const MethodTypePush = 'push';
@@ -11,11 +11,7 @@ export interface Props extends React.Props<Anchor> {
   label?: string;
   color?: string;
   method?: Method;
-  router?: {
-    push: Function,
-    replace: Function,
-    createPath: Function,
-  }
+  router?: InjectedRouter;
 }
 
 class Anchor extends React.Component<Props, undefined> {
