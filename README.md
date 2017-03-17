@@ -238,9 +238,10 @@ See here for the [license](https://github.com/RyanCCollins/scalable-react-typesc
 - [x] Integrate storybook
 - [x] Standardize the tslint configuration
 - [x] Add more reusable modules, ala box / section
+- [x] Refactor reusable modules into uikit
+- [x] Remove requires and use es6 imports for all libs
+- [ ] Migrate to a multi-module pattern using lerna (in progress)
 - [ ] Add a no any rule and update source to use it
-- [ ] Remove requires and use es6 imports for all libs
-- [ ] Refactor reusable modules into uikit
 
 ## Troubleshooting
 Make sure to use the right version of node.  You can reference the version in the `.nvmrc` file.  For help installing and using NVM, please refer to this [gist](https://gist.github.com/RyanCCollins/1a5686ff9dd51b72eb2d4dc70aa6c1f4).
