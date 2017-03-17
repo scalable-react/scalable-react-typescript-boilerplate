@@ -1,6 +1,5 @@
 'use strict';
 
-
 const babel = require('babel-core');
 const tsc = require('typescript');
 const crypto = require('crypto');
@@ -12,8 +11,7 @@ const path = require('path');
 const BABELRC_FILENAME = '.babelrc';
 
 const cache = Object.create(null);
-const tsconfig = require('../../tsconfig.json');
-
+var tsconfig = require('../../packages/demo/tsconfig.json');
 
 const getBabelRC = (filename, {useCache}) => {
   const paths = [];
@@ -92,7 +90,7 @@ const createTransformer = (options) => {
 
       // ts compile
       const diag = [];
-      const tsOutput = tsc.transpileModule(src, {diagnostics: diag, filename, compilerOptions: tsconfig.compilerOptions, reportDiagnostics: true});
+      const tsOutput = tsc.transpileModule(src, {diagnostics: diag, filename, compilerOptions: options.tsconfig.compilerOptions, reportDiagnostics: true});
 
     //   console.log(tsOutput.outputText)
 

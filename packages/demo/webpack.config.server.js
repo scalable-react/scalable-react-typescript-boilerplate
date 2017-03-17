@@ -17,7 +17,6 @@ module.exports = {
     alias: {
       components: path.resolve(ROOT_PATH, 'build/src/client/components'),
       containers: path.resolve(ROOT_PATH, 'build/src/client/containers'),
-      ui: path.resolve(ROOT_PATH, 'packages/ui/dist'),
       test: path.resolve(ROOT_PATH, 'build/src/client/test'),
       shared: path.resolve(ROOT_PATH, 'build/src/client/shared'),
       root: path.resolve(ROOT_PATH, 'build/src/client/'),
