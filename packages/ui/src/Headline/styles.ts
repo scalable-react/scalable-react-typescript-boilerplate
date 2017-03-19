@@ -1,7 +1,7 @@
 import { marginCss } from '../Paragraph/styles';
 import calculateSize from './styleUtils';
 import styled from 'styled-components';
-import { Props } from './index';
+import { Props } from './types';
 
 export const HeadlineStyled = styled.h1`
   text-align: center;

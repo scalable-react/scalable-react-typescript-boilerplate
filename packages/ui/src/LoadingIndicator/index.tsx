@@ -1,12 +1,14 @@
 // Adapted from https://grommet.github.io/docs/spinning
 import * as React from 'react';
 import { Box } from '../';
-import { LoadingIndicatorProps } from './types';
 import SvgIcon, { Circle } from './styles';
 
+export interface Props extends React.Props<typeof LoadingIndicator> {
+  isLoading: boolean;
+}
 export default function LoadingIndicator({
   isLoading,
-}: LoadingIndicatorProps): JSX.Element {
+}: Props): JSX.Element {
   if (!isLoading) {
     return null;
   }

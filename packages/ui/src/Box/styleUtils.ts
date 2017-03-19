@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import Props from './types';
 import { BREAKPOINTS } from './maps';
 import {
   Size,
@@ -102,7 +103,7 @@ export const breakPointCss = (breakPoint: Breakpoint) => {
   const selector = breakPoint === 'desktop' ? 'min-width' : 'max-width';
   return css`
     @media screen and (${selector}: ${BREAKPOINTS.phone}) {
-      padding: ${({ pad }: any) => sizeToString(pad)};
+      padding: ${({ pad }: Props) => sizeToString(pad)};
     }
   `;
 };

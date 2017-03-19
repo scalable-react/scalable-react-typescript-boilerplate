@@ -19,7 +19,7 @@ export interface SizeStyle {
   width: string;
 }
 
-export interface BoxProps {
+export interface Props {
   alignItems?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
   flexDirection?: 'row' | 'column';
   justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
@@ -33,8 +33,8 @@ export interface BoxProps {
   backgroundImage?: string;
   full?: Full;
   selectable?: boolean;
-  style?: any;
+  style?: {};
   className?: string;
 };
 
-export default BoxProps;
+export default Props;

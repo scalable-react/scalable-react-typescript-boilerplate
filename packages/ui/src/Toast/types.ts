@@ -1,5 +1,3 @@
-import { Props } from './';
-
-export { Props };
+export { Props } from './';
 
 export type Status = 'ok' | 'warning' | 'error' | 'none';

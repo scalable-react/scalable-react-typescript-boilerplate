@@ -68,6 +68,9 @@
     ],
     "jsx-no-multiline-js": [
       false
+    ],
+    "jsx-boolean-value": [
+      false
     ]
   }
 }

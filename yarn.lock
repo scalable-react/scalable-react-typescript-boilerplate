@@ -8163,9 +8163,9 @@ tslint-loader@^3.4.3:
     rimraf "^2.4.4"
     semver "^5.3.0"
 
-tslint-react@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/tslint-react/-/tslint-react-2.4.0.tgz#82c314f2752c419c6e41d9789587ef42f64261ea"
+tslint-react@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/tslint-react/-/tslint-react-2.5.0.tgz#94cd6143f6ae825c47f242c5146fc89caeadeae2"
 
 tslint@^4.5.1:
   version "4.5.1"

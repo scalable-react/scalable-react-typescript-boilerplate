@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Props from './types';
+import { Props } from './types';
 
 export default styled.div`
   background: ${(props: Props) => props.backgroundColor};

@@ -18,7 +18,7 @@ export interface MarginSizeMap {
   large: number;
 }
 
-export interface ParagraphProps {
+export interface Props {
   color?: string;
   textAlign?: string;
   paragraphSize?: ParagraphSize;

@@ -1,3 +1,1 @@
-import { Props } from './';
-
-export { Props };
+export { Props } from './';

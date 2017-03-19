@@ -1,13 +1,17 @@
 import * as React from 'react';
 import { Markdown } from 'ui';
 import Component from './styles';
-import { ArticleProps } from './types';
+import BoxProps from '../Box/types';
 
+export interface Props extends BoxProps {
+  content?: string;
+  children?: JSX.Element;
+}
 export default function Article({
   content,
   children,
   ...rest,
-}: ArticleProps) {
+}: Props) {
   return (
     <Component {...rest} className="markdown-body">
       {content && typeof content === 'string' &&

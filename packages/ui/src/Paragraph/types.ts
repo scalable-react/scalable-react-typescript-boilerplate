@@ -1,1 +1,1 @@
-export * from './index';
+export { Props, ParagraphSize, Margin, SizeMap, MarginSizeMap } from './index';

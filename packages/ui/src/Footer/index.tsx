@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { FooterComponent } from './styles';
-import { FooterProps } from './types';
 
+export interface Props extends React.Props<typeof Footer> {
+  color?: string;
+}
 export default function Footer({
   color,
   children,
-}: FooterProps): JSX.Element {
+}: Props): JSX.Element {
   const colorProp = color || '#0a0a0a';
   return (
     <FooterComponent color={colorProp}>

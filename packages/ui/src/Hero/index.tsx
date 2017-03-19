@@ -1,7 +1,9 @@
 import * as React from 'react';
 import Component from './styles';
-import Props from './types';
 
+export interface Props extends React.Props<typeof Hero> {
+  backgroundColor?: string;
+}
 export default function Hero({
   children,
   backgroundColor,

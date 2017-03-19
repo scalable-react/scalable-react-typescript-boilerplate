@@ -1,12 +1,14 @@
 import * as React from 'react';
-import { MarkdownProps } from './types';
 import Component from './styles';
 import ReactMarkdown from 'react-markdown';
 import 'github-markdown-css/github-markdown.css';
 
+export interface Props extends React.Props<typeof Markdown> {
+  content: string;
+}
 export default function Markdown({
   content,
-}: MarkdownProps): JSX.Element {
+}: Props): JSX.Element {
   return (
     <Component className="markdown-body">
       <ReactMarkdown source={content} />

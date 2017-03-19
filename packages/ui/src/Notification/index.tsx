@@ -1,8 +1,12 @@
 import * as React from 'react';
 import Box from './styles';
 import { Paragraph } from '../';
-import { Props } from './types';
+import { Status } from './types';
 
+export interface Props extends React.HTMLProps<typeof ErrorComponent> {
+  message: JSX.Element | string;
+  status?: Status;
+}
 export default function Notification({
   message,
   status,

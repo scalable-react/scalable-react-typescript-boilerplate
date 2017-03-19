@@ -2,10 +2,10 @@ import * as React from 'react';
 import { HeroButton, ButtonComponent} from './styles';
 import { Size } from './types';
 
-export interface Props extends React.HTMLProps<Button> {
+// This is so that the onClick handler is accepted without type interferance
+export interface Props extends React.HTMLProps<HTMLButtonElement & Button> {
   color?: string;
   backgroundColor?: string;
-  onClick?: (x: any) => any;
   fontSize?: Size;
   isHero?: boolean;
   borderColor?: string;
