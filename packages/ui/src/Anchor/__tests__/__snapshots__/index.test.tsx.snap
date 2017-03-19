@@ -20,7 +20,6 @@ exports[`<Anchor /> should render path props 1`] = `
 
 exports[`<Anchor /> should render with children 1`] = `
 <Anchor
-  color="#007acc"
   method="push"
   path="/about"
 >
@@ -30,7 +29,6 @@ exports[`<Anchor /> should render with children 1`] = `
 
 exports[`<Anchor /> should render with default props 1`] = `
 <Anchor
-  color="#007acc"
   method="push"
 />
 `;

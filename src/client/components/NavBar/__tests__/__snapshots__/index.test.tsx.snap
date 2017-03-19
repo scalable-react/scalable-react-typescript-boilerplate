@@ -7,6 +7,7 @@ exports[`<NavBar /> default should render NavBar with links and text 1`] = `
       <withRouter(Anchor)
         color="#007acc"
         path="/"
+        plain={true}
       >
         NavBar Test
       </withRouter(Anchor)>
@@ -16,6 +17,7 @@ exports[`<NavBar /> default should render NavBar with links and text 1`] = `
         <styled.li>
           <withRouter(Anchor)
             path="https://medium.com"
+            plain={true}
           >
             Medium
           </withRouter(Anchor)>
@@ -23,6 +25,7 @@ exports[`<NavBar /> default should render NavBar with links and text 1`] = `
         <styled.li>
           <withRouter(Anchor)
             path="https://www.ryancollins.io/"
+            plain={true}
           >
             RyanCollins
           </withRouter(Anchor)>
