@@ -3,10 +3,10 @@ import { graphql } from 'react-apollo';
 import { Box, Headline, Section, LoadingIndicator, Notification } from 'ui';
 import { PostCard } from 'components';
 import POST_QUERY from './posts.graphql';
-import { StyledHr } from './styles';
-import { BlogProps, BlogState } from './types';
+import Hr from './styles';
+import { Props, State } from './types';
 
-class Blog extends React.Component<BlogProps, BlogState> {
+class Blog extends React.Component<Props, State> {
   constructor() {
     super();
     this.handleClearError = this.handleClearError.bind(this);
@@ -32,7 +32,7 @@ class Blog extends React.Component<BlogProps, BlogState> {
       >
         <Headline fontWeight={700}>
           Blog
-          <StyledHr />
+          <Hr />
         </Headline>
         {error && showError &&
           <Notification

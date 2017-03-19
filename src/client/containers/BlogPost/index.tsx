@@ -24,7 +24,7 @@ const mapDispatchToProps: MapDispatch = (dispatch) => ({
   ),
 });
 
-export interface Props extends React.Props<any> {
+export interface Props {
   loading: boolean;
   error?: ErrorType;
   post?: Post;
@@ -36,7 +36,7 @@ export interface Props extends React.Props<any> {
   };
 }
 
-export interface StateProps extends React.Props<BlogPost> {
+export interface StateProps {
   input: Input,
 }
 export interface DispatchProps {

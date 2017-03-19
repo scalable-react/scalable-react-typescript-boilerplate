@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledHr = styled.hr`
+export default styled.hr`
   border-top: 4px solid;
 `;

@@ -1,3 +1,5 @@
+import Blog from '../';
+
 export interface Post {
   id: string;
   title: string;
@@ -5,12 +7,12 @@ export interface Post {
   content: string;
 }
 
-export interface BlogProps extends React.Props<any> {
+export interface Props extends React.Props<typeof Blog> {
   loading: boolean;
   error?: { message: string };
   posts?: Post[];
 }
 
-export interface BlogState {
+export interface State {
   showError: boolean;
 }

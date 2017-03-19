@@ -22,6 +22,7 @@
     "forin": true,
     "ban": true,
     "label-position": true,
+    "no-any": true,
     "max-line-length": [
       true,
       120

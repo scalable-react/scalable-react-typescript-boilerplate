@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { withRouter, InjectedRouter } from 'react-router';
-import { AnchorComponent } from './styles';
+import Component from './styles';
 
 const MethodTypePush = 'push';
 const MethodTypeReplace = 'replace';
 type Method = 'push' | 'replace';
 export interface Props extends React.Props<Anchor> {
   path?: string;
+  plain?: boolean;
   href?: string;
   label?: string;
   color?: string;
@@ -16,7 +17,6 @@ export interface Props extends React.Props<Anchor> {
 
 class Anchor extends React.Component<Props, undefined> {
   public static defaultProps: Props = {
-    color: '#007acc',
     method: MethodTypePush,
   };
 
@@ -38,12 +38,18 @@ class Anchor extends React.Component<Props, undefined> {
       children,
       color,
       href,
+      plain,
     } = this.props;
 
     return (
-      <AnchorComponent href={href} color={color} onClick={this.handleClick}>
+      <Component
+        plain={plain}
+        href={href}
+        color={color}
+        onClick={this.handleClick}
+      >
         {label || children}
-      </AnchorComponent>
+      </Component>
     );
   }
 }

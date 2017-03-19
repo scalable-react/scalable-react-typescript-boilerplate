@@ -252,6 +252,28 @@
   version "1.16.35"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-1.16.35.tgz#ee687cc42d1a79448256f1c012a33a0840e85c5c"
 
+"@types/source-map@*":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@types/source-map/-/source-map-0.5.0.tgz#dd34bbd8e32fe4e74f2e3d8ac07f8aa5b45a47ac"
+
+"@types/tapable@*":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-0.2.3.tgz#0888b0f20cc7e58e1c22a1888b4e963eefaa810a"
+
+"@types/uglify-js@*":
+  version "2.6.28"
+  resolved "https://registry.yarnpkg.com/@types/uglify-js/-/uglify-js-2.6.28.tgz#1499b48ca3a44132250b318cdde25b8f45f0c616"
+  dependencies:
+    "@types/source-map" "*"
+
+"@types/webpack@^2.2.11":
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-2.2.11.tgz#d218555ca9a5e24627036aaf619e5c4402ab5a74"
+  dependencies:
+    "@types/node" "*"
+    "@types/tapable" "*"
+    "@types/uglify-js" "*"
+
 abab@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.3.tgz#b81de5f7274ec4e756d797cd834f303642724e5d"

@@ -10,7 +10,7 @@ import axios from 'axios';
 
 const isClient = typeof document !== 'undefined';
 
-declare var window: { __INITIAL_STATE__: any };
+declare var window: { __INITIAL_STATE__: {} };
 const initialState = isClient ? window.__INITIAL_STATE__ : defaultInitialState;
 
 function createThunkMiddleware() {

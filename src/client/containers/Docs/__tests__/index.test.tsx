@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
+import { Store } from 'redux';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import DocsContainer from '../';
-import State from '../State';
+import State from '../state';
 
 import mockStore from '../../../test/mockstore';
 
@@ -14,7 +15,7 @@ const testState: State = {
 };
 
 describe('DocsContainer ', () => {
-  let store: any;
+  let store: Store<State>;
   beforeEach(() => {
     store = mockStore(testState);
   });

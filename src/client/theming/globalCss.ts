@@ -25,12 +25,6 @@ const globalCss = injectGlobal`
     overflow-x: hidden;
   }
 
-  a {
-    text-decoration: none;
-    line-height: inherit;
-    cursor: pointer;
-  }
-
   .markdown-body {
     max-width: 100% !important;
   }

@@ -4,7 +4,7 @@ import { ThemeColorMap } from '../../types';
 import HomePresentation from './presentation';
 import { withTheme } from 'styled-components';
 
-interface Props { theme: ThemeColorMap; }
+export interface Props { theme: ThemeColorMap; }
 class Home extends React.Component<Props, undefined> {
   public render() {
     return (

@@ -60,7 +60,7 @@ export default class Feature extends React.Component<FeatureProps, undefined> {
           </Box>
           <Author>
             <span>By </span>
-            <Anchor color="#007acc" href="http://www.ryancollins.io/" > Ryan C.Collins </Anchor>
+            <Anchor plain color="#007acc" href="http://www.ryancollins.io/" > Ryan C.Collins </Anchor>
           </Author>
           <Box flexDirection="row" alignItems="center" justifyContent="center" >
             <Box margin="small" >

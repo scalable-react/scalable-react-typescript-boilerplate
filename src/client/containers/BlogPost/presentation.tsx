@@ -4,7 +4,7 @@ import { LoadingIndicator, Section, Notification } from 'ui';
 import { ErrorType, Post as PostType, OnInput, OnSubmit, OnKeyUp } from './types';
 import { ThemeColorMap } from '../../types';
 
-interface Props {
+export interface Props {
   onChange: OnInput;
   onSubmit: OnSubmit;
   onKeyUp: OnKeyUp;
@@ -14,7 +14,7 @@ interface Props {
   input: string;
   theme: ThemeColorMap;
 }
-export default class BlogPostPresentation extends React.Component<Props, any> {
+export default class BlogPostPresentation extends React.Component<Props, undefined> {
   public render() {
     const { loading, post, error, theme, ...rest } = this.props;
     return (

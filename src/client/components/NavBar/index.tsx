@@ -18,7 +18,7 @@ export default function NavBar({
     <Nav>
       <InnerNav>
         <LeftMenu>
-          <Anchor path="/" color="#007acc">
+          <Anchor plain path="/" color="#007acc">
             {logoText}
           </Anchor>
         </LeftMenu>
@@ -27,6 +27,7 @@ export default function NavBar({
             {links.map((item, i) =>
               <MenuItem key={i}>
                 <Anchor
+                  plain
                   path={item.url}
                 >
                   {item.text}

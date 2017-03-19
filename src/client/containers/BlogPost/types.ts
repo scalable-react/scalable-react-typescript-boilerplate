@@ -1,13 +1,11 @@
 import * as React from 'react';
 import { Props } from './';
+import { Props as PresentationProps } from './presentation';
 import { State } from './state';
 import { ActionCreatorTypes } from './actionCreators';
 import { ActionTypes } from './actions';
 
-export { Props };
-export { State };
-export { ActionCreatorTypes };
-export { ActionTypes };
+export { Props, PresentationProps, State, ActionCreatorTypes, ActionTypes };
 
 export type OnInput = (e: React.SyntheticEvent<undefined>) => void;
 export type OnSubmit = () => void;

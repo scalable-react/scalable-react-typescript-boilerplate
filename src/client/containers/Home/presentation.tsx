@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { Heading, Section, Hero, Paragraph, Button, Anchor } from 'ui';
 import { Container, HeroLogo, HeroLogoRow, HeadingContainer, GetStartedButtons } from './styles';
-import { ThemeColorMap } from '../../types';
+import { Props as HomeProps } from './types';
 
-interface Props extends React.Props<typeof HomePresentation> {
+export interface Props extends HomeProps {
   children?: JSX.Element;
-  theme: ThemeColorMap;
 }
 export default function HomePresentation({
   children,
@@ -35,6 +34,7 @@ export default function HomePresentation({
           </HeadingContainer>
           <GetStartedButtons>
             <Anchor
+              plain
               color={theme.white1}
               path="/docs"
             >
@@ -49,6 +49,7 @@ export default function HomePresentation({
               </Button>
             </Anchor>
             <Anchor
+              plain
               color={theme.white1}
               path="/todo-app"
             >

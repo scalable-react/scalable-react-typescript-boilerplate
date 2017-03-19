@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Article, Headline, LoadingIndicator, Section, Notification } from 'ui';
-import { StyledHr } from './styles';
+import Hr from './styles';
 import { State } from './state';
 import {
   LoadInitiationAction,
@@ -48,7 +48,7 @@ export default class Feature extends React.Component<FeatureProps, undefined> {
       >
         <Headline fontWeight={700}>
           Docs
-          <StyledHr />
+          <Hr />
         </Headline>
         {error &&
           <Notification

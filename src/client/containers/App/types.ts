@@ -1,9 +1,13 @@
-export interface AppProps extends React.Props<any> {
-  children: any;
+import App from '../';
+
+export interface NavLink { url: string; text: string; };
+
+export interface Props extends React.Props<typeof App> {
+  children: JSX.Element;
   actions: {
     appSetMobile: (isMobile: boolean) => void,
   };
   isMobile: boolean;
-  navLinks: Array<{ url: string, text: string }>;
+  navLinks: NavLink[];
   logoText: string;
 };

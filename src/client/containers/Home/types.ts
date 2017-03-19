@@ -1,6 +1,4 @@
-import * as React from 'react';
-import Home from './';
+import { Props } from './';
+import { Props as PresentationProps } from './presentation';
 
-export interface HomeProps extends React.Props<typeof Home> {
-  theme: any;
-}
+export { Props, PresentationProps };
