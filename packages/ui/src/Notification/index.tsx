@@ -3,7 +3,7 @@ import Box from './styles';
 import { Paragraph } from '../';
 import { Status } from './types';
 
-export interface Props extends React.HTMLProps<typeof ErrorComponent> {
+export interface Props extends React.HTMLProps<typeof Notification> {
   message: JSX.Element | string;
   status?: Status;
 }
