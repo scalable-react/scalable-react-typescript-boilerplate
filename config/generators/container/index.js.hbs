@@ -2,60 +2,62 @@ import * as React from 'react';
 {{#if wantActionsAndReducer}}
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
-import { State } from '../../state';
-import { {{ properCase name }}ActionType } from './actions';
-import { {{ properCase name }}State } from './reducer';
+import { State as GlobalState } from 'root/state';
+import { Action, ActionMap, ErrorType } from './types';
 import actionCreators from './actionCreators';
-import {
-  {{ properCase name }}Props,
-  {{ properCase name }}DispatchProps,
-  {{ properCase name }}PropTypes,
-} from './types';
-{{else}}
-import { {{ properCase name }}PropTypes } from './types';
 {{/if}}
 {{#if wantSelectors}}
-import {
-  selectIsLoading,
-  selectError,
-  selectData,
-} from './selectors';
+import * as selectors from './selectors';
 {{/if}}
-import { Heading, Section } from './styles';
+import Presentation from './presentation';
 {{#if wantActionsAndReducer}}
 
 {{#if wantSelectors}}
-const mapStateToProps = (state: State): {{ properCase name }}Props => ({
-  isLoading: selectIsLoading(state),
-  error: selectError(state),
-  data: selectData(state),
+type MapStateToProps = (state: GlobalState) => StateProps;
+const mapStateToProps: MapStateToProps = (state) => ({
+  isLoading: selectors.selectIsLoading(state),
+  error: selectors.selectError(state),
+  data: selectors.selectData(state),
 });
 {{else}}
-const mapStateToProps = (state: State): {{ properCase name }}Props => ({
+type MapStateToProps = (state: GlobalState): StateProps;
+const mapStateToProps: MapStateToProps = (state) => ({
   isLoading: state.{{ camelCase name }}.isLoading,
   error: state.{{ camelCase name }}.error,
   data: state.{{ camelCase name }}.data,
 });
 {{/if}}
 
-const mapDispatchToProps = (dispatch: Dispatch<{{ properCase name }}ActionType>): {{ properCase name }}DispatchProps => ({
+type MapDispatchToProps = (dispatch: Dispatch<Action>) => DispatchProps;
+const mapDispatchToProps: MapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(
     actionCreators,
     dispatch,
   ),
 });
 
-class {{ properCase name }} extends React.Component<{{ properCase name }}PropTypes, {{ properCase name }}State> {
+export interface DispatchProps {
+  actions: ActionMap;
+}
+
+export interface StateProps {
+  isLoading: boolean;
+  error?: ErrorType;
+  data?: string;
+}
+
+export type Props = StateProps & DispatchProps;
+
+class {{ properCase name }} extends React.Component<Props, undefined> {
 {{else}}
-class {{ properCase name }} extends React.Component<{{ properCase name }}PropTypes, any> {
+export interface Props {
+
+}
+class {{ properCase name }} extends React.Component<Props, undefined> {
 {{/if}}
   public render() {
     return (
-      <Section>
-        <Heading>
-          Best container ever!
-        </Heading>
-      </Section>
+      <Presentation {...this.props} />
     );
   }
 }

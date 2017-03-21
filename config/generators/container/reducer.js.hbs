@@ -1,20 +1,14 @@
 import * as T from './constants';
-import { 
-  {{ properCase name }}Action,
-  {{ properCase name }}State,
+import initialState from './state';
+import {
+  Action,
+  State,
 } from './types';
 
-export { {{ properCase name }}State };
-export const initialState: {{ properCase name }}State = {
-  isLoading: false,
-  error: null,
-  data: null,
-};
-
-const {{ camelCase name }}Reducer = (
-  state: {{ properCase name }}State = initialState,
-  action: {{ properCase name }}Action,
-): {{ properCase name }}State => {
+const reducer = (
+  state: State = initialState,
+  action: Action,
+): State => {
   switch (action.type) {
   case T.LOAD_INITIATION:
     return Object.assign({}, state, {
@@ -35,4 +29,4 @@ const {{ camelCase name }}Reducer = (
   }
 };
 
-export default {{ camelCase name }}Reducer;
+export default reducer;

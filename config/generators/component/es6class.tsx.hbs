@@ -1,8 +1,10 @@
 import * as React from 'react';
 import Component from './styles';
-import { {{ properCase name }}Props } from './types';
 
-class {{ properCase name }} extends React.Component<{{ properCase name }}Props, undefined> {
+export interface Props extends React.HTMLProps<typeof {{ properCase name }}> {
+  children: JSX.Element;
+}
+class {{ properCase name }} extends React.Component<Props, undefined> {
   public render() {
     const {
       children,

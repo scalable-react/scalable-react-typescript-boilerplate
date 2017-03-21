@@ -43,31 +43,62 @@ module.exports = {
     const containerPath = path.resolve(process.cwd(), `${data.path}/{{properCase name}}/`);
     const rootPath = path.resolve(process.cwd(), `./src/client/containers/index.ts`);
     const reducersPath = path.resolve(process.cwd(), './src/client/reducers.ts');
+    const typesPath = path.resolve(process.cwd(), './src/client/types.ts');
     const statePath = path.resolve(process.cwd(), './src/client/state.ts');
-    const actions = [{
-      type: 'add',
-      path: `${containerPath}/index.tsx`,
-      templateFile: './container/index.js.hbs',
-      abortOnFail: true
-    }, {
-      type: 'modify',
-      path: rootPath,
-      pattern: /(\/\* GENERATOR-IMPORT \*\/)/g,
-      template: trimTemplateFile('./config/generators/container/import.js.hbs'),
-      abortOnFail: false
-    },
-    {
-      type: 'modify',
-      path: rootPath,
-      pattern: /(\/\* GENERATOR-EXPORT \*\/)/g,
-      template: trimTemplateFile('./config/generators/container/export.js.hbs'),
-      abortOnFail: false
-    }];
+    const actions = [
+      {
+        type: 'add',
+        path: `${containerPath}/index.tsx`,
+        templateFile: './container/index.js.hbs',
+        abortOnFail: true
+      },
+      {
+        type: 'add',
+        path: `${containerPath}/presentation.tsx`,
+        templateFile: './container/presentation.js.hbs',
+        abortOnFail: true
+      },
+      {
+        type: 'modify',
+        path: rootPath,
+        pattern: /(\/\* GENERATOR-IMPORT \*\/)/g,
+        template: trimTemplateFile('./config/generators/container/import.js.hbs'),
+        abortOnFail: false
+      },
+      {
+        type: 'modify',
+        path: rootPath,
+        pattern: /(\/\* GENERATOR-EXPORT \*\/)/g,
+        template: trimTemplateFile('./config/generators/container/export.js.hbs'),
+        abortOnFail: false
+      },
+      {
+        type: 'modify',
+        path: typesPath,
+        pattern: /(\/\* GENERATOR-IMPORT \*\/)/g,
+        template: trimTemplateFile('./config/generators/container/types.import.ts.hbs'),
+        abortOnFail: false
+      },
+      {
+        type: 'modify',
+        path: typesPath,
+        pattern: /(\/\* GENERATOR-EXPORT \*\/)/g,
+        template: trimTemplateFile('./config/generators/container/types.export.ts.hbs'),
+        abortOnFail: false
+      }
+    ];
 
     actions.push({
       type: 'add',
       path: `${containerPath}/styles.ts`,
       templateFile: './container/styles.js.hbs',
+      abortOnFail: true
+    });
+
+    actions.push( {
+      type: 'add',
+      path: `${containerPath}/types.ts`,
+      templateFile: './container/types.ts.hbs',
       abortOnFail: true
     });
 
@@ -91,6 +122,14 @@ module.exports = {
         abortOnFail: true
       });
 
+
+      actions.push({
+        type: 'add',
+        path: `${containerPath}/state.ts`,
+        templateFile: './container/state.js.hbs',
+        abortOnFail: true
+      });
+
       actions.push({
         type: 'add',
         path: `${containerPath}/actions.ts`,
@@ -105,13 +144,6 @@ module.exports = {
         templateFile: './container/constants.js.hbs',
         abortOnFail: true
       });
-
-      actions.push( {
-        type: 'add',
-        path: `${containerPath}/types.ts`,
-        templateFile: './container/types.ts.hbs',
-        abortOnFail: true
-      })
 
       // Reducer
       actions.push({
