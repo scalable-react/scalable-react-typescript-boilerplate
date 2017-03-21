@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Component from './styles';
-import { {{ properCase name }}Props } from './types';
 
+export interface Props extends React.HTMLProps<typeof {{ properCase name }}> {
+  children: JSX.Element;
+}
 export default function {{ properCase name }}({
   children,
-}: {{ properCase name }}Props): JSX.Element {
+}: Props): JSX.Element {
   return (
     <Component>
       {children}

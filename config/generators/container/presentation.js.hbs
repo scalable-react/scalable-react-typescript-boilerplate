@@ -1,0 +1,22 @@
+import * as React from 'react';
+import { StateProps } from './types';
+import { Heading, Section } from './styles';
+
+export default class Presentation extends React.Component<StateProps, undefined> {
+  public render() {
+    {{#if wantActionsAndReducer}}
+    const {
+      isLoading,
+      error,
+      data,
+    } = this.props;
+    {{/if}}
+    return (
+      <Section>
+        <Heading>
+          Best container ever!
+        </Heading>
+      </Section>
+    );
+  }
+}
