@@ -1,3 +1,4 @@
+{{#if wantActionsAndReducer}}
 import { ActionCreatorsMapObject } from 'redux';
 import {
   LoadInitiationAction,
@@ -7,11 +8,7 @@ import {
 } from './actions';
 
 export { State } from './state';
-{{#if wantActionsAndReducer}}
 export { Props, StateProps, DispatchProps } from './';
-{{else}}
-export { Props } from './';
-{{/if}}
 export { ActionType } from './constants';
 export { Action } from './actions';
 export interface ErrorType { message: string }
@@ -22,3 +19,6 @@ export interface ActionMap extends ActionCreatorsMapObject {
   loadFailure: (error: ErrorType) => LoadFailureAction;
   loadCancel: () => LoadCancelAction;
 }
+{{else}}
+export { Props } from './';
+{{/if}}

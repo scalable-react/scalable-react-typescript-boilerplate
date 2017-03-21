@@ -95,6 +95,13 @@ module.exports = {
       abortOnFail: true
     });
 
+    actions.push( {
+      type: 'add',
+      path: `${containerPath}/types.ts`,
+      templateFile: './container/types.ts.hbs',
+      abortOnFail: true
+    });
+
     if (data.wantSelectors) {
       actions.push({
         type: 'add',
@@ -137,13 +144,6 @@ module.exports = {
         templateFile: './container/constants.js.hbs',
         abortOnFail: true
       });
-
-      actions.push( {
-        type: 'add',
-        path: `${containerPath}/types.ts`,
-        templateFile: './container/types.ts.hbs',
-        abortOnFail: true
-      })
 
       // Reducer
       actions.push({

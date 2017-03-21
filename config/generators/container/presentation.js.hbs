@@ -1,8 +1,19 @@
 import * as React from 'react';
+{{#if wantActionsAndReducer}}
 import { StateProps } from './types';
+{{else}}
+import { Props as ParentProps } from './types';
+{{/if}}
 import { Heading, Section } from './styles';
 
+{{#if wantActionsAndReducer}}
 export default class Presentation extends React.Component<StateProps, undefined> {
+{{else}}
+export interface Props extends ParentProps {
+  // own props
+}
+export default class Presentation extends React.Component<Props, undefined> {
+{{/if}}
   public render() {
     {{#if wantActionsAndReducer}}
     const {
