@@ -1,5 +1,5 @@
 import * as types from './constants';
-import {defaultAction} from 'shared/actionCreators';
+import { defaultAction } from 'shared/actionCreators';
 import {
   SetIsMobileAction,
 } from './actions';
