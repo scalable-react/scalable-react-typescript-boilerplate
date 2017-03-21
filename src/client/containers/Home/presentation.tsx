@@ -1,72 +1,28 @@
 import * as React from 'react';
-import { Heading, Section, Hero, Paragraph, Button, Anchor } from 'ui';
-import { Container, HeroLogo, HeroLogoRow, HeadingContainer, GetStartedButtons } from './styles';
-import { Props as HomeProps } from './types';
+import { Welcome } from 'components';
+import { LoadingIndicator, Toast, Box } from 'ui';
+import { Props } from './types';
 
-export interface Props extends HomeProps {
-  children?: JSX.Element;
-}
-export default function HomePresentation({
-  children,
-  theme,
-}: Props): JSX.Element {
-  return (
-    <Container>
-      <Section
-        alignItems="center"
-        flexDirection="column"
-        full={{ horizontal: true }}
-        backgroundColor={theme.offwhite}
-      >
-        <Hero backgroundColor={theme.black2}>
-          <HeroLogoRow>
-            <HeroLogo>
-              TS
-            </HeroLogo>
-          </HeroLogoRow>
-          <HeadingContainer>
-            <Heading margin="small" tag="h1" color={theme.primary}>
-              Scalable React TypeScript Boilerplate
-            </Heading>
-            <Paragraph margin="small" paragraphSize="large">
-              Scaling JavaScript apps has never been easier
-            </Paragraph>
-          </HeadingContainer>
-          <GetStartedButtons>
-            <Anchor
-              plain
-              color={theme.white1}
-              path="/docs"
-            >
-              <Button
-                style={{ margin: 10 }}
-                fontSize="xlarge"
-                isHero
-                backgroundColor={theme.secondary}
-                borderColor="#733529"
-              >
-                Read the docs
-              </Button>
-            </Anchor>
-            <Anchor
-              plain
-              color={theme.white1}
-              path="/todo-app"
-            >
-              <Button
-                style={{ margin: 10 }}
-                fontSize="xlarge"
-                isHero
-                backgroundColor={theme.secondary}
-                borderColor="#733529"
-              >
-                View Example App
-              </Button>
-            </Anchor>
-          </GetStartedButtons>
-        </Hero>
-      </Section>
-      {children}
-    </Container>
-  );
+export default class Presentation extends React.Component<Props, undefined> {
+  public render() {
+    const {
+      isLoading,
+      error,
+      data,
+      actions,
+    } = this.props;
+    return (
+      <Box full alignItems="center" justifyContent="center">
+        <LoadingIndicator isLoading={isLoading} />
+        {error &&
+          <Toast
+            status="warning"
+            message={error.message}
+            onClose={actions.clearError}
+          />
+        }
+        <Welcome data={data} />
+      </Box>
+    );
+  }
 }

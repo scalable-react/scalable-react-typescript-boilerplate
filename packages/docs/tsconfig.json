@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src/client",
+    "module": "es6",
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "outDir": "build/src",
+    "jsx": "preserve",
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "paths": {
+      "components/*": ["./components/*"],
+      "containers/*": ["./containers/*"],
+      "test/*": ["./test/*"],
+      "shared/*": ["./shared/*"],
+      "root/*": ["./*"], 
+      "ui": ["../../packages/ui/src/index"]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.*",
+    "**/*.mock.*"
+  ]
+}

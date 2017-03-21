@@ -1,4 +1,4 @@
-import docsLogic from './containers/Docs/logic';
+import docsLogic from './containers/Home/logic';
 
 const rootLogic = [
   ...docsLogic,

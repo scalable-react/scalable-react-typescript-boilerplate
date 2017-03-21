@@ -7,6 +7,6 @@ export interface SetIsMobileAction extends Action {
   isMobile: boolean
 }
 
-export type FeatureAction =
+export type Action =
   SetIsMobileAction |
   DefaultAction;

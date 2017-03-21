@@ -5,7 +5,7 @@ import BoxProps from '../Box/types';
 import { Status } from './types';
 
 export interface Props extends BoxProps {
-  message?: JSX.Element;
+  message?: JSX.Element | string;
   children?: JSX.Element;
   onClose?: () => void;
   status?: Status;
