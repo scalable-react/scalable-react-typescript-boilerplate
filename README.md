@@ -39,6 +39,9 @@ We encourage encapsulation of features by asking that you organize each feature 
 
 Give it a try! We promise you will enjoy it.
 
+## Multiple Package Approach
+We recently migrated to a multi-package approach using [Lerna](https://github.com/lerna/lerna).  More info coming soon! 
+
 ## Styled Components
 This project embraces [styled-components](https://github.com/styled-components/styled-components) as it's a fantastic way to style your React components.  
 
