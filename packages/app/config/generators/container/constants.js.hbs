@@ -1,0 +1,13 @@
+export type LOAD_INITIATION_TYPE = '{{ uppercase name }}/LOAD_INITIATION';
+export const LOAD_INITIATION: LOAD_INITIATION_TYPE = '{{ uppercase name }}/LOAD_INITIATION';
+
+export type LOAD_SUCCESS_TYPE = '{{ uppercase name }}/LOAD_SUCCESS';
+export const LOAD_SUCCESS: LOAD_SUCCESS_TYPE = '{{ uppercase name }}/LOAD_SUCCESS';
+
+export type LOAD_FAILURE_TYPE = '{{ uppercase name }}/LOAD_FAILURE';
+export const LOAD_FAILURE: LOAD_FAILURE_TYPE = '{{ uppercase name }}/LOAD_FAILURE';
+
+export type LOAD_CANCEL_TYPE = '{{ uppercase name }}/LOAD_CANCEL';
+export const LOAD_CANCEL: LOAD_CANCEL_TYPE = '{{ uppercase name }}/LOAD_CANCEL';
+
+export type ActionType = LOAD_INITIATION_TYPE | LOAD_SUCCESS_TYPE | LOAD_FAILURE_TYPE | LOAD_CANCEL_TYPE;

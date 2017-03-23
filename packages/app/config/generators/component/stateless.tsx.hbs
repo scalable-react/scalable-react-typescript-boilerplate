@@ -1,0 +1,15 @@
+import * as React from 'react';
+import Component from './styles';
+
+export interface Props extends React.HTMLProps<typeof {{ properCase name }}> {
+  children: JSX.Element;
+}
+export default function {{ properCase name }}({
+  children,
+}: Props): JSX.Element {
+  return (
+    <Component>
+      {children}
+    </Component>
+  );
+};
