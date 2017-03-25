@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Markdown } from 'ui';
+import { Markdown } from '../';
 import Component from './styles';
 import BoxProps from '../Box/types';
 

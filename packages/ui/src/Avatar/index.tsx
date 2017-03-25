@@ -1,6 +1,7 @@
 import { AvatarStyle } from './styles';
-import styled from 'styled-components';
+import styled, { ThemeProps } from 'styled-components';
 
+export { ThemeProps };
 export type ImageSize = 'thumb' | 'small' | 'medium' | 'large';
 export interface Props {
   src: string;

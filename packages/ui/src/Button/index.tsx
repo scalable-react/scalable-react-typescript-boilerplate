@@ -11,7 +11,7 @@ export interface Props extends React.HTMLProps<HTMLButtonElement & Button> {
   borderColor?: string;
 }
 
-class Button extends React.Component<Props, undefined> {
+export class Button extends React.Component<Props, undefined> {
   public static defaultProps: Props = {
     color: '#fefefe',
     backgroundColor: '#c05b4d',

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'react-apollo';
-import { Box, Headline, Section, LoadingIndicator, Notification } from 'ui';
+import { Box, Headline, Section, LoadingIndicator, Notification } from 'openui';
 import { PostCard } from 'components';
 import POST_QUERY from './posts.graphql';
 import Hr from './styles';

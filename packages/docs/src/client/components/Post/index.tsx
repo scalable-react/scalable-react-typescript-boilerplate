@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Markdown, Image, Headline, Article, Box } from 'ui';
+import { Markdown, Image, Headline, Article, Box } from 'openui';
 import { Comment, AddComment } from 'components';
 import { PostProps } from './types';
 

@@ -1,8 +1,8 @@
+import { css, InterpolationFunction, ThemeProps } from 'styled-components';
 import remStringFromPx from '../utils';
 import map from './maps';
 import { Props } from './index';
 import defaultUrl from './default';
-import { css } from 'styled-components';
 
 const propsToSize = ({ size }: Props) => {
   const imageSize = size || 'medium';
@@ -14,8 +14,9 @@ const propsToSize = ({ size }: Props) => {
   `;
 };
 
-export const AvatarStyle = css`
-  background: url(${({ src }) => src || defaultUrl});
+export type AvatarStylesType = Array<string | number | InterpolationFunction<Props & ThemeProps<{}>>>;
+export const AvatarStyle: AvatarStylesType = css`
+  background: url(${({ src }: Props) => src || defaultUrl});
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

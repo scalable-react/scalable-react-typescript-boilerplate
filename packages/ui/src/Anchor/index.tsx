@@ -4,8 +4,8 @@ import Component from './styles';
 
 const MethodTypePush = 'push';
 const MethodTypeReplace = 'replace';
-type Method = 'push' | 'replace';
-export interface Props extends React.Props<Anchor> {
+export type Method = 'push' | 'replace';
+export interface Props extends React.Props<typeof Anchor> {
   path?: string;
   plain?: boolean;
   href?: string;
@@ -15,7 +15,7 @@ export interface Props extends React.Props<Anchor> {
   router?: InjectedRouter;
 }
 
-class Anchor extends React.Component<Props, undefined> {
+export class Anchor extends React.Component<Props, undefined> {
   public static defaultProps: Props = {
     method: MethodTypePush,
   };

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavBar } from 'components';
-import { Box, Heading, Footer, Paragraph, SvgIcon, Anchor } from 'ui';
+import { Box, Heading, Footer, Paragraph, SvgIcon, Anchor } from 'openui';
 import { SetIsMobileAction } from './actions';
 import { State } from './state';
 import { Author, Main } from './styles';

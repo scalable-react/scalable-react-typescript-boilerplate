@@ -15,6 +15,7 @@
     "react-markdown": "^2.4.5",
     "rimraf": "^2.6.1",
     "styled-components": "^1.4.4",
-    "yarn": "^0.21.3"
+    "yarn": "^0.21.3",
+    "typescript": "^2.2.1"
   }
 }

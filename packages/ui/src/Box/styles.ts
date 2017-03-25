@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css, InterpolationFunction, ThemeProps } from 'styled-components';
 import Props from './types';
 import {
   calculateFlexWrap,
@@ -7,7 +7,9 @@ import {
   boxSizeToStyle,
 } from './styleUtils';
 
-export const BoxStyles = css`
+export { ThemeProps, Props };
+export type BoxStylesType = Array<string | number | InterpolationFunction<Props & ThemeProps<{}>>>;
+export const BoxStyles: BoxStylesType = css`
   display: flex;
   background-color: ${({ backgroundColor }: Props) => backgroundColor || 'transparent'};
   justify-content: ${({ justifyContent }: Props) => justifyContent || 'flex-start'};

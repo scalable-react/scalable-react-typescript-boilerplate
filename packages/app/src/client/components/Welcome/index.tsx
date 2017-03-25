@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Markdown } from 'ui';
+import { Markdown } from 'openui';
 import Component from './styles';
 
 export interface Props extends React.HTMLProps<typeof Welcome> {

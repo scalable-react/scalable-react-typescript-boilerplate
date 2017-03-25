@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css, InterpolationFunction, ThemeProps } from 'styled-components';
 import Props from './types';
 import { BREAKPOINTS } from './maps';
 import {
@@ -99,7 +99,9 @@ export function calculateFullStyle(full: Full, postFix: 'vw' | 'vh'): string {
   return 'auto';
 }
 
-export const breakPointCss = (breakPoint: Breakpoint) => {
+export type BreakPointCss = (breakPoint: Breakpoint) =>
+  Array<string | number | InterpolationFunction<Props & ThemeProps<{}>>>;
+export const breakPointCss: BreakPointCss = (breakPoint) => {
   const selector = breakPoint === 'desktop' ? 'min-width' : 'max-width';
   return css`
     @media screen and (${selector}: ${BREAKPOINTS.phone}) {

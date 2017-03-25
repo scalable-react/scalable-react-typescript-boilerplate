@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Anchor } from 'ui';
+import { Anchor } from 'openui';
 import { NavBarProps } from './types';
 import {
   Nav,

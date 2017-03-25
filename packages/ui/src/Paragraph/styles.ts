@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css, InterpolationFunction, ThemeProps } from 'styled-components';
 import { Margin, Props } from './types';
 import calculateSize, { calculateMargin } from './styleUtils';
 
@@ -16,7 +16,8 @@ export function marginCss(margin: Margin) {
   `;
 };
 
-export const style = css`
+export type Style = Array<string | number | InterpolationFunction<Props & ThemeProps<{}>>>;
+export const style: Style = css`
   max-width: 630px;
   text-align: ${(props: Props) => props.textAlign || defaultProps.textAlign};
   color: ${(props: Props) => props.color || defaultProps.color};

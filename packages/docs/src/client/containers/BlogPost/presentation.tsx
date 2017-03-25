@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Post } from 'components';
-import { LoadingIndicator, Section, Notification } from 'ui';
+import { LoadingIndicator, Section, Notification } from 'openui';
 import { ErrorType, Post as PostType, OnInput, OnSubmit, OnKeyUp } from './types';
 import { ThemeColorMap } from '../../types';
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Article, Headline, LoadingIndicator, Section, Notification } from 'ui';
+import { Article, Headline, LoadingIndicator, Section, Notification } from 'openui';
 import Hr from './styles';
 import { State } from './state';
 import {

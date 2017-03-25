@@ -16,8 +16,7 @@
       "containers/*": ["./containers/*"],
       "test/*": ["./test/*"],
       "shared/*": ["./shared/*"],
-      "root/*": ["./*"], 
-      "ui": ["../ui/src/index"]
+      "root/*": ["./*"]
     }
   },
   "include": [

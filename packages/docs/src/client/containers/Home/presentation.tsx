@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Heading, Section, Hero, Paragraph, Button, Anchor } from 'ui';
+import { Heading, Section, Hero, Paragraph, Button, Anchor } from 'openui';
 import { Container, HeroLogo, HeroLogoRow, HeadingContainer, GetStartedButtons } from './styles';
 import { Props as HomeProps } from './types';
 
