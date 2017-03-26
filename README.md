@@ -37,6 +37,9 @@ We encourage modularization / encapsulation of features by asking that you organ
 
 On top of that, we also ask that you think about separation of concern as you are building your features.  You will see in the example application in this repository that a feature is built up of a dozen or so small, single purpose modules.  By following these simple patterns, you will set yourself up for maximum scalability.  Give it a try! We think you will enjoy it.
 
+## Lerna
+We are hard at work converting the structure of this boilerplate to use Lerna.  Stay tuned for more information!
+
 ## Styled Components
 This project embraces [styled-components](https://github.com/styled-components/styled-components) as it's a fantastic way to style your React components.  
 
