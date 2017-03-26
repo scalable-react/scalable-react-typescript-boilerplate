@@ -16,7 +16,7 @@ Checkout [our website](https://scalable-react-ts-boilerplate.herokuapp.com/) for
 
 ## Background Info
 
-We know that there are a ton of react boilerplates and starter projects to choose from.  Our hope with this project is to provide an example of one of the best front-end architectural patterns available: Feature First.  We started initially with a vanilla JS version of this architecture and have since converted it entirely to strongly-typed TypeScript.  Above all else, the hope of this repository is to provide the open source community with a great example of how to build large-scale apps with React and TypeScript.  Read on to get started!
+We know that there are a ton of react boilerplates and starter projects to choose from.  Our hope with this project is to provide an example of one of the best front-end architectural patterns available: Feature First.  We started initially with a vanilla JS version of this architecture and have since converted it entirely to strongly-typed TypeScript.  Above all else, the hope of this repository is to provide the open source community with a great example of how to build large-scale apps with React and TypeScript using the feature-first modularization pattern.  Read on to get started!
 
 ## Getting Started
 1. Clone the Repo
@@ -31,11 +31,11 @@ From the root of the project directory, run `yarn` if you have yarn installed gl
 Run `npm run start` then browse http://localhost:1337 to see your running app.
 
 ## What is Feature First?
-In most projects and frameworks, files are organized in a File type first fashion. For example, your tests exist in a test folder, your styles in a styles folder. This boilerplate takes a different approach.
+In many projects and frameworks, files are organized by their file type.  For example, you will find tests in a test folder, reducers in a reducers folder and so on and so forth.  This framework takes a different approach.
 
-We encourage encapsulation of features by asking that you organize each feature into the same folder. With React, this means that your containers and components exist in their own folders, along with literally every other file that pertains to that one feature. In other words, your actions, reducers, tests, styles, types and everything else are all internal to the feature they represent. By decoupling your features from the rest of your app, you set yourself up to reuse your UI components in future projects. You can thank us later!
+We encourage modularization / encapsulation of features by asking that you organize your files by feature, rather than file type. When you begin working on your next container, instead of having to root through multiple files to find all of the files that the container depends on, you can expect to find these files in one place: with the feature that they represent.  This helps to decouple the features in your app, lending itself well to code reuse, scalability and modularization.
 
-Give it a try! We promise you will enjoy it.
+On top of that, we also ask that you think about separation of concern as you are building your features.  You will see in the example application in this repository that a feature is built up of a dozen or so small, single purpose modules.  By following these simple patterns, you will set yourself up for maximum scalability.  Give it a try! We think you will enjoy it.
 
 ## Styled Components
 This project embraces [styled-components](https://github.com/styled-components/styled-components) as it's a fantastic way to style your React components.  
