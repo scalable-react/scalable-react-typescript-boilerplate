@@ -30,27 +30,29 @@ lerna(verbose) Attempting running BootstrapCommand.execute
 lerna(info)    Bootstrapping 3 packages
 lerna(info)    Preinstalling packages
 lerna(info)    Installing external dependencies
-lerna(verbose) NpmUtilities.installInDir     ("./packages/app", ["@types/enzyme@^2.7.5","@types/jest@^18.1.1","babel-core@^6.23.1","babel-loader@^...)
+lerna(verbose) NpmUtilities.installInDir     ("./packages/app", ["@types/compression@latest","@types/express@latest","@types/graphql@latest","@typ...)
 lerna(verbose) FileSystemUtilities.rename    ("./packages/app/package.json", "./packages/app/package.json.lerna_backup")
 lerna(verbose) NpmUtilities.installInDir     ("./packages/docs", ["@types/compression@latest","@types/express@latest","@types/graphql@latest","@ty...)
 lerna(verbose) FileSystemUtilities.rename    ("./packages/docs/package.json", "./packages/docs/package.json.lerna_backup")
 lerna(verbose) FileSystemUtilities.rename    ("./packages/app/package.json", "./packages/app/package.json.lerna_backup") => 
-lerna(verbose) FileSystemUtilities.writeFile ("./packages/app/package.json", "{\"dependencies\":{\"@types/enzyme\":\"^2.7.5\",\"@types/jest\":\"^1...)
+lerna(verbose) FileSystemUtilities.writeFile ("./packages/app/package.json", "{\"dependencies\":{\"@types/compression\":\"latest\",\"@types/expres...)
 lerna(verbose) FileSystemUtilities.rename    ("./packages/docs/package.json", "./packages/docs/package.json.lerna_backup") => 
 lerna(verbose) FileSystemUtilities.writeFile ("./packages/docs/package.json", "{\"dependencies\":{\"@types/compression\":\"latest\",\"@types/expre...)
-lerna(verbose) FileSystemUtilities.writeFile ("./packages/app/package.json", "{\"dependencies\":{\"@types/enzyme\":\"^2.7.5\",\"@types/jest\":\"^1...) => 
+lerna(verbose) FileSystemUtilities.writeFile ("./packages/app/package.json", "{\"dependencies\":{\"@types/compression\":\"latest\",\"@types/expres...) => 
 lerna(verbose) FileSystemUtilities.writeFile ("./packages/docs/package.json", "{\"dependencies\":{\"@types/compression\":\"latest\",\"@types/expre...) => 
+lerna(verbose) FileSystemUtilities.renameSync("./packages/app/package.json.lerna_backup", "./packages/app/package.json")
+lerna(verbose) FileSystemUtilities.renameSync("./packages/app/package.json.lerna_backup", "./packages/app/package.json") => 
+lerna(verbose) NpmUtilities.installInDir     ("./packages/app", ["@types/compression@latest","@types/express@latest","@types/graphql@latest","@typ...) => 
 lerna(verbose) FileSystemUtilities.renameSync("./packages/docs/package.json.lerna_backup", "./packages/docs/package.json")
 lerna(verbose) FileSystemUtilities.renameSync("./packages/docs/package.json.lerna_backup", "./packages/docs/package.json") => 
 lerna(verbose) NpmUtilities.installInDir     ("./packages/docs", ["@types/compression@latest","@types/express@latest","@types/graphql@latest","@ty...) => 
-lerna(verbose) FileSystemUtilities.renameSync("./packages/app/package.json.lerna_backup", "./packages/app/package.json")
-lerna(verbose) FileSystemUtilities.renameSync("./packages/app/package.json.lerna_backup", "./packages/app/package.json") => 
-lerna(verbose) NpmUtilities.installInDir     ("./packages/app", ["@types/enzyme@^2.7.5","@types/jest@^18.1.1","babel-core@^6.23.1","babel-loader@^...) => 
 lerna(info)    Symlinking packages and binaries
 lerna(verbose) FileSystemUtilities.existsSync("./packages/ui/package.json")
 lerna(verbose) FileSystemUtilities.existsSync("./packages/ui/package.json") => true
 lerna(verbose) FileSystemUtilities.existsSync("./packages/app/node_modules/openui")
-lerna(verbose) FileSystemUtilities.existsSync("./packages/app/node_modules/openui") => false
+lerna(verbose) FileSystemUtilities.existsSync("./packages/app/node_modules/openui") => true
+lerna(verbose) FileSystemUtilities.isSymlink ("./packages/app/node_modules/openui")
+lerna(verbose) FileSystemUtilities.isSymlink ("./packages/app/node_modules/openui") => "./packages/ui"
 lerna(verbose) FileSystemUtilities.existsSync("./packages/ui/package.json")
 lerna(verbose) FileSystemUtilities.existsSync("./packages/ui/package.json") => true
 lerna(verbose) FileSystemUtilities.existsSync("./packages/docs/node_modules/openui")
@@ -70,706 +72,160 @@ lerna(verbose) NpmUtilities.runScriptInDir   ("postinstall", [], "./packages/app
 lerna(verbose) NpmUtilities.execInDir        ("run postinstall", [], "./packages/app")
 lerna(verbose) NpmUtilities.runScriptInDir   ("postinstall", [], "./packages/docs")
 lerna(verbose) NpmUtilities.execInDir        ("run postinstall", [], "./packages/docs")
-lerna(error)   NpmUtilities.execInDir        ("run postinstall", [], "./packages/docs")
+lerna(error)   NpmUtilities.execInDir        ("run postinstall", [], "./packages/app")
     Error: Command failed: npm run postinstall 
     
-    npm ERR! Darwin 15.6.0
-    npm ERR! argv "/Users/myMac/.nvm/versions/node/v6.9.5/bin/node" "/usr/local/bin/npm" "run" "deploy"
-    npm ERR! node v6.9.5
-    npm ERR! npm  v4.1.2
+    npm ERR! Linux 4.4.0-66-generic
+    npm ERR! argv "/home/ryancollinsio/.nvm/versions/node/v6.2.0/bin/node" "/home/ryancollinsio/.nvm/versions/node/v6.2.0/bin/npm" "run" "deploy"
+    npm ERR! node v6.2.0
+    npm ERR! npm  v3.8.9
     npm ERR! code ELIFECYCLE
-    npm ERR! react-ts-boilerplate@1.0.1 deploy: `cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js`
+    npm ERR! app@1.0.0 deploy: `cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js`
     npm ERR! Exit status 2
     npm ERR! 
-    npm ERR! Failed at the react-ts-boilerplate@1.0.1 deploy script 'cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js'.
+    npm ERR! Failed at the app@1.0.0 deploy script 'cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js'.
     npm ERR! Make sure you have the latest version of node.js and npm installed.
-    npm ERR! If you do, this is most likely a problem with the react-ts-boilerplate package,
+    npm ERR! If you do, this is most likely a problem with the app package,
     npm ERR! not with npm itself.
     npm ERR! Tell the author that this fails on your system:
     npm ERR!     cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js
     npm ERR! You can get information on how to open an issue for this project with:
-    npm ERR!     npm bugs react-ts-boilerplate
+    npm ERR!     npm bugs app
     npm ERR! Or if that isn't available, you can get their info via:
-    npm ERR!     npm owner ls react-ts-boilerplate
+    npm ERR!     npm owner ls app
     npm ERR! There is likely additional logging output above.
     
     npm ERR! Please include the following file with any support request:
-    npm ERR!     /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs/npm-debug.log
+    npm ERR!     /home/ryancollinsio/developer/ts-boilerplate/packages/app/npm-debug.log
     
-    npm ERR! Darwin 15.6.0
-    npm ERR! argv "/Users/myMac/.nvm/versions/node/v6.9.5/bin/node" "/usr/local/bin/npm" "run" "postinstall"
-    npm ERR! node v6.9.5
-    npm ERR! npm  v4.1.2
+    npm ERR! Linux 4.4.0-66-generic
+    npm ERR! argv "/home/ryancollinsio/.nvm/versions/node/v6.2.0/bin/node" "/home/ryancollinsio/.nvm/versions/node/v6.2.0/bin/npm" "run" "postinstall"
+    npm ERR! node v6.2.0
+    npm ERR! npm  v3.8.9
     npm ERR! code ELIFECYCLE
-    npm ERR! react-ts-boilerplate@1.0.1 postinstall: `npm run deploy`
+    npm ERR! app@1.0.0 postinstall: `npm run deploy`
     npm ERR! Exit status 1
     npm ERR! 
-    npm ERR! Failed at the react-ts-boilerplate@1.0.1 postinstall script 'npm run deploy'.
+    npm ERR! Failed at the app@1.0.0 postinstall script 'npm run deploy'.
     npm ERR! Make sure you have the latest version of node.js and npm installed.
-    npm ERR! If you do, this is most likely a problem with the react-ts-boilerplate package,
+    npm ERR! If you do, this is most likely a problem with the app package,
     npm ERR! not with npm itself.
     npm ERR! Tell the author that this fails on your system:
     npm ERR!     npm run deploy
     npm ERR! You can get information on how to open an issue for this project with:
-    npm ERR!     npm bugs react-ts-boilerplate
+    npm ERR!     npm bugs app
     npm ERR! Or if that isn't available, you can get their info via:
-    npm ERR!     npm owner ls react-ts-boilerplate
+    npm ERR!     npm owner ls app
     npm ERR! There is likely additional logging output above.
     
     npm ERR! Please include the following file with any support request:
-    npm ERR!     /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs/npm-debug.log
+    npm ERR!     /home/ryancollinsio/developer/ts-boilerplate/packages/app/npm-debug.log
     
-        at ChildProcess.exithandler (child_process.js:206:12)
+        at ChildProcess.exithandler (child_process.js:202:12)
         at emitTwo (events.js:106:13)
         at ChildProcess.emit (events.js:191:7)
-        at maybeClose (internal/child_process.js:877:16)
-        at Socket.<anonymous> (internal/child_process.js:334:11)
+        at maybeClose (internal/child_process.js:850:16)
+        at Socket.<anonymous> (internal/child_process.js:323:11)
         at emitOne (events.js:96:13)
         at Socket.emit (events.js:188:7)
-        at Pipe._handle.close [as _onclose] (net.js:498:12)
+        at Pipe._handle.close [as _onclose] (net.js:492:12)
 lerna(error)   
-> react-ts-boilerplate@1.0.1 postinstall /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs
+> app@1.0.0 postinstall /home/ryancollinsio/developer/ts-boilerplate/packages/app
 > npm run deploy
 
 
-> react-ts-boilerplate@1.0.1 predeploy /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs
+> app@1.0.0 predeploy /home/ryancollinsio/developer/ts-boilerplate/packages/app
 > rimraf build/public/*.*
 
 
-> react-ts-boilerplate@1.0.1 deploy /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs
+> app@1.0.0 deploy /home/ryancollinsio/developer/ts-boilerplate/packages/app
 > cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js
 
-ts-loader: Using typescript@2.2.1 and /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs/tsconfig.json
-Hash: 3ba380adb8e876cf5ac1
-Version: webpack 2.2.1
-Time: 60852ms
-                         Asset       Size  Chunks                    Chunk Names
-vendor.d80938afbcf073b35e49.js     788 kB       0  [emitted]  [big]  vendor
-  main.366818b58f4b6e1b08c6.js     560 kB       1  [emitted]  [big]  main
-                 manifest.json  100 bytes          [emitted]         
-   [2] ./~/react/react.js 56 bytes {0} {1} [built]
-  [19] ./~/styled-components/dist/styled-components.es.js 226 kB {0} {1} [built]
-  [31] ./~/redux/es/index.js 1.08 kB {0} {1} [built]
-  [73] ./~/react-redux/es/index.js 194 bytes {0} {1} [built]
-  [78] ./~/graphql-tag/index.js 4.66 kB {0} {1} [built]
- [140] ./~/apollo-client/index.js 1.26 kB {0} {1} [built]
- [141] ./~/react-apollo/lib/browser.js 650 bytes {0} {1} [built]
- [219] ./~/redux-logic/build-es/index.js 245 bytes {0} {1} [built]
- [269] ./~/react-dom/index.js 59 bytes {0} {1} [built]
- [575] ./src/client/index.tsx 1.22 kB {1} [built]
- [576] ./~/react-markdown/src/react-markdown.js 2.1 kB {0} [built]
- [577] ./~/redux-connect/lib/index.js 1.52 kB {0} [built]
- [578] ./~/rxjs/Rx.js 9.58 kB {0} [built]
-[1105] multi ./src/client/index.tsx 28 bytes {1} [built]
-[1106] multi react react-dom styled-components react-redux react-router react-router-redux react-markdown redux-connect redux rxjs axios redux-logic react-apollo graphql-tag apollo-client 196 bytes {0} [built]
-    + 1092 hidden modules
+ts-loader: Using typescript@2.2.1 and /home/ryancollinsio/developer/ts-boilerplate/packages/app/tsconfig.json
+Hash: 70d9cecfe659495e5dab
+Version: webpack 2.3.2
+Time: 25600ms
+                                        Asset       Size  Chunks                    Chunk Names
+               vendor.e6f399fec9e37fdb4e9f.js     768 kB       0  [emitted]  [big]  vendor
+                 main.6a2bc42b872dfa95d56e.js    2.63 MB       1  [emitted]  [big]  main
+    main.d856920e6a6b5997ab7e111c18fff09b.css    11.4 kB       1  [emitted]         main
+             main.6a2bc42b872dfa95d56e.js.map    3.11 MB       1  [emitted]         main
+main.d856920e6a6b5997ab7e111c18fff09b.css.map  118 bytes       1  [emitted]         main
+                                manifest.json  285 bytes          [emitted]         
+   [5] ./~/react/react.js 56 bytes {0} {1} [built]
+  [46] ./~/redux/es/index.js 1.08 kB {0} {1} [built]
+ [134] ./~/react-redux/es/index.js 194 bytes {0} {1} [built]
+ [135] ./~/styled-components/dist/styled-components.es.js 226 kB {0} {1} [built]
+ [151] ./~/apollo-client/index.js 1.26 kB {0} {1} [built]
+ [235] ./~/graphql-tag/index.js 4.66 kB {0} {1} [built]
+ [236] ./~/react-router-redux/lib/index.js 1.97 kB {0} {1} [built]
+ [237] ./~/react-router/es/index.js 1.46 kB {0} {1} [built]
+ [238] ./~/redux-logic/build-es/index.js 245 bytes {0} {1} [built]
+ [277] ./~/axios/index.js 40 bytes {0} {1} [built]
+ [278] ./~/react-apollo/lib/browser.js 650 bytes {0} {1} [built]
+ [279] ./~/react-dom/index.js 59 bytes {0} {1} [built]
+ [618] ./~/rxjs/Rx.js 9.58 kB {0} [built]
+[1124] multi ./src/client/index.tsx 28 bytes {1} [built]
+[1125] multi react react-dom styled-components react-redux react-router react-router-redux react-markdown redux-connect redux rxjs axios redux-logic react-apollo graphql-tag apollo-client 196 bytes {0} [built]
+    + 1114 hidden modules
 
-ERROR in ./src/client/containers/Home/presentation.tsx
-(2,67): error TS2307: Cannot find module 'ui'.
+ERROR in /home/ryancollinsio/developer/ts-boilerplate/packages/app/node_modules/openui/dist/SvgIcon/types.d.ts
+(2,35): error TS2314: Generic type 'SVGProps<T>' requires 1 type argument(s).
 
-ERROR in ./src/client/containers/Features/index.tsx
-(2,68): error TS2307: Cannot find module 'ui'.
+ERROR in main.6a2bc42b872dfa95d56e.js from UglifyJs
+Name expected [main.6a2bc42b872dfa95d56e.js:61060,8]
+Child extract-text-webpack-plugin:
+       [0] ./~/css-loader/lib/css-base.js 1.46 kB {0} [built]
+       [1] ./~/css-loader!./~/postcss-loader!../ui/~/github-markdown-css/github-markdown.css 11.5 kB {0} [built]
 
-ERROR in ./src/client/containers/Docs/presentation.tsx
-(2,76): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/containers/BlogPost/presentation.tsx
-(3,57): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/containers/Blog/index.tsx
-(3,72): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/containers/App/presentation.tsx
-(3,66): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/containers/About/index.tsx
-(10,8): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/components/PostCard/styles.ts
-(2,25): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/components/Post/index.tsx
-(2,57): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/components/NavBar/index.tsx
-(2,24): error TS2307: Cannot find module 'ui'.
-
-ERROR in ../ui/src/Anchor/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Anchor/index.tsx Unexpected token (7:5)
-You may need an appropriate loader to handle this file type.
-| const MethodTypePush = 'push';
-| const MethodTypeReplace = 'replace';
-| type Method = 'push' | 'replace';
-| export interface Props extends React.Props<Anchor> {
-|   path?: string;
- @ ../ui/src/index.ts 1:0-30
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Article/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Article/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import BoxProps from '../Box/types';
-| 
-| export interface Props extends BoxProps {
-|   content?: string;
-|   children?: JSX.Element;
- @ ../ui/src/index.ts 2:0-32
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Avatar/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Avatar/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import styled from 'styled-components';
-| 
-| export type ImageSize = 'thumb' | 'small' | 'medium' | 'large';
-| export interface Props {
-|   src: string;
- @ ../ui/src/index.ts 3:0-30
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Button/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Button/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| 
-| // This is so that the onClick handler is accepted without type interferance
-| export interface Props extends React.HTMLProps<HTMLButtonElement & Button> {
-|   color?: string;
-|   backgroundColor?: string;
- @ ../ui/src/index.ts 5:0-30
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Footer/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Footer/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import { FooterComponent } from './styles';
-| 
-| export interface Props extends React.Props<typeof Footer> {
-|   color?: string;
-| }
- @ ../ui/src/index.ts 7:0-30
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Notification/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Notification/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import { Status } from './types';
-| 
-| export interface Props extends React.HTMLProps<typeof Notification> {
-|   message: JSX.Element | string;
-|   status?: Status;
- @ ../ui/src/index.ts 6:0-42
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Box/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Box/index.tsx Unexpected token (7:2)
-You may need an appropriate loader to handle this file type.
-| export default function Box({
-|   children,
-|   ...rest,
-| }: Props): JSX.Element {
-|   return (
- @ ../ui/src/index.ts 4:0-24
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Heading/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Heading/index.tsx Unexpected token (5:7)
-You may need an appropriate loader to handle this file type.
-| import { H1, H2, H3, H4, H5 } from './styles';
-| 
-| export type Tag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
-| 
-| export interface Props {
- @ ../ui/src/index.ts 8:0-32
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Image/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Image/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import { imageStyle } from './styles';
-| 
-| export type ImageSize = 'thumb' | 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'full';
-| 
-| export interface Props {
- @ ../ui/src/index.ts 11:0-28
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Headline/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Headline/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import { HeadlineSize, FontWeight } from './types';
-| 
-| export interface Props {
-|   color?: string;
-|   textAlign?: string;
- @ ../ui/src/index.ts 9:0-34
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Hero/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Hero/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import Component from './styles';
-| 
-| export interface Props extends React.Props<typeof Hero> {
-|   backgroundColor?: string;
-| }
- @ ../ui/src/index.ts 10:0-26
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/LoadingIndicator/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/LoadingIndicator/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import SvgIcon, { Circle } from './styles';
-| 
-| export interface Props extends React.Props<typeof LoadingIndicator> {
-|   isLoading: boolean;
-| }
- @ ../ui/src/index.ts 12:0-50
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Section/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Section/index.tsx Unexpected token (7:2)
-You may need an appropriate loader to handle this file type.
-| export default function Section({
-|   children,
-|   ...rest,
-| }: BoxProps): JSX.Element {
-|   return (
- @ ../ui/src/index.ts 15:0-32
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Markdown/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Markdown/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import 'github-markdown-css/github-markdown.css';
-| 
-| export interface Props extends React.Props<typeof Markdown> {
-|   content: string;
-| }
- @ ../ui/src/index.ts 13:0-34
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Paragraph/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Paragraph/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import { style } from './styles';
-| 
-| export type ParagraphSize = 'small' | 'medium' | 'large' | 'xlarge';
-| export type Margin = 'none' | 'small' | 'medium' | 'large';
-| 
- @ ../ui/src/index.ts 14:0-36
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/SvgIcon/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/SvgIcon/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import { SvgProps } from './types';
-| 
-| export type Props = SvgProps & React.HTMLProps<typeof SvgIcon>;
-| export default function SvgIcon({
-|   children,
- @ ../ui/src/index.ts 16:0-32
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Toast/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Toast/index.tsx Unexpected token (7:7)
-You may need an appropriate loader to handle this file type.
-| import { Status } from './types';
-| 
-| export interface Props extends BoxProps {
-|   message?: JSX.Element | string;
-|   children?: JSX.Element;
- @ ../ui/src/index.ts 17:0-28
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-lerna(error)   NpmUtilities.runScriptInDir   ("postinstall", [], "./packages/docs")
+lerna(error)   NpmUtilities.runScriptInDir   ("postinstall", [], "./packages/app")
 lerna(error)   
-> react-ts-boilerplate@1.0.1 postinstall /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs
+> app@1.0.0 postinstall /home/ryancollinsio/developer/ts-boilerplate/packages/app
 > npm run deploy
 
 
-> react-ts-boilerplate@1.0.1 predeploy /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs
+> app@1.0.0 predeploy /home/ryancollinsio/developer/ts-boilerplate/packages/app
 > rimraf build/public/*.*
 
 
-> react-ts-boilerplate@1.0.1 deploy /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs
+> app@1.0.0 deploy /home/ryancollinsio/developer/ts-boilerplate/packages/app
 > cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./webpack.config.prod.js
 
-ts-loader: Using typescript@2.2.1 and /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/docs/tsconfig.json
-Hash: 3ba380adb8e876cf5ac1
-Version: webpack 2.2.1
-Time: 60852ms
-                         Asset       Size  Chunks                    Chunk Names
-vendor.d80938afbcf073b35e49.js     788 kB       0  [emitted]  [big]  vendor
-  main.366818b58f4b6e1b08c6.js     560 kB       1  [emitted]  [big]  main
-                 manifest.json  100 bytes          [emitted]         
-   [2] ./~/react/react.js 56 bytes {0} {1} [built]
-  [19] ./~/styled-components/dist/styled-components.es.js 226 kB {0} {1} [built]
-  [31] ./~/redux/es/index.js 1.08 kB {0} {1} [built]
-  [73] ./~/react-redux/es/index.js 194 bytes {0} {1} [built]
-  [78] ./~/graphql-tag/index.js 4.66 kB {0} {1} [built]
- [140] ./~/apollo-client/index.js 1.26 kB {0} {1} [built]
- [141] ./~/react-apollo/lib/browser.js 650 bytes {0} {1} [built]
- [219] ./~/redux-logic/build-es/index.js 245 bytes {0} {1} [built]
- [269] ./~/react-dom/index.js 59 bytes {0} {1} [built]
- [575] ./src/client/index.tsx 1.22 kB {1} [built]
- [576] ./~/react-markdown/src/react-markdown.js 2.1 kB {0} [built]
- [577] ./~/redux-connect/lib/index.js 1.52 kB {0} [built]
- [578] ./~/rxjs/Rx.js 9.58 kB {0} [built]
-[1105] multi ./src/client/index.tsx 28 bytes {1} [built]
-[1106] multi react react-dom styled-components react-redux react-router react-router-redux react-markdown redux-connect redux rxjs axios redux-logic react-apollo graphql-tag apollo-client 196 bytes {0} [built]
-    + 1092 hidden modules
+ts-loader: Using typescript@2.2.1 and /home/ryancollinsio/developer/ts-boilerplate/packages/app/tsconfig.json
+Hash: 70d9cecfe659495e5dab
+Version: webpack 2.3.2
+Time: 25600ms
+                                        Asset       Size  Chunks                    Chunk Names
+               vendor.e6f399fec9e37fdb4e9f.js     768 kB       0  [emitted]  [big]  vendor
+                 main.6a2bc42b872dfa95d56e.js    2.63 MB       1  [emitted]  [big]  main
+    main.d856920e6a6b5997ab7e111c18fff09b.css    11.4 kB       1  [emitted]         main
+             main.6a2bc42b872dfa95d56e.js.map    3.11 MB       1  [emitted]         main
+main.d856920e6a6b5997ab7e111c18fff09b.css.map  118 bytes       1  [emitted]         main
+                                manifest.json  285 bytes          [emitted]         
+   [5] ./~/react/react.js 56 bytes {0} {1} [built]
+  [46] ./~/redux/es/index.js 1.08 kB {0} {1} [built]
+ [134] ./~/react-redux/es/index.js 194 bytes {0} {1} [built]
+ [135] ./~/styled-components/dist/styled-components.es.js 226 kB {0} {1} [built]
+ [151] ./~/apollo-client/index.js 1.26 kB {0} {1} [built]
+ [235] ./~/graphql-tag/index.js 4.66 kB {0} {1} [built]
+ [236] ./~/react-router-redux/lib/index.js 1.97 kB {0} {1} [built]
+ [237] ./~/react-router/es/index.js 1.46 kB {0} {1} [built]
+ [238] ./~/redux-logic/build-es/index.js 245 bytes {0} {1} [built]
+ [277] ./~/axios/index.js 40 bytes {0} {1} [built]
+ [278] ./~/react-apollo/lib/browser.js 650 bytes {0} {1} [built]
+ [279] ./~/react-dom/index.js 59 bytes {0} {1} [built]
+ [618] ./~/rxjs/Rx.js 9.58 kB {0} [built]
+[1124] multi ./src/client/index.tsx 28 bytes {1} [built]
+[1125] multi react react-dom styled-components react-redux react-router react-router-redux react-markdown redux-connect redux rxjs axios redux-logic react-apollo graphql-tag apollo-client 196 bytes {0} [built]
+    + 1114 hidden modules
 
-ERROR in ./src/client/containers/Home/presentation.tsx
-(2,67): error TS2307: Cannot find module 'ui'.
+ERROR in /home/ryancollinsio/developer/ts-boilerplate/packages/app/node_modules/openui/dist/SvgIcon/types.d.ts
+(2,35): error TS2314: Generic type 'SVGProps<T>' requires 1 type argument(s).
 
-ERROR in ./src/client/containers/Features/index.tsx
-(2,68): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/containers/Docs/presentation.tsx
-(2,76): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/containers/BlogPost/presentation.tsx
-(3,57): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/containers/Blog/index.tsx
-(3,72): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/containers/App/presentation.tsx
-(3,66): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/containers/About/index.tsx
-(10,8): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/components/PostCard/styles.ts
-(2,25): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/components/Post/index.tsx
-(2,57): error TS2307: Cannot find module 'ui'.
-
-ERROR in ./src/client/components/NavBar/index.tsx
-(2,24): error TS2307: Cannot find module 'ui'.
-
-ERROR in ../ui/src/Anchor/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Anchor/index.tsx Unexpected token (7:5)
-You may need an appropriate loader to handle this file type.
-| const MethodTypePush = 'push';
-| const MethodTypeReplace = 'replace';
-| type Method = 'push' | 'replace';
-| export interface Props extends React.Props<Anchor> {
-|   path?: string;
- @ ../ui/src/index.ts 1:0-30
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Article/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Article/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import BoxProps from '../Box/types';
-| 
-| export interface Props extends BoxProps {
-|   content?: string;
-|   children?: JSX.Element;
- @ ../ui/src/index.ts 2:0-32
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Avatar/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Avatar/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import styled from 'styled-components';
-| 
-| export type ImageSize = 'thumb' | 'small' | 'medium' | 'large';
-| export interface Props {
-|   src: string;
- @ ../ui/src/index.ts 3:0-30
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Button/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Button/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| 
-| // This is so that the onClick handler is accepted without type interferance
-| export interface Props extends React.HTMLProps<HTMLButtonElement & Button> {
-|   color?: string;
-|   backgroundColor?: string;
- @ ../ui/src/index.ts 5:0-30
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Footer/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Footer/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import { FooterComponent } from './styles';
-| 
-| export interface Props extends React.Props<typeof Footer> {
-|   color?: string;
-| }
- @ ../ui/src/index.ts 7:0-30
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Notification/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Notification/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import { Status } from './types';
-| 
-| export interface Props extends React.HTMLProps<typeof Notification> {
-|   message: JSX.Element | string;
-|   status?: Status;
- @ ../ui/src/index.ts 6:0-42
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Box/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Box/index.tsx Unexpected token (7:2)
-You may need an appropriate loader to handle this file type.
-| export default function Box({
-|   children,
-|   ...rest,
-| }: Props): JSX.Element {
-|   return (
- @ ../ui/src/index.ts 4:0-24
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Heading/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Heading/index.tsx Unexpected token (5:7)
-You may need an appropriate loader to handle this file type.
-| import { H1, H2, H3, H4, H5 } from './styles';
-| 
-| export type Tag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
-| 
-| export interface Props {
- @ ../ui/src/index.ts 8:0-32
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Image/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Image/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import { imageStyle } from './styles';
-| 
-| export type ImageSize = 'thumb' | 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'full';
-| 
-| export interface Props {
- @ ../ui/src/index.ts 11:0-28
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Headline/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Headline/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import { HeadlineSize, FontWeight } from './types';
-| 
-| export interface Props {
-|   color?: string;
-|   textAlign?: string;
- @ ../ui/src/index.ts 9:0-34
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Hero/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Hero/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import Component from './styles';
-| 
-| export interface Props extends React.Props<typeof Hero> {
-|   backgroundColor?: string;
-| }
- @ ../ui/src/index.ts 10:0-26
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/LoadingIndicator/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/LoadingIndicator/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import SvgIcon, { Circle } from './styles';
-| 
-| export interface Props extends React.Props<typeof LoadingIndicator> {
-|   isLoading: boolean;
-| }
- @ ../ui/src/index.ts 12:0-50
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Section/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Section/index.tsx Unexpected token (7:2)
-You may need an appropriate loader to handle this file type.
-| export default function Section({
-|   children,
-|   ...rest,
-| }: BoxProps): JSX.Element {
-|   return (
- @ ../ui/src/index.ts 15:0-32
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Markdown/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Markdown/index.tsx Unexpected token (6:7)
-You may need an appropriate loader to handle this file type.
-| import 'github-markdown-css/github-markdown.css';
-| 
-| export interface Props extends React.Props<typeof Markdown> {
-|   content: string;
-| }
- @ ../ui/src/index.ts 13:0-34
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Paragraph/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Paragraph/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import { style } from './styles';
-| 
-| export type ParagraphSize = 'small' | 'medium' | 'large' | 'xlarge';
-| export type Margin = 'none' | 'small' | 'medium' | 'large';
-| 
- @ ../ui/src/index.ts 14:0-36
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/SvgIcon/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/SvgIcon/index.tsx Unexpected token (4:7)
-You may need an appropriate loader to handle this file type.
-| import { SvgProps } from './types';
-| 
-| export type Props = SvgProps & React.HTMLProps<typeof SvgIcon>;
-| export default function SvgIcon({
-|   children,
- @ ../ui/src/index.ts 16:0-32
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
-
-ERROR in ../ui/src/Toast/index.tsx
-Module parse failed: /Users/myMac/Developer/works-in-progress/open-source-maintaining/scalable-react-ts-boilerplate/packages/ui/src/Toast/index.tsx Unexpected token (7:7)
-You may need an appropriate loader to handle this file type.
-| import { Status } from './types';
-| 
-| export interface Props extends BoxProps {
-|   message?: JSX.Element | string;
-|   children?: JSX.Element;
- @ ../ui/src/index.ts 17:0-28
- @ ./src/client/containers/Blog/index.tsx
- @ ./src/client/containers/index.ts
- @ ./src/client/routes.tsx
- @ ./src/client/index.tsx
- @ multi ./src/client/index.tsx
+ERROR in main.6a2bc42b872dfa95d56e.js from UglifyJs
+Name expected [main.6a2bc42b872dfa95d56e.js:61060,8]
+Child extract-text-webpack-plugin:
+       [0] ./~/css-loader/lib/css-base.js 1.46 kB {0} [built]
+       [1] ./~/css-loader!./~/postcss-loader!../ui/~/github-markdown-css/github-markdown.css 11.5 kB {0} [built]
 
 lerna(error)   Errored while running BootstrapCommand.execute

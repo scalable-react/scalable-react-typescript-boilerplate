@@ -16,8 +16,8 @@ export function marginCss(margin: Margin) {
   `;
 };
 
-export type Style = Array<string | number | InterpolationFunction<Props & ThemeProps<{}>>>;
-export const style: Style = css`
+export { ThemeProps, InterpolationFunction };
+export const style = css`
   max-width: 630px;
   text-align: ${(props: Props) => props.textAlign || defaultProps.textAlign};
   color: ${(props: Props) => props.color || defaultProps.color};

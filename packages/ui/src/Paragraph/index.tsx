@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { ThemeProps } from 'styled-components';
 import { style } from './styles';
 
 export type ParagraphSize = 'small' | 'medium' | 'large' | 'xlarge';
@@ -25,6 +25,7 @@ export interface Props {
   margin?: Margin;
 }
 
+export { ThemeProps };
 const Paragraph = styled.p`
   ${style}
 `;

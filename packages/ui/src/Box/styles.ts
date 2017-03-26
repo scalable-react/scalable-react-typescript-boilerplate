@@ -7,9 +7,8 @@ import {
   boxSizeToStyle,
 } from './styleUtils';
 
-export { ThemeProps, Props };
-export type BoxStylesType = Array<string | number | InterpolationFunction<Props & ThemeProps<{}>>>;
-export const BoxStyles: BoxStylesType = css`
+export { ThemeProps, Props, InterpolationFunction };
+export const BoxStyles = css`
   display: flex;
   background-color: ${({ backgroundColor }: Props) => backgroundColor || 'transparent'};
   justify-content: ${({ justifyContent }: Props) => justifyContent || 'flex-start'};
