@@ -45,7 +45,8 @@
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "npm run test -- --watch",
     "test:update": "npm run test -- --u",
-    "storybook": "start-storybook -p 9001 -c ./config/.storybook"
+    "storybook": "start-storybook -p 9001 -c ./config/.storybook",
+    "start:docs": "cd packages/docs && npm run start && cd .."
   },
   "dependencies": {
     "@kadira/react-storybook-addon-info": "^3.3.0",

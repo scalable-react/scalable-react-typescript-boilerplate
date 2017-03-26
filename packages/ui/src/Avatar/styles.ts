@@ -14,8 +14,8 @@ const propsToSize = ({ size }: Props) => {
   `;
 };
 
-export type AvatarStylesType = Array<string | number | InterpolationFunction<Props & ThemeProps<{}>>>;
-export const AvatarStyle: AvatarStylesType = css`
+export { InterpolationFunction, ThemeProps };
+export const AvatarStyle = css`
   background: url(${({ src }: Props) => src || defaultUrl});
   background-size: cover;
   background-position: center;
