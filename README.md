@@ -16,9 +16,7 @@ Checkout [our website](https://scalable-react-ts-boilerplate.herokuapp.com/) for
 
 ## Background Info
 
-This project was initially inspired by the [Scalable React Boilerplate](https://github.com/RyanCCollins/scalable-react-boilerplate). It inherits the [Feature-First](https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.8nerdsqhd) organizational pattern.
-
-The main feature of this project is that it uses [TypeScript](https://www.typescriptlang.org/) as its main language.  The reasons to use static types for front-end engineering are plentiful, but if you need more convincing, check the resources section below.
+We know that there are a ton of react boilerplates and starter projects to choose from.  Our hope with this project is to provide an example of one of the best front-end architectural patterns available: Feature First.  We started initially with a vanilla JS version of this architecture and have since converted it entirely to strongly-typed TypeScript.  Above all else, the hope of this repository is to provide the open source community with a great example of how to build large-scale apps with React and TypeScript.  Read on to get started!
 
 ## Getting Started
 1. Clone the Repo
