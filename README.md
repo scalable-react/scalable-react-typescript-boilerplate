@@ -19,6 +19,23 @@ Checkout [our website](https://scalable-react-ts-boilerplate.herokuapp.com/) for
 
 We know that there are a ton of react boilerplates and starter projects to choose from.  Our hope with this project is to provide an example of one of the best front-end architectural patterns available: Feature First.  We started initially with a vanilla JS version of this architecture and have since converted it entirely to strongly-typed TypeScript.  Above all else, the hope of this repository is to provide the open source community with a great example of how to build large-scale apps with React and TypeScript using the feature-first modularization pattern.  Read on to get started!
 
+## Main Features
+- Feature First
+- Statically Typed
+- TypeScript
+- Lerna
+- Start UI Kit (Open UI)
+- Redux Logic
+- Webpack 2
+- React
+- Redux
+- Hot Module Reloading
+- Server Side Rendering
+- Highly optimized webpack configuration
+  - Code Chunking
+  - Lazy route loading
+  - Uglification / minification
+
 ## Getting Started
 1. Clone the Repo
 `git clone https://github.com/RyanCCollins/scalable-react-ts-boilerplate`
