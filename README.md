@@ -24,7 +24,7 @@ We know that there are a ton of react boilerplates and starter projects to choos
 - Statically Typed
 - TypeScript
 - Lerna
-- Start UI Kit (Open UI)
+- Starter UI Kit (Open UI)
 - Redux Logic
 - Webpack 2
 - React
