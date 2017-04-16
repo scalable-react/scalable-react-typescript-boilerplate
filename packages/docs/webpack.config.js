@@ -3,7 +3,7 @@ const path = require('path');
 const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
-  devtool: 'cheap-module-source-map',
+  devtool: 'eval-source-map',
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
