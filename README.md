@@ -1,3 +1,6 @@
+__NOTICE__:
+We have been working on refactoring this repo to use lerna for the last few months and are nearly there!  Stay tuned for more announcements and checkout our progress [on this branch](https://github.com/scalable-react/scalable-react-typescript-boilerplate/tree/feat_rc_docs_package).
+
 ![WIP](https://github.com/RyanCCollins/cdn/blob/master/misc/Work_In_Progress.png?raw=true)
 
 # Work In Progress
