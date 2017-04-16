@@ -53,7 +53,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.tsx?$/, loaders: ['babel-loader', 'ts-loader'], include: [path.join(__dirname, 'src'), path.resolve(__dirname, 'packages')] },
+      { test: /\.tsx?$/, loaders: ['babel-loader', 'ts-loader'], include: path.join(__dirname, 'src') },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel-loader'], include: path.join(__dirname, 'src') },
       {
         test: /\.css$/,
