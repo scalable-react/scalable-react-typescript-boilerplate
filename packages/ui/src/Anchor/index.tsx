@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { withRouter, InjectedRouter } from 'react-router';
 import Component from './styles';
+import foo from './foo';
+
+foo.foo();
 
 const MethodTypePush = 'push';
 const MethodTypeReplace = 'replace';

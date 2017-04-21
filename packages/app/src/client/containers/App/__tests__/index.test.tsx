@@ -9,14 +9,6 @@ import mockStore from 'test/mockstore';
 
 const testState: State = {
   isMobile: true,
-  logoText: 'logo',
-  navLinks: [{
-    text: 'demo',
-    url: 'www.google.com',
-  }, {
-    text: 'demo2',
-    url: 'www.gmail.com',
-  }],
 };
 
 describe('DocsContainer ', () => {

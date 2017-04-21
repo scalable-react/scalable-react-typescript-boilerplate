@@ -14,7 +14,8 @@
     "serve:docs": "cd ./packages/docs && npm run serve",
     "start:app": "cd ./packages/app && npm run start",
     "serve:app": "cd ./packages/app && npm run serve",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "clean": "shjs ./clean.js"
   },
   "devDependencies": {
     "husky": "^0.13.2",
@@ -24,5 +25,8 @@
     "tslint-loader": "^3.4.3",
     "tslint-react": "^2.5.0",
     "typescript": "^2.2.1"
+  },
+  "dependencies": {
+    "shelljs": "^0.7.7"
   }
 }
