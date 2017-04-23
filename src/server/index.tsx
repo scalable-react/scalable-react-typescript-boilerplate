@@ -11,7 +11,7 @@ import theme from '../client/theming';
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import store from '../client/store';
 import { routes } from '../client/routes';
-import Html from '../client/containers/Html';
+import Html from '../client/components/Html';
 import graphQlEntry from './graphqlEntry';
 import 'isomorphic-fetch';
 
