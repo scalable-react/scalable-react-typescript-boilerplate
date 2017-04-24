@@ -1,4 +1,5 @@
 import * as React from 'react';
+import defaultImage from './default';
 import { CommentProps } from './types';
 import {
   Wrapper,
@@ -14,7 +15,7 @@ export default function Comment({
   body,
   picUrl,
 }: CommentProps): JSX.Element {
-  const url = picUrl || 'https://github.com/RyanCCollins/cdn/blob/master/misc/missing.png?raw=true';
+  const url = picUrl || defaultImage;
   return (
     <Wrapper>
       <PicWrapper>
