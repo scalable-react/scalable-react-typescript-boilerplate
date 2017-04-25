@@ -3,7 +3,7 @@
 exports[`<Image /> should render a default image 1`] = `
 <img
   alt="Some alt text"
-  className="gzOwmX"
+  className="ddORmD"
   src="A source string"
 />
 `;
@@ -11,7 +11,7 @@ exports[`<Image /> should render a default image 1`] = `
 exports[`<Image /> should render a full image 1`] = `
 <img
   alt="Some alt text"
-  className="gzOwmX"
+  className="ddORmD"
   size="full"
   src="A source string"
 />
@@ -20,7 +20,7 @@ exports[`<Image /> should render a full image 1`] = `
 exports[`<Image /> should render a large image 1`] = `
 <img
   alt="Some alt text"
-  className="gzOwmX"
+  className="ddORmD"
   size="large"
   src="A source string"
 />
@@ -29,7 +29,7 @@ exports[`<Image /> should render a large image 1`] = `
 exports[`<Image /> should render a medium image 1`] = `
 <img
   alt="Some alt text"
-  className="gzOwmX"
+  className="ddORmD"
   size="medium"
   src="A source string"
 />
@@ -38,7 +38,7 @@ exports[`<Image /> should render a medium image 1`] = `
 exports[`<Image /> should render a small image 1`] = `
 <img
   alt="Some alt text"
-  className="gzOwmX"
+  className="ddORmD"
   size="small"
   src="A source string"
 />
@@ -47,7 +47,7 @@ exports[`<Image /> should render a small image 1`] = `
 exports[`<Image /> should render a thumbnail image 1`] = `
 <img
   alt="Some alt text"
-  className="gzOwmX"
+  className="ddORmD"
   size="thumb"
   src="A source string"
 />
@@ -56,7 +56,7 @@ exports[`<Image /> should render a thumbnail image 1`] = `
 exports[`<Image /> should render a xlarge image 1`] = `
 <img
   alt="Some alt text"
-  className="gzOwmX"
+  className="ddORmD"
   size="xlarge"
   src="A source string"
 />
@@ -65,7 +65,7 @@ exports[`<Image /> should render a xlarge image 1`] = `
 exports[`<Image /> should render a xsmall image 1`] = `
 <img
   alt="Some alt text"
-  className="gzOwmX"
+  className="ddORmD"
   size="xsmall"
   src="A source string"
 />
@@ -74,7 +74,7 @@ exports[`<Image /> should render a xsmall image 1`] = `
 exports[`<Image /> should render a xxsmall image 1`] = `
 <img
   alt="Some alt text"
-  className="gzOwmX"
+  className="ddORmD"
   size="xxsmall"
   src="A source string"
 />

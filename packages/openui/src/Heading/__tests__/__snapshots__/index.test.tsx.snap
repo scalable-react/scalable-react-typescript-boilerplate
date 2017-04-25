@@ -2,7 +2,7 @@
 
 exports[`<Heading /> should render with default props 1`] = `
 <styled.h1
-  color="#007acc"
+  color="#666"
   margin="medium"
   tag="h1"
   textAlign="center"

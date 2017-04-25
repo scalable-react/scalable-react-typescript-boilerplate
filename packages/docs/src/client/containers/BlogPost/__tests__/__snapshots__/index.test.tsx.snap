@@ -41,7 +41,7 @@ exports[`<BlogPostPresentation /> should render as expected 1`] = `
   <LoadingIndicator
     isLoading={false}
   />
-  <Post
+  <undefined
     comment={
       Object {
         "input": "foo",

@@ -3,6 +3,7 @@
 exports[`<Hero /> rendering behavior should render the Hero component with default props 1`] = `
 <styled.div
   backgroundColor="#2d2d2d"
+  full={false}
 >
   Some content
 </styled.div>
@@ -11,6 +12,7 @@ exports[`<Hero /> rendering behavior should render the Hero component with defau
 exports[`<Hero /> rendering behavior should render with other props 1`] = `
 <styled.div
   backgroundColor="ff6600"
+  full={false}
 >
   Some content
 </styled.div>
