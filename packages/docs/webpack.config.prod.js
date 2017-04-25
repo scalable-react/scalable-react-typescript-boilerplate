@@ -83,9 +83,6 @@ module.exports = {
       'process.env.API_URL': JSON.stringify(process.env.API_URL || 'http://localhost:1338/api'),
     }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: false
-    }),
     new webpack.LoaderOptionsPlugin({
       debug: false,
       minimize: true,

@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Route, IndexRoute, Router as ReactRouter } from 'react-router';
 import client from './apolloClient';
 import store, { history } from './store';
-import { Layout, Landing } from './containers';
+import { Layout, Landing } from 'features';
 import colors from './theming';
 
 import ReactGA from 'react-ga';

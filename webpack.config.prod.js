@@ -45,7 +45,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       components: path.resolve(ROOT_PATH, 'src/client/components'),
-      containers: path.resolve(ROOT_PATH, 'src/client/containers'),
+      features: path.resolve(ROOT_PATH, 'src/client/features'),
       shared: path.resolve(ROOT_PATH, 'src/client/shared'),
       ui: path.resolve(ROOT_PATH, 'packages/ui/src'),
       test: path.resolve(ROOT_PATH, 'src/client/test'),

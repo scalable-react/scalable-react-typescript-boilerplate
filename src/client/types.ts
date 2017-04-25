@@ -1,7 +1,7 @@
 import { Action } from 'redux';
 /* GENERATOR-IMPORT */
-import * as LandingTypes from './containers/Landing/types';
-import * as LayoutTypes from './containers/Layout/types';
+import * as LandingTypes from 'features/Landing/types';
+import * as LayoutTypes from 'features/Layout/types';
 export { ThemeColorMap } from './theming/types';
 
 export interface PayloadAction<P> extends Action {
