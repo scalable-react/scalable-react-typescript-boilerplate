@@ -4,7 +4,7 @@ import ButtonComponent from './styles';
 import { Size } from './types';
 
 // This is so that the onClick handler is accepted without type interferance
-export interface Props extends React.HTMLProps<HTMLButtonElement & typeof ButtonComponent> {
+export interface Props extends React.HTMLProps<HTMLButtonElement & typeof Button> {
   color?: string;
   backgroundColor?: string;
   fontSize?: Size;
@@ -13,7 +13,7 @@ export interface Props extends React.HTMLProps<HTMLButtonElement & typeof Button
   path?: string;
 }
 
-class Button extends React.Component<Props, undefined> {
+export class Button extends React.Component<Props, undefined> {
   public static defaultProps: Props = {
     color: '#fefefe',
     backgroundColor: '#c05b4d',
@@ -21,10 +21,10 @@ class Button extends React.Component<Props, undefined> {
     fontSize: 'medium',
   };
   public render() {
-    const { children, label, path, ...props } = this.props;
+    const { children, label, path } = this.props;
     const button = (
       <ButtonComponent
-        {...props}
+        onClick={this.props.onClick}
       >
         {children || label || ''}
       </ButtonComponent>
