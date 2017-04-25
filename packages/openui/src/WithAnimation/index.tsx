@@ -12,7 +12,7 @@ export interface Props {
   css?: ThemedCssFunction<{}>;
 }
 
-type HOC = (props: Props) => JSX.Element;
+export type HOC = (props: Props) => JSX.Element;
 const WithAnimation: HOC = ({
   duration = 1000,
   type = 'fadeIn',

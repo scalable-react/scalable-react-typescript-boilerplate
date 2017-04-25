@@ -1,4 +1,4 @@
-type State = 'Pinned' | 'Unpinned';
+export type State = 'Pinned' | 'Unpinned';
 export interface HeaderState {
   state: State;
   position: number;

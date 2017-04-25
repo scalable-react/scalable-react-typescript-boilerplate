@@ -1,14 +1,15 @@
-import { css } from 'styled-components';
+import { css, InterpolationFunction, ThemeProps } from 'styled-components';
 import { HeaderComponentProps, Props } from './types';
 
-function translateStyle({ state, height }: HeaderComponentProps) {
+export function translateStyle({ state, height }: HeaderComponentProps) {
   const translate = state === 'Pinned' ? 0 : -height;
   return css`
     transform: translate3d(0px, ${translate}px, 0px);
   `;
 }
 
-type OwnProps = Props & HeaderComponentProps;
+export { InterpolationFunction, ThemeProps };
+export type OwnProps = Props & HeaderComponentProps;
 export default function headerStyles() {
   return css`
     ${(props: OwnProps) => translateStyle(props)}

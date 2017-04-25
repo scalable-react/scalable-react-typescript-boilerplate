@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Component from './styles';
 import ReactMarkdown from 'react-markdown';
-import 'github-markdown-css/github-markdown.css';
 
 export interface Props extends React.Props<typeof Markdown> {
   content: string;
