@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Heading, Section, Hero, Paragraph, Button, Anchor } from 'openui';
+import { Heading, Section, Hero, Paragraph, Button, Anchor, Box } from 'openui';
 import { Container, HeroLogo, HeroLogoRow, HeadingContainer, GetStartedButtons } from './styles';
 import { Props as HomeProps } from './types';
 
@@ -33,36 +33,35 @@ export default function HomePresentation({
             </Paragraph>
           </HeadingContainer>
           <GetStartedButtons>
-            <Anchor
-              plain
-              color={theme.white1}
-              path="/docs"
-            >
-              <Button
-                style={{ margin: 10 }}
-                fontSize="xlarge"
-                isHero
-                backgroundColor={theme.secondary}
-                borderColor="#733529"
+            <Box margin="small">
+              <Anchor
+                plain
+                color={theme.white1}
+                path="/docs"
               >
-                Read the docs
-              </Button>
-            </Anchor>
-            <Anchor
-              plain
-              color={theme.white1}
-              path="/todo-app"
-            >
-              <Button
-                style={{ margin: 10 }}
-                fontSize="xlarge"
-                isHero
-                backgroundColor={theme.secondary}
-                borderColor="#733529"
+                <Button
+                  fontSize="xlarge"
+                  backgroundColor={theme.secondary}
+                >
+                  Read the docs
+                </Button>
+              </Anchor>
+            </Box>
+            <Box margin="small">
+              <Anchor
+                plain
+                color={theme.white1}
+                path="/todo-app"
               >
-                View Example App
-              </Button>
-            </Anchor>
+                <Button
+                  style={{ margin: 10 }}
+                  fontSize="xlarge"
+                  backgroundColor={theme.secondary}
+                >
+                  View Example App
+                </Button>
+              </Anchor>
+            </Box>
           </GetStartedButtons>
         </Hero>
       </Section>
