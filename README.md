@@ -4,7 +4,7 @@ We have been working on refactoring this repo to use lerna for the last few mont
 ![WIP](https://github.com/RyanCCollins/cdn/blob/master/misc/Work_In_Progress.png?raw=true)
 
 # Work In Progress
-__NOTICE__: This repository is in active development.  We encourage usage and pull requests, but please be advised that it is changing fast!
+__NOTICE__: This repository is in active development.  We encourage usage and pull requests, but please be advised that it is changing fast!  If you're looking for a stable boilerplate, this is not it just yet.  Stay tuned and get involved if you want to help us build it.
 
 ![TypeScript](https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png)
 
