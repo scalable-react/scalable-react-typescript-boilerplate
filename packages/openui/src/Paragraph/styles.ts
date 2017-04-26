@@ -3,7 +3,7 @@ import { Margin, Props } from './types';
 import calculateSize, { calculateMargin } from './styleUtils';
 
 const defaultProps: Props = {
-  color: '#fff',
+  color: '#666',
   textAlign: 'center',
   paragraphSize: 'medium',
   margin: 'medium',
