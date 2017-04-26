@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> default should render a plain button with default props 1`] = `
+<styled.button>
+  Button Text
+</styled.button>
+`;
+
+exports[`<Button /> default should render a plain button with other props 1`] = `
+<styled.button>
+  Button Text
+</styled.button>
+`;

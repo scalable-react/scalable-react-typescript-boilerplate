@@ -13,11 +13,10 @@
     "noUnusedLocals": true,
     "paths": {
       "components/*": ["./components/*"],
-      "containers/*": ["./containers/*"],
+      "features/*": ["./features/*"],
       "test/*": ["./test/*"],
       "shared/*": ["./shared/*"],
-      "root/*": ["./*"], 
-      "ui": ["../../packages/ui/src/index"]
+      "root/*": ["./*"]
     }
   },
   "include": [

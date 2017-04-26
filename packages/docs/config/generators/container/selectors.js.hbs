@@ -1,0 +1,23 @@
+import { State as GlobalState } from '../../state';
+import { State, ErrorType } from './types';
+import { createSelector, Selector } from 'reselect';
+
+export const select{{ properCase name }} = () => (state: GlobalState): State => state.{{ camelCase name }};
+
+export type SelectIsLoading = Selector<GlobalState, boolean>;
+export const selectIsLoading: SelectIsLoading = createSelector(
+  select{{ properCase name }}(),
+  ({{ camelCase name }}) => {{ camelCase name }}.isLoading,
+);
+
+export type SelectError = Selector<GlobalState, ErrorType>;
+export const selectError: SelectError = createSelector(
+  select{{ properCase name }}(),
+  ({{ camelCase name }}) => {{ camelCase name }}.error,
+);
+
+export type SelectData = Selector<GlobalState, string>;
+export const selectData: SelectData = createSelector(
+  select{{ properCase name }}(),
+  ({{ camelCase name }}) => {{ camelCase name }}.data,
+);

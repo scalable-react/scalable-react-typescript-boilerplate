@@ -2,7 +2,7 @@ const path = require('path');
 const { trimTemplateFile } = require('../utils/');
 
 module.exports = {
-  description: 'Add a container component',
+  description: 'Add a feature',
   prompts: [
     {
       type: 'input',
@@ -21,7 +21,7 @@ module.exports = {
       type: 'input',
       name: 'path',
       message: 'What directory would you like your container in? (relative)',
-      default: './src/client/containers',
+      default: './src/client/features',
       validate: (value) => {
         return true;
       }
@@ -30,7 +30,7 @@ module.exports = {
       type: 'confirm',
       name: 'wantActionsAndReducer',
       default: true,
-      message: 'Do you want actions/constants/reducer for this container?'
+      message: 'Do you want actions/constants/reducer for this feature?'
     },
     {
       type: 'confirm',
@@ -41,7 +41,7 @@ module.exports = {
   ],
   actions: (data) => {
     const containerPath = path.resolve(process.cwd(), `${data.path}/{{properCase name}}/`);
-    const rootPath = path.resolve(process.cwd(), `./src/client/containers/index.ts`);
+    const rootPath = path.resolve(process.cwd(), `./src/client/features/index.ts`);
     const reducersPath = path.resolve(process.cwd(), './src/client/reducers.ts');
     const typesPath = path.resolve(process.cwd(), './src/client/types.ts');
     const statePath = path.resolve(process.cwd(), './src/client/state.ts');
