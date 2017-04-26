@@ -48,7 +48,10 @@ From the root of the project directory, run `yarn` if you have yarn installed gl
 --- or ---
 `npm install`.
 
-3. Start the Development Server
+3. Clear out the code you don't want.
+Run `npm run clean` to get rid of the docs package and to reset the codebase to the bare minimum (note: we are still working on this and this would be a great place to submit an improvement).
+
+4. Start the Development Server
 Run `npm run start` then browse http://localhost:1337 to see your running app.
 
 ## What is Feature First?
