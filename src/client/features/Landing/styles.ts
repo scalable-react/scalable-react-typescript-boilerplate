@@ -7,4 +7,8 @@ export const Section = styled.section`
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
+  h1, p {
+    color: #666 !important;
+  }
 `;

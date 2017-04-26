@@ -1,10 +1,10 @@
-__NOTICE__:
-We have been working on refactoring this repo to use lerna for the last few months and are nearly there!  Stay tuned for more announcements and checkout our progress [on this branch](https://github.com/scalable-react/scalable-react-typescript-boilerplate/tree/feat_rc_docs_package).
-
 ![WIP](https://github.com/RyanCCollins/cdn/blob/master/misc/Work_In_Progress.png?raw=true)
 
-# Work In Progress
-__NOTICE__: This repository is in active development.  We encourage usage and pull requests, but please be advised that it is changing fast!  If you're looking for a stable boilerplate, this is not it just yet.  Stay tuned and get involved if you want to help us build it.
+# __NOTICE__:
+We have done it!  We migrated the repo to using lerna.  Please be advised that we are not yet calling this repo ready for production as there is still more work to do.  Please feel free to use it for small side projects and to submit PRs until a proper release has been published.
+
+### Open UI
+We are working on a small ui kit, which you'll find located in the packages directory.  Much like this project, this code is not yet production ready and we have yet to document it.  Please stay tuned.
 
 ![TypeScript](https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png)
 
