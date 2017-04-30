@@ -4,7 +4,7 @@
 We recently migrated the repo to utilize [lerna](https://lernajs.io/).  Please be advised that we are not yet calling this repo ready for production as there is still more work to do.  Please feel free to use it for small side projects and to submit PRs until a proper release has been published.
 
 ### Open UI
-We are working on a small ui kit, which you'll find located in the packages directory.  Much like this project, this code is not yet production ready and we have yet to document it.  Please stay tuned.
+We are working on a ui kit, which you'll find located in the packages directory.  Much like this project, this code is not yet production ready and we have yet to document it.  Please stay tuned.
 
 ![TypeScript](https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png)
 
