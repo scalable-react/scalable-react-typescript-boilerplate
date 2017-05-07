@@ -9,6 +9,8 @@ We are working on a ui kit, which you'll find located in the packages directory.
 ![TypeScript](https://raygun.com/blog/wp-content/uploads/2016/07/Callums-post-on-Typescript.png)
 
 # Scalable React TS Boilerplate
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/scalable-react/scalable-react-typescript-boilerplate.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/scalable-react/scalable-react-typescript-boilerplate.svg?branch=master)](https://travis-ci.org/scalable-react/scalable-react-typescript-boilerplate)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Roadmap](https://camo.githubusercontent.com/de5f01c39b77893278b0f44ebf20ecca32adb13c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2546302539462539332539342d726f61646d61702d4344393532332e7376673f7374796c653d666c61742d737175617265)](https://github.com/scalable-react/scalable-react-typescript-boilerplate#roadmap)
