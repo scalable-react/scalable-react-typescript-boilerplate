@@ -222,7 +222,7 @@ The [documentation website](https://scalable-react-ts-boilerplate.herokuapp.com/
 
 ## Scripts
 - `npm run setup:yarn`
-  - Install the package dependencies via yarn
+  - Install the package dependencies via yarn (recomended)
 - `npm install`
   - Install dependencies (the ol' fashioned way)
 - `npm run start`
