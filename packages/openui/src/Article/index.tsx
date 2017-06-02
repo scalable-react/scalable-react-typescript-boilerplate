@@ -13,7 +13,7 @@ export default function Article({
   ...rest,
 }: Props) {
   return (
-    <Component {...rest} className="markdown-body">
+    <Component {...rest}>
       {content && typeof content === 'string' &&
         <Markdown content={content} />
       }

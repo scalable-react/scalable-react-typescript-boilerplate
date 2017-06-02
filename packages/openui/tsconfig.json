@@ -7,7 +7,6 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "sourceMap": true,
-    "outDir": "dist",
     "jsx": "react",
     "noUnusedLocals": true,
     "declaration": true
