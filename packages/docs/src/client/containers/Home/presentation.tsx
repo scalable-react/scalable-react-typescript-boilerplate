@@ -40,8 +40,7 @@ export default function HomePresentation({
                 path="/docs"
               >
                 <Button
-                  fontSize="xlarge"
-                  backgroundColor={theme.secondary}
+                  fontSize="large"
                 >
                   Read the docs
                 </Button>
@@ -55,8 +54,7 @@ export default function HomePresentation({
               >
                 <Button
                   style={{ margin: 10 }}
-                  fontSize="xlarge"
-                  backgroundColor={theme.secondary}
+                  fontSize="large"
                 >
                   View Example App
                 </Button>
