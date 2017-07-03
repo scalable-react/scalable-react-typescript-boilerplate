@@ -2,7 +2,7 @@ import * as React from 'react';
 import Presentation from './presentation';
 
 export interface Props {
-  title: string
+  title: string;
 }
 
 class Landing extends React.Component<Props, undefined> {
