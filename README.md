@@ -1,7 +1,7 @@
 ![](https://github.com/RyanCCollins/cdn/raw/master/road_not_maintained.jpg?raw=true)
 
 # __NOTICE__:
-The maintainers of this framework are no longer able to support a thriving open source community.  This repo will stay put to serve as an example for the community, but should not be depended on in a production application unless you and are your team intend to build upon it. 
+The maintainers of this repo are no longer able to support a thriving open source community.  This repo will stay put to serve as an example for the community, but should not be depended on in a production application unless you and are your team intend to build upon it. 
 
 If you're interested in helping to support and grow this library, please let us know in the issues!
 
